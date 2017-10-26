@@ -22,6 +22,8 @@ TODO
 * Add options to adjust scaling.
 * Let you change the titlebar text?
 * Add custom backgrounds, not just the error box?
+* Automatic word-wrapping so you don't have to do it manually like a caveman
+* A way to automate conversion, so you could do things like make twitterbots out of this?
 
 Other games to add
 ------------------
