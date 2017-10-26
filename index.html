@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<title>Police Quest 2 Death Generator</title>
+<style>
+img.source{
+	display: none;
+}
+textarea{
+	font-family: monospace;
+}
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<img src="pq2-blank.png" id="template" class="source"/>
+<img src="pq2-font.png" id="font" class="source"/>
+<canvas id=death >No canvas!</canvas>
+<p>
+<textarea cols=40 rows=5 id=sourcetext>
+Thank you for playing Police
+Quest 2. Next time, be a little more
+careful.
+</textarea>
+</p>
+<script>
+var scale = 2
+var canvas = document.querySelector('canvas')
+var context = canvas.getContext('2d')
+var baseImage = document.querySelector('img#template')
+var fontImage = document.querySelector('img#font')
+var fontInfo=null
+
+function renderText(){
+	var origin=fontInfo.origin
+	var bx=fontInfo.box.x,by=fontInfo.box.y
+	var text = document.querySelector("textarea#sourcetext").value.split('\n')
+	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
+	var y=origin.y
+	for (let line of text){
+		var x=origin.x
+		for(var i=0;i<line.length;i++){
+			var info=fontInfo[line.charCodeAt(i)]
+			if(info==null){
+				info=fontInfo[fontInfo["null-character"]]
+			}
+			context.drawImage(fontImage,info.x,0,bx,by,x*scale,y*scale,bx*scale,by*scale)
+			x+=info.w
+		}
+		y+=fontInfo.height
+	}
+}
+$('#sourcetext').keyup(function(){
+	if(fontInfo != null){
+		renderText()
+	}
+})
+$(window).on('load', function(){
+	context.canvas.width = baseImage.width * scale
+	context.canvas.height = baseImage.height * scale
+	context.imageSmoothingEnabled = false;
+	$.getJSON("pq2.json",function(data){
+		fontInfo = data
+		renderText()
+	})
+});
+</script>
