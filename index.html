@@ -56,7 +56,8 @@ $('#sourcetext').keyup(function(){
 $(window).on('load', function(){
 	context.canvas.width = baseImage.width * scale
 	context.canvas.height = baseImage.height * scale
-	context.imageSmoothingEnabled = false;
+	context.imageSmoothingEnabled = false
+	context.mozImageSmoothingEnabled = false
 	$.getJSON("pq2.json",function(data){
 		fontInfo = data
 		renderText()
