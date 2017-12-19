@@ -2,7 +2,10 @@ Sierra Death Screen Generator
 =============================
 
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
-Right now, it only supports Police Quest 2
+Right now, it supports:
+
+* Police Quest 2
+* SimCity 2000 Advisors
 
 Creating a new font
 ===================
@@ -17,16 +20,17 @@ This is mainly a guide for me so I don't forget.
 TODO
 ====
 
-* Actually support games other than PQ2?
+* Support more games!
 * Add a twitter-safe saving option, for death screens that aren't inherently twitter-safe
 * Add options to adjust scaling.
 * Let you change the titlebar text?
 * Add custom backgrounds, not just the error box?
 * Automatic word-wrapping so you don't have to do it manually like a caveman
 * A way to automate conversion, so you could do things like make twitterbots out of this?
+* Merge the source images?
 
 Other games to add
 ------------------
 * Every SCI game
 * AGI games?
-* SimCity 2000 (YOU CAN'T CUT BACK ON FUNDING YOU WILL REGRET THIS!)
+

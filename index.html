@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Police Quest 2 Death Generator</title>
+<title class="change-title">Sierra Death Generator</title>
 <style>
 img.source{
 	display: none;
@@ -7,29 +7,107 @@ img.source{
 textarea{
 	font-family: monospace;
 }
+button.generator-switcher{
+	margin-right: 1em;
+	padding: 2px;
+}
+
 </style>
 <script src="jquery-3.2.1.min.js"></script>
-<h1>Sierra Death Generator</h1>
-<p>Code by <a href="https://twitter.com/Foone">@Foone</a>, content by <a href="https://en.wikipedia.org/wiki/Sierra_Entertainment">Sierra Online</a>.</p>
-<img src="pq2-blank.png" id="template" class="source"/>
-<img src="pq2-font.png" id="font" class="source"/>
-<canvas id=death >No canvas!</canvas>
+<script src="jquery.waitforimages.min.js"></script>
+<h1 class="change-title">Sierra Death Generator</h1>
+Generators: <span id="genlist"> </span>
+<p>Code by <a href="https://twitter.com/Foone">@Foone</a>, content by <a href="#" class="change-source">somebody</a>.</p>
+<canvas id=death>No canvas!</canvas>
 <p>
-<textarea cols=40 rows=5 id=sourcetext>
-Thank you for playing Police
-Quest 2. Next time, be a little more
-careful.
-</textarea>
+<textarea cols=40 rows=5 id=sourcetext></textarea>
 </p>
+<div class="overlays"></div>
+
 <script>
-var scale = 2
+
+var scale = 2 // TODO: Allow this to be changed!
 var canvas = document.querySelector('canvas')
 var context = canvas.getContext('2d')
-var baseImage = document.querySelector('img#template')
-var fontImage = document.querySelector('img#font')
-var fontInfo=null
+var baseImage = null
+var fontImage = null
+var fontInfo = null
+var overlayNames = null
+var selectedGenerator = 'sc2k'
+if(window.location.hash.length > 0){
+	selectedGenerator = window.location.hash.substr(1)
+}
+
+var generators={
+	'pq2':{
+		'title': 'Police Quest 2 Death',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':'Thank you for playing Police\nQuest 2. Next time, be a little more\ncareful.',
+	},
+	'sc2k':{
+		'title': 'SimCity 2000 Advisor',
+		'source':'Maxis Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
+		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!",
+	}
+}
+
+for(key in generators) {
+	if(generators.hasOwnProperty(key)) {
+		$('#genlist').append($('<button class="generator-switcher"/>').text(generators[key].title).data('generator',key).click(function (){
+			selectedGenerator=$(this).data('generator')
+			selectGenerator()
+		}))
+	}
+}
+
+function isAnyDefaultText(text){
+	for(key in generators) {
+		if(generators.hasOwnProperty(key)) {
+			if(generators[key].defaulttext == text){
+				return true
+			}
+		}
+	}
+	return false
+}
+
+function selectGenerator(){
+	var gen=generators[selectedGenerator]
+	window.location.hash=selectedGenerator
+	$('button.generator-switcher').each(function(){
+		$(this).prop('disabled',$(this).data('generator')==selectedGenerator)
+	})
+
+	$('.change-title').text(gen.title + " Generator");
+	$('.change-source').attr('href',gen.sourceurl).text(gen.source)
+	var sourcetext = $('#sourcetext');
+	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
+		$('#sourcetext').text(gen.defaulttext)
+	}
+	fontInfo=null // Prevent flash of gibberish when switching images
+	loadJSONForGenerator()
+	$('.source').remove();
+	baseImage = $('<img id="template" class="source" />').attr('src',selectedGenerator + '-blank.png').appendTo('body')[0]
+	fontImage = $('<img id="font" class="source" />').attr('src',selectedGenerator + '-font.png').appendTo('body')[0]
+	$('.source').waitForImages(true).done(function(){
+		baseImage=$('img#template')[0]
+		//fontImage=$('img#font')[0]
+		context.canvas.width = baseImage.width * scale
+		context.canvas.height = baseImage.height * scale
+		context.imageSmoothingEnabled = false
+		renderText()
+	});
+
+}
+
+
 
 function renderText(){
+	if(fontInfo == null){
+		return
+	}
 	var origin=fontInfo.origin
 	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
@@ -42,26 +120,62 @@ function renderText(){
 			if(info==null){
 				info=fontInfo[fontInfo["null-character"]]
 			}
+			bx=info.w
+			by=info.h
 			context.drawImage(fontImage,info.x,0,bx,by,x*scale,y*scale,bx*scale,by*scale)
 			x+=info.w
 		}
 		y+=fontInfo.height
 	}
-}
-$('#sourcetext').keyup(function(){
-	if(fontInfo != null){
-		renderText()
+	if ('overlays' in fontInfo) {
+		for(var i=0;i<overlayNames.length;i++){
+			var oname=overlayNames[i]
+			var currentOverlay=fontInfo.overlays[oname]
+			var x=currentOverlay.x
+			var y=currentOverlay.y
+			var adv=currentOverlay.options
+			adv=adv[$('#overlay-'+oname+' option:selected').text()]
+			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
+		}
 	}
-})
-$(window).on('load', function(){
-	context.canvas.width = baseImage.width * scale
-	context.canvas.height = baseImage.height * scale
-	context.imageSmoothingEnabled = false
-	context.mozImageSmoothingEnabled = false
-	$.getJSON("pq2.json",function(data){
+}
+
+function resetOverlays(){
+	overlayNames = []
+	$('.overlays p').remove()
+	if('overlays' in fontInfo){
+		var overlays = fontInfo.overlays
+		for(key in overlays) {
+			if(overlays.hasOwnProperty(key)) {
+				overlayNames.push(key)
+				var overlay = overlays[key]
+				var pwrapper=$("<p>").text(overlay.title+': ')
+				var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
+				for(opt in overlay.options){
+					if(overlay.options.hasOwnProperty(opt)){
+						$('<option>').text(opt).prop('selected',opt==overlay['default']).appendTo(select)
+					}
+				}
+				select.appendTo(pwrapper)
+				pwrapper.appendTo($('.overlays'))
+			}
+		}
+	}
+	$('.overlays select').change(renderText)
+}
+
+function loadJSONForGenerator(){
+	$.getJSON(selectedGenerator+".json",function(data){
 		fontInfo = data
+		resetOverlays()
 		renderText()
 	})
-});
+}
+selectGenerator()
+
+$('#sourcetext').keyup(renderText)
+
+
+
 </script>
 <a href="https://github.com/foone/SierraDeathGenerator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
