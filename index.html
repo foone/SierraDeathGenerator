@@ -111,6 +111,8 @@ function renderText(){
 	var origin=fontInfo.origin
 	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
+	// Clear before drawing, as transparents might get overdrawn
+	context.clearRect(0, 0, canvas.width, canvas.height)
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var y=origin.y
 	for (let line of text){
