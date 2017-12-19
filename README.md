@@ -5,6 +5,7 @@ This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
 * Police Quest 2
+* Police Quest 3
 * SimCity 2000 Advisors
 
 Creating a new font
