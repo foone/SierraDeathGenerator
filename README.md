@@ -7,6 +7,7 @@ This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
 * Commander Keen 4
+* Manhunter: New York
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors
