@@ -12,7 +12,9 @@ button.generator-switcher{
 	margin-right: 1em;
 	padding: 2px;
 }
-
+#sourcetext{
+	vertical-align: top;
+}
 </style>
 <script src="jquery-3.2.1.min.js"></script>
 <script src="jquery.waitforimages.min.js"></script>
@@ -22,6 +24,7 @@ Generators: <span id="genlist"> </span>
 <canvas id=death>No canvas!</canvas>
 <p>
 <textarea cols=40 rows=5 id=sourcetext></textarea>
+<a href="" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" /></a>
 </p>
 <div class="overlays"></div>
 
@@ -125,14 +128,18 @@ function selectGenerator(){
 
 
 
-function renderText(){
+function renderText(scaled = true){
 	var buffer = 10
 	var browserScale = $(window).width() / (baseImage.width + buffer)
 	var scale = Math.min(browserScale, 2)
-
+	if(!scaled){
+		scale = 2
+	}
 	context.canvas.width = baseImage.width * scale
 	context.canvas.height = baseImage.height * scale
-	context.imageSmoothingEnabled = false
+	if(scale == 2.0){
+		context.imageSmoothingEnabled = false
+	}
 
 	if(fontInfo == null){
 		return
@@ -207,6 +214,15 @@ selectGenerator()
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
 
+$('#save').click(function(){
+	// generate an unscaled version
+	renderText(false)
+	this.href=context.canvas.toDataURL('image/png')
+	var text = document.querySelector("textarea#sourcetext").value
+	text = text.replace(/\n/," ").replace(/[^-._a-zA-Z0-9 ]/,"")
+	this.download = selectedGenerator + "-" + text + ".png"
+	return true
+})
 
 </script>
 <a href="https://github.com/foone/SierraDeathGenerator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
