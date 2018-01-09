@@ -6,6 +6,7 @@ Sierra Death Screen Generator
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
+* Duke Nukem 1
 * Commander Keen 4
 * Manhunter: New York
 * Police Quest 2
