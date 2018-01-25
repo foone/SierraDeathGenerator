@@ -9,6 +9,7 @@ Right now, it supports:
 * Bio Menace
 * Duke Nukem 1
 * Commander Keen 4
+* King's Quest 4
 * Manhunter: New York
 * Police Quest 2
 * Police Quest 3
