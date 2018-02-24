@@ -8,7 +8,7 @@ Right now, it supports:
 
 * Bio Menace
 * Duke Nukem 1
-* Castlevania: Symphony of the Night
+* Castlevania: Symphony of the Night (PS1)
 * Commander Keen 4
 * King's Quest 4
 * Manhunter: New York
@@ -16,6 +16,7 @@ Right now, it supports:
 * Police Quest 3
 * SimCity 2000 Advisors
 * Space Quest 3
+* Zero Wing (Genesis/Megadrive)
 
 Creating a new font
 ===================
