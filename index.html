@@ -48,6 +48,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!"
 	},
+	'sotn':{
+		'title': 'Castlevania: Symphony of the Night',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!'
+	},
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',
@@ -169,6 +175,7 @@ function renderText(scaled = true){
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var y=origin.y
+	var firstLine=true;
 	for (let line of text){
 		var x=origin.x
 		for(var i=0;i<line.length;i++){
@@ -180,6 +187,13 @@ function renderText(scaled = true){
 			by=info.h
 			context.drawImage(fontImage,info.x,0,bx,by,x*scale,y*scale,bx*scale,by*scale)
 			x+=info.w
+		}
+		if(firstLine){
+			if(fontInfo['first-height'] != null){
+				// remove out fontInfo.height because it's going to be re-added later.
+				y+=fontInfo['first-height']-fontInfo.height
+			}
+			firstLine = false;
 		}
 		y+=fontInfo.height
 	}

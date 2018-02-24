@@ -8,6 +8,7 @@ Right now, it supports:
 
 * Bio Menace
 * Duke Nukem 1
+* Castlevania: Symphony of the Night
 * Commander Keen 4
 * King's Quest 4
 * Manhunter: New York
