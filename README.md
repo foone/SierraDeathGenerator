@@ -7,9 +7,10 @@ This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
 * Bio Menace
-* Duke Nukem 1
 * Castlevania: Symphony of the Night (PS1)
 * Commander Keen 4
+* DOS text screens
+* Duke Nukem 1
 * King's Quest 4
 * Manhunter: New York
 * Police Quest 2

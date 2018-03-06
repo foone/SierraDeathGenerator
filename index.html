@@ -60,6 +60,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
 		'defaulttext':'\nKeen enters the\n     Shadowlands'
 	},
+	'dos':{
+		'title': 'MS-DOS',
+		'source':'Microsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
+		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!"
+	},
+
 	'dn1':{
 		'title': 'Duke Nukem 1',
 		'source':'Apogee Software',
@@ -161,9 +168,19 @@ function selectGenerator(){
 function renderText(scaled = true){
 	var buffer = 10
 	var browserScale = $(window).width() / (baseImage.width + buffer)
-	var scale = Math.min(browserScale, 2)
+
+	if(fontInfo == null){
+		return
+	}
+	var fontScale=2;
+	if(fontInfo['scale'] != null){
+		fontScale=fontInfo.scale
+	}
+
+
+	var scale = Math.min(browserScale, fontScale)
 	if(!scaled){
-		scale = 2
+		scale = fontScale
 	}
 	context.canvas.width = baseImage.width * scale
 	context.canvas.height = baseImage.height * scale
@@ -171,9 +188,6 @@ function renderText(scaled = true){
 		context.imageSmoothingEnabled = false
 	}
 
-	if(fontInfo == null){
-		return
-	}
 	var origin=fontInfo.origin
 	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
