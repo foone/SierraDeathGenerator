@@ -177,16 +177,16 @@ function selectGenerator(){
 
 }
 
-function getWidth(scale, lines){
+function getWidth(lines){
 	var maxw=0;
-	for (let line of text){
+	for (let line of lines){
 		var w=0;
 		for(var i=0;i<line.length;i++){
 			var info=fontInfo[line.charCodeAt(i)]
 			if(info==null){
 				info=fontInfo[fontInfo["null-character"]]
 			}
-			w+=info.w*scale
+			w+=info.w
 		}
 		maxw=Math.max(maxw,w)
 	}
@@ -219,19 +219,20 @@ function renderText(scaled = true){
 		context.imageSmoothingEnabled = false
 	}
 
-	var origin=fontInfo.origin
+	var originx=fontInfo.origin.x
+	var y=fontInfo.origin.y
+
 	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
 	// Clear before drawing, as transparents might get overdrawn
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
-	var y=origin.y
 	var firstLine=true;
 	if(justify == 'center-box'){
-		origin.x -= getWidth(scale, text)/2
+		originx -= getWidth(text)/2
 	}
 	for (let line of text){
-		var x=origin.x
+		var x=originx
 		for(var i=0;i<line.length;i++){
 			var info=fontInfo[line.charCodeAt(i)]
 			if(info==null){

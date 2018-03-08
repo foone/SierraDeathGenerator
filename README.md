@@ -13,6 +13,7 @@ Right now, it supports:
 * Duke Nukem 1
 * King's Quest 4
 * Manhunter: New York
+* Metal Gear Solid
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors
