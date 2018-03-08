@@ -30,16 +30,6 @@ Generators: <span id="genlist"> </span>
 
 <script>
 
-var canvas = document.querySelector('canvas')
-var context = canvas.getContext('2d')
-var baseImage = null
-var fontImage = null
-var fontInfo = null
-var overlayNames = null
-var selectedGenerator = 'pq2'
-if(window.location.hash.length > 0){
-	selectedGenerator = window.location.hash.substr(1)
-}
 
 var generators={
 	'bm':{
@@ -117,6 +107,18 @@ var generators={
 	}
 }
 
+var canvas = document.querySelector('canvas')
+var context = canvas.getContext('2d')
+var baseImage = null
+var fontImage = null
+var fontInfo = null
+var overlayNames = null
+var selectedGenerator = 'pq2'
+if(window.location.hash.length > 0){
+	selectedGenerator = window.location.hash.substr(1)
+}
+
+
 for(key in generators) {
 	if(generators.hasOwnProperty(key)) {
 		$('#genlist').append($('<button class="generator-switcher"/>').text(generators[key].title).data('generator',key).click(function (){
@@ -163,7 +165,21 @@ function selectGenerator(){
 
 }
 
-
+function getWidth(scale, lines){
+	var maxw=0;
+	for (let line of text){
+		var w=0;
+		for(var i=0;i<line.length;i++){
+			var info=fontInfo[line.charCodeAt(i)]
+			if(info==null){
+				info=fontInfo[fontInfo["null-character"]]
+			}
+			w+=info.w*scale
+		}
+		maxw=Math.max(maxw,w)
+	}
+	return maxw
+}
 
 function renderText(scaled = true){
 	var buffer = 10
@@ -172,11 +188,14 @@ function renderText(scaled = true){
 	if(fontInfo == null){
 		return
 	}
-	var fontScale=2;
+	var fontScale = 2;
 	if(fontInfo['scale'] != null){
-		fontScale=fontInfo.scale
+		fontScale = fontInfo.scale
 	}
-
+	var justify = 'left'
+	if(fontInfo['justify'] != null){
+		justify = fontInfo['justify']
+	}
 
 	var scale = Math.min(browserScale, fontScale)
 	if(!scaled){
@@ -196,6 +215,9 @@ function renderText(scaled = true){
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var y=origin.y
 	var firstLine=true;
+	if(justify == 'center-box'){
+		origin.x -= getWidth(scale, text)/2
+	}
 	for (let line of text){
 		var x=origin.x
 		for(var i=0;i<line.length;i++){
