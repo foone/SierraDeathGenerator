@@ -18,6 +18,7 @@ Right now, it supports:
 * Police Quest 3
 * SimCity 2000 Advisors
 * Space Quest 3
+* Space Quest 4
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font

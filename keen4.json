@@ -2,12 +2,13 @@
   "height": 10,
   "origin":{
     "x": 84,
-    "y": 15
+    "y": 35
   },
   "box":{
     "x":16,
     "y":16
   },
+  "justify":"v-center",
   "null-character": 140,
    "overlays":{
     "portrait":{

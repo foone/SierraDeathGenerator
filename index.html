@@ -23,7 +23,7 @@ Generators: <span id="genlist"> </span>
 <p><a href="https://github.com/foone/SierraDeathGenerator">Code</a> by <a href="https://twitter.com/Foone">@Foone</a>, content by <a href="#" class="change-source">somebody</a>.</p>
 <canvas id=death>No canvas!</canvas>
 <p>
-<textarea cols=40 rows=5 id=sourcetext></textarea>
+<textarea cols=40 rows=6 id=sourcetext></textarea>
 <a href="" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" /></a>
 </p>
 <div class="overlays"></div>
@@ -48,7 +48,7 @@ var generators={
 		'title': 'Commander Keen 4',
 		'source':'id Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
-		'defaulttext':'\nKeen enters the\n     Shadowlands'
+		'defaulttext':'Keen enters the\n     Shadowlands'
 	},
 	'dos':{
 		'title': 'MS-DOS',
@@ -56,7 +56,6 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
 		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\>"
 	},
-
 	'dn1':{
 		'title': 'Duke Nukem 1',
 		'source':'Apogee Software',
@@ -104,6 +103,12 @@ var generators={
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Thanks for playing Space Quest\n]I[. As usual, you've been a real\n                    hoot."
+	},
+	'sq4':{
+		'title': 'Space Quest 4',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"'
 	},
 	'zerowing':{
 		'title': 'Zero Wing',
@@ -186,6 +191,16 @@ function getWidth(lines){
 	}
 	return maxw
 }
+function getHeight(lines){
+	if(lines.length == 9){
+		return 0;
+	}
+	if(fontInfo['first-height'] == null){
+		return fontInfo.height * lines.length
+	}
+	
+	return Math.max(0,fontInfo.height * (lines.length-1)) + fontInfo['first-height']
+}
 
 function renderText(scaled = true){
 	var buffer = 10
@@ -214,7 +229,6 @@ function renderText(scaled = true){
 	}
 
 	var originx=fontInfo.origin.x
-	var y=fontInfo.origin.y
 
 	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
@@ -223,7 +237,22 @@ function renderText(scaled = true){
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var firstLine=true;
 	if(justify == 'center-box'){
-		originx -= getWidth(text)/2
+		originx -= Math.floor(getWidth(text)/2)
+	}
+	if ('overlays' in fontInfo) {
+		for(var i=0;i<overlayNames.length;i++){
+			var oname=overlayNames[i]
+			var currentOverlay=fontInfo.overlays[oname]
+			var x=currentOverlay.x
+			var y=currentOverlay.y
+			var adv=currentOverlay.options
+			adv=adv[$('#overlay-'+oname+' option:selected').text()]
+			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
+		}
+	}
+	var y=fontInfo.origin.y
+	if(justify=='v-center'){
+		y -= Math.floor(getHeight(text)/2)
 	}
 	for (let line of text){
 		var x=originx
@@ -245,17 +274,6 @@ function renderText(scaled = true){
 			firstLine = false;
 		}
 		y+=fontInfo.height
-	}
-	if ('overlays' in fontInfo) {
-		for(var i=0;i<overlayNames.length;i++){
-			var oname=overlayNames[i]
-			var currentOverlay=fontInfo.overlays[oname]
-			var x=currentOverlay.x
-			var y=currentOverlay.y
-			var adv=currentOverlay.options
-			adv=adv[$('#overlay-'+oname+' option:selected').text()]
-			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
-		}
 	}
 }
 
