@@ -166,8 +166,9 @@ function selectGenerator(){
 	fontInfo=null // Prevent flash of gibberish when switching images
 	loadJSONForGenerator()
 	$('.source').remove();
-	baseImage = $('<img id="template" class="source" />').attr('src',selectedGenerator + '-blank.png').appendTo('body')[0]
-	fontImage = $('<img id="font" class="source" />').attr('src',selectedGenerator + '-font.png').appendTo('body')[0]
+	gamesPath = 'games/' + selectedGenerator + '/'
+	baseImage = $('<img id="template" class="source" />').attr('src', gamesPath + selectedGenerator + '-blank.png').appendTo('body')[0]
+	fontImage = $('<img id="font" class="source" />').attr('src', gamesPath + selectedGenerator + '-font.png').appendTo('body')[0]
 	$('.source').waitForImages(true).done(function(){
 		baseImage=$('img#template')[0]
 		//fontImage=$('img#font')[0]
@@ -302,14 +303,14 @@ function resetOverlays(){
 }
 
 function loadJSONForGenerator(){
-	$.getJSON(selectedGenerator+".json",function(data){
+	gamesPath = 'games/' + selectedGenerator + '/'
+	$.getJSON(gamesPath + selectedGenerator + ".json",function(data){
 		fontInfo = data
 		resetOverlays()
 		renderText()
 	})
 }
 selectGenerator()
-
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
 
@@ -324,4 +325,3 @@ $('#save').click(function(){
 })
 
 </script>
-
