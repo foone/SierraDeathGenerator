@@ -1,327 +1,53 @@
-<!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title class="change-title">Sierra Death Generator</title>
-<style>
-img.source{
-	display: none;
-}
-textarea{
-	font-family: monospace;
-}
-button.generator-switcher{
-	margin-right: 1em;
-	padding: 2px;
-}
-#sourcetext{
-	vertical-align: top;
-}
-</style>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/jquery.waitforimages.min.js"></script>
-<h1 class="change-title">Sierra Death Generator</h1>
-Generators: <span id="genlist"> </span>
-<p><a href="https://github.com/foone/SierraDeathGenerator">Code</a> by <a href="https://twitter.com/Foone">@Foone</a>, content by <a href="#" class="change-source">somebody</a>.</p>
-<canvas id=death>No canvas!</canvas>
-<p>
-<textarea cols=40 rows=6 id=sourcetext></textarea>
-<a href="" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" /></a>
-</p>
-<div class="overlays"></div>
+<!doctype html>
 
-<script>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
 
+	<title>Sierra Death Generator</title>
+	<meta name="description" content="Sierra Death Generator">
+	<meta name="author" content="@foone">
 
-var generators={
-	'bm':{
-		'title': 'Bio Menace',
-		'source':'Apogee Software',
-		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
-		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!"
-	},
-	'sotn':{
-		'title': 'Castlevania: Symphony of the Night',
-		'source':'Konami',
-		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!'
-	},
-	'keen4':{
-		'title': 'Commander Keen 4',
-		'source':'id Software',
-		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
-		'defaulttext':'Keen enters the\n     Shadowlands'
-	},
-	'dos':{
-		'title': 'MS-DOS',
-		'source':'Microsoft',
-		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
-		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\>"
-	},
-	'dn1':{
-		'title': 'Duke Nukem 1',
-		'source':'Apogee Software',
-		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
-		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!"
-	},
-	'kq4':{
-		'title': 'King\'s Quest 4',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"'
-	},
-	'mgs':{
-		'title': 'Metal Gear Solid',
-		'source':'Konami',
-		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake..."
-	},
-	'mh1':{
-		'title': 'Manhunter: New York',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
-	},
-	'pq2':{
-		'title': 'Police Quest 2',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'Thank you for playing Police\nQuest 2. Next time, be a little more\ncareful.'
-	},
-	'pq3':{
-		'title': 'Police Quest 3',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?"
-	},
-	'sc2k':{
-		'title': 'SimCity 2000 Advisor',
-		'source':'Maxis Software',
-		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
-		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!"
-	},
-	'sq3':{
-		'title': 'Space Quest 3',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Thanks for playing Space Quest\n]I[. As usual, you've been a real\n                    hoot."
-	},
-	'sq4':{
-		'title': 'Space Quest 4',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"'
-	},
-	'zerowing':{
-		'title': 'Zero Wing',
-		'source':'Toaplan',
-		'sourceurl':'https://en.wikipedia.org/wiki/Toaplan',
-		'defaulttext':"Cats: All your base are belong\n      to us."
-	}
-}
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css?v=1.0">
 
-var canvas = document.querySelector('canvas')
-var context = canvas.getContext('2d')
-var baseImage = null
-var fontImage = null
-var fontInfo = null
-var overlayNames = null
-var selectedGenerator = 'pq2'
-if(window.location.hash.length > 0){
-	selectedGenerator = window.location.hash.substr(1)
-}
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Jquery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.waitforimages.min.js"></script>
+
+</head>
+
+<body>
+
+	<h1 class="change-title">Sierra Death Generator</h1>
+
+	Generators: <span id="genlist"> </span>
+
+	<!-- copyright footnote -->
+	<p><a href="https://github.com/foone/SierraDeathGenerator">Code</a> by <a href="https://twitter.com/Foone">@Foone</a>, content by <a href="#" class="change-source">somebody</a>.</p>
+
+	<!-- Screenshot/Canvas -->
+	<canvas id="death">No canvas!</canvas>
+
+	<!-- Customization -->
+	<p>
+		<textarea cols=40 rows=6 id=sourcetext></textarea>
+		<a href="#" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" /></a>
+	</p>
 
 
-for(key in generators) {
-	if(generators.hasOwnProperty(key)) {
-		$('#genlist').append($('<button class="generator-switcher"/>').text(generators[key].title).data('generator',key).click(function (){
-			selectedGenerator=$(this).data('generator')
-			selectGenerator()
-		}))
-	}
-}
+	<div class="overlays"></div>
 
-function isAnyDefaultText(text){
-	for(key in generators) {
-		if(generators.hasOwnProperty(key)) {
-			if(generators[key].defaulttext == text){
-				return true
-			}
-		}
-	}
-	return false
-}
 
-function selectGenerator(){
-	var gen=generators[selectedGenerator]
-	window.location.hash=selectedGenerator
-	$('button.generator-switcher').each(function(){
-		$(this).prop('disabled',$(this).data('generator')==selectedGenerator)
-	})
+	<!-- Other/Main Scripts after DOM load -->
+	<script src="js/generators.js"></script>
+	<script src="js/scripts.js"></script>
 
-	$('.change-title').text(gen.title + " Generator");
-	$('.change-source').attr('href',gen.sourceurl).text(gen.source)
-	var sourcetext = $('#sourcetext');
-	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
-		$('#sourcetext').text(gen.defaulttext)
-	}
-	fontInfo=null // Prevent flash of gibberish when switching images
-	loadJSONForGenerator()
-	$('.source').remove();
-	gamesPath = 'games/' + selectedGenerator + '/'
-	baseImage = $('<img id="template" class="source" />').attr('src', gamesPath + selectedGenerator + '-blank.png').appendTo('body')[0]
-	fontImage = $('<img id="font" class="source" />').attr('src', gamesPath + selectedGenerator + '-font.png').appendTo('body')[0]
-	$('.source').waitForImages(true).done(function(){
-		baseImage=$('img#template')[0]
-		//fontImage=$('img#font')[0]
-		renderText()
-	});
+</body>
 
-}
-
-function getWidth(lines){
-	var maxw=0;
-	for (let line of lines){
-		var w=0;
-		for(var i=0;i<line.length;i++){
-			var info=fontInfo[line.charCodeAt(i)]
-			if(info==null){
-				info=fontInfo[fontInfo["null-character"]]
-			}
-			w+=info.w
-		}
-		maxw=Math.max(maxw,w)
-	}
-	return maxw
-}
-function getHeight(lines){
-	if(lines.length == 9){
-		return 0;
-	}
-	if(fontInfo['first-height'] == null){
-		return fontInfo.height * lines.length
-	}
-	
-	return Math.max(0,fontInfo.height * (lines.length-1)) + fontInfo['first-height']
-}
-
-function renderText(scaled = true){
-	var buffer = 10
-	var browserScale = $(window).width() / (baseImage.width + buffer)
-
-	if(fontInfo == null){
-		return
-	}
-	var fontScale = 2;
-	if(fontInfo['scale'] != null){
-		fontScale = fontInfo.scale
-	}
-	var justify = 'left'
-	if(fontInfo['justify'] != null){
-		justify = fontInfo['justify']
-	}
-
-	var scale = Math.min(browserScale, fontScale)
-	if(!scaled){
-		scale = fontScale
-	}
-	context.canvas.width = baseImage.width * scale
-	context.canvas.height = baseImage.height * scale
-	if(scale == 2.0){
-		context.imageSmoothingEnabled = false
-	}
-
-	var originx=fontInfo.origin.x
-
-	var bx=fontInfo.box.x,by=fontInfo.box.y
-	var text = document.querySelector("textarea#sourcetext").value.split('\n')
-	// Clear before drawing, as transparents might get overdrawn
-	context.clearRect(0, 0, canvas.width, canvas.height)
-	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
-	var firstLine=true;
-	if(justify == 'center-box'){
-		originx -= Math.floor(getWidth(text)/2)
-	}
-	if ('overlays' in fontInfo) {
-		for(var i=0;i<overlayNames.length;i++){
-			var oname=overlayNames[i]
-			var currentOverlay=fontInfo.overlays[oname]
-			var x=currentOverlay.x
-			var y=currentOverlay.y
-			var adv=currentOverlay.options
-			adv=adv[$('#overlay-'+oname+' option:selected').text()]
-			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
-		}
-	}
-	var y=fontInfo.origin.y
-	if(justify=='v-center'){
-		y -= Math.floor(getHeight(text)/2)
-	}
-	for (let line of text){
-		var x=originx
-		for(var i=0;i<line.length;i++){
-			var info=fontInfo[line.charCodeAt(i)]
-			if(info==null){
-				info=fontInfo[fontInfo["null-character"]]
-			}
-			bx=info.w
-			by=info.h
-			context.drawImage(fontImage,info.x,0,bx,by,x*scale,y*scale,bx*scale,by*scale)
-			x+=info.w
-		}
-		if(firstLine){
-			if(fontInfo['first-height'] != null){
-				// remove out fontInfo.height because it's going to be re-added later.
-				y+=fontInfo['first-height']-fontInfo.height
-			}
-			firstLine = false;
-		}
-		y+=fontInfo.height
-	}
-}
-
-function resetOverlays(){
-	overlayNames = []
-	$('.overlays p').remove()
-	if('overlays' in fontInfo){
-		var overlays = fontInfo.overlays
-		for(key in overlays) {
-			if(overlays.hasOwnProperty(key)) {
-				overlayNames.push(key)
-				var overlay = overlays[key]
-				var pwrapper=$("<p>").text(overlay.title+': ')
-				var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
-				for(opt in overlay.options){
-					if(overlay.options.hasOwnProperty(opt)){
-						$('<option>').text(opt).prop('selected',opt==overlay['default']).appendTo(select)
-					}
-				}
-				select.appendTo(pwrapper)
-				pwrapper.appendTo($('.overlays'))
-			}
-		}
-	}
-	$('.overlays select').change(renderText)
-}
-
-function loadJSONForGenerator(){
-	gamesPath = 'games/' + selectedGenerator + '/'
-	$.getJSON(gamesPath + selectedGenerator + ".json",function(data){
-		fontInfo = data
-		resetOverlays()
-		renderText()
-	})
-}
-selectGenerator()
-$('#sourcetext').keyup(renderText)
-$(window).resize(function () { renderText() });
-
-$('#save').click(function(){
-	// generate an unscaled version
-	renderText(false)
-	this.href=context.canvas.toDataURL('image/png')
-	var text = document.querySelector("textarea#sourcetext").value
-	text = text.replace(/\n/," ").replace(/[^-._a-zA-Z0-9 ]/,"")
-	this.download = selectedGenerator + "-" + text + ".png"
-	return true
-})
-
-</script>
+</html>
