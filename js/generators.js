@@ -35,6 +35,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"'
 	},
+	'kq5':{
+		'title': 'King\'s Quest 5',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':'"There\'s nothing interesting around here.\nCome on!"'
+	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
