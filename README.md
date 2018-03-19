@@ -6,6 +6,7 @@ Sierra Death Screen Generator
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
+* Adventures in the Magic Kingdom
 * Ancients 1: Death Watch
 * Bad Dudes
 * Bio Menace
@@ -23,6 +24,7 @@ Right now, it supports:
 * Gold Rush!
 * Golgo 13: Top Secret Episode
 * King's Quest 4
+* King's Quest 5
 * Legend of Zelda
 * Life & Death
 * Manhunter: New York

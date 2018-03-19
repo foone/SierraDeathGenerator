@@ -1,4 +1,10 @@
 var generators={
+	'amk':{
+		'title': 'Adventures in the Magic Kingdom',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"999 ghosts are in this\n\nhouse. but they're always\n\nlooking for number 1,000.\n\nBe careful--They might\n\nwant you!\n             \u25bc"
+	},
 	'ancients':{
 		'title': 'Ancients',
 		'source':'Farr-Ware Software',
@@ -102,6 +108,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"'
 	},
+	'kq5':{
+		'title': 'King\'s Quest 5',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':'"There\'s nothing interesting around here.\nCome on!"'
+	},
 	'zelda':{
 		'title': 'Legend of Zelda',
 		'source':'Nintendo',
@@ -113,7 +125,6 @@ var generators={
 		'source':'The Software Toolworks',
 		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
 		'defaulttext':"Your patient has died of a burst\nappendix.  Report immediately to medical\nschool and pay attention!"
-
 	},
 	'mh1':{
 		'title': 'Manhunter: New York',
@@ -121,7 +132,6 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
 	},
-
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',

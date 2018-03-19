@@ -1,4 +1,4 @@
-var canvas = document.querySelector('canvas')
+var canvas = document.querySelector('canvas#death')
 var context = canvas.getContext('2d')
 var baseImage = null
 var fontImage = null
@@ -66,11 +66,13 @@ function selectGenerator(){
 	baseImage = $('<img id="template" class="source" />').attr('src', gamesPath + selectedGenerator + '-blank.png').appendTo('body')[0]
 	fontImage = $('<img id="font" class="source" />').attr('src', gamesPath + selectedGenerator + '-font.png').appendTo('body')[0]
 
+	baseImage = null
 	$('.source').waitForImages(true).done(function(){
 		baseImage=$('img#template')[0]
 		//fontImage=$('img#font')[0]
 		renderText()
 	});
+
 
 }
 
@@ -103,32 +105,37 @@ function getHeight(lines){
 	return Math.max(0,fontInfo.height * (lines.length-1)) + fontInfo['first-height']
 
 }
+function parseOverlays(fontInfo){
+	var overlays = {}
+	if ('overlays' in fontInfo) {
+		for(var i=0;i<overlayNames.length;i++){
+			var oname=overlayNames[i]
+			var currentOverlay=fontInfo.overlays[oname]
+			var adv=currentOverlay.options
+			adv=adv[$('#overlay-'+oname+' option:selected').text()]
+			var blend='source-over'
+			if('blend-mode' in currentOverlay){
+				blend = currentOverlay['blend-mode']
+			}
+			overlays[oname] = {
+				"x":currentOverlay.x,
+				"y":currentOverlay.y,
+				"w":adv.w,
+				"h":adv.h,
+				"blend":blend,
+				"source":{
+					"x":adv.x,
+					"y":adv.y
+				}
+			}
 
+		}
+	}
+	return overlays
+}
 function renderText(scaled = true){
-
-	var buffer = 10
-	var browserScale = $(window).width() / (baseImage.width + buffer)
-
-	if(fontInfo == null){
+	if(fontInfo == null || baseImage == null){
 		return
-	}
-	var fontScale = 2;
-	if(fontInfo['scale'] != null){
-		fontScale = fontInfo.scale
-	}
-	var justify = 'left'
-	if(fontInfo['justify'] != null){
-		justify = fontInfo['justify']
-	}
-
-	var scale = Math.min(browserScale, fontScale)
-	if(!scaled){
-		scale = fontScale
-	}
-	context.canvas.width = baseImage.width * scale
-	context.canvas.height = baseImage.height * scale
-	if(scale == 2.0){
-		context.imageSmoothingEnabled = false
 	}
 
 	var originx=fontInfo.origin.x
@@ -136,40 +143,81 @@ function renderText(scaled = true){
 	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
 
+	var justify = 'left'
+	if(fontInfo['justify'] != null){
+		justify = fontInfo['justify']
+	}
+	var textbox={
+		w: getWidth(text),
+		h: getHeight(text)
+	}
+	if(justify == 'center-box'){
+		originx -= Math.floor(textbox.w/2)
+	}
+
+	var overlays = parseOverlays(fontInfo)
+
+	var outputSize={
+		w:baseImage.width,
+		h:baseImage.height
+	}
+	if('dynamic-size' in fontInfo){
+		outputSize.w = eval(fontInfo['dynamic-size'].w)
+		outputSize.h = eval(fontInfo['dynamic-size'].h)
+	}
+	var buffer = 10
+	var browserScale = $(window).width() / (outputSize.w + buffer)
+
+	var fontScale = 2;
+	if(fontInfo['scale'] != null){
+		fontScale = fontInfo.scale
+	}
+
+
+	var scale = Math.min(browserScale, fontScale)
+	if(!scaled){
+		scale = fontScale
+	}
+	context.canvas.width = outputSize.w * scale
+	context.canvas.height = outputSize.h * scale
+	if(scale == 2.0){
+		context.imageSmoothingEnabled = false
+	}
+
+
 	// Clear before drawing, as transparents might get overdrawn
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var firstLine=true;
 
-	if(justify == 'center-box'){
-		originx -= Math.floor(getWidth(text)/2)
+
+	if('border' in fontInfo) {
+		var bw=baseImage.width,bh=baseImage.height
+		buildBorder(fontImage,fontInfo,outputSize.w,outputSize.h)
+		var bordercanvas = document.querySelector('canvas#border')
+		context.drawImage(bordercanvas,0,0,outputSize.w,outputSize.h,0,0,canvas.width, canvas.height)
 	}
 
-	if ('overlays' in fontInfo) {
-		for(var i=0;i<overlayNames.length;i++){
-			var oname=overlayNames[i]
-			var currentOverlay=fontInfo.overlays[oname]
-			var x=currentOverlay.x
-			var y=currentOverlay.y
-			var adv=currentOverlay.options
-			adv=adv[$('#overlay-'+oname+' option:selected').text()]
-			var blend='source-over'
-			if('blend-mode' in currentOverlay){
-				blend = currentOverlay['blend-mode']
-			}
-			context.globalCompositeOperation = blend
-			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
-		}
+	if('hooks' in fontInfo && 'pre-overlays' in fontInfo['hooks']){
+		// EVAL IS SAFE CODE, YES?
+		eval(fontInfo['hooks']['pre-overlays'])
 	}
+
+	Object.keys(overlays).forEach(function (key) {
+		var adv = overlays[key]
+		context.globalCompositeOperation = adv.blend
+		context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+	})
 	context.globalCompositeOperation = "source-over"
 
 
 	var y=fontInfo.origin.y
 
 	if(justify=='v-center'){
-		y -= Math.floor(getHeight(text)/2)
+		y -= Math.floor(textbox.h/2)
 	}
 	var fontOriginY=0
+
 	if('hooks' in fontInfo && 'pre-text' in fontInfo['hooks']){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
@@ -204,6 +252,59 @@ function renderText(scaled = true){
 		}
 		y+=fontInfo.height
 	}
+
+}
+
+
+
+function buildBorder(fontImage,fontInfo,w,h){
+
+	function drawBorderPiece(x,y,piece){
+		bctx.drawImage(fontImage,piece.x,piece.y,piece.w,piece.h,x,y,piece.w,piece.h)
+	}
+	var bctx = document.querySelector('canvas#border').getContext('2d')
+	if(bctx.canvas.width == w && bctx.canvas.height == h){
+		return
+	}
+	bctx.canvas.width = w
+	bctx.canvas.height = h
+	var border = fontInfo.border
+	// todo: support styles other than "copy", like "stretch"
+
+	// Draw center
+	for(var x=border.l.w;x<w-border.r.w;x+=border.c.w){
+		for(var y=border.t.h;y<h-border.b.h;y+=border.c.h){
+			drawBorderPiece(x,y,border.c)
+		}
+	}
+
+	// Draw top-center edge
+	for(var x=border.tl.w;x<w-border.tr.w;x+=border.t.w){
+		drawBorderPiece(x,0,border.t)
+	}
+	// Draw bottom-center edge
+	for(var x=border.bl.w;x<w-border.br.w;x+=border.b.w){
+		drawBorderPiece(x,h-border.b.h,border.b)
+	}
+	// Draw left edge
+	for(var y=border.tl.h;y<h-border.bl.h;y+=border.l.h){
+		drawBorderPiece(0,y,border.l)
+	}
+	// Draw right edge
+	for(var y=border.tr.h;y<h-border.br.h;y+=border.r.h){
+		drawBorderPiece(w-border.r.w,y,border.r)
+	}
+
+	// Top-Left corner
+	drawBorderPiece(0,0,border.tl)
+	// Top-Right corner
+	drawBorderPiece(w-border.tr.w,0,border.tr)
+
+	// Bottom-Left corner
+	drawBorderPiece(0,h-border.bl.h,border.bl)
+
+	// Bottom-Right corner
+	drawBorderPiece(w-border.br.w,h-border.br.h,fontInfo.border.br)
 
 }
 

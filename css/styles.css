@@ -13,3 +13,7 @@ img.source{
 .internal-overlay{
 	display: none;
 }
+
+canvas#border{
+	display: none;
+}
