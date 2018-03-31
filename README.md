@@ -6,6 +6,7 @@ Sierra Death Screen Generator
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
+* Bad Dudes
 * Bio Menace
 * Castlevania: Symphony of the Night (PS1)
 * Commander Keen 4

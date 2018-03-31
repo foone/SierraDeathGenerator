@@ -1,4 +1,10 @@
 var generators={
+	'baddudes':{
+		'title': 'Bad Dudes',
+		'source':'Data East',
+		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
+		'defaulttext':" The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?"
+	},
 	'bm':{
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
