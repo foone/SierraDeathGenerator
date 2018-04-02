@@ -1,14 +1,9 @@
+html {
+	overflow-y: scroll;
+}
+
 img.source{
 	display: none;
-}
-
-textarea{
-	font-family: monospace;
-}
-
-button.generator-switcher{
-	margin-right: 1em;
-	padding: 2px;
 }
 
 #sourcetext{
