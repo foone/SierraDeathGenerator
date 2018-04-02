@@ -41,6 +41,11 @@ function selectGenerator(){
 
 	$('.change-title').text(gen.title + " Generator");
 	$('.change-source').attr('href',gen.sourceurl).text(gen.source)
+	if(gen['contributor']){
+		$('#extra-contrib').text(' and ' + gen['contributor'])
+	}else{
+		$('#extra-contrib').text('')
+	}
 	var sourcetext = $('#sourcetext');
 
 	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){

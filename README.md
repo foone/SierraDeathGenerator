@@ -15,6 +15,7 @@ Right now, it supports:
 * King's Quest 4
 * Manhunter: New York
 * Metal Gear Solid
+* Mortal Kombat II
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors

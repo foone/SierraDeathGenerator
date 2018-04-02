@@ -41,17 +41,24 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"'
 	},
+	'mh1':{
+		'title': 'Manhunter: New York',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
+	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake..."
 	},
-	'mh1':{
-		'title': 'Manhunter: New York',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
+	'mk2':{
+		'title': 'Mortal Kombat II',
+		'source':'Midway',
+		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
+		'defaulttext':"Can you take the cold?",
+		"contributor": "emmakris",
 	},
 	'pq2':{
 		'title': 'Police Quest 2',
@@ -88,11 +95,5 @@ var generators={
 		'source':'Toaplan',
 		'sourceurl':'https://en.wikipedia.org/wiki/Toaplan',
 		'defaulttext':"Cats: All your base are belong\n      to us."
-	},
-	'mk2':{
-		'title': 'Mortal Kombat II',
-		'source':'Midway',
-		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
-		'defaulttext':"Can you take the cold?"
 	}
 }
