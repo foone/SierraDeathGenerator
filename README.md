@@ -6,6 +6,7 @@ Sierra Death Screen Generator
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
+* Bad Dudes
 * Bio Menace
 * Castlevania: Symphony of the Night (PS1)
 * Commander Keen 4
@@ -14,6 +15,7 @@ Right now, it supports:
 * King's Quest 4
 * Manhunter: New York
 * Metal Gear Solid
+* Mortal Kombat II
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors

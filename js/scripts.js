@@ -41,6 +41,11 @@ function selectGenerator(){
 
 	$('.change-title').text(gen.title + " Generator");
 	$('.change-source').attr('href',gen.sourceurl).text(gen.source)
+	if(gen['contributor']){
+		$('#extra-contrib').text(' and ' + gen['contributor'])
+	}else{
+		$('#extra-contrib').text('')
+	}
 	var sourcetext = $('#sourcetext');
 
 	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
@@ -153,6 +158,11 @@ function renderText(scaled = true){
 	}
 
 	for (let line of text){
+		if(fontInfo['case-fold'] == 'upper'){
+			line = line.toUpperCase()
+		}else if(fontInfo['case-fold'] == 'lower'){
+			line = line.toLowerCase()
+		}
 		var x=originx
 		for(var i=0;i<line.length;i++){
 			var info=fontInfo[line.charCodeAt(i)]
