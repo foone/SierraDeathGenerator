@@ -88,5 +88,11 @@ var generators={
 		'source':'Toaplan',
 		'sourceurl':'https://en.wikipedia.org/wiki/Toaplan',
 		'defaulttext':"Cats: All your base are belong\n      to us."
+	},
+	'mk2':{
+		'title': 'Mortal Kombat II',
+		'source':'Midway',
+		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
+		'defaulttext':"Can you take the cold?"
 	}
 }
