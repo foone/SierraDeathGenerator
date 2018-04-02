@@ -10,6 +10,7 @@
 
 	<!-- Styles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/tachyons.min.css">
 	<link rel="stylesheet" href="css/styles.css?v=1.0">
 
 	<!--[if lt IE 9]>
@@ -22,27 +23,37 @@
 
 </head>
 
-<body>
+<body class="w-100 sans-serif bg-white black-80 code">
 
-	<h1 class="change-title">Sierra Death Generator</h1>
+	<main>
 
-	Generators: <span id="genlist"> </span>
+		<div class="mw9 center ph1-ns">
+			<div class="cf ph1-ns">
+				<div class="fl w-100 w-100-ns pa1">
 
-	<!-- copyright footnote -->
-	<p><a href="https://github.com/foone/SierraDeathGenerator">Code</a> by <a href="https://twitter.com/Foone">@Foone</a><span id="extra-contrib"></span>, content by <a href="#" class="change-source">somebody</a>.</p>
+						<h1 class="f3 fw6 ttu change-title">Sierra Death Generator</h1>
 
-	<!-- Screenshot/Canvas -->
-	<canvas id="death">No canvas!</canvas>
+						<h2 class="f4">Generators: </h2> <div class="tracked" id="genlist"> </div>
 
-	<!-- Customization -->
-	<p>
-		<textarea cols=40 rows=6 id=sourcetext></textarea>
-		<a href="#" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" /></a>
-	</p>
+						<!-- copyright footnote -->
+						<p><a href="https://github.com/foone/SierraDeathGenerator">Code</a> by <a href="https://twitter.com/Foone">@Foone</a><span id="extra-contrib"></span>, content by <a href="#" class="change-source">somebody</a>.</p>
 
+						<!-- Screenshot/Canvas -->
+						<canvas id="death">No canvas!</canvas>
 
-	<div class="overlays"></div>
+						<!-- Customization -->
+						<p>
+							<textarea cols="40" rows="6" id="sourcetext" class="border-box hover-black measure b--black-20 pa2 mb2"></textarea>
+							<a href="#" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" /></a>
+						</p>
 
+						<div class="overlays"></div>
+
+				</div>
+			</div>
+		</div>
+
+	</main>
 
 	<!-- Other/Main Scripts after DOM load -->
 	<script src="js/generators.js"></script>

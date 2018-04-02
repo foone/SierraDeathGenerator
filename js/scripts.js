@@ -12,10 +12,10 @@ if(window.location.hash.length > 0){
 
 for(key in generators) {
 	if(generators.hasOwnProperty(key)) {
-		$('#genlist').append($('<button class="generator-switcher"/>').text(generators[key].title).data('generator',key).click(function (){
+		$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray"></a>').attr("href",'#'+key).text(generators[key].title).data('generator',key).click(function (){
 			selectedGenerator=$(this).data('generator')
 			selectGenerator()
-		}))
+		})).append(' ')
 	}
 }
 
