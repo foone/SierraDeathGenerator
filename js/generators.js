@@ -78,6 +78,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!"
 	},
+	'sf2':{
+		'title': 'Street Fighter 2',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
+		'defaulttext':"Damme dude!"
+	},
 	'sq3':{
 		'title': 'Space Quest 3',
 		'source':'Sierra Online',
