@@ -82,6 +82,7 @@ var generators={
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
+		"contributor": "emmakris",
 		'defaulttext':"Damme dude!"
 	},
 	'sq3':{
