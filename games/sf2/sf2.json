@@ -14,7 +14,7 @@
 			"x": 44,
 			"y": 10,
 			"title": "Left Portrait",
-			"default": "ruy-normal",
+			"default": "ryu-normal",
 			"options": {
 				"balrog-normal": {
 					"x": 0,
@@ -135,14 +135,14 @@
 					"h": 101
 				},
 
-				"ruy-normal": {
+				"ryu-normal": {
 					"x": 576,
 					"y": 215,
 					"w": 70,
 					"h": 101
 				},
 
-				"ruy-beaten": {
+				"ryu-beaten": {
 					"x": 714,
 					"y": 215,
 					"w": 71,
@@ -302,14 +302,14 @@
 					"h": 101
 				},
 
-				"ruy-normal": {
+				"ryu-normal": {
 					"x": 645,
 					"y": 215,
 					"w": 70,
 					"h": 101
 				},
 
-				"ruy-beaten": {
+				"ryu-beaten": {
 					"x": 789,
 					"y": 215,
 					"w": 70,
