@@ -16,11 +16,13 @@ Right now, it supports:
 * Manhunter: New York
 * Metal Gear Solid
 * Mortal Kombat II
+* Oregon Trail
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors
 * Space Quest 3
 * Space Quest 4
+* Street Fighter II
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font
