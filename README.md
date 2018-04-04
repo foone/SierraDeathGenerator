@@ -23,7 +23,6 @@ Right now, it supports:
 * Space Quest 3
 * Space Quest 4
 * Street Fighter II
-* Super Mario Bros
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font

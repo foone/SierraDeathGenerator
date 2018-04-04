@@ -66,6 +66,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
 		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
 	},
+	'oregon':{
+		'title': 'Oregon Trail',
+		'source':'MECC',
+		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
+		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
+	},
 	'pq2':{
 		'title': 'Police Quest 2',
 		'source':'Sierra Online',
