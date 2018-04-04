@@ -101,7 +101,7 @@ var generators={
 		'title': 'Super Mario Bros',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':'LUIGI, IT HAS BEEN SO LONG... \nWHERE IS MARIO?',
+		'defaulttext':'   THANK YOU MARIO!\n\nBUT OUR PRINCESS IS IN\nANOTHER CASTLE!',
 		'contributor': '@pixel_data'
 	},
 	'sq3':{
