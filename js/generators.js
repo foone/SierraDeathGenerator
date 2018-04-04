@@ -57,8 +57,14 @@ var generators={
 		'title': 'Mortal Kombat II',
 		'source':'Midway',
 		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
-		'defaulttext':"Can you take the cold?",
-		"contributor": "emmakris",
+		'defaulttext':'Can you take the cold?',
+		'contributor': '@pixel_data'
+	},
+	'oregon':{
+		'title': 'Oregon Trail',
+		'source':'MECC',
+		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
+		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
 	},
 	'pq2':{
 		'title': 'Police Quest 2',
@@ -82,8 +88,15 @@ var generators={
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
-		"contributor": "emmakris",
-		'defaulttext':"Damme dude!"
+		'defaulttext':"Damme dude!",
+		'contributor': '@pixel_data'
+	},
+	'smb':{
+		'title': 'Super Mario Bros',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':'LUIGI, IT HAS BEEN SO LONG... \nWHERE IS MARIO?',
+		'contributor': '@pixel_data'
 	},
 	'sq3':{
 		'title': 'Space Quest 3',
