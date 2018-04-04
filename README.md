@@ -20,6 +20,7 @@ Right now, it supports:
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors
+* Super Mario Bros
 * Space Quest 3
 * Space Quest 4
 * Street Fighter II
