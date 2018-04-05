@@ -17,6 +17,7 @@ Right now, it supports:
 * Metal Gear Solid
 * Mortal Kombat II
 * Oregon Trail
+* Pokemon Red/Blue/Yellow
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors

@@ -72,6 +72,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
 		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
 	},
+	'pokemon':{
+		'title': 'Pokemon',
+		'source':'Game Freak',
+		'sourceurl':'https://en.wikipedia.org/wiki/Game_Freak',
+		'defaulttext':'         CHARMANDER\nGary: WHAT?\nUnbelievable!'
+	},
 	'pq2':{
 		'title': 'Police Quest 2',
 		'source':'Sierra Online',
