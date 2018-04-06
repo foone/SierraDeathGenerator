@@ -25,6 +25,7 @@ Right now, it supports:
 * Space Quest 3
 * Space Quest 4
 * Street Fighter II
+* Wally Bear and the NO! Gang
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font
