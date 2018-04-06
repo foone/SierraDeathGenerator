@@ -1,6 +1,28 @@
-let data = {
+let config = {
 
     default : 'baddudes',
+
+    gamesFolder : 'games',
+
+    floppyURL : 'images/floppy.png',
+
+    generatorAssets : [
+        {
+            'key' : 'font',
+            'suffix' : '-font.png',
+            'type' : 'image'
+        },
+        {
+            'key' : 'template',
+            'suffix' : '-blank.png',
+            'type' : 'image'
+        },
+        {
+            'key' : 'settings',
+            'suffix' : '.json',
+            'type' : 'json'
+        }
+    ],
 
 	generators : {
 
