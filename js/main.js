@@ -1,108 +1,3 @@
-const utils = {
-
-    existingGenerator: function (reqGenerator) {
-        return config.generators.hasOwnProperty(reqGenerator);
-    },
-
-    fetchGeneratorAssets: function (reqGenerator) { // Fetches images for generator
-
-        // Fetch according to config
-        for (let i = 0; i < config.generatorAssets.length; i++) {
-
-            // Get asset if we don't have it already
-            if (!config.generators[reqGenerator].hasOwnProperty(config.generatorAssets[i].key)) {
-
-                // noinspection ES6ModulesDependencies
-                m.request({
-
-                    method: "GET",
-                    url: config.gamesFolder + '/' + reqGenerator + '/' + reqGenerator + config.generatorAssets[i].suffix,
-
-                    config: function (xhr) { // Can be customized according asset type
-
-                        if (config.generatorAssets[i].type === 'image') {
-                            xhr.responseType = 'arraybuffer';
-                        }
-
-                    },
-
-                    extract: function (xhr) { // Can be customized according asset type
-
-                        if (config.generatorAssets[i].type === 'image') {
-                            return utils.createImageObject(xhr.response);
-                        } else {
-                            return JSON.parse(xhr.responseText);
-                        }
-
-                    }
-
-                }).then(function (fetchedData) {
-                    config.generators[reqGenerator][config.generatorAssets[i].key] = fetchedData
-                })
-
-            }
-
-        }
-
-    },
-
-    createBase64src: function (imageData) { // Create base64 image data out of xhr
-        const uInt8Array = new Uint8Array(imageData);
-        let i = uInt8Array.length;
-        const binaryString = new Array(i);
-
-        while (i--) {
-            binaryString[i] = String.fromCharCode(uInt8Array[i]);
-        }
-
-        return "data:image/png;base64," + window.btoa(binaryString.join(''))
-    },
-
-    createImageObject: function (imageData) { // Create image element off base64 image data
-        let imgElement = new Image();
-
-        imgElement.src = utils.createBase64src(imageData);
-
-        return imgElement
-    },
-
-    assetsLoaded: function (reqGenerator) { // Checks to see if all assets for a generator are loaded
-
-        // Check if every asset exists
-        for (let i = 0; i < config.generatorAssets.length; i++) {
-            if (!config.generators[reqGenerator].hasOwnProperty(config.generatorAssets[i].key)) {
-                return false;
-            }
-        }
-
-        return true;
-            
-    },
-
-    initCanvas: function (vnode) {
-
-        const canvas = document.getElementById('death');
-        // noinspection JSUnresolvedVariable
-        const template = config.generators[vnode.attrs.generator].template;
-        // noinspection JSUnusedLocalSymbols
-        const font = config.generators[vnode.attrs.generator].font;
-
-        canvas.width = template.width * 2;
-        canvas.height = template.height * 2;
-
-
-        if (canvas.getContext) {
-            const ctx = canvas.getContext('2d');
-            ctx.imageSmoothingEnabled = false;
-            ctx.scale(2, 2);
-            ctx.drawImage(template, 0, 0);
-        } else {
-            // canvas-unsupported code here
-        }
-    }
-
-};
-
 // noinspection JSUnusedLocalSymbols
 let mainTemplate = {
     oninit: function(vnode) {
@@ -110,10 +5,9 @@ let mainTemplate = {
 
         if (!utils.existingGenerator(vnode.attrs.generator)){
             m.route.set('/'+config.default)
+        } else {
+            utils.fetchGeneratorAssets(vnode.attrs.generator);
         }
-
-        utils.fetchGeneratorAssets(vnode.attrs.generator)
-
     },
     oncreate: function(vnode) {
         console.log("DOM created")
@@ -122,9 +16,8 @@ let mainTemplate = {
         console.log("DOM updated");
 
         if (utils.assetsLoaded(vnode.attrs.generator)) {
-            utils.initCanvas(vnode)
+            utils.initCanvas(vnode.attrs.generator)
         }
-
     },
     onbeforeremove: function(vnode) {
         console.log("exit animation can start");
@@ -145,24 +38,29 @@ let mainTemplate = {
             m.route.set('/'+config.default);
             return false
         }
-
         utils.fetchGeneratorAssets(vnode.attrs.generator);
-
         return true
-
     },
     view : function(vnode) {
+        let ui = vnode.state
+        let topMargin = 0;
 
+        if (!utils.existingGenerator(vnode.attrs.generator)) {
+            return false
+        }
+
+        if (utils.assetsLoaded(vnode.attrs.generator)) {
+            topMargin = (640-config.generators[vnode.attrs.generator].template.height*2) / 2;
+        }
         return m("main", [
-            m("p",[vnode.attrs.generator]),
             m("div", {class: "mw9 center ph1-ns"}, [
                 m("div", {class: "cf ph1-ns"}, [
                     m("div", {class: "fl w-100 w-100-ns pa1"}, [
 
-                        m("h1", {class: "f3 fw6 ttu"}, ["Sierra Death Generator"]),
-                        m("h2", {class: "f4"}, [config.generators[vnode.attrs.generator].title]),
+                        m("h1", {class: "f3 fw6 ttu"}, [config.generators[vnode.attrs.generator].title+" Generator"]),
+                        m("h2", {class: "f4"}, ["Generators:"]),
 
-                        m("div", {class: "tracked"}, [
+                        m("div", {}, [
                             function(){
                                 let generators = [];
                                 Object.keys(config.generators).forEach(function(key) {
@@ -172,29 +70,57 @@ let mainTemplate = {
                             }()
                         ]),
 
-                        m("div", [
-                            m("a", {href: "https://github.com/foone/SierraDeathGenerator"}, ["Code"]), " by ", m("a", {href: "https://twitter.com/Foone"}, ["@Foone"]),
-                            m("span", {id: "extra-contrib"}, [", content by ", m("a", {href: "#"}, ["somebody"])])
+                        m("div",{class:"crt", id:"monitor"},[
+                            (utils.assetsLoaded(vnode.attrs.generator))?m("canvas", {id: "death", style: "margin-top:"+topMargin+"px;"}, ["No canvas!"]):'',
+                            m("div", {class:"copyrights"},[
+                                m("a", {href: "https://github.com/foone/SierraDeathGenerator"}, ["Code"]), " by ", m("a", {href: "https://twitter.com/Foone"}, ["@Foone"]), ', ', m("a", {href: "https://twitter.com/karavas"}, ["@karavas"]),
+                                m("span", {id: "extra-contrib"}, [" content by ", m("a", {href: config.generators[vnode.attrs.generator].sourceurl}, [config.generators[vnode.attrs.generator].source])])
+                            ]),
                         ]),
 
-                        function(){
-                            if (utils.assetsLoaded(vnode.attrs.generator)) {
-                                return m("canvas", {id: "death"}, ["No canvas!"])
-                            }
-                        }(),
+                        m("div",{id:"customization"},[
 
                         m("p", [
                             m("textarea", {
                                 cols: "40",
                                 rows: "6",
                                 class: "border-box hover-black measure b--black-20 pa2 mb2"
-                            }),
+                            },[config.generators[vnode.attrs.generator].defaulttext]),
 
                             m("a", {href: "#", id: "save"}, [
                                 m("img", {src: config.floppyURL, width: "96", height: "96"})
-                            ])
+                            ]),
+
+                            (utils.assetsLoaded(vnode.attrs.generator))?m("p",[
+                                    function(){
+                                        if (!config.generators[vnode.attrs.generator].settings.hasOwnProperty('overlays')) {
+                                            return
+                                        }
+                                        let overlays = [];
+                                        Object.keys(config.generators[vnode.attrs.generator].settings.overlays).forEach(function (key) {
+                                            overlays.push(
+                                                m("label",[key]),
+                                                m('select',{},[
+                                                    function() {
+                                                        if (!config.generators[vnode.attrs.generator].settings.overlays[key].hasOwnProperty('options')) {
+                                                            return
+                                                        }
+                                                        let options = [];
+                                                        Object.keys(config.generators[vnode.attrs.generator].settings.overlays[key].options).forEach(function (opt) {
+                                                            options.push(m("option",[opt]));
+                                                        });
+                                                        return options;
+                                                    }()
+                                                ])
+                                            );
+                                        });
+                                        return overlays;
+                                    }()
+                            ]):''
+
                         ])
 
+                        ])
                     ])
                 ])
             ])

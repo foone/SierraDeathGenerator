@@ -24,7 +24,7 @@ let config = {
         }
     ],
 
-	generators : {
+	generators : { // Default text should probably be moved inside the json file?
 
         baddudes: {
             'title': 'Bad Dudes',
