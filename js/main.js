@@ -46,7 +46,7 @@ const utils = {
 
     },
 
-    createBase64src: function (imageData) {
+    createBase64src: function (imageData) { // Create base64 image data out of xhr
         const uInt8Array = new Uint8Array(imageData);
         let i = uInt8Array.length;
         const binaryString = new Array(i);
@@ -58,7 +58,7 @@ const utils = {
         return "data:image/png;base64," + window.btoa(binaryString.join(''))
     },
 
-    createImageObject: function (imageData) {
+    createImageObject: function (imageData) { // Create image element off base64 image data
         let imgElement = new Image();
 
         imgElement.src = utils.createBase64src(imageData);
@@ -66,11 +66,11 @@ const utils = {
         return imgElement
     },
 
-    assetsLoaded: function (vnode) {
+    assetsLoaded: function (reqGenerator) { // Checks to see if all assets for a generator are loaded
 
         // Check if every asset exists
         for (let i = 0; i < config.generatorAssets.length; i++) {
-            if (!config.generators[vnode.attrs.generator].hasOwnProperty(config.generatorAssets[i].key)) {
+            if (!config.generators[reqGenerator].hasOwnProperty(config.generatorAssets[i].key)) {
                 return false;
             }
         }
@@ -121,7 +121,7 @@ let mainTemplate = {
     onupdate: function(vnode) {
         console.log("DOM updated");
 
-        if (utils.assetsLoaded(vnode)) {
+        if (utils.assetsLoaded(vnode.attrs.generator)) {
             utils.initCanvas(vnode)
         }
 
@@ -178,7 +178,7 @@ let mainTemplate = {
                         ]),
 
                         function(){
-                            if (utils.assetsLoaded(vnode)) {
+                            if (utils.assetsLoaded(vnode.attrs.generator)) {
                                 return m("canvas", {id: "death"}, ["No canvas!"])
                             }
                         }(),
