@@ -66,12 +66,6 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
 		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
 	},
-	'oregon':{
-		'title': 'Oregon Trail',
-		'source':'MECC',
-		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
-		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
-	},
 	'pokemon':{
 		'title': 'Pokemon',
 		'source':'Game Freak',
@@ -96,6 +90,18 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!"
 	},
+	'sq3':{
+		'title': 'Space Quest 3',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':"Thanks for playing Space Quest\n]I[. As usual, you've been a real\n                    hoot."
+	},
+	'sq4':{
+		'title': 'Space Quest 4',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"'
+	},
 	'sf2':{
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
@@ -110,17 +116,11 @@ var generators={
 		'defaulttext':'   THANK YOU MARIO!\n\nBUT OUR PRINCESS IS IN\nANOTHER CASTLE!',
 		'contributor': '@pixel_data'
 	},
-	'sq3':{
-		'title': 'Space Quest 3',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Thanks for playing Space Quest\n]I[. As usual, you've been a real\n                    hoot."
-	},
-	'sq4':{
-		'title': 'Space Quest 4',
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"'
+	'wally':{
+		'title': 'Wally Bear and the NO! Gang',
+		'source':'American Game Cartridges',
+		'sourceurl':'https://en.wikipedia.org/wiki/American_Game_Cartridges',
+		'defaulttext':'Taking drugs is stupid,\nToby.'
 	},
 	'zerowing':{
 		'title': 'Zero Wing',
