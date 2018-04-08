@@ -47,6 +47,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
 	},
+
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
@@ -115,6 +116,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'   THANK YOU MARIO!\n\nBUT OUR PRINCESS IS IN\nANOTHER CASTLE!',
 		'contributor': '@pixel_data'
+	},
+	'm64':{
+		'title': 'Super Mario 64',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool"
 	},
 	'wally':{
 		'title': 'Wally Bear and the NO! Gang',
