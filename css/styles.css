@@ -1,5 +1,6 @@
 html {
 	overflow-y: scroll;
+    background-color: #f1f1f1;
 }
 
 @keyframes flicker {
@@ -169,13 +170,27 @@ html {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    background-color: #000000;
+    background-color: #111111;
     text-align: center;
     box-shadow:
             inset 0 0 1rem black,
             inset 0 0 3rem black,
             1px 1px 5px #888888;
     border-radius: 5px;
+	background-image: url("../images/monitor_bg.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.gameSelector img {
+    width: 150px;
+    height: 95px;
+}
+
+#generators {
+    max-height: 300px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
 }
 
 #customization {
@@ -190,27 +205,27 @@ html {
     left: 10px;
 }
 
-#death {
-    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 1s; /* Firefox < 16 */
-    -ms-animation: fadein 1s; /* Internet Explorer */
-    -o-animation: fadein 1s; /* Opera < 12.1 */
-    animation: fadein 1s;
+.fadein {
+	-webkit-animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-ms-animation: fadein 1s;
+	-o-animation: fadein 1s;
+	animation: fadein 1s;
 }
 
 @keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9; }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity:  0.9; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9;}
 }

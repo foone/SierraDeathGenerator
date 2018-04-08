@@ -2,7 +2,7 @@ var canvas = document.querySelector('canvas')
 var context = canvas.getContext('2d')
 var baseImage = null
 var fontImage = null
-var fontInfo = null
+var generatorSettings = null
 var overlayNames = null
 var selectedGenerator = 'pq2'
 
@@ -52,7 +52,7 @@ function selectGenerator(){
 		$('#sourcetext').text(gen.defaulttext)
 	}
 
-	fontInfo=null // Prevent flash of gibberish when switching images
+	generatorSettings=null // Prevent flash of gibberish when switching images
 	loadJSONForGenerator()
 	$('.source').remove();
 
@@ -74,9 +74,9 @@ function getWidth(lines){
 	for (let line of lines){
 		var w=0;
 		for(var i=0;i<line.length;i++){
-			var info=fontInfo[line.charCodeAt(i)]
+			var info=generatorSettings[line.charCodeAt(i)]
 			if(info==null){
-				info=fontInfo[fontInfo["null-character"]]
+				info=generatorSettings[generatorSettings["null-character"]]
 			}
 			w+=info.w
 		}
@@ -90,12 +90,11 @@ function getHeight(lines){
 	if(lines.length == 9){
 		return 0;
 	}
-	if(fontInfo['first-height'] == null){
-		return fontInfo.height * lines.length
+	if(generatorSettings['first-height'] == null){
+		return generatorSettings.height * lines.length
 	}
 	
-	return Math.max(0,fontInfo.height * (lines.length-1)) + fontInfo['first-height']
-
+	return Math.max(0,generatorSettings.height * (lines.length-1)) + generatorSettings['first-height']
 }
 
 function renderText(scaled = true){
@@ -103,16 +102,16 @@ function renderText(scaled = true){
 	var buffer = 10
 	var browserScale = $(window).width() / (baseImage.width + buffer)
 
-	if(fontInfo == null){
+	if(generatorSettings == null){
 		return
 	}
 	var fontScale = 2;
-	if(fontInfo['scale'] != null){
-		fontScale = fontInfo.scale
+	if(generatorSettings['scale'] != null){
+		fontScale = generatorSettings.scale
 	}
 	var justify = 'left'
-	if(fontInfo['justify'] != null){
-		justify = fontInfo['justify']
+	if(generatorSettings['justify'] != null){
+		justify = generatorSettings['justify']
 	}
 
 	var scale = Math.min(browserScale, fontScale)
@@ -125,49 +124,33 @@ function renderText(scaled = true){
 		context.imageSmoothingEnabled = false
 	}
 
-	var originx=fontInfo.origin.x
-
-	var bx=fontInfo.box.x,by=fontInfo.box.y
+	var originx=generatorSettings.origin.x
+	var bx=generatorSettings.box.x,by=generatorSettings.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
 
-	// Clear before drawing, as transparents might get overdrawn
-	context.clearRect(0, 0, canvas.width, canvas.height)
-	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var firstLine=true;
 
 	if(justify == 'center-box'){
 		originx -= Math.floor(getWidth(text)/2)
 	}
 
-	if ('overlays' in fontInfo) {
-		for(var i=0;i<overlayNames.length;i++){
-			var oname=overlayNames[i]
-			var currentOverlay=fontInfo.overlays[oname]
-			var x=currentOverlay.x
-			var y=currentOverlay.y
-			var adv=currentOverlay.options
-			adv=adv[$('#overlay-'+oname+' option:selected').text()]
-			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
-		}
-	}
-
-	var y=fontInfo.origin.y
+	var y=generatorSettings.origin.y
 
 	if(justify=='v-center'){
 		y -= Math.floor(getHeight(text)/2)
 	}
 
 	for (let line of text){
-		if(fontInfo['case-fold'] == 'upper'){
+		if(generatorSettings['case-fold'] == 'upper'){
 			line = line.toUpperCase()
-		}else if(fontInfo['case-fold'] == 'lower'){
+		}else if(generatorSettings['case-fold'] == 'lower'){
 			line = line.toLowerCase()
 		}
 		var x=originx
 		for(var i=0;i<line.length;i++){
-			var info=fontInfo[line.charCodeAt(i)]
+			var info=generatorSettings[line.charCodeAt(i)]
 			if(info==null){
-				info=fontInfo[fontInfo["null-character"]]
+				info=generatorSettings[generatorSettings["null-character"]]
 			}
 			bx=info.w
 			by=info.h
@@ -175,13 +158,13 @@ function renderText(scaled = true){
 			x+=info.w
 		}
 		if(firstLine){
-			if(fontInfo['first-height'] != null){
-				// remove out fontInfo.height because it's going to be re-added later.
-				y+=fontInfo['first-height']-fontInfo.height
+			if(generatorSettings['first-height'] != null){
+				// remove out generatorSettings.height because it's going to be re-added later.
+				y+=generatorSettings['first-height']-generatorSettings.height
 			}
 			firstLine = false;
 		}
-		y+=fontInfo.height
+		y+=generatorSettings.height
 	}
 
 }
@@ -190,8 +173,8 @@ function resetOverlays(){
 
 	overlayNames = []
 	$('.overlays p').remove()
-	if('overlays' in fontInfo){
-		var overlays = fontInfo.overlays
+	if('overlays' in generatorSettings){
+		var overlays = generatorSettings.overlays
 		for(key in overlays) {
 			if(overlays.hasOwnProperty(key)) {
 				overlayNames.push(key)
@@ -216,7 +199,7 @@ function loadJSONForGenerator(){
 
 	gamesPath = 'games/' + selectedGenerator + '/'
 	$.getJSON(gamesPath + selectedGenerator + ".json",function(data){
-		fontInfo = data
+		generatorSettings = data
 		resetOverlays()
 		renderText()
 	})
