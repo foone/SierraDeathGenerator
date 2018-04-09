@@ -66,36 +66,49 @@ const app = function(){
             }
             return true;
         },
+        downloadCanvas : function(canvas, filename) {
+        // Source from:  http://stackoverflow.com/questions/18480474/how-to-save-an-image-from-canvas
 
-        postToImgur: function () {
+            /// create an "off-screen" anchor tag
+            let lnk = document.createElement('a'), e;
 
-            // var form = new FormData();
-            // form.append("image", "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-            //
-            // var settings = {
-            //     "async": true,
-            //     "crossDomain": true,
-            //     "url": "https://api.imgur.com/3/image",
-            //     "method": "POST",
-            //     "headers": {
-            //         "Authorization": "Client-ID {{clientId}}"
-            //     },
-            //     "processData": false,
-            //     "contentType": false,
-            //     "mimeType": "multipart/form-data",
-            //     "data": form
-            // }
-            //
-            // $.ajax(settings).done(function (response) {
-            //     console.log(response);
-            // });
+            /// the key here is to set the download attribute of the a tag
+            lnk.download = filename;
 
+            /// convert canvas content to data-uri for link. When download
+            /// attribute is set the content pointed to by link will be
+            /// pushed as "download" in HTML5 capable browsers
+            lnk.href = canvas.toDataURL("image/png;base64");
+
+            /// create a "fake" click-event to trigger the download
+            if (document.createEvent) {
+                e = document.createEvent("MouseEvents");
+                e.initMouseEvent("click", true, true, window,
+                    0, 0, 0, 0, 0, false, false, false,
+                    false, 0, null);
+
+                lnk.dispatchEvent(e);
+            } else if (lnk.fireEvent) {
+                lnk.fireEvent("onclick");
+            }
+        },
+
+        saveCanvas: function() {
+            let currentGeneator = m.route.param('generator');
+            let generatorState = state.generators[currentGeneator];
+            let currentText = (generatorState.currentText!==undefined)?generatorState.currentText:generatorState.defaulttext;
+            app.downloadCanvas(document.getElementById('death'), currentGeneator+currentText.replace(/[^a-z0-9]/gi, '_').toLowerCase());
+        },
+
+        filterGenerators: function(generatorKey) {
+            let generator = state.generators[generatorKey];
+            return (generator.title.toLowerCase().indexOf(state.filter.toLowerCase())!==-1);
         },
 
         initCanvas: function (reqGenerator) {
 
             const canvas = document.getElementById('death');
-            // noinspection JSUnresolvedVariable
+            // noinspection JSUnresolvedletiable
             const template = state.generators[reqGenerator].template;
             // noinspection JSUnusedLocalSymbols
             const font = state.generators[reqGenerator].font;
@@ -106,11 +119,11 @@ const app = function(){
 
             function getWidth(lines){
 
-                var maxw=0;
+                let maxw=0;
                 for (let line of lines){
-                    var w=0;
-                    for(var i=0;i<line.length;i++){
-                        var info=generatorSettings[line.charCodeAt(i)]
+                    let w=0;
+                    for(let i=0;i<line.length;i++){
+                        let info=generatorSettings[line.charCodeAt(i)];
                         if(info==null){
                             info=generatorSettings[generatorSettings["null-character"]]
                         }
@@ -123,7 +136,7 @@ const app = function(){
             }
             function getHeight(lines){
 
-                if(lines.length == 9){
+                if(lines.length === 9){
                     return 0;
                 }
                 if(generatorSettings['first-height'] == null){
@@ -141,24 +154,6 @@ const app = function(){
 
             ctx.drawImage(template, 0, 0);
 
-            // TODO: would be nice to remove black for monitor effect
-            // function draw(img) {
-            //     var buffer = canvas;
-            //     var bufferctx = ctx;
-            //     bufferctx.drawImage(img, 0, 0);
-            //     var imageData = bufferctx.getImageData(0,0,buffer.width,  buffer.height);
-            //     var data = imageData.data;
-            //     var removeBlack = function() {
-            //         for (var i = 0; i < data.length; i += 4) {
-            //             if(data[i]+ data[i + 1] + data[i + 2] < 10){
-            //                 data[i + 3] = 0; // alpha
-            //             }
-            //         }
-            //         ctx.putImageData(imageData, 0, 0);
-            //     };
-            //     removeBlack();
-            // }
-
                 // Draw Template
                 ctx.drawImage(template, 0, 0);
 
@@ -166,7 +161,6 @@ const app = function(){
                 if (state.generators[reqGenerator].settings.hasOwnProperty('overlays')) {
                     let overlaysObj = state.generators[reqGenerator].settings.overlays;
                     let overlays = Object.keys(overlaysObj);
-                    let options = Array();
                     let selectedOption = {};
 
                     // Draw selected overlay or default if none selected
@@ -179,37 +173,38 @@ const app = function(){
                         } else {
                             selectedOption = overlay.options[overlay.default];
                         }
-                        // let selectedOption = overlay.options[overlay.selected];
                         ctx.drawImage(font, selectedOption.x, selectedOption.y, selectedOption.w, selectedOption.h, overlay.x, overlay.y, selectedOption.w, selectedOption.h)
                     });
                 }
 
             // Draw text
-            var originx = generatorSettings.origin.x;
-            var bx = generatorSettings.box.x, by=generatorSettings.box.y;
-            var text = (state.generators[reqGenerator].currentText!==undefined)?state.generators[reqGenerator].currentText.split('\n'):state.generators[reqGenerator].defaulttext.split('\n');
-            var firstLine = true;
-            var y = generatorSettings.origin.y
+            let originx = generatorSettings.origin.x;
+            let bx = generatorSettings.box.x, by=generatorSettings.box.y;
+            let text = (state.generators[reqGenerator].currentText!==undefined)?state.generators[reqGenerator].currentText.split('\n'):state.generators[reqGenerator].defaulttext.split('\n');
+            let firstLine = true;
+            let y = generatorSettings.origin.y;
 
-            var justify = (generatorSettings.justify)||'left';
+            let justify = (generatorSettings.justify)||'left';
 
             switch (justify) {
                 case 'center-box':
                     originx -= Math.floor(getWidth(text)/2);
+                    break;
                 case 'v-center':
                     y -= Math.floor(getHeight(text)/2);
+                    break;
             }
 
             for (let line of text){
 
-                if(generatorSettings['case-fold'] == 'upper'){
+                if(generatorSettings['case-fold'] === 'upper'){
                     line = line.toUpperCase();
-                }else if(generatorSettings['case-fold'] == 'lower'){
+                }else if(generatorSettings['case-fold'] === 'lower'){
                     line = line.toLowerCase();
                 }
-                var x=originx;
-                for(var i=0;i<line.length;i++){
-                    var info=generatorSettings[line.charCodeAt(i)];
+                let x=originx;
+                for(let i=0;i<line.length;i++){
+                    let info=generatorSettings[line.charCodeAt(i)];
                     if(info==null){
                         info=generatorSettings["null-character"];
                     }

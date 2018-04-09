@@ -3,6 +3,7 @@ let state = {
     defaultGenerator: 'baddudes',
     gamesFolder: 'games',
     floppyURL: 'images/floppy.png',
+    filter : '',
 
     generatorAssets: [
         {
