@@ -97,7 +97,8 @@ const app = function(){
             let currentGeneator = m.route.param('generator');
             let generatorState = state.generators[currentGeneator];
             let currentText = (generatorState.currentText!==undefined)?generatorState.currentText:generatorState.defaulttext;
-            app.downloadCanvas(document.getElementById('death'), currentGeneator+currentText.replace(/[^a-z0-9]/gi, '_').toLowerCase());
+            app.downloadCanvas(document.getElementById('death'), currentGeneator+'-'+currentText.replace(/[^a-z0-9]/gi, '_').toLowerCase());
+            return false;
         },
 
         filterGenerators: function(generatorKey) {

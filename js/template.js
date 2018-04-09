@@ -154,9 +154,7 @@ let mainTemplate = {
                             m(generatorTextComponent),
                             m(generatorOptionsComponent),
                             m("div",{class:"fl w-100 pv4 tr"},[
-                                m("a", {href: "#", id: "save", onclick: app.saveCanvas}, [
-                                    m("img", {src: state.floppyURL, width: "96", height: "96"})
-                                ])
+                                m("img", {src: state.floppyURL, width: "96", height: "96", onclick: app.saveCanvas, id:"floppy"})
                             ])
                         ]),
 
