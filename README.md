@@ -13,6 +13,7 @@ Right now, it supports:
 * DOS text screens
 * Duke Nukem 1
 * King's Quest 4
+* Legend of Zelda
 * Manhunter: New York
 * Metal Gear Solid
 * Mortal Kombat II

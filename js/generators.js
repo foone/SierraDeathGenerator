@@ -41,6 +41,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"'
 	},
+	'zelda':{
+		'title': 'Legend of Zelda',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"It's dangerous to go\n alone! Take this."
+	},
 	'mh1':{
 		'title': 'Manhunter: New York',
 		'source':'Sierra Online',

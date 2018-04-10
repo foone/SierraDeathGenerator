@@ -164,6 +164,9 @@ function renderText(scaled = true){
 			line = line.toLowerCase()
 		}
 		var x=originx
+		if(justify == 'center'){
+			x = originx - Math.floor(getWidth([line])/2)
+		}
 		for(var i=0;i<line.length;i++){
 			var info=fontInfo[line.charCodeAt(i)]
 			if(info==null){
