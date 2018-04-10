@@ -25,6 +25,7 @@ Right now, it supports:
 * Super Mario Bros
 * Space Quest 3
 * Space Quest 4
+* Stardew Valley
 * Street Fighter II
 * Wally Bear and the NO! Gang
 * Zero Wing (Genesis/Megadrive)
