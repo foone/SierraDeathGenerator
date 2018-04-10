@@ -23,6 +23,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
 		'defaulttext':'Keen enters the\n     Shadowlands'
 	},
+	'doom':{
+		'title': 'Doom',
+		'source':'id Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
+		'defaulttext':"ONCE YOU BEAT THE BIG BADASSES AND\nCLEAN OUT THE MOON BASE YOU'RE SUPPOSED\nTO WIN, AREN'T YOU? AREN'T YOU? WHERE'S\nYOUR FAT REWARD AND TICKET HOME? WHAT\nTHE HELL IS THIS? IT'S NOT SUPPOSED TO\nEND THIS WAY!\n\nIT STINKS LIKE ROTTEN MEAT, BUT LOOKS\nLIKE THE LOST DEIMOS BASE. LOOKS LIKE\nYOU'RE STUCK ON THE SHORES OF HELL.\nTHE ONLY WAY OUT IS THROUGH.\n\nTO CONTINUE THE DOOM EXPERIENCE, PLAY\nTHE SHORES OF HELL AND ITS AMAZING\nSEQUEL, INFERNO!"
+	},
 	'dos':{
 		'title': 'MS-DOS',
 		'source':'Microsoft',

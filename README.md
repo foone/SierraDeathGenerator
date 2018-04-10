@@ -10,6 +10,7 @@ Right now, it supports:
 * Bio Menace
 * Castlevania: Symphony of the Night (PS1)
 * Commander Keen 4
+* Doom
 * DOS text screens
 * Duke Nukem 1
 * King's Quest 4
