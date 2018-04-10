@@ -45,6 +45,11 @@ html {
 	left: 10px;
 }
 
+.copyrights a, .copyrights a:visited {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
 @keyframes flicker {
 	0% {
 		opacity: 0.27861;
@@ -187,7 +192,7 @@ html {
 	opacity: 0;
 	z-index: 2;
 	pointer-events: none;
-	animation: flicker 0.15s infinite;
+	/*animation: flicker 0.15s infinite;*/
 }
 .crt::before {
 	content: " ";
