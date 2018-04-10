@@ -103,6 +103,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"'
 	},
+	'sv':{
+		'title': 'Stardew Valley',
+		'source':'ConcernedApe',
+		'sourceurl':'https://en.wikipedia.org/wiki/Stardew_Valley',
+		'defaulttext':"Your grandpa used to complain\nabout the rickety old bed. But\nI think, deep down, he actually\nloved that house.",
+	},
 	'sf2':{
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
