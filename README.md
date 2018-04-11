@@ -10,19 +10,28 @@ Right now, it supports:
 * Bio Menace
 * Castlevania: Symphony of the Night (PS1)
 * Commander Keen 4
+* Doom
 * DOS text screens
 * Duke Nukem 1
 * King's Quest 4
+* Legend of Zelda
 * Manhunter: New York
 * Metal Gear Solid
+* Metroid
 * Mortal Kombat II
+* Roland MT-32 Synth Module LCD
 * Oregon Trail
+* Pokemon Red/Blue/Yellow
 * Police Quest 2
 * Police Quest 3
 * SimCity 2000 Advisors
+* Super Mario 64
+* Super Mario Bros
 * Space Quest 3
 * Space Quest 4
+* Stardew Valley
 * Street Fighter II
+* Wally Bear and the NO! Gang
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font
