@@ -213,7 +213,6 @@ const app = function(){
                     y -= Math.floor(getHeight(text)/2);
                     break;
             }
-
             for (let line of text){
 
                 if(generatorSettings['case-fold'] === 'upper'){
@@ -221,9 +220,16 @@ const app = function(){
                 }else if(generatorSettings['case-fold'] === 'lower'){
                     line = line.toLowerCase();
                 }
+
                 let x=originx;
+
+                if (justify === 'center'){
+                     x = originx - Math.floor(getWidth([line])/2);
+                }
+
                 for(let i=0;i<line.length;i++){
                     let info=generatorSettings[line.charCodeAt(i)];
+
                     if(info==null){
                         info=generatorSettings["null-character"];
                     }
@@ -232,6 +238,7 @@ const app = function(){
                     ctx.drawImage(state.generators[reqGenerator].font,info.x,0,bx,by,x,y,bx,by);
                     x+=info.w;
                 }
+
                 if(firstLine){
                     if(generatorSettings['first-height'] != null){
                         // remove out generatorSettings.height because it's going to be re-added later.
