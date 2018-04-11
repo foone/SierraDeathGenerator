@@ -253,3 +253,8 @@ const app = function(){
     };
 
 }();
+
+// Redraw on resizing (for canvas resizing) TODO: Set throttle?
+window.onresize = function() {
+    m.redraw();
+};
