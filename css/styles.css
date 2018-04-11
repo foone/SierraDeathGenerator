@@ -1,11 +1,94 @@
 html {
 	overflow-y: scroll;
+    background-color: #f1f1f1;
 }
 
-img.source{
-	display: none;
+#monitor {
+	height: 540px;
+	overflow: hidden;
+	position: relative;
+	background-color: #111111;
+	text-align: center;
+	box-shadow:
+			inset 0 0 1rem black,
+			inset 0 0 3rem black,
+			1px 1px 5px #888888;
+	background-image: url("../images/monitor_bg.jpg");
+	background-position: center;
+	background-size: cover;
 }
 
-#sourcetext{
-	vertical-align: top;
+#generators {
+	max-height: 300px;
+	margin-bottom: 20px;
+	overflow-y: scroll;
+}
+
+.crt::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(18, 16, 16, 0.1);
+	opacity: 0;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.crt::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	z-index: 2;
+	background-size: 100% 2px, 3px 100%;
+	pointer-events: none;
+}
+
+.copyrights {
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.copyrights a, .copyrights a:visited {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.gameSelector {
+    display: block;
+    position: relative;
+    float: left;
+}
+.gameSelector span {
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    top: 35%;
+}
+
+#floppy {
+    cursor: pointer;
+}
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
 }
