@@ -5,7 +5,7 @@ let copyrightComponent = {
         let currentGenerator = m.route.param('generator');
         return m("div", {class:"copyrights"},[
             m("a", {href: "https://github.com/foone/SierraDeathGenerator"}, ["Code"]), " by ", m("a", {href: "https://twitter.com/Foone"}, ["@Foone"]), ', ',
-            m("a", {href: "https://github.com/foone/SierraDeathGenerator/graphs/contributors"}, ["kind contributors"]),
+            m("a", {href: "https://github.com/foone/SierraDeathGenerator/graphs/contributors"}, ["kind contributors,"]),
             (state.generators[currentGenerator].contributor!==undefined)?([', ',m("a", {href: ""},[state.generators[currentGenerator].contributor])]):null,
             m("span", {id: "extra-contrib"}, [" content by ", m("a", {href: state.generators[currentGenerator].sourceurl}, [state.generators[currentGenerator].source])])
         ])
