@@ -136,7 +136,7 @@ let mainTemplate = {
 
         // Position Canvas appropriately using CSS
         if (app.assetsLoaded(currentGenerator)) {
-            topMargin = (540-state.generators[currentGenerator].template.height*2) / 2;
+            topMargin = ( 540 - (state.generators[currentGenerator].template.height*app.getCanvasScaleRatio(currentGenerator,2)) ) / 2; // TODO: 2 times scale is hardcorded here? Should it?
         }
 
         return m("main", {class:"pv3"}, [

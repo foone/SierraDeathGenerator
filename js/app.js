@@ -66,6 +66,7 @@ const app = function(){
             }
             return true;
         },
+
         downloadCanvas : function(canvas, filename) {
         // Source from:  http://stackoverflow.com/questions/18480474/how-to-save-an-image-from-canvas
 
@@ -94,10 +95,10 @@ const app = function(){
         },
 
         saveCanvas: function() {
-            let currentGeneator = m.route.param('generator');
-            let generatorState = state.generators[currentGeneator];
+            let currentGenerator = m.route.param('generator');
+            let generatorState = state.generators[currentGenerator];
             let currentText = (generatorState.currentText!==undefined)?generatorState.currentText:generatorState.defaulttext;
-            app.downloadCanvas(document.getElementById('death'), currentGeneator+'-'+currentText.replace(/[^a-z0-9]/gi, '_').toLowerCase());
+            app.downloadCanvas(document.getElementById('death'), currentGenerator+'-'+currentText.replace(/[^a-z0-9]/gi, '_').toLowerCase());
             return false;
         },
 
@@ -106,9 +107,24 @@ const app = function(){
             return (generator.title.toLowerCase().indexOf(state.filter.toLowerCase())!==-1);
         },
 
+        getCanvasScaleRatio: function(reqGenerator, scaleBase){
+            const template = state.generators[reqGenerator].template;
+            const canvasWrapper = document.getElementById('monitor');
+            const canvasWrapperWidth = canvasWrapper.clientWidth;
+
+            if ((template.width*scaleBase)>canvasWrapperWidth) {
+                return ((canvasWrapperWidth/(template.width*scaleBase))*scaleBase*0.8); // 80% less than full
+            } else {
+                return scaleBase;
+            }
+        },
+
         initCanvas: function (reqGenerator) {
 
             const canvas = document.getElementById('death');
+            const scaleBase = 2;
+            const scaleRatio = app.getCanvasScaleRatio(reqGenerator,scaleBase);
+
             // noinspection JSUnresolvedletiable
             const template = state.generators[reqGenerator].template;
             // noinspection JSUnusedLocalSymbols
@@ -135,6 +151,7 @@ const app = function(){
                 return maxw
 
             }
+
             function getHeight(lines){
 
                 if(lines.length === 9){
@@ -148,10 +165,11 @@ const app = function(){
             }
 
             // TODO: Scaling
-            canvas.width = template.width * 2;
-            canvas.height = template.height * 2;
+            canvas.width = template.width*scaleRatio;
+            canvas.height = template.height*scaleRatio;
+
             ctx.imageSmoothingEnabled = false;
-            ctx.scale(2, 2);
+            ctx.scale(scaleRatio, scaleRatio);
 
             ctx.drawImage(template, 0, 0);
 
