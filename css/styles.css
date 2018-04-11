@@ -3,10 +3,6 @@ html {
     background-color: #f1f1f1;
 }
 
-.crt {
-	/*animation: textShadow 1.6s infinite;*/
-}
-
 #monitor {
 	height: 540px;
 	overflow: hidden;
@@ -22,32 +18,10 @@ html {
 	background-size: cover;
 }
 
-.gameSelector img {
-	/*width: 150px;*/
-	/*height: 95px;*/
-}
-
 #generators {
 	max-height: 300px;
 	margin-bottom: 20px;
 	overflow-y: scroll;
-}
-
-#customization {
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.copyrights {
-	color: #ffffff;
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
-}
-
-.copyrights a, .copyrights a:visited {
-    color: #ffffff;
-    font-weight: bolder;
 }
 
 .crt::after {
@@ -63,6 +37,7 @@ html {
 	z-index: 2;
 	pointer-events: none;
 }
+
 .crt::before {
 	content: " ";
 	display: block;
@@ -75,6 +50,18 @@ html {
 	z-index: 2;
 	background-size: 100% 2px, 3px 100%;
 	pointer-events: none;
+}
+
+.copyrights {
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.copyrights a, .copyrights a:visited {
+    color: #ffffff;
+    font-weight: bolder;
 }
 
 #floppy {
