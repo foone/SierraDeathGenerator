@@ -17,6 +17,7 @@ Right now, it supports:
 * Legend of Zelda
 * Manhunter: New York
 * Metal Gear Solid
+* Metroid
 * Mortal Kombat II
 * Oregon Trail
 * Pokemon Red/Blue/Yellow
