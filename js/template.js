@@ -4,7 +4,7 @@ let copyrightComponent = {
     view : function(){
         let currentGenerator = m.route.param('generator');
         return m("div", {class:"copyrights"},[
-            m("a", {href: "https://github.com/foone/SierraDeathGenerator"}, ["Code"]), " by ", m("a", {href: "https://twitter.com/Foone"}, ["@Foone"]), ', ', m("a", {href: "https://twitter.com/karavas"}, ["@karavas"]),
+            m("a", {href: "https://github.com/foone/SierraDeathGenerator"}, ["Code"]), " by ", m("a", {href: "https://twitter.com/Foone"}, ["@Foone"]), ', ', m("a", {href: "https://github.com/foone/SierraDeathGenerator/graphs/contributors"}, ["contributors"]),
             m("span", {id: "extra-contrib"}, [" content by ", m("a", {href: state.generators[currentGenerator].sourceurl}, [state.generators[currentGenerator].source])])
         ])
     }
