@@ -79,6 +79,14 @@ var generators={
 		'defaulttext':'Can you take the cold?',
 		'contributor': '@pixel_data'
 	},
+	'mt32':{
+		'title': 'MT-32',
+		'source':'Roland',
+		'sourceurl':'https://en.wikipedia.org/wiki/Roland_MT-32',
+		'defaulttext':' ** Roland MT-32 ** ',
+		'contributor': '@NoxicoDev'
+	},
+
 	'oregon':{
 		'title': 'Oregon Trail',
 		'source':'MECC',
