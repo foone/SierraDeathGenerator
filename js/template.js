@@ -13,17 +13,24 @@ let copyrightComponent = {
 };
 
 let generatorsComponent = {
+
     view : function(){
+
         let generators = [];
         Object.keys(state.generators).filter(app.filterGenerators).forEach(function(key) {
             let activeClass = 'b--transparent o-90';
             if (m.route.get()==='/'+key) {
                 activeClass = 'b--black o-100';
             }
+            let imgSrc = state.gamesFolder+'/'+key+'/'+key+'-logo.png';
+            if (state.missingLogos.hasOwnProperty(key)) {
+                imgSrc = state.missingLogoImage;
+            }
             generators.push([
                 m("div",{class:"fl w-10 w-20-m pa1 bw1 b--solid br3 "+activeClass, style:"overflow:hidden;"},[
                     m("a", { class: "gameSelector", href: '/' + key,  oncreate: m.route.link, }, [
-                        m("img",{style:"float: left;", class:"grow br3", src:state.gamesFolder+'/'+key+'/'+key+'-logo.png'})
+                        m("span",[key]),
+                        m("img",{style:"float: left;", class:"grow br3", gamekey:key, src:imgSrc, onerror: m.withAttr('gamekey',app.missingLogo)})
                     ]),
                 ])
             ]);

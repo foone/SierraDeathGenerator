@@ -64,6 +64,22 @@ html {
     font-weight: bolder;
 }
 
+.gameSelector {
+    display: block;
+    position: relative;
+    float: left;
+}
+.gameSelector span {
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    top: 35%;
+}
+
 #floppy {
     cursor: pointer;
 }

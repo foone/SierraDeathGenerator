@@ -67,6 +67,12 @@ const app = function(){
             return true;
         },
 
+        missingLogo: function(key) {
+            if (!state.missingLogos.hasOwnProperty(key)) {
+                state.missingLogos[key] = true;
+            }
+        },
+
         downloadCanvas : function(canvas, filename) {
         // Source from:  http://stackoverflow.com/questions/18480474/how-to-save-an-image-from-canvas
 

@@ -3,7 +3,9 @@ let state = {
     defaultGenerator: 'baddudes',
     gamesFolder: 'games',
     floppyURL: 'images/floppy.png',
+    missingLogoImage: 'images/missing_logo.png',
     filter : '',
+    missingLogos : {}, // Only used as placeholder list
 
     generatorAssets: [
         {
