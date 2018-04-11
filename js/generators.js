@@ -66,6 +66,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake..."
 	},
+	'metroid':{
+		'title': 'Metroid',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':'           Great!\n You fulfiled your mission.\n It will revive peace in\nspace. \n But,it may be invaded by\nthe other Metroid.\n Pray for a true peace in\nSpace!',
+	},
 	'mk2':{
 		'title': 'Mortal Kombat II',
 		'source':'Midway',
