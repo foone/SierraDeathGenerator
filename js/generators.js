@@ -70,7 +70,7 @@ var generators={
 		'title': 'Metroid',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':'           Great!\n You fulfiled your mission.\n It will revive peace in\nspace. \n But,it may be invaded by\nthe other Metroid.\n Pray for a true peace in\nSpace!',
+		'defaulttext':'           GREAT!\n YOU FULFILED YOUR MISSION.\n IT WILL REVIVE PEACE IN\nSPACE. \n BUT,IT MAY BE INVADED BY\nTHE OTHER METROID.\n PRAY FOR A TRUE PEACE IN\nSPACE',
 	},
 	'mk2':{
 		'title': 'Mortal Kombat II',
