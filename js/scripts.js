@@ -151,10 +151,16 @@ function renderText(scaled = true){
 		}
 	}
 
+
 	var y=fontInfo.origin.y
 
 	if(justify=='v-center'){
 		y -= Math.floor(getHeight(text)/2)
+	}
+
+	if('hooks' in fontInfo && 'pre-text' in fontInfo['hooks']){
+		// EVAL IS SAFE CODE, YES?
+		eval(fontInfo['hooks']['pre-text'])
 	}
 
 	for (let line of text){

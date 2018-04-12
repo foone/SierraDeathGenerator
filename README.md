@@ -9,6 +9,7 @@ Right now, it supports:
 * Bad Dudes
 * Bio Menace
 * Castlevania: Symphony of the Night (PS1)
+* Cave Story
 * Commander Keen 4
 * Doom
 * DOS text screens

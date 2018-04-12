@@ -17,6 +17,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!'
 	},
+	'cs':{
+		'title': 'Cave Story+',
+		'source':'Pixel',
+		'sourceurl':'https://en.wikipedia.org/wiki/Daisuke_Amaya',
+		'defaulttext':"Oh, sorry 'bout that.\nThe Doctor's such a cruel\nand evil person."
+	},
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',
