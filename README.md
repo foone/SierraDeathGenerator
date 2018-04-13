@@ -11,6 +11,7 @@ Right now, it supports:
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story
 * Commander Keen 4
+* Crowtel Renovations
 * Doom
 * DOS text screens
 * Duke Nukem 1

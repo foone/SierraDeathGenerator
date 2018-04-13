@@ -29,6 +29,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
 		'defaulttext':'Keen enters the\n     Shadowlands'
 	},
+	'crowtel':{
+		'title': 'Crowtel Renovations',
+		'source':'Sink',
+		'sourceurl':'https://twitter.com/sinksadventure',
+		'defaulttext':"Someone clogged my\ntoilet. It wasn't me..."
+	},
 	'doom':{
 		'title': 'Doom',
 		'source':'id Software',
