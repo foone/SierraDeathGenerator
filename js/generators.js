@@ -23,6 +23,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Daisuke_Amaya',
 		'defaulttext':"Oh, sorry 'bout that.\nThe Doctor's such a cruel\nand evil person."
 	},
+	'ci':{
+		'title': 'Codename: ICEMAN',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':"You've overestimated your strength\n and can't thread water any longer."
+	},
+
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',

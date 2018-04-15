@@ -10,6 +10,7 @@ Right now, it supports:
 * Bio Menace
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story
+* Codename: ICEMAN
 * Commander Keen 4
 * Crowtel Renovations
 * Doom
