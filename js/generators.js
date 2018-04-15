@@ -29,7 +29,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"You've overestimated your strength\n and can't thread water any longer."
 	},
-
+	'lb1':{
+		'title': "The Colonel's Bequest",
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':"You've overestimated your strength\n and can't thread water any longer."
+	},
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',
@@ -60,6 +65,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!"
 	},
+	'edit':{
+		'title': 'EDIT.COM',
+		'source':'Microsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
+		'defaulttext':""
+	},
+
 	'gr':{
 		'title': 'Gold Rush!',
 		'source':'Sierra Online',

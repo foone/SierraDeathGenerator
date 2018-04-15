@@ -15,6 +15,7 @@ Right now, it supports:
 * Crowtel Renovations
 * Doom
 * DOS text screens
+* DOS 6's EDIT.COM text editor
 * Duke Nukem 1
 * Gold Rush!
 * King's Quest 4
