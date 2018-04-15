@@ -1,5 +1,5 @@
 w=9
-for i in range(ord(' '),ord('z')):
+for i in range(ord(' '),128):
 	print """"{}": {{
   "x": {},
   "w": {},
