@@ -10,6 +10,28 @@
   },
   "scale": 1,
   "null-character": 32,
+  "overlays": {
+    "program": {
+      "x": 0,
+      "y": 0,
+      "title": "Program",
+      "default": "edit.com",
+      "options": {
+        "edit.com": {
+          "x": 0,
+          "y": 16,
+          "w": 1,
+          "h": 1
+        },
+        "qbasic.exe": {
+          "x": 0,
+          "y": 16,
+          "w": 720,
+          "h": 400
+        }
+      }
+    }
+  },
   "32": {
     "x": 288,
     "w": 9,
