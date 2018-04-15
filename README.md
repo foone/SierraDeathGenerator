@@ -15,6 +15,7 @@ Right now, it supports:
 * Doom
 * DOS text screens
 * Duke Nukem 1
+* Gold Rush!
 * King's Quest 4
 * Legend of Zelda
 * Manhunter: New York

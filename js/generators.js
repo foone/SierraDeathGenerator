@@ -53,6 +53,14 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!"
 	},
+	'gr':{
+		'title': 'Gold Rush!',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':'Last words: '
+	},
+
+
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
