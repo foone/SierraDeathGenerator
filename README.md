@@ -29,6 +29,7 @@ Right now, it supports:
 * Pokemon Red/Blue/Yellow
 * Police Quest 2
 * Police Quest 3
+* Road Rash (for the Genesis/Megadrive)
 * SimCity 2000 Advisors
 * Super Mario 64
 * Super Mario Bros

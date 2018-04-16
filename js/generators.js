@@ -150,6 +150,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?"
 	},
+	"rr":{
+		'title': 'Road Rash',
+		'source':'Electronic Arts',
+		'sourceurl':'https://en.wikipedia.org/wiki/Electronic_Arts',
+		'defaulttext':"It's a great day to\nface challenge on \nthe open road. Best\nof luck friend!"
+
+	},
 	'sc2k':{
 		'title': 'SimCity 2000 Advisor',
 		'source':'Maxis Software',
