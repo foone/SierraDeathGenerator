@@ -29,12 +29,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"You've overestimated your strength\n and can't thread water any longer."
 	},
-	'lb1':{
-		'title': "The Colonel's Bequest",
-		'source':'Sierra Online',
-		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"You've overestimated your strength\n and can't thread water any longer."
-	},
+
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',
