@@ -1,6 +1,6 @@
 import sys,os,glob
 from PIL import Image
-files = sorted(glob.glob('atlas/*.png'))
+files = sorted(glob.glob('atlas/*.png')+glob.glob('atlas/*.bmp'))
 fontfile=Image.open(sys.argv[1])
 width=fontfile.size[0]
 images = {}
@@ -12,7 +12,7 @@ for path in files:
 outx,outy=0,fontfile.size[1]
 box=max(im.size[0] for im in images.values()),max(im.size[1] for im in images.values())
 placements=[]
-for name,im in images.items():
+for name,im in sorted(images.items()):
 	if outx+box[0]>=width:
 		outx=0
 		outy+=box[1]

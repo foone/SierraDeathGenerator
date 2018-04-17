@@ -1,12 +1,14 @@
-CHARS=u"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!,.\u00A9():?' "
+# encoding=utf-8
+
+import string
+CHARS=string.ascii_uppercase+"0123456789,.':!_ "
+
+w,h=8,8
 
 for i,c in enumerate(CHARS):
-	cs=c
-	if c.lower()!=c:
-		cs=c+c.lower()
-	for cx in cs:
+	if c != '\0':
 		print """"{}": {{
 	  "x": {},
-	  "w": 8,
-	  "h": 8
-	}},""".format(ord(cx),8*i)
+	  "w": {},
+	  "h": {}
+	}},""".format(ord(c),w*i,w,h)
