@@ -1,4 +1,10 @@
 var generators={
+	'ancients':{
+		'title': 'Ancients',
+		'source':'Farr-Ware Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Ancients_1:_Death_Watch',
+		'defaulttext':"You have never felt the\nneed to recall the\nmemories of your youth.\nThe dreams that have\nhaunted you these last\nnights act as a reminder\nof where you came from\nand what you have seen.\n\nPlaying in the fields\nare among the strongest\nmemories of your youth.\nthere you spent much \ntime exploring, playing\nthe role  of  a  wild"
+	},
 	'baddudes':{
 		'title': 'Bad Dudes',
 		'source':'Data East',
