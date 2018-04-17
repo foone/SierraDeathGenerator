@@ -72,7 +72,7 @@
 			"x": 96,
 			"y": 46,
 			"title": "Who is talking?",
-			"default": "rival1",
+			"default": "Toby",
 			"options": {
 				"Toby": {
 					"w": 16,
