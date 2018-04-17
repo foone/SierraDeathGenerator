@@ -48,6 +48,12 @@ var generators={
 		'sourceurl':'https://twitter.com/sinksadventure',
 		'defaulttext':"Someone clogged my\ntoilet. It wasn't me..."
 	},
+	'deusex':{
+		'title': 'Deus Ex',
+		'source':'Ion Storm',
+		'sourceurl':'https://en.wikipedia.org/wiki/Ion_Storm',
+		'defaulttext':"NSF everywhere, JC.  Your orders are to\nshoot on sight.  A UNATCO informant on\nthe North Dock can get you inside the\nstatue.  Look for a Bum.  Identify\nyourself with the phrase 'Iron and\nCopper.'"
+	},
 	'doom':{
 		'title': 'Doom',
 		'source':'id Software',

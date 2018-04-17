@@ -1,7 +1,9 @@
-w=9
-for i in range(ord(' '),128):
+w=8
+h=12
+start=ord(' ')
+for i in range(start,128):
 	print """"{}": {{
   "x": {},
   "w": {},
-  "h": 16
-}},""".format(i,i*w,w)
+  "h": {}
+}},""".format(i,(i-start)*w,w,h)

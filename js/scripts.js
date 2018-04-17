@@ -147,9 +147,15 @@ function renderText(scaled = true){
 			var y=currentOverlay.y
 			var adv=currentOverlay.options
 			adv=adv[$('#overlay-'+oname+' option:selected').text()]
+			var blend='source-over'
+			if('blend-mode' in currentOverlay){
+				blend = currentOverlay['blend-mode']
+			}
+			context.globalCompositeOperation = blend
 			context.drawImage(fontImage,adv.x,adv.y,adv.w,adv.h,x*scale,y*scale,adv.w*scale,adv.h*scale)
 		}
 	}
+	context.globalCompositeOperation = "source-over"
 
 
 	var y=fontInfo.origin.y
@@ -206,6 +212,10 @@ function resetOverlays(){
 				overlayNames.push(key)
 				var overlay = overlays[key]
 				var pwrapper=$("<p>").text(overlay.title+': ')
+				if(overlay.title ==''){
+					// Internal effect, don't show to the user
+					pwrapper.addClass('internal-overlay')
+				}
 				var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
 				for(opt in overlay.options){
 					if(overlay.options.hasOwnProperty(opt)){

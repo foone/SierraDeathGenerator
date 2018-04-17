@@ -9,3 +9,7 @@ img.source{
 #sourcetext{
 	vertical-align: top;
 }
+
+.internal-overlay{
+	display: none;
+}

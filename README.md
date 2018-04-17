@@ -14,6 +14,7 @@ Right now, it supports:
 * Codename: ICEMAN
 * Commander Keen 4
 * Crowtel Renovations
+* Deus Ex
 * Doom
 * DOS text screens
 * DOS 6's EDIT.COM text editor
