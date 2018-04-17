@@ -208,6 +208,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool"
 	},
+	'sm':{
+		'title': 'Super Metroid',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"I first battled the Metroids\non planet Zebes. It was there\nthat I foiled the plans of\nthe Space Pirate leader\nMother Brain to use the\ncreatures to attack\ngalactic civilization...\n_"
+	},
+
 	'wally':{
 		'title': 'Wally Bear and the NO! Gang',
 		'source':'American Game Cartridges',

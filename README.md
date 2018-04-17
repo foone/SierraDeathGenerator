@@ -35,6 +35,7 @@ Right now, it supports:
 * SimCity 2000 Advisors
 * Super Mario 64
 * Super Mario Bros
+* Super Metroid
 * Space Quest 3
 * Space Quest 4
 * Stardew Valley
