@@ -163,7 +163,7 @@ function renderText(scaled = true){
 	if(justify=='v-center'){
 		y -= Math.floor(getHeight(text)/2)
 	}
-
+	var fontOriginY=0
 	if('hooks' in fontInfo && 'pre-text' in fontInfo['hooks']){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
@@ -186,7 +186,7 @@ function renderText(scaled = true){
 			}
 			bx=info.w
 			by=info.h
-			context.drawImage(fontImage,info.x,0,bx,by,x*scale,y*scale,bx*scale,by*scale)
+			context.drawImage(fontImage,info.x,fontOriginY,bx,by,x*scale,y*scale,bx*scale,by*scale)
 			x+=info.w
 		}
 		if(firstLine){

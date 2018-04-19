@@ -22,6 +22,7 @@ Right now, it supports:
 * Gold Rush!
 * King's Quest 4
 * Legend of Zelda
+* Life & Death
 * Manhunter: New York
 * Metal Gear Solid
 * Metroid

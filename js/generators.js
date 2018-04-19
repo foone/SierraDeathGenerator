@@ -99,6 +99,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"It's dangerous to go\n alone! Take this."
 	},
+	'lad':{
+		'title': 'Life & Death',
+		'source':'The Software Toolworks',
+		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
+		'defaulttext':"Your patient has died of a burst\nappendix.  Report immediately to medical\nschool and pay attention!"
+
+	},
 	'mh1':{
 		'title': 'Manhunter: New York',
 		'source':'Sierra Online',
