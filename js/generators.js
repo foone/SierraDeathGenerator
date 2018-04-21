@@ -228,6 +228,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/American_Game_Cartridges',
 		'defaulttext':'Taking drugs is stupid,\nToby.'
 	},
+	'wbm':{
+		'title': 'Wrath of the Black Manta',
+		'source':'AI',
+		'sourceurl':'https://en.wikipedia.org/wiki/Wrath_of_the_Black_Manta',
+		'defaulttext':"It seems to be drug\nrelated. You don't use\ndrugs, do you?"
+	},
 	'zerowing':{
 		'title': 'Zero Wing',
 		'source':'Toaplan',

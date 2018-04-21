@@ -42,6 +42,7 @@ Right now, it supports:
 * Stardew Valley
 * Street Fighter II
 * Wally Bear and the NO! Gang
+* Wrath of the Black Manta
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font
