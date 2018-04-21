@@ -20,6 +20,7 @@ Right now, it supports:
 * DOS 6's EDIT.COM text editor
 * Duke Nukem 1
 * Gold Rush!
+* Golgo 13: Top Secret Episode
 * King's Quest 4
 * Legend of Zelda
 * Life & Death

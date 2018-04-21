@@ -78,15 +78,18 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
 		'defaulttext':""
 	},
-
 	'gr':{
 		'title': 'Gold Rush!',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'Last words: '
 	},
-
-
+	'g13':{
+		'title': 'Golgo-13',
+		'source':'Vic Tokai',
+		'sourceurl':'https://en.wikipedia.org/wiki/Tokai_Communications',
+		'defaulttext':"You shouldn't \nbe proud of \nclearing\neveryone out in \nrapid fire."
+	},
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
