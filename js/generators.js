@@ -139,6 +139,12 @@ var generators={
 		'defaulttext':' ** Roland MT-32 ** ',
 		'contributor': '@NoxicoDev'
 	},
+	'ng':{
+		'title': 'Ninja Gaiden',
+		'source':'Tecmo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Tecmo',
+		'defaulttext':'"Just a girl.\n Get out of here!"',
+	},
 
 	'oregon':{
 		'title': 'Oregon Trail',

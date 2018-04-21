@@ -28,6 +28,7 @@ Right now, it supports:
 * Metroid
 * Mortal Kombat II
 * Roland MT-32 Synth Module LCD
+* Ninja Gaiden
 * Oregon Trail
 * Pokemon Red/Blue/Yellow
 * Police Quest 2
