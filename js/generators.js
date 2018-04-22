@@ -133,14 +133,16 @@ var generators={
 		'source':'Midway',
 		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
 		'defaulttext':'Can you take the cold?',
-		'contributor': '@pixel_data'
+		'contributor': '@pixel_data',
+		'contributorurl':'https://twitter.com/pixel_data'
 	},
 	'mt32':{
 		'title': 'MT-32',
 		'source':'Roland',
 		'sourceurl':'https://en.wikipedia.org/wiki/Roland_MT-32',
 		'defaulttext':' ** Roland MT-32 ** ',
-		'contributor': '@NoxicoDev'
+		'contributor': '@NoxicoDev',
+		'contributorurl' :'https://twitter.com/noxicodev'
 	},
 	'ng':{
 		'title': 'Ninja Gaiden',
@@ -209,14 +211,16 @@ var generators={
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
 		'defaulttext':"Damme dude!",
-		'contributor': '@pixel_data'
+		'contributor': '@pixel_data',
+		'contributorurl':'https://twitter.com/pixel_data'
 	},
 	'smb':{
 		'title': 'Super Mario Bros',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'   THANK YOU MARIO!\n\nBUT OUR PRINCESS IS IN\nANOTHER CASTLE!',
-		'contributor': '@pixel_data'
+		'contributor': '@pixel_data',
+		'contributorurl':'https://twitter.com/pixel_data'
 	},
 	'm64':{
 		'title': 'Super Mario 64',
