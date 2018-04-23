@@ -42,6 +42,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
 		'defaulttext':'Keen enters the\n     Shadowlands'
 	},
+	'cosmo':{
+		'title': 'Cosmo\'s Cosmic Adventure',
+		'source':'Apogee Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
+		'defaulttext':'       COSMIC HINT!\n\n These hint globes will\n help you along your\n journey.  Press the up\n key to reread them.\n\n Press SPACE to hurry or\n  Press any key to exit.'
+	},
 	'crowtel':{
 		'title': 'Crowtel Renovations',
 		'source':'Sink',

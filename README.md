@@ -13,6 +13,7 @@ Right now, it supports:
 * Cave Story
 * Codename: ICEMAN
 * Commander Keen 4
+* Cosmo's Cosmic Adventure
 * Crowtel Renovations
 * Deus Ex
 * Doom
