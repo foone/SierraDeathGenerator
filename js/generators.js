@@ -240,7 +240,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"I first battled the Metroids\non planet Zebes. It was there\nthat I foiled the plans of\nthe Space Pirate leader\nMother Brain to use the\ncreatures to attack\ngalactic civilization...\n_"
 	},
-
+	'tmnt1':{
+		'title': 'TMNT',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Find and help\nyour friend\nin this stage.\n    You can\n    do it."
+	},
 	'wally':{
 		'title': 'Wally Bear and the NO! Gang',
 		'source':'American Game Cartridges',

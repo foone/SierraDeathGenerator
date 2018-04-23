@@ -44,6 +44,7 @@ Right now, it supports:
 * Space Quest 4
 * Stardew Valley
 * Street Fighter II
+* Teenage Mutant Ninja Turtles 1 (NES)
 * Wally Bear and the NO! Gang
 * Wrath of the Black Manta
 * Zero Wing (Genesis/Megadrive)
