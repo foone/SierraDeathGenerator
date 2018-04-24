@@ -10,7 +10,28 @@
 	},
 	"null-character": 32,
 	"case-fold": "upper",
-
+	"overlays": {
+		"portrait": {
+			"x": 7,
+			"y": 55,
+			"title": "Portrait",
+			"default": "splinter",
+			"options": {
+				"splinter": {
+					"x": 0,
+					"y": 8,
+					"w": 32,
+					"h": 32
+				},
+				"april": {
+					"x": 32,
+					"y": 8,
+					"w": 32,
+					"h": 32
+				}
+			}
+		}
+	},
 	"49": {
 		"x": 0,
 		"w": 8,
