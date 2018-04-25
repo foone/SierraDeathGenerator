@@ -152,8 +152,8 @@ var generators={
 	},
 	'minit':{
 		'title': 'Minit',
-		'source':'Vlambeer',
-		'sourceurl':'https://en.wikipedia.org/wiki/Vlambeer',
+		'source':'Jan Willem Nijman, Kitty Calis, Jukio Kallio, and Dominik Johann',
+		'sourceurl':'https://en.wikipedia.org/wiki/Minit_(video_game)',
 		'defaulttext':'Hello there...'
 	},
 	'mk2':{
