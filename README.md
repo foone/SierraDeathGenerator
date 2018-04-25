@@ -13,6 +13,7 @@ Right now, it supports:
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story
 * Codename: ICEMAN
+* The Colonel's Bequest (Laura Bow 1)
 * Commander Keen 4
 * Cosmo's Cosmic Adventure
 * Crowtel Renovations
