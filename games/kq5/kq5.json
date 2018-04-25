@@ -10,7 +10,7 @@
   },
   "null-character": 0,
   "dynamic-size":{
-    "w":"27 + textbox.w",
+    "w":"27 + Math.max(textbox.w,overlays.portrait.h)",
     "h":"31 + textbox.h + overlays.portrait.h"
   },
   "hooks": {
