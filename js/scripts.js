@@ -95,7 +95,7 @@ function getWidth(lines){
 }
 function getHeight(lines){
 
-	if(lines.length == 9){
+	if(lines.length == 0){
 		return 0;
 	}
 	if(fontInfo['first-height'] == null){
@@ -111,18 +111,24 @@ function parseOverlays(fontInfo){
 		for(var i=0;i<overlayNames.length;i++){
 			var oname=overlayNames[i]
 			var currentOverlay=fontInfo.overlays[oname]
-			var adv=currentOverlay.options
-			adv=adv[$('#overlay-'+oname+' option:selected').text()]
+			var stage="pre-text"
+			if('stage' in currentOverlay){
+				stage=currentOverlay['stage']
+			}
+			var sname = $('#overlay-'+oname+' option:selected').text()
+			var adv=currentOverlay.options[sname]
 			var blend='source-over'
 			if('blend-mode' in currentOverlay){
 				blend = currentOverlay['blend-mode']
 			}
 			overlays[oname] = {
+				"name":sname,
 				"x":currentOverlay.x,
 				"y":currentOverlay.y,
 				"w":adv.w,
 				"h":adv.h,
 				"blend":blend,
+				"stage":stage,
 				"source":{
 					"x":adv.x,
 					"y":adv.y
@@ -133,6 +139,7 @@ function parseOverlays(fontInfo){
 	}
 	return overlays
 }
+
 function renderText(scaled = true){
 	if(fontInfo == null || baseImage == null){
 		return
@@ -184,18 +191,35 @@ function renderText(scaled = true){
 		context.imageSmoothingEnabled = false
 	}
 
+	function drawOverlays(stage){
+		Object.keys(overlays).forEach(function (key) {
+			var adv = overlays[key]
+			if(adv.stage == stage){
+				context.globalCompositeOperation = adv.blend
+				context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+			}
+		})
+		context.globalCompositeOperation = "source-over"
+	}
 
 	// Clear before drawing, as transparents might get overdrawn
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
 	var firstLine=true;
 
+	drawOverlays('pre-border')
 
 	if('border' in fontInfo) {
-		var bw=baseImage.width,bh=baseImage.height
-		buildBorder(fontImage,fontInfo,outputSize.w,outputSize.h)
+		var bw=outputSize.w,bh=outputSize.h
+		var bx=('x' in fontInfo.border) ? fontInfo.border.x :0
+		var by=('x' in fontInfo.border) ? fontInfo.border.y : 0
+		if('hooks' in fontInfo && 'border' in fontInfo['hooks']){
+			// EVAL IS SAFE CODE, YES?
+			eval(fontInfo['hooks']['border'])
+		}
+		buildBorder(fontImage,fontInfo,bw,bh)
 		var bordercanvas = document.querySelector('canvas#border')
-		context.drawImage(bordercanvas,0,0,outputSize.w,outputSize.h,0,0,canvas.width, canvas.height)
+		context.drawImage(bordercanvas,0,0,bw,bh,bx*scale,by*scale,bw*scale, bh*scale)
 	}
 
 	if('hooks' in fontInfo && 'pre-overlays' in fontInfo['hooks']){
@@ -203,13 +227,8 @@ function renderText(scaled = true){
 		eval(fontInfo['hooks']['pre-overlays'])
 	}
 
-	Object.keys(overlays).forEach(function (key) {
-		var adv = overlays[key]
-		context.globalCompositeOperation = adv.blend
-		context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
-	})
-	context.globalCompositeOperation = "source-over"
 
+	drawOverlays('pre-text')
 
 	var y=fontInfo.origin.y
 

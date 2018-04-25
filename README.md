@@ -30,6 +30,7 @@ Right now, it supports:
 * Manhunter: New York
 * Metal Gear Solid
 * Metroid
+* Minit
 * Mortal Kombat II
 * Roland MT-32 Synth Module LCD
 * Ninja Gaiden

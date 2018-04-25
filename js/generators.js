@@ -144,6 +144,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'           GREAT!\n YOU FULFILED YOUR MISSION.\n IT WILL REVIVE PEACE IN\nSPACE. \n BUT,IT MAY BE INVADED BY\nTHE OTHER METROID.\n PRAY FOR A TRUE PEACE IN\nSPACE',
 	},
+	'minit':{
+		'title': 'Minit',
+		'source':'Vlambeer',
+		'sourceurl':'https://en.wikipedia.org/wiki/Vlambeer',
+		'defaulttext':'Hello there...'
+	},
 	'mk2':{
 		'title': 'Mortal Kombat II',
 		'source':'Midway',
