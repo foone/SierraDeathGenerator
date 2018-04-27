@@ -291,9 +291,18 @@ function buildBorder(fontImage,fontInfo,w,h){
 	// todo: support styles other than "copy", like "stretch"
 
 	// Draw center
-	for(var x=border.l.w;x<w-border.r.w;x+=border.c.w){
-		for(var y=border.t.h;y<h-border.b.h;y+=border.c.h){
-			drawBorderPiece(x,y,border.c)
+	if(border.c.mode=='stretch'){
+		var piece = border.c
+		bctx.drawImage(fontImage,
+			piece.x,piece.y,piece.w,piece.h,
+			border.l.w,border.t.h,
+			w-border.l.w-border.r.w,h-border.b.h-border.t.h
+		)
+	}else{
+		for(var x=border.l.w;x<w-border.r.w;x+=border.c.w){
+			for(var y=border.t.h;y<h-border.b.h;y+=border.c.h){
+				drawBorderPiece(x,y,border.c)
+			}
 		}
 	}
 

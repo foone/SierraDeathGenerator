@@ -102,6 +102,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
 		'defaulttext':""
 	},
+	'ff7':{
+		'title': 'Final Fantasy VII',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D"
+	},
 	'gr':{
 		'title': 'Gold Rush!',
 		'source':'Sierra Online',
