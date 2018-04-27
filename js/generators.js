@@ -90,6 +90,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!"
 	},
+	'ecco1':{
+		'title': 'Ecco the Dolphin',
+		'source':'Novotrade International',
+		'sourceurl':'https://en.wikipedia.org/wiki/Appaloosa_Interactive',
+		'defaulttext':"\n\nThe marks on \nyour head look \nlike stars in \nthe sky  "
+	},
 	'edit':{
 		'title': 'EDIT.COM',
 		'source':'Microsoft',

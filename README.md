@@ -20,6 +20,7 @@ Right now, it supports:
 * Deus Ex
 * Doom
 * DOS text screens
+* Ecco the Dolphin
 * DOS 6's EDIT.COM text editor
 * Duke Nukem 1
 * Gold Rush!
