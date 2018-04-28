@@ -10,6 +10,7 @@ Right now, it supports:
 * Ancients 1: Death Watch
 * Bad Dudes
 * Bio Menace
+* Castlevania II: Simon's Quest
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story
 * Codename: ICEMAN

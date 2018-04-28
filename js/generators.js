@@ -23,6 +23,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!"
 	},
+	'cv2':{
+		'title': 'Castlevania II',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.'
+	},
 	'sotn':{
 		'title': 'Castlevania: Symphony of the Night',
 		'source':'Konami',
