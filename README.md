@@ -54,7 +54,8 @@ Right now, it supports:
 * Teenage Mutant Ninja Turtles 1 (NES)
 * ToeJam & Earl in Panic on Funkotron (ToeJame & Earl 2)
 * Wally Bear and the NO! Gang
-* Wrath of the Black Manta
+* Wrath of the Black Manta\
+* Zelda 2: The Adventure of Link
 * Zero Wing (Genesis/Megadrive)
 
 Creating a new font
