@@ -253,7 +253,12 @@ function renderText(scaled = true){
 			x = originx - Math.floor(getWidth([line])/2)
 		}
 		for(var i=0;i<line.length;i++){
-			var info=fontInfo[line.charCodeAt(i)]
+			var c=line.charCodeAt(i)
+			if(c>= 0xD800 && c<=0xDBFF){
+				c = line.codePointAt(i)
+				i++; // Can this be more than 2? ARG JS UNICODE IS BAD
+			}
+			var info=fontInfo[c]
 			if(info==null){
 				info=fontInfo[fontInfo["null-character"]]
 			}
