@@ -280,6 +280,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':"Find and help\nyour friend\nin this stage.\n    You can\n    do it."
 	},
+	'tjae2':{
+		'title': 'ToeJam & Earl 2',
+		'source':'Johnson Voorsanger Productions',
+		'sourceurl':'https://en.wikipedia.org/wiki/ToeJam_%26_Earl_Productions',
+		'defaulttext':"        Game Tip\nHold up on direction pad\nto shake trees, part\nbushes or push buttons."
+	},
 	'wally':{
 		'title': 'Wally Bear and the NO! Gang',
 		'source':'American Game Cartridges',

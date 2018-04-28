@@ -20,9 +20,10 @@ Right now, it supports:
 * Deus Ex
 * Doom
 * DOS text screens
-* Ecco the Dolphin
 * DOS 6's EDIT.COM text editor
 * Duke Nukem 1
+* Ecco the Dolphin
+* Final Fantasy VII
 * Gold Rush!
 * Golgo 13: Top Secret Episode
 * King's Quest 4
@@ -50,6 +51,7 @@ Right now, it supports:
 * Stardew Valley
 * Street Fighter II
 * Teenage Mutant Ninja Turtles 1 (NES)
+* ToeJam & Earl in Panic on Funkotron (ToeJame & Earl 2)
 * Wally Bear and the NO! Gang
 * Wrath of the Black Manta
 * Zero Wing (Genesis/Megadrive)
