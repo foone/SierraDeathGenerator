@@ -17,3 +17,7 @@ img.source{
 canvas#border{
 	display: none;
 }
+
+#makegif{
+	display: none;
+}

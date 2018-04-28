@@ -21,6 +21,11 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery.waitforimages.min.js"></script>
 
+	<script type="text/javascript" src="js/gif/LZWEncoder.js"></script>
+	<script type="text/javascript" src="js/gif/NeuQuant.js"></script>
+	<script type="text/javascript" src="js/gif/GIFEncoder.js"></script>
+	<script type="text/javascript" src="js/gif/b64.js"></script>
+
 </head>
 
 <body class="w-100 sans-serif bg-white black-80 code">
@@ -46,6 +51,7 @@
 						<p>
 							<textarea cols="40" rows="6" id="sourcetext" class="border-box hover-black measure b--black-20 pa2 mb2"></textarea>
 							<a href="#" id="save"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+IBBRQ0G7eG+BwAAACiSURBVDjLzdIxCsMwDAVQgQePOkIuIvDRmqP5Br2CS4eM8ZhBxHUUt8gE09KQtNoefGRbFgAkKQapFbNGqtBreAHbAGBTEEyCMSoM0wvdcGeF26wQksZFw2l0ZwDsB1hGsAfrYP8G7Ysa+ey3DarY7mcfN7ey606vcvoaPymMLRC1gDlIVMIVjM9JKuEKEJGJHG+xRHIL2AIjXo1/nqNxfj0AmAoaBZSWo6oAAAAASUVORK5CYII=" width="96" height="96" alt="Save image"/></a>
+							<a href="#" id="makegif"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAAAd0SU1FB+IBBRQ0G7eG+BwAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMjHxIGmVAAACXklEQVR4Xu2Xy47DMAwD8/8/3YWBDZAV5HVYkVGTcgBealuPzKnbq8i2bY/MVVjAP7kCC1hEjQWciBILOBkVMgF3JNvjGAUSAXcm2+cYNhaQkO10DBMLmJDtdQwLC/iHbLdjGFjAgmy/Y6pYwAmyHfdU+XgB6vpnyeYYqWIBAIpZLABAMYsFAChmsQAAxSy3FJDlChR9LQBA0dcCABR9LQBA0dcCABR9HyMgCxtFDwsAUPSwAABFDwsAUPSwAABFj0cLyFKBXW9gAQDsegMLAGDXG1gAALvewAIA2PUGFgDArjewAAB2vYEFALDrDSwAgF1vYAEA7HqDRwtgo+hhAQCKHhYAoOhhAQCKHhYAoOjxGAFXoOhrAQCKvhYAoOhrAQCKvhYAoOh7SwFdKGaxAADFLBYAoJjFAgAUs1gAgGKWjxfwSSh2tQAAxa4WAKDY1QIAFLtaAIBiVwsAUOwqETDyNLIdR6rIBHxLqlhAMVUsoJgqFlBMFQsopkq9gilhAc1YQDMW0IwFNGMBzVhAMxbQjAU0QxeQ/Vs8xvzFApqhfZHVh16dfysW0Az9S1Q/dHwfM2N1b3W+E+/FsKFXrA4c38fMWN1bne/EezFs+BV/YQ++qtd9/i68SgH2wKt63efvwqs0AR083p8lwj5fhQWv0gR08Hh/lgj7fBUWtEqrAdXnO/FezIyz99jQOq0WUJ/vxHsxM87eY0PvFBeJWZG9GdmZ/R45ey8S38WwoVfMhj5mRfZmZGf2e+TsvUh8F8OGX9FAWEAzFtCMBTRjAc1YQDMW0IwFNGMBrbxeP412TklDzQnuAAAAAElFTkSuQmCC" width="96" height="96" alt="Make GIF"/></a>
 						</p>
 
 						<div class="overlays"></div>

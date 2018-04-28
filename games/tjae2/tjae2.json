@@ -17,6 +17,8 @@
 	"hooks": {
 		"pre-text": "if($('#overlay-font option:selected').text()=='font2'){fontOriginY=8;}"
 	},
+	"gif":true,
+	"script":true,
 	"overlays": {
 		"font": {
 			"x": 0,

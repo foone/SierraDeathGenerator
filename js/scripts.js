@@ -373,8 +373,22 @@ function loadJSONForGenerator(){
 		fontInfo = data
 		resetOverlays()
 		renderText()
+		if(fontInfo.gif){
+			$('#makegif').show()
+		}else{
+			$('#makegif').hide()
+		}
+		if(fontInfo.script){
+			$.getScript(gamesPath + selectedGenerator + ".js");
+		}
 	})
 
+}
+
+function getNameForCurrentImage(ext){
+	var text = document.querySelector("textarea#sourcetext").value
+	text = text.replace(/\n/," ").replace(/[^-._a-zA-Z0-9 ]/,"")
+	return selectedGenerator + "-" + text + "." + ext
 }
 
 selectGenerator()
@@ -385,8 +399,11 @@ $('#save').click(function(){
 	// generate an unscaled version
 	renderText(false)
 	this.href=context.canvas.toDataURL('image/png')
-	var text = document.querySelector("textarea#sourcetext").value
-	text = text.replace(/\n/," ").replace(/[^-._a-zA-Z0-9 ]/,"")
-	this.download = selectedGenerator + "-" + text + ".png"
+	this.download = getNameForCurrentImage("png")
+	return true
+})
+$('#makegif').click(function(){
+	this.href = makeGIF(context)
+	this.download = getNameForCurrentImage("gif")
 	return true
 })
