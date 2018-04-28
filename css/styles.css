@@ -21,3 +21,7 @@ canvas#border{
 #makegif{
 	display: none;
 }
+
+#throbber{
+	display: none;
+}

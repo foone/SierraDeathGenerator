@@ -10,6 +10,8 @@
 	},
 	"null-character": 32,
 	"case-fold": "upper",
+	"gif":true,
+	"script":true,
 	"overlays": {
 		"mouth": {
 			"x": 147,
