@@ -274,6 +274,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool"
 	},
+	'smw':{
+		'title': 'Super Mario World',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Welcome!   This is\nDinosaur Land.  In\nthis strange  land\nwe    find    that\nPrincess Toadstool\nis  missing again!\nLooks  like Bowser\nis at it again!"
+	},
 	'sm':{
 		'title': 'Super Metroid',
 		'source':'Nintendo',

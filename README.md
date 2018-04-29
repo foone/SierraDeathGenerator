@@ -45,6 +45,7 @@ Right now, it supports:
 * Road Rash (for the Genesis/Megadrive)
 * SimCity 2000 Advisors
 * Super Mario 64
+* Super Mario World
 * Super Mario Bros
 * Super Metroid
 * Space Quest 3
