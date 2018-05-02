@@ -10,6 +10,12 @@ if(window.location.hash.length > 0){
 	selectedGenerator = window.location.hash.substr(1)
 }
 
+function hideGenerators(){
+	$('a#hidelink').hide()
+	$('a#showlink').show()
+	$('#genlist').hide()
+}
+
 for(key in generators) {
 	if(generators.hasOwnProperty(key)) {
 		$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray"></a>').attr("href",'#'+key).text(generators[key].title).data('generator',key).click(function (){
@@ -396,6 +402,7 @@ function getNameForCurrentImage(ext){
 	return selectedGenerator + "-" + text + "." + ext
 }
 
+
 selectGenerator()
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
@@ -411,4 +418,16 @@ $('#makegif').click(function(){
 	this.href = makeGIF(context)
 	this.download = getNameForCurrentImage("gif")
 	return true
+})
+
+$('a#showlink').click(function(){
+	$(this).hide()
+	$('a#hidelink').show()
+	$('#genlist').show()
+	return false
+})
+
+$('a#hidelink').click(function(){
+	hideGenerators()
+	return false
 })

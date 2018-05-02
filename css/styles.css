@@ -25,3 +25,10 @@ canvas#border{
 #throbber{
 	display: none;
 }
+
+a#showlink{
+	display: none;
+}
+h2.inline{
+	display: inline;
+}
