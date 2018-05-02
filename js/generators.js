@@ -252,6 +252,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Stardew_Valley',
 		'defaulttext':"Your grandpa used to complain\nabout the rickety old bed. But\nI think, deep down, he actually\nloved that house.",
 	},
+	'sf':{
+		'title': 'Star Fox',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"what's wrong\nwith you today\nfox?!",
+	},
 	'sf2':{
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
