@@ -1,1 +1,4 @@
 old-output/
+atlas/
+*.json
+*.png
