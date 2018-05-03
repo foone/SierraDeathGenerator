@@ -4,10 +4,6 @@
     "x": 40,
     "y": 160
   },
-  "box": {
-    "x": 8,
-    "y": 0
-  },
   "null-character": 32,
   "overlays": {
     "scene": {

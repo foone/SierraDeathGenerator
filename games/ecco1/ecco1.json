@@ -4,10 +4,6 @@
     "x": 168,
     "y": 16
   },
-  "box": {
-    "x": 24,
-    "y": 16
-  },
   "justify": "center",
   "null-character": 32,
   "case-fold": "upper",

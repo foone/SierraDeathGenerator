@@ -4,10 +4,6 @@
     "x": 69,
     "y": 14
   },
-  "box":{
-    "x":16,
-    "y":16
-  },
   "null-character": 0,
   "overlays":{
     "death":{

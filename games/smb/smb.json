@@ -4,10 +4,6 @@
 		"x": 39,
 		"y": 72
 	},
-	"box": {
-		"x": 8,
-		"y": 8
-	},
 	"null-character": 32,
 	"case-fold": "upper",
 	"overlays": {

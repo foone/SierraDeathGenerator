@@ -4,10 +4,6 @@
     "x": 12,
     "y": 59
   },
-  "box":{
-    "x":16,
-    "y":16
-  },
   "null-character": 0,
   "dynamic-size":{
     "w":"27 + Math.max(textbox.w,overlays.portrait.w)",

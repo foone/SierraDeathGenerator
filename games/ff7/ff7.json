@@ -4,10 +4,6 @@
 		"x": 8,
 		"y": 4
 	},
-	"box": {
-		"x": 16,
-		"y": 16
-	},
 	"null-character": 32,
 	"dynamic-size": {
 		"w": "20+textbox.w",

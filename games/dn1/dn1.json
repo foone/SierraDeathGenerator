@@ -4,10 +4,6 @@
     "x": 88,
     "y": 152
   },
-  "box":{
-    "x":8,
-    "y":0
-  },
   "null-character": 32,
    "overlays":{
     "portrait":{

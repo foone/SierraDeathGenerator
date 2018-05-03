@@ -5,10 +5,6 @@
     "x": 56,
     "y": 22
   },
-  "box": {
-    "x": 8,
-    "y": 0
-  },
   "null-character": 32,
   "overlays": {
     "portrait": {

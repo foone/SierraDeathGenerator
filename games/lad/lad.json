@@ -4,10 +4,6 @@
 		"x": 53,
 		"y": 158
 	},
-	"box": {
-		"x": 12,
-		"y": 9
-	},
 	"null-character": 32,
 	"hooks": {
 		"pre-text": "if($('#overlay-scene option:selected').text()=='class'){originx=95;y=15;fontOriginY=9;}"

@@ -4,10 +4,6 @@
 		"x": 24,
 		"y": 32
 	},
-	"box": {
-		"x": 8,
-		"y": 8
-	},
 	"null-character": 32,
 	"case-fold": "upper",
 	"gif":true,

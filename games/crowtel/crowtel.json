@@ -4,10 +4,6 @@
 		"x": 44,
 		"y": 15
 	},
-	"box": {
-		"x": 13,
-		"y": 13
-	},
 	"null-character": 32,
 	"overlays": {
 		"scene": {

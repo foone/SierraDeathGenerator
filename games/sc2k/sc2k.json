@@ -4,10 +4,6 @@
     "x": 79,
     "y": 15
   },
-  "box":{
-    "x":16,
-    "y":16
-  },
   "null-character": 32,
   "overlays":{
     "advisors":{

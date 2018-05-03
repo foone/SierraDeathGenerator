@@ -4,10 +4,6 @@
 		"x": 132,
 		"y": 0
 	},
-	"box": {
-		"x": 16,
-		"y": 16
-	},
 	"null-character": 0,
 	"dynamic-size": {
 		"w": "264",

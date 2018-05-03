@@ -4,10 +4,6 @@
 		"x": 34,
 		"y": 1
 	},
-	"box": {
-		"x": 9,
-		"y": 11
-	},
 	"null-character": 32,
 	"dynamic-size": {
 		"w": "overlays.scene.name=='dialogue' ? 128 : 224",

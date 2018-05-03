@@ -4,10 +4,6 @@
 		"x": 56,
 		"y": 47
 	},
-	"box": {
-		"x": 8,
-		"y": 8
-	},
 	"null-character": 32,
 	"hooks": {
 		"pre-text": "if(overlays.scene.name=='fortress'){y=151;originx=32}"

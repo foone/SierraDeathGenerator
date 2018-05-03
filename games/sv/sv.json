@@ -4,10 +4,6 @@
 		"x": 52,
 		"y": 37
 	},
-	"box": {
-		"x": 36,
-		"y": 51
-	},
 	"null-character": 32,
 	"scale": 1,
 	"overlays": {

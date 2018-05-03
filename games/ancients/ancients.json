@@ -4,10 +4,6 @@
 		"x": 37,
 		"y": 74
 	},
-	"box": {
-		"x": 6,
-		"y": 6
-	},
 	"case-fold": "upper",
 	"null-character": 32,
 	"65": {

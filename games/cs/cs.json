@@ -4,10 +4,6 @@
 		"x": 140,
 		"y": 20
 	},
-	"box": {
-		"x": 15,
-		"y": 15
-	},
 	"null-character": 32,
 	"hooks":{
 		"pre-text":"if($('#overlay-portrait option:selected').text()=='no_portrait'){originx=28}"
