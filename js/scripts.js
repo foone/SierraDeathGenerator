@@ -10,6 +10,13 @@ if(window.location.hash.length > 0){
 	selectedGenerator = window.location.hash.substr(1)
 }
 
+function first(){
+	for(var i=0;i<arguments.length;i++){
+		if(arguments[i] !== undefined){
+			return arguments[i]
+		}
+	}
+}
 function hideGenerators(){
 	$('a#hidelink').hide()
 	$('a#showlink').show()
@@ -81,18 +88,43 @@ function selectGenerator(){
 
 
 }
+function parseLine(line, fontOriginY=0){
+	var out=[]
+	var defaultInfo = first(fontInfo.default, {})
+	// FIXME: can doing uppercase/lowercase break astral codepoints?
+	if(fontInfo['case-fold'] == 'upper'){
+		line = line.toUpperCase()
+	}else if(fontInfo['case-fold'] == 'lower'){
+		line = line.toLowerCase()
+	}
+	for(var i=0;i<line.length;i++){
+		var c=line.charCodeAt(i)
+		if(c>= 0xD800 && c<=0xDBFF){
+			c = line.codePointAt(i)
+			i++; // Can this be more than 2? ARG JS UNICODE IS BAD
+		}
+		var info=fontInfo[c]
+		if(info==null){
+			info=fontInfo[fontInfo["null-character"]]
+		}
+		out.push({
+			'x': first(info.x, defaultInfo.x),
+			'y': first(info.y, defaultInfo.y, fontOriginY),
+			'w': first(info.w, defaultInfo.w),
+			'h': first(info.h, defaultInfo.h)
+		})
+	}
+	return out
+}
+
 
 function getWidth(lines){
-
+	var defaultInfo = first(fontInfo.default, {})
 	var maxw=0;
 	for (let line of lines){
 		var w=0;
-		for(var i=0;i<line.length;i++){
-			var info=fontInfo[line.charCodeAt(i)]
-			if(info==null){
-				info=fontInfo[fontInfo["null-character"]]
-			}
-			w+=info.w
+		for (let char of parseLine(line)){
+			w += char.w
 		}
 		maxw=Math.max(maxw,w)
 	}
@@ -117,24 +149,18 @@ function parseOverlays(fontInfo){
 		for(var i=0;i<overlayNames.length;i++){
 			var oname=overlayNames[i]
 			var currentOverlay=fontInfo.overlays[oname]
-			var stage="pre-text"
-			if('stage' in currentOverlay){
-				stage=currentOverlay['stage']
-			}
+
 			var sname = $('#overlay-'+oname+' option:selected').text()
 			var adv=currentOverlay.options[sname]
-			var blend='source-over'
-			if('blend-mode' in currentOverlay){
-				blend = currentOverlay['blend-mode']
-			}
+
 			overlays[oname] = {
 				"name":sname,
 				"x":currentOverlay.x,
 				"y":currentOverlay.y,
 				"w":adv.w,
 				"h":adv.h,
-				"blend":blend,
-				"stage":stage,
+				"blend":first(currentOverlay['blend-mode'], 'source-over'),
+				"stage":first(currentOverlay.stage, "pre-text"),
 				"source":{
 					"x":adv.x,
 					"y":adv.y
@@ -151,15 +177,12 @@ function renderText(scaled = true){
 		return
 	}
 
-	var originx=fontInfo.origin.x
+	var originx = fontInfo.origin.x
 
-	var bx=fontInfo.box.x,by=fontInfo.box.y
 	var text = document.querySelector("textarea#sourcetext").value.split('\n')
 
-	var justify = 'left'
-	if(fontInfo['justify'] != null){
-		justify = fontInfo['justify']
-	}
+	var justify = first(fontInfo.justify, 'left')
+
 	var textbox={
 		w: getWidth(text),
 		h: getHeight(text)
@@ -181,11 +204,7 @@ function renderText(scaled = true){
 	var buffer = 10
 	var browserScale = $(window).width() / (outputSize.w + buffer)
 
-	var fontScale = 2;
-	if(fontInfo['scale'] != null){
-		fontScale = fontInfo.scale
-	}
-
+	var fontScale = first(fontInfo.scale, 2);
 
 	var scale = Math.min(browserScale, fontScale)
 	if(!scaled){
@@ -217,15 +236,15 @@ function renderText(scaled = true){
 
 	if('border' in fontInfo) {
 		var bw=outputSize.w,bh=outputSize.h
-		var bx=('x' in fontInfo.border) ? fontInfo.border.x :0
-		var by=('x' in fontInfo.border) ? fontInfo.border.y : 0
+		var border_x = first(fontInfo.border.x, 0)
+		var border_y = first(fontInfo.border.y, 0)
 		if('hooks' in fontInfo && 'border' in fontInfo['hooks']){
 			// EVAL IS SAFE CODE, YES?
 			eval(fontInfo['hooks']['border'])
 		}
 		buildBorder(fontImage,fontInfo,bw,bh)
 		var bordercanvas = document.querySelector('canvas#border')
-		context.drawImage(bordercanvas,0,0,bw,bh,bx*scale,by*scale,bw*scale, bh*scale)
+		context.drawImage(bordercanvas,0,0,bw,bh,border_x*scale,border_y*scale,bw*scale, bh*scale)
 	}
 
 	if('hooks' in fontInfo && 'pre-overlays' in fontInfo['hooks']){
@@ -247,31 +266,16 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
+	var defaultInfo = first(fontInfo.default, {})
 
 	for (let line of text){
-		if(fontInfo['case-fold'] == 'upper'){
-			line = line.toUpperCase()
-		}else if(fontInfo['case-fold'] == 'lower'){
-			line = line.toLowerCase()
-		}
 		var x=originx
 		if(justify == 'center'){
 			x = originx - Math.floor(getWidth([line])/2)
 		}
-		for(var i=0;i<line.length;i++){
-			var c=line.charCodeAt(i)
-			if(c>= 0xD800 && c<=0xDBFF){
-				c = line.codePointAt(i)
-				i++; // Can this be more than 2? ARG JS UNICODE IS BAD
-			}
-			var info=fontInfo[c]
-			if(info==null){
-				info=fontInfo[fontInfo["null-character"]]
-			}
-			bx=info.w
-			by=info.h
-			context.drawImage(fontImage,info.x,fontOriginY,bx,by,x*scale,y*scale,bx*scale,by*scale)
-			x+=info.w
+		for(let char of parseLine(line, fontOriginY)){
+			context.drawImage(fontImage,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
+			x+=char.w
 		}
 		if(firstLine){
 			if(fontInfo['first-height'] != null){
