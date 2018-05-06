@@ -32,3 +32,6 @@ a#showlink{
 h2.inline{
 	display: inline;
 }
+span#uploading{
+	display: none;
+}

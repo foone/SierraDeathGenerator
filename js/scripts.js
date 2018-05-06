@@ -71,6 +71,10 @@ function selectGenerator(){
 		$('#sourcetext').text(gen.defaulttext)
 	}
 
+	$('#throbber').hide()
+	$('#uploading').hide()
+	$('a#upload').show()
+
 	fontInfo=null // Prevent flash of gibberish when switching images
 	loadJSONForGenerator()
 	$('.source').remove();
@@ -418,6 +422,44 @@ $('#save').click(function(){
 	this.download = getNameForCurrentImage("png")
 	return true
 })
+$('a#upload').click(function(){
+	renderText(false)
+	var imgdata = context.canvas.toDataURL('image/png').split(',',2)[1]
+	$(this).hide()
+	$('#throbber').show()
+	$('#uploading').text('Uploading...').show()
+	
+	$.ajax({
+		url: 'https://api.imgur.com/3/image',
+		type: 'POST',
+		headers: {
+			Authorization: 'Client-ID 68dc4ab71488809',
+			Accept: 'application/json'
+		},
+		data: {
+			image: imgdata,
+			type: 'base64',
+			name: 'upload.png'
+		},
+		success: function(result) {
+			$('#throbber').hide()
+			if(result.success && result.data.link){
+				var link = result.data.link;
+				$('#uploading').text('Uploaded to ').append(
+					$('<a>').attr('href',link).text(link)
+				)
+			}else{
+				$('#uploading').text('Error uploading to imgur!')	
+			}
+		},
+		error: function(result) {
+			$('#throbber').hide()
+			$('#uploading').text('Error uploading to imgur!')
+		}
+	});
+	return false
+})
+
 $('#makegif').click(function(){
 	this.href = makeGIF(context)
 	this.download = getNameForCurrentImage("gif")
