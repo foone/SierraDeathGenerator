@@ -5,6 +5,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
 		'defaulttext':"999 ghosts are in this\n\nhouse. but they're always\n\nlooking for number 1,000.\n\nBe careful--They might\n\nwant you!\n             \u25bc"
 	},
+	'af2':{
+		'title': 'Aero Fighters 2',
+		'source':'Video System',
+		'sourceurl':'https://en.wikipedia.org/wiki/Aero_Fighters',
+		'defaulttext':"I am the world's first\ndolphin pilot."
+	},
+
 	'ancients':{
 		'title': 'Ancients',
 		'source':'Farr-Ware Software',

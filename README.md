@@ -7,6 +7,7 @@ This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
 * Adventures in the Magic Kingdom
+* Aero Fighters II
 * Ancients 1: Death Watch
 * Bad Dudes
 * Bio Menace
