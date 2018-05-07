@@ -1,7 +1,7 @@
-Sierra Death Screen Generator
+The Death Generator
 =============================
 
-> Try it out: [foone.github.io/SierraDeathGenerator](https://foone.github.io/SierraDeathGenerator)
+> Try it out: [DeathGenerator.com](http://deathgenerator.com)
 
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
