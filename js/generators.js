@@ -95,7 +95,7 @@ var generators={
 		'title': 'MS-DOS',
 		'source':'Microsoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
-		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\>"
+		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\\>"
 	},
 	'dn1':{
 		'title': 'Duke Nukem 1',
