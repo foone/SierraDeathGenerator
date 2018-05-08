@@ -176,6 +176,14 @@ function parseOverlays(fontInfo){
 	return overlays
 }
 
+function twitterifyCanvas(context){
+	var pixel = context.getImageData(0,0,1,1)
+	if(pixel.data[3]==255){
+		pixel.data[3]=254
+	}
+	context.putImageData(pixel,0,0)
+}
+
 function renderText(scaled = true){
 	if(fontInfo == null || baseImage == null){
 		return
@@ -291,6 +299,7 @@ function renderText(scaled = true){
 		y+=fontInfo.height
 	}
 
+	twitterifyCanvas(context)
 }
 
 

@@ -75,7 +75,6 @@ TODO
 ====
 
 * Support more games!
-* Add a twitter-safe saving option, for death screens that aren't inherently twitter-safe
 * Add options to adjust scaling.
 * Let you change the titlebar text?
 * Add custom backgrounds, not just the error box?
