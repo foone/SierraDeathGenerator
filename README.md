@@ -49,6 +49,7 @@ Right now, it supports:
 * Super Mario World
 * Super Mario Bros
 * Super Metroid
+* Space Quest 1 (VGA remake)
 * Space Quest 3
 * Space Quest 4
 * Stardew Valley
