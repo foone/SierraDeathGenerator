@@ -44,6 +44,7 @@ Right now, it supports:
 * Police Quest 2
 * Police Quest 3
 * Road Rash (for the Genesis/Megadrive)
+* Rygar
 * SimCity 2000 Advisors
 * Super Mario 64
 * Super Mario World

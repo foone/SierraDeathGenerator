@@ -235,6 +235,14 @@ var generators={
 		'defaulttext':"It's a great day to\nface challenge on \nthe open road. Best\nof luck friend!"
 
 	},
+	"rygar":{
+		'title': 'Rygar',
+		'source':'Tecmo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Tecmo',
+		'defaulttext':"from this\npoint you\ncan't go on\nwithout\ncrossbow."
+
+	},
+
 	'sc2k':{
 		'title': 'SimCity 2000 Advisor',
 		'source':'Maxis Software',
