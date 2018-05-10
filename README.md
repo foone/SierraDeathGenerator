@@ -1,7 +1,7 @@
-Sierra Death Screen Generator
+The Death Generator
 =============================
 
-> Try it out: [foone.github.io/SierraDeathGenerator](https://foone.github.io/SierraDeathGenerator)
+> Try it out: [DeathGenerator.com](http://deathgenerator.com)
 
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
@@ -50,6 +50,7 @@ Right now, it supports:
 * Super Mario World
 * Super Mario Bros
 * Super Metroid
+* Space Quest 1 (VGA remake)
 * Space Quest 3
 * Space Quest 4
 * Stardew Valley
@@ -76,7 +77,6 @@ TODO
 ====
 
 * Support more games!
-* Add a twitter-safe saving option, for death screens that aren't inherently twitter-safe
 * Add options to adjust scaling.
 * Let you change the titlebar text?
 * Add custom backgrounds, not just the error box?

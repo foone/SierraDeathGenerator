@@ -59,7 +59,6 @@ var generators={
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'It\'s not a pretty sight'
-		
 	},
 	'keen4':{
 		'title': 'Commander Keen 4',
@@ -95,7 +94,7 @@ var generators={
 		'title': 'MS-DOS',
 		'source':'Microsoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
-		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\>"
+		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\\>"
 	},
 	'dn1':{
 		'title': 'Duke Nukem 1',
@@ -248,6 +247,12 @@ var generators={
 		'source':'Maxis Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!"
+	},
+	'sq1vga':{
+		'title': 'Space Quest 1',
+		'source':'Sierra Online',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':"As you lie on the floor in a smoldering,\ncarbogelatinous heap, you just can't help\nbut wonder why you bothered getting up\nthis morning."
 	},
 	'sq3':{
 		'title': 'Space Quest 3',
