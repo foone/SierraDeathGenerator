@@ -11,7 +11,7 @@
 	},
 	"hooks": {
 		"pre-overlays": "overlays.death.x = Math.floor(outputSize.w/2 - overlays.death.w/2);overlays.buttons.y = outputSize.h-23",
-		"pre-text": "y = 13 + overlays.death.h"
+		"pre-text": "mainFont.y = 13 + overlays.death.h"
 	},
 	"justify": "center-box",
 	"overlays": {

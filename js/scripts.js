@@ -18,6 +18,101 @@ function first(){
 		}
 	}
 }
+
+class BitmapFont {
+	constructor(info, image) {
+		this.info = info
+		this.image = image
+		this.y = info.origin.y
+	}
+
+	parseLine(line, fontOriginY=0){
+		var out=[]
+		var defaultInfo = first(this.info.default, {})
+		// FIXME: can doing uppercase/lowercase break astral codepoints?
+		if(this.info['case-fold'] == 'upper'){
+			line = line.toUpperCase()
+		}else if(this.info['case-fold'] == 'lower'){
+			line = line.toLowerCase()
+		}
+		for(var i=0;i<line.length;i++){
+			var c=line.charCodeAt(i)
+			if(c>= 0xD800 && c<=0xDBFF){
+				c = line.codePointAt(i)
+				i++; // Can this be more than 2? ARG JS UNICODE IS BAD
+			}
+			var info=this.info[c]
+			if(info==null){
+				info=this.info[this.info["null-character"]]
+			}
+			out.push({
+				'x': first(info.x, defaultInfo.x),
+				'y': first(info.y, defaultInfo.y, fontOriginY),
+				'w': first(info.w, defaultInfo.w),
+				'h': first(info.h, defaultInfo.h)
+			})
+		}
+		return out
+	}
+
+
+	 getWidth(lines){
+		var defaultInfo = first(this.info.default, {})
+		var maxw=0;
+		for (let line of lines){
+			var w=0;
+			for (let char of this.parseLine(line)){
+				w += char.w
+			}
+			maxw=Math.max(maxw,w)
+		}
+		return maxw
+	}
+
+	getHeight(lines){
+		if(lines.length == 0){
+			return 0;
+		}
+		if(this.info['first-height'] == null){
+			return this.info.height * lines.length
+		}
+
+		return Math.max(0,this.info.height * (lines.length-1)) + this.info['first-height']
+	}
+
+
+	draw(context, text, originx, justify, fontOriginY, scale){
+		var y=this.y
+
+		if(justify=='v-center'){
+			y -= Math.floor(this.getHeight(text)/2)
+		}
+		var firstLine = true
+		for (let line of text){
+			var x=originx
+			if(justify == 'center'){
+				x = originx - Math.floor(this.getWidth([line])/2)
+			}
+			for(let char of this.parseLine(line, fontOriginY)){
+				context.drawImage(this.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
+				x+=char.w
+			}
+			if(firstLine){
+				if(this.info['first-height'] != null){
+					// remove out fontInfo.height because it's going to be re-added later.
+					y+=this.info['first-height']-this.info.height
+				}
+				firstLine = false;
+			}
+			y+=this.info.height
+		}
+
+	}
+
+}
+
+
+
 function hideGenerators(){
 	$('a#hidelink').hide()
 	$('a#showlink').show()
@@ -93,61 +188,7 @@ function selectGenerator(){
 
 
 }
-function parseLine(line, fontOriginY=0){
-	var out=[]
-	var defaultInfo = first(fontInfo.default, {})
-	// FIXME: can doing uppercase/lowercase break astral codepoints?
-	if(fontInfo['case-fold'] == 'upper'){
-		line = line.toUpperCase()
-	}else if(fontInfo['case-fold'] == 'lower'){
-		line = line.toLowerCase()
-	}
-	for(var i=0;i<line.length;i++){
-		var c=line.charCodeAt(i)
-		if(c>= 0xD800 && c<=0xDBFF){
-			c = line.codePointAt(i)
-			i++; // Can this be more than 2? ARG JS UNICODE IS BAD
-		}
-		var info=fontInfo[c]
-		if(info==null){
-			info=fontInfo[fontInfo["null-character"]]
-		}
-		out.push({
-			'x': first(info.x, defaultInfo.x),
-			'y': first(info.y, defaultInfo.y, fontOriginY),
-			'w': first(info.w, defaultInfo.w),
-			'h': first(info.h, defaultInfo.h)
-		})
-	}
-	return out
-}
 
-
-function getWidth(lines){
-	var defaultInfo = first(fontInfo.default, {})
-	var maxw=0;
-	for (let line of lines){
-		var w=0;
-		for (let char of parseLine(line)){
-			w += char.w
-		}
-		maxw=Math.max(maxw,w)
-	}
-	return maxw
-
-}
-function getHeight(lines){
-
-	if(lines.length == 0){
-		return 0;
-	}
-	if(fontInfo['first-height'] == null){
-		return fontInfo.height * lines.length
-	}
-
-	return Math.max(0,fontInfo.height * (lines.length-1)) + fontInfo['first-height']
-
-}
 function parseOverlays(fontInfo){
 	var overlays = {}
 	if ('overlays' in fontInfo) {
@@ -189,6 +230,21 @@ function renderText(scaled = true){
 	if(fontInfo == null || baseImage == null){
 		return
 	}
+	// Define the top-level font
+	var mainFont = new BitmapFont(fontInfo, fontImage)
+	var fonts={
+		'main': mainFont
+	}
+	if('subfonts' in fontInfo){
+		for(var key of Object.keys(fontInfo.subfonts)){
+			fonts[key] = new BitmapFont(fontInfo.subfonts[key], fontImage)
+		}
+	}
+	var overlays = parseOverlays(fontInfo)
+
+	if('hooks' in fontInfo && 'font' in fontInfo['hooks']){
+		eval(fontInfo.hooks.font)
+	}
 
 	var originx = fontInfo.origin.x
 
@@ -197,14 +253,13 @@ function renderText(scaled = true){
 	var justify = first(fontInfo.justify, 'left')
 
 	var textbox={
-		w: getWidth(text),
-		h: getHeight(text)
+		w: mainFont.getWidth(text),
+		h: mainFont.getHeight(text)
 	}
 	if(justify == 'center-box'){
 		originx -= Math.floor(textbox.w/2)
 	}
 
-	var overlays = parseOverlays(fontInfo)
 
 	var outputSize={
 		w:baseImage.width,
@@ -248,7 +303,6 @@ function renderText(scaled = true){
 	// Clear before drawing, as transparents might get overdrawn
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
-	var firstLine=true;
 
 	drawOverlays('pre-border')
 
@@ -273,37 +327,15 @@ function renderText(scaled = true){
 
 	drawOverlays('pre-text')
 
-	var y=fontInfo.origin.y
 
-	if(justify=='v-center'){
-		y -= Math.floor(textbox.h/2)
-	}
 	var fontOriginY=0
 
 	if('hooks' in fontInfo && 'pre-text' in fontInfo['hooks']){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
-	var defaultInfo = first(fontInfo.default, {})
+	mainFont.draw(context, text, originx, justify, fontOriginY, scale)
 
-	for (let line of text){
-		var x=originx
-		if(justify == 'center'){
-			x = originx - Math.floor(getWidth([line])/2)
-		}
-		for(let char of parseLine(line, fontOriginY)){
-			context.drawImage(fontImage,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
-			x+=char.w
-		}
-		if(firstLine){
-			if(fontInfo['first-height'] != null){
-				// remove out fontInfo.height because it's going to be re-added later.
-				y+=fontInfo['first-height']-fontInfo.height
-			}
-			firstLine = false;
-		}
-		y+=fontInfo.height
-	}
 
 	twitterifyCanvas(context)
 }

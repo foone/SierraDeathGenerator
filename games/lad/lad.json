@@ -6,7 +6,7 @@
 	},
 	"null-character": 32,
 	"hooks": {
-		"pre-text": "if($('#overlay-scene option:selected').text()=='class'){originx=95;y=15;fontOriginY=9;}"
+		"pre-text": "if($('#overlay-scene option:selected').text()=='class'){originx=95;mainFont.y=15;fontOriginY=9;}"
 	},
 	"overlays": {
 		"scene": {

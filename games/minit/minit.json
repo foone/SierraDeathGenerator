@@ -13,7 +13,7 @@
 	"hooks": {
 		"border": "if(overlays.style.name=='balloon'){bh-=3}else{bw=6 + Math.max(8,textbox.w);bh=5 + textbox.h;border_x=Math.max(3,89-bw/2);originx=3+border_x;border_y=110-textbox.h}",
 		"pre-overlays": "if(overlays.style.name=='balloon'){overlays.balloontip.y=outputSize.h-4;overlays.balloontip.x=Math.floor(outputSize.w/2)-3}",
-		"pre-text": "if(overlays.style.name=='scene'){y=113-textbox.h}"
+		"pre-text": "if(overlays.style.name=='scene'){mainFont.y=113-textbox.h}"
 	},
 	"scale": 2,
 	"overlays": {
