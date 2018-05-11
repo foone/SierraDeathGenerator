@@ -48,6 +48,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Daisuke_Amaya',
 		'defaulttext':"Oh, sorry 'bout that.\nThe Doctor's such a cruel\nand evil person."
 	},
+	'caption':{
+		'title': 'Closed Captions',
+		'source':'FCC',
+		'sourceurl':'https://en.wikipedia.org/wiki/Federal_Communications_Commission',
+		'defaulttext':"\n PUT SPACES BEFORE EACH LINE \n AND AFTER FOR BETTER LOOK "
+	},
 	'ci':{
 		'title': 'Codename: ICEMAN',
 		'source':'Sierra Online',

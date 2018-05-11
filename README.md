@@ -14,6 +14,7 @@ Right now, it supports:
 * Castlevania II: Simon's Quest
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story
+* Closed Captions
 * Codename: ICEMAN
 * The Colonel's Bequest (Laura Bow 1)
 * Commander Keen 4

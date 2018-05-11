@@ -2,7 +2,7 @@ html {
 	overflow-y: scroll;
 }
 
-img.source{
+img.source, canvas.source{
 	display: none;
 }
 

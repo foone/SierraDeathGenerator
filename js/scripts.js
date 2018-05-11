@@ -4,6 +4,7 @@ var baseImage = null
 var fontImage = null
 var fontInfo = null
 var overlayNames = null
+var overlayOverrides = null
 var selectedGenerator = 'pq2'
 
 if(window.location.hash.length > 0){
@@ -143,7 +144,7 @@ function getHeight(lines){
 	if(fontInfo['first-height'] == null){
 		return fontInfo.height * lines.length
 	}
-	
+
 	return Math.max(0,fontInfo.height * (lines.length-1)) + fontInfo['first-height']
 
 }
@@ -233,7 +234,12 @@ function renderText(scaled = true){
 			var adv = overlays[key]
 			if(adv.stage == stage){
 				context.globalCompositeOperation = adv.blend
-				context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+				if(key in overlayOverrides){
+					var img = overlayOverrides[key]
+					context.drawImage(img,0,0,img.width,img.height,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+				}else{
+					context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+				}
 			}
 		})
 		context.globalCompositeOperation = "source-over"
@@ -365,7 +371,7 @@ function buildBorder(fontImage,fontInfo,w,h){
 }
 
 function resetOverlays(){
-
+	overlayOverrides = {}
 	overlayNames = []
 	$('.overlays p').remove()
 	if('overlays' in fontInfo){
@@ -386,11 +392,34 @@ function resetOverlays(){
 					}
 				}
 				select.appendTo(pwrapper)
+				if('replaceable' in overlay){
+					var uploadlabel=$(' <label>Replace image:</label>')
+					var upload=$('<input type="file" class="overlay-replacement" accept="image/*"/>').attr('id','replace-'+key)
+					upload.appendTo(uploadlabel)
+					uploadlabel.appendTo(pwrapper)
+				}
 				pwrapper.appendTo($('.overlays'))
 			}
 		}
 	}
 	$('.overlays select').change(renderText)
+	$('.overlay-replacement').change(function(){
+		// from http://jsfiddle.net/influenztial/qy7h5/
+		var name = $(this).attr('id').split('-',2)[1]
+		var reader = new FileReader();
+	    reader.onload = function(event){
+	        var img = new Image();
+	        img.onload = function(){
+	        	var overrideCanvas = $('<canvas class="source">').attr('width',img.width).attr('height',img.height).appendTo($('.overlays p'))[0]
+	        	var octx = overrideCanvas.getContext('2d')
+	        	octx.drawImage(img,0,0)
+		        overlayOverrides[name]=overrideCanvas
+			    renderText()
+	        }
+	        img.src = event.target.result;
+	    }
+	    reader.readAsDataURL(this.files[0]);
+	})
 
 }
 
@@ -437,7 +466,7 @@ $('a#upload').click(function(){
 	$(this).hide()
 	$('#throbber').show()
 	$('#uploading').text('Uploading...').show()
-	
+
 	$.ajax({
 		url: 'https://api.imgur.com/3/image',
 		type: 'POST',
@@ -458,7 +487,7 @@ $('a#upload').click(function(){
 					$('<a>').attr('href',link).text(link)
 				)
 			}else{
-				$('#uploading').text('Error uploading to imgur!')	
+				$('#uploading').text('Error uploading to imgur!')
 			}
 		},
 		error: function(result) {
@@ -486,3 +515,4 @@ $('a#hidelink').click(function(){
 	hideGenerators()
 	return false
 })
+
