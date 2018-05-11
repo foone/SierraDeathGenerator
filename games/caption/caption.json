@@ -8,7 +8,7 @@
 	"scale": 1,
 	"hooks": {
 		"font": "if(overlays.font.name != 'STV5730A'){mainFont=fonts[overlays.font.name]}",
-		"pre-text": "if(textbox.h>72){y=324-textbox.h}"
+		"pre-text": "if(textbox.h>72){mainFont.y=324-textbox.h}"
 	},
 	"overlays": {
 		"background": {
