@@ -6,6 +6,9 @@
 	},
 	"null-character": 32,
 	"scale": 1,
+	"hooks": {
+		"pre-text": "if(textbox.h>72){y=324-textbox.h}"
+	},
 	"overlays": {
 		"background": {
 			"x": 0,
