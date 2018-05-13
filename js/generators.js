@@ -90,6 +90,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Ion_Storm',
 		'defaulttext':"NSF everywhere, JC.  Your orders are to\nshoot on sight.  A UNATCO informant on\nthe North Dock can get you inside the\nstatue.  Look for a Bum.  Identify\nyourself with the phrase 'Iron and\nCopper.'"
 	},
+	'ddp':{
+		'title': 'DoDonPachi',
+		'source':'CAVE',
+		'sourceurl':'https://en.wikipedia.org/wiki/Cave_(company)',
+		'defaulttext':"          [red]warning[/red]\n\nthis game is for use in\n[red]JAPAN ONLY.[/red]\nSales, export or operation\noutside this country may be\nconstrued as copyright and \ntrademark infringement and \nis strictly prohibited.\nviolator and subject to\nsevere penalties and will\nbe prosecutedt to the full\nextent of the jam.\n\n[blue]©atlus/cave 1995 1996 1997\n    all rights reserved[/blue]\n    [red]1997 2/5 master ver.[/red]"
+	},
 	'doom':{
 		'title': 'Doom',
 		'source':'id Software',

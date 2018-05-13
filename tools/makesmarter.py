@@ -1,15 +1,14 @@
 # encoding=utf-8
 
 import string
-CHARS='0123456789-'' '+string.ascii_uppercase+":./\'"+string.ascii_lowercase+u'àâäáéèëêìîïíòǒöóùûüúÄÖÜçßñ+*▶⏩⏪■―\0\0\0\0ÅåÉ\0Ñ📡╦?♡▁▃▄▅▇█=𝄞→←↑↓🔑⏰'
+CHARS=(u' !"#$%&\'[]*+,-./0123456789;:←=→?©'+string.ascii_uppercase+
+u'\0_▯↑↓')
 
-w,h=12,18
-xspacing=2
+w,h=8,16
+xspacing=0
 
 for i,c in enumerate(CHARS):
 	if c != '\0':
 		print """"{}": {{
-	  "x": {},
-	  "w": {},
-	  "h": {}
+	  "x": {}
 	}},""".format(ord(c),(w+xspacing)*i,w,h)

@@ -21,6 +21,7 @@ Right now, it supports:
 * Cosmo's Cosmic Adventure
 * Crowtel Renovations
 * Deus Ex
+* DoDonPachi
 * Doom
 * DOS text screens
 * DOS 6's EDIT.COM text editor

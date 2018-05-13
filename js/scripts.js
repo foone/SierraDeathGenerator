@@ -25,14 +25,75 @@ class BitmapFont {
 		this.image = image
 		this.y = info.origin.y
 	}
+}
 
-	parseLine(line, fontOriginY=0){
+class NewLine{
+	constructor(){
+		this.type = 'NewLine'
+	}
+}
+
+class LineGroup{
+	constructor(firstLine){
+		this.firstLine=firstLine
+		this.snippets = []
+		this.height = 0 
+	}
+
+	add(snippet){
+		this.snippets.push(snippet)
+		this.height = Math.max(this.height, snippet.getHeight(this.firstLine))
+	}
+
+	getWidth(){
+		var w=0
+		for(var snippet of this.snippets){
+			w+=snippet.getWidth()
+		}
+		return w
+	}
+
+	getHeight(){
+		return this.height
+	}
+
+	isEmpty(){
+		return this.snippets.length == 0 
+	}
+
+	draw(context, scale, xStart, y){
+		var x = xStart
+		for(let snippet of this.snippets){
+			x = snippet.draw(context, scale, x, y)
+		}
+	}
+}
+
+class Snippet{
+	constructor(font, text){
+		this.type = 'Snippet'
+		this.font = font
+		this.text = text
+	}
+
+	draw(context, scale, xStart, y){
+		var x=xStart
+		for(let char of this.parse()){
+			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
+			x+=char.w
+		}
+		return x
+	}
+
+	parse(fontOriginY=0){
 		var out=[]
-		var defaultInfo = first(this.info.default, {})
+		var font = this.font.info
+		var defaultInfo = first(font.default, {})
 		// FIXME: can doing uppercase/lowercase break astral codepoints?
-		if(this.info['case-fold'] == 'upper'){
+		var line = this.text
+		if(font['case-fold'] == 'upper'){
 			line = line.toUpperCase()
-		}else if(this.info['case-fold'] == 'lower'){
+		}else if(font['case-fold'] == 'lower'){
 			line = line.toLowerCase()
 		}
 		for(var i=0;i<line.length;i++){
@@ -41,9 +102,9 @@ class BitmapFont {
 				c = line.codePointAt(i)
 				i++; // Can this be more than 2? ARG JS UNICODE IS BAD
 			}
-			var info=this.info[c]
+			var info=font[c]
 			if(info==null){
-				info=this.info[this.info["null-character"]]
+				info=font[font["null-character"]]
 			}
 			out.push({
 				'x': first(info.x, defaultInfo.x),
@@ -55,62 +116,117 @@ class BitmapFont {
 		return out
 	}
 
-
-	 getWidth(lines){
-		var defaultInfo = first(this.info.default, {})
-		var maxw=0;
-		for (let line of lines){
-			var w=0;
-			for (let char of this.parseLine(line)){
-				w += char.w
-			}
-			maxw=Math.max(maxw,w)
+	getWidth(){
+		var w=0
+		for(var char of this.parse()){
+			w += char.w
 		}
-		return maxw
+		return w
 	}
 
-	getHeight(lines){
-		if(lines.length == 0){
-			return 0;
+	getHeight(firstLine){
+		var info = this.font.info
+		if(firstLine){
+			return first(info['first-height'], info['height'])
+		}else{
+			return info['height']
 		}
-		if(this.info['first-height'] == null){
-			return this.info.height * lines.length
-		}
-
-		return Math.max(0,this.info.height * (lines.length-1)) + this.info['first-height']
-	}
-
-
-	draw(context, text, originx, justify, fontOriginY, scale){
-		var y=this.y
-
-		if(justify=='v-center'){
-			y -= Math.floor(this.getHeight(text)/2)
-		}
-		var firstLine = true
-		for (let line of text){
-			var x=originx
-			if(justify == 'center'){
-				x = originx - Math.floor(this.getWidth([line])/2)
-			}
-			for(let char of this.parseLine(line, fontOriginY)){
-				context.drawImage(this.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
-				x+=char.w
-			}
-			if(firstLine){
-				if(this.info['first-height'] != null){
-					// remove out fontInfo.height because it's going to be re-added later.
-					y+=this.info['first-height']-this.info.height
-				}
-				firstLine = false;
-			}
-			y+=this.info.height
-		}
-
 	}
 
 }
 
+class FontManager{
+	constructor(context, text, fonts) {
+		this.context = context
+		this.text = text
+		this.fonts = fonts
+		this.lines = this.applyMarkup()
+	}
+
+	splitSnippet(font, text ){
+		var parts = text.split(/(\n)/)
+		var out=[]
+		for(var part of parts){
+			if(part=='\n'){
+				out.push(new NewLine())
+			}else{
+				out.push(new Snippet(font, part))
+			}
+		}
+		return out
+	}
+
+	buildLines(pieces){
+		var out=[]
+		var line = new LineGroup(true)
+		for(var piece of pieces){
+			if(piece instanceof NewLine){
+				out.push(line)
+				line = new LineGroup(false)
+			}else{
+				line.add(piece)
+			}
+		}
+		if(!line.isEmpty()){
+			out.push(line)
+		}
+		return out
+	}
+
+	applyMarkup(){
+		var parts = this.text.split(/\[(\/?[a-zA-Z0-9]*)\]/)
+		parts.unshift('/')
+		var out=[]
+		for(var i=0;i<parts.length;i+=2){
+			var marker = parts[i]
+			var text = parts[i+1]
+			if(text!==''){ // Skip empty text segments
+				if(marker.startsWith('/')){
+					marker='main'
+				}
+				if(!(marker in this.fonts)){
+					marker='main'
+				}
+				for(var snippet of this.splitSnippet(this.fonts[marker], text)){
+					out.push(snippet)
+				}
+			}
+		}
+		return this.buildLines(out)
+	}
+
+	getHeight(){
+		var height = 0
+		for(var line of this.lines){
+			height += line.getHeight()
+		}
+		return height
+	}
+
+	getWidth(){
+		var width = 0 
+		for(var line of this.lines){
+			width = Math.max(width,line.getWidth())
+		}
+		return width
+	}
+	
+	draw(mainFont, scale, originx, justify, fontOriginY){
+		var y = mainFont.y
+		if(justify=='v-center'){
+			y -= Math.floor(this.getHeight()/2)
+		}
+		for(var line of this.lines){
+			var x = originx
+			if(justify == 'center'){
+				x = originx - Math.floor(line.getWidth()/2)
+			}
+			line.draw(this.context, scale, x, y)
+			y+=line.getHeight()
+		}
+	}
+
+}
 
 
 function hideGenerators(){
@@ -143,6 +259,14 @@ function selectGenerator(){
 
 	var gen=generators[selectedGenerator]
 	window.location.hash=selectedGenerator
+	if(gen === undefined){
+		gen={
+			title:'placeholder',
+			defaulttext: '',
+			sourceurl:'',
+			source:'UNKNOWN'
+		}
+	}
 
 	$('button.generator-switcher').each(function(){
 		$(this).prop('disabled',$(this).data('generator')==selectedGenerator)
@@ -230,6 +354,7 @@ function renderText(scaled = true){
 	if(fontInfo == null || baseImage == null){
 		return
 	}
+
 	// Define the top-level font
 	var mainFont = new BitmapFont(fontInfo, fontImage)
 	var fonts={
@@ -240,21 +365,27 @@ function renderText(scaled = true){
 			fonts[key] = new BitmapFont(fontInfo.subfonts[key], fontImage)
 		}
 	}
+	var originx = first(fontInfo.origin.x, 0)
+
 	var overlays = parseOverlays(fontInfo)
+
+	var rawtext = document.querySelector("textarea#sourcetext").value
+
+	function switchFont(newFont){
+		rawtext = '[' + newFont + ']' + rawtext
+	}
 
 	if('hooks' in fontInfo && 'font' in fontInfo['hooks']){
 		eval(fontInfo.hooks.font)
 	}
 
-	var originx = fontInfo.origin.x
-
-	var text = document.querySelector("textarea#sourcetext").value.split('\n')
+	var fontManager = new FontManager(context, rawtext, fonts)
 
 	var justify = first(fontInfo.justify, 'left')
 
 	var textbox={
-		w: mainFont.getWidth(text),
-		h: mainFont.getHeight(text)
+		w: fontManager.getWidth(),
+		h: fontManager.getHeight()
 	}
 	if(justify == 'center-box'){
 		originx -= Math.floor(textbox.w/2)
@@ -278,6 +409,8 @@ function renderText(scaled = true){
 	if(!scaled){
 		scale = fontScale
 	}
+	
+
 	context.canvas.width = outputSize.w * scale
 	context.canvas.height = outputSize.h * scale
 	if(scale == 2.0){
@@ -334,7 +467,7 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
-	mainFont.draw(context, text, originx, justify, fontOriginY, scale)
+	fontManager.draw(mainFont, scale, originx, justify, fontOriginY)
 
 
 	twitterifyCanvas(context)

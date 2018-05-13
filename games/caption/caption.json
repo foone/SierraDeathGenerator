@@ -7,7 +7,7 @@
 	"null-character": 32,
 	"scale": 1,
 	"hooks": {
-		"font": "if(overlays.font.name != 'STV5730A'){mainFont=fonts[overlays.font.name]}",
+		"font": "if(overlays.font.name != 'STV5730A'){switchFont(overlays.font.name)}",
 		"pre-text": "if(textbox.h>72){mainFont.y=overlays.background.h-6-textbox.h}else{mainFont.y=overlays.background.h-78}",
 		"pre-overlays": "if(overlays.resolution.name=='VHS'){overlays.background.w=440;overlays.background.h=330}else{overlays.background.w=640;overlays.background.h=480}"
 	},
