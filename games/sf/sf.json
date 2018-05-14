@@ -11,7 +11,7 @@
 	},
 	"hooks": {
 		"pre-overlays": "if(overlays.scene.name=='training'){overlays.portrait.x=49;overlays.portrait.y=151}",
-		"pre-text": "if(overlays.scene.name=='training'){y=152;originx=82}"
+		"pre-text": "if(overlays.scene.name=='training'){mainFont.y=152;originx=82}"
 	},
 	"overlays": {
 		"scene": {
