@@ -11,6 +11,7 @@ Right now, it supports:
 * Ancients 1: Death Watch
 * Bad Dudes
 * Bio Menace
+* Captain Novolin
 * Castlevania II: Simon's Quest
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story

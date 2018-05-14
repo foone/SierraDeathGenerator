@@ -30,6 +30,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!"
 	},
+	'cn':{
+		'title': 'Captain Novolin',
+		'source':'Sculptured Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sculptured_Software',
+		'defaulttext':'You need to check your\nblood sugar four times a \nday,but you can check it \n more often if you like.'
+	},
 	'cv2':{
 		'title': 'Castlevania II',
 		'source':'Konami',
