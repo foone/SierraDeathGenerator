@@ -348,6 +348,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/American_Game_Cartridges',
 		'defaulttext':'Taking drugs is stupid,\nToby.'
 	},
+	'wh2':{
+		'title': 'World Heroes 2',
+		'source':'ADK',
+		'sourceurl':'https://en.wikipedia.org/wiki/ADK_(company)',
+		'defaulttext':'Live my child,so i may\nsmack you around again\nsome day!'
+	},
 	'wbm':{
 		'title': 'Wrath of the Black Manta',
 		'source':'AI',
