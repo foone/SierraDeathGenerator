@@ -9,11 +9,25 @@
 	"hooks": {
 		"font": "if(overlays.font.name != 'STV5730A'){switchFont(overlays.font.name)}",
 		"pre-text": "if(textbox.h>72){mainFont.y=overlays.background.h-6-textbox.h}else{mainFont.y=overlays.background.h-78}",
-		"pre-overlays": "if(overlays.resolution.name=='VHS'){overlays.background.w=440;overlays.background.h=330}else{overlays.background.w=640;overlays.background.h=480}"
+		"pre-overlays": "overlays.background.w=fontInfo['-resolutions'][overlays.resolution.name]['w'];overlays.background.h=fontInfo['-resolutions'][overlays.resolution.name]['h']"
+	},
+	"-resolutions":{
+		"VHS":{
+			"w":440,
+			"h":330
+		},
+		"VGA":{
+			"w":640,
+			"h":480
+		},
+		"DVD":{
+			"w":720,
+			"h":480
+		}
 	},
 	"dynamic-size": {
-		"w": "overlays.resolution.name=='VHS' ? 440 : 640",
-		"h": "overlays.resolution.name=='VHS' ? 330 : 480"
+		"w": "fontInfo['-resolutions'][overlays.resolution.name]['w']",
+		"h": "fontInfo['-resolutions'][overlays.resolution.name]['h']"
 	},
 	"overlays": {
 		"background": {
@@ -76,6 +90,12 @@
 					"h": 1
 				},
 				"VGA": {
+					"x": 0,
+					"y": 1024,
+					"w": 1,
+					"h": 1
+				},
+				"DVD":{
 					"x": 0,
 					"y": 1024,
 					"w": 1,
