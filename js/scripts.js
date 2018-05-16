@@ -618,10 +618,15 @@ selectGenerator()
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
 
-$('#save').click(function(){
+function getDataURLImage(){
 	// generate an unscaled version
 	renderText(false)
-	this.href=context.canvas.toDataURL('image/png')
+	return context.canvas.toDataURL('image/png')
+
+}
+
+$('#save').click(function(){
+	this.href = getDataURLImage()
 	this.download = getNameForCurrentImage("png")
 	return true
 })

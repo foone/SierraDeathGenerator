@@ -6,6 +6,14 @@ const path = require('path');
 const readFile = util.promisify(fs.readFile);
 
 
+const getOptions=(
+	"(function (){"+
+		"let opts = {'main-text':$('#sourcetext').val()};"+
+		"$('select').each(function(_,e){"+
+			"opts[$(e).attr('id').split('-',2)[1]]=$(e).val()"+
+		"});"+
+		"return opts;"+
+	"})()");
 
 (async () => {
 	const browser = await puppeteer.launch({'args':['--allow-file-access-from-files'],'headless':true});
@@ -26,7 +34,7 @@ const readFile = util.promisify(fs.readFile);
 			// ADD OPTIONS IN
 			//
 			out['image']=image
-			out['options'] = await page.evaluate("(function (){let opts = {'main-text':$('#sourcetext').val()};$('select').each(function(_,e){opts[$(e).attr('id').split('-',2)[1]]=$(e).val()});return opts})()")
+			out['options'] = await page.evaluate(getOptions)
 	}
 	await browser.close();
 	console.log(JSON.stringify(output))
