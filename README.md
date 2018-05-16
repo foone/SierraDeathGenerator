@@ -49,6 +49,7 @@ Right now, it supports:
 * Road Rash (for the Genesis/Megadrive)
 * Rygar
 * SimCity 2000 Advisors
+* Skyblazer
 * Super Mario 64
 * Super Mario World
 * Super Mario Bros

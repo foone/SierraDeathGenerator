@@ -266,6 +266,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!"
 	},
+	'sb':{
+		'title': 'Skyblazer',
+		'source':'Ukiyotei',
+		'sourceurl':'https://en.wikipedia.org/wiki/Ukiyotei',
+		'defaulttext':"[cyan]Sky[/cyan]\nDo you not know who I am?\nI am known as Sky. ▼"
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
