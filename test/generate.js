@@ -19,7 +19,6 @@ const readFile = util.promisify(fs.readFile);
 			const page = await browser.newPage();
 			//page.on('console', msg => console.log('PAGE LOG:', msg.text()));
 			await page.goto(indexURL + generator);
-			await page.click('#hidelink');
 			await page._client.send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: './'});
 			await page.waitForFunction("$('#sourcetext').text('')")
 			await page.type('#sourcetext','hello');
