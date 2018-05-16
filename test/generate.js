@@ -5,16 +5,6 @@ const util = require('util');
 const path = require('path');
 const readFile = util.promisify(fs.readFile);
 
-
-const getOptions=(
-	"(function (){"+
-		"let opts = {'main-text':$('#sourcetext').val()};"+
-		"$('select').each(function(_,e){"+
-			"opts[$(e).attr('id').split('-',2)[1]]=$(e).val()"+
-		"});"+
-		"return opts;"+
-	"})()");
-
 (async () => {
 	const browser = await puppeteer.launch({'args':['--allow-file-access-from-files'],'headless':true});
 	const indexURL = 'file://' + path.resolve(__dirname,'../index.html') + '#';
@@ -25,16 +15,17 @@ const getOptions=(
 	for(let generator of Object.keys(generators)){
 			let out = output[generator] = {}
 			const page = await browser.newPage();
+
 			//page.on('console', msg => console.log('PAGE LOG:', msg.text()));
+
 			await page.goto(indexURL + generator);
 			await page._client.send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: './'});
-			await page.waitForFunction("$('#sourcetext').text('')")
-			await page.type('#sourcetext','hello');
+			//await page.waitForFunction("$('#sourcetext').text('')")
+			//await page.type('#sourcetext','hello');
 			var image = await page.evaluate('getDataURLImage()')
-			// ADD OPTIONS IN
-			//
+
 			out['image']=image
-			out['options'] = await page.evaluate(getOptions)
+			out['options'] = await page.evaluate('getOptions()')
 	}
 	await browser.close();
 	console.log(JSON.stringify(output))

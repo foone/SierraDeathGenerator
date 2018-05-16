@@ -342,6 +342,37 @@ function parseOverlays(fontInfo){
 	return overlays
 }
 
+function getOptions(){
+	let opts = {
+		'main-text': $('#sourcetext').val()
+	};
+	$('select').each(function(_,e){
+		opts[$(e).attr('id').split('-',2)[1]] = $(e).val()
+	});
+	return opts;
+}
+
+function setOptions(opts){
+	$('#sourcetext').val(opts['main-text'])
+
+	$('select').each(function(_,e){
+		$(this).val(opts[$(e).attr('id').split('-',2)[1]])
+	});
+	return opts;
+}
+
+function getAllPossibleOptions(){
+	let opts={}
+	$('select').each(function(_,e){
+		let sopt = opts[$(e).attr('id').split('-',2)[1]] = []
+		$(this).find('option').each(function(_,o){
+			sopt.push($(o).val())
+		})
+	});
+
+	return opts;
+}
+
 function twitterifyCanvas(context){
 	var pixel = context.getImageData(0,0,1,1)
 	if(pixel.data[3]==255){
