@@ -174,7 +174,7 @@ class FontManager{
 	}
 
 	applyMarkup(){
-		var parts = this.text.split(/\[(\/?[a-zA-Z0-9]*)\]/)
+		var parts = this.text.split(/\[(\/?[_a-zA-Z0-9]*)\]/)
 		parts.unshift('/')
 		var out=[]
 		for(var i=0;i<parts.length;i+=2){
@@ -320,7 +320,7 @@ function parseOverlays(fontInfo){
 			var oname=overlayNames[i]
 			var currentOverlay=fontInfo.overlays[oname]
 
-			var sname = $('#overlay-'+oname+' option:selected').text()
+			var sname = $('#overlay-'+oname+' option:selected').val()
 			var adv=currentOverlay.options[sname]
 
 			overlays[oname] = {
@@ -331,6 +331,7 @@ function parseOverlays(fontInfo){
 				"h":adv.h,
 				"blend":first(currentOverlay['blend-mode'], 'source-over'),
 				"stage":first(currentOverlay.stage, "pre-text"),
+				"title":first(currentOverlay.title,sname),
 				"source":{
 					"x":adv.x,
 					"y":adv.y
@@ -584,7 +585,7 @@ function resetOverlays(){
 				var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
 				for(opt in overlay.options){
 					if(overlay.options.hasOwnProperty(opt)){
-						$('<option>').text(opt).prop('selected',opt==overlay['default']).appendTo(select)
+						$('<option>').text(first(overlay.options[opt].title,opt)).attr('value',opt).prop('selected',opt==overlay['default']).appendTo(select)
 					}
 				}
 				select.appendTo(pwrapper)
