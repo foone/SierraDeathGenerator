@@ -6,10 +6,24 @@ var fontInfo = null
 var overlayNames = null
 var overlayOverrides = null
 var selectedGenerator = 'pq2'
+var glitch = false
+
+function applyHashChange(){
+	selectedGenerator = window.location.hash.substr(1)
+	if(selectedGenerator.startsWith('-')){
+		selectedGenerator = selectedGenerator.substr(1)
+		glitch=true
+	}else{
+		glitch=false
+	}
+	selectGenerator()
+}
 
 if(window.location.hash.length > 0){
-	selectedGenerator = window.location.hash.substr(1)
+	applyHashChange()
 }
+
+window.addEventListener("hashchange", applyHashChange,false)
 
 function first(){
 	for(var i=0;i<arguments.length;i++){
@@ -106,8 +120,12 @@ class Snippet{
 			if(info==null){
 				info=font[font["null-character"]]
 			}
+			var x=first(info.x, defaultInfo.x)
+			if(glitch){
+				x*=0.95
+			}
 			out.push({
-				'x': first(info.x, defaultInfo.x),
+				'x': x,
 				'y': first(info.y, defaultInfo.y, fontOriginY),
 				'w': first(info.w, defaultInfo.w),
 				'h': first(info.h, defaultInfo.h)
@@ -258,7 +276,7 @@ function isAnyDefaultText(text){
 function selectGenerator(){
 
 	var gen=generators[selectedGenerator]
-	window.location.hash=selectedGenerator
+	window.location.hash=(glitch?'-':'') + selectedGenerator
 	if(gen === undefined){
 		gen={
 			title:'placeholder',
