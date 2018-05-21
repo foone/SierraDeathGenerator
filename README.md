@@ -12,6 +12,7 @@ Right now, it supports:
 * Bad Dudes
 * Bio Menace
 * Captain Novolin
+* Carmageddon
 * Castlevania II: Simon's Quest
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story
