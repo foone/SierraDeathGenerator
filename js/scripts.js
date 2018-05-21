@@ -192,7 +192,7 @@ class FontManager{
 	}
 
 	applyMarkup(){
-		var parts = this.text.split(/\[(\/?[_a-zA-Z0-9]*)\]/)
+		var parts = this.text.split(/\[(\/?[:_a-zA-Z0-9]*)\]/)
 		parts.unshift('/')
 		var out=[]
 		for(var i=0;i<parts.length;i+=2){
@@ -617,7 +617,14 @@ function resetOverlays(){
 			}
 		}
 	}
-	$('.overlays select').change(renderText)
+	$('.overlays select').change(function(){
+		var name = $(this).attr('id').split('-',2)[1]
+		var hookname = 'change-'+name
+		if('hooks' in fontInfo && hookname in fontInfo.hooks){
+			eval(fontInfo.hooks[hookname])
+		}
+		renderText()
+	})
 	$('.overlay-replacement').change(function(){
 		// from http://jsfiddle.net/influenztial/qy7h5/
 		var name = $(this).attr('id').split('-',2)[1]
