@@ -36,6 +36,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sculptured_Software',
 		'defaulttext':'You need to check your\nblood sugar four times a \nday,but you can check it \n more often if you like.'
 	},
+	'carma':{
+		'title': 'Carmageddon',
+		'source':'Stainless Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Stainless_Games',
+		'defaulttext':'[white]Screwie[/]\nHave you got\nthe guts to\ntrade places,\nPunk?'
+	},
 	'cv2':{
 		'title': 'Castlevania II',
 		'source':'Konami',
