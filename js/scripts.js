@@ -51,7 +51,7 @@ class LineGroup{
 	constructor(firstLine){
 		this.firstLine=firstLine
 		this.snippets = []
-		this.height = 0 
+		this.height = 0
 	}
 
 	add(snippet){
@@ -72,7 +72,39 @@ class LineGroup{
 	}
 
 	isEmpty(){
-		return this.snippets.length == 0 
+		return this.snippets.length == 0
+	}
+
+	split(maxwidth){
+		if(this.getWidth()>maxwidth){
+			var x=0;
+			var out=[]
+			var first=this.firstLine
+			for(var snippet of this.snippets){
+				var w=snippet.getWidth()
+				if(x+w>maxwidth){
+					var parts = snippet.split(maxwidth-x)
+					for(var p of parts){
+						var lg = new LineGroup(first)
+						first=false
+						lg.add(p)
+						out.push(lg)
+					}
+					// TODO: rest of snippets?
+					return out
+				}else{
+					x+=w
+					var lg = new LineGroup(first)
+					lg.add(snippet)
+					out.add(snippet)
+					first=false
+				}
+			}
+			return out
+		}else{
+			return [this]
+		}
+
 	}
 
 	draw(context, scale, xStart, y){
@@ -88,6 +120,39 @@ class Snippet{
 		this.type = 'Snippet'
 		this.font = font
 		this.text = text
+	}
+
+	split(maxwidth){
+		var chars = this.parse()
+		function widthSoFar(bk){
+			var w=0
+			for(var i=0;i<bk;i++){
+				w+=chars[i].w
+			}
+			return w
+		}
+		var lb = new LineBreak(this.text)
+		var last=null
+		var bk
+		var first=true
+		while(bk = lb.nextBreak()){
+			if(widthSoFar(bk.position)>maxwidth){
+				if(first){
+					last=bk.position
+				}
+				break
+			}
+			first=false
+			last=bk.position
+		}
+		if(last==null){
+			// We had no break points, or our first breakpoint was over the max. So we can't split
+			return [this]
+		}else{
+			var before = new Snippet(this.font, this.text.slice(0,last))
+			var after = new Snippet(this.font, this.text.slice(last))
+			return [before, after]
+		}
 	}
 
 	draw(context, scale, xStart, y){
@@ -191,6 +256,24 @@ class FontManager{
 		return out
 	}
 
+	wordwrap(maxwidth){
+
+		function splitLine(line){
+			var parts = line.split(maxwidth)
+			if(parts.length==2){
+				return [parts[0]].concat(splitLine(parts[1]))
+			}else{ // should only be 1
+				return parts
+			}
+		}
+
+		var out=[]
+		for(var line of this.lines){
+			out = out.concat(splitLine(line))
+		}
+		this.lines = out
+	}
+
 	applyMarkup(){
 		var parts = this.text.split(/\[(\/?[:_a-zA-Z0-9]*)\]/)
 		parts.unshift('/')
@@ -222,13 +305,13 @@ class FontManager{
 	}
 
 	getWidth(){
-		var width = 0 
+		var width = 0
 		for(var line of this.lines){
 			width = Math.max(width,line.getWidth())
 		}
 		return width
 	}
-	
+
 	draw(mainFont, scale, originx, justify, fontOriginY){
 		var y = mainFont.y
 		if(justify=='v-center'){
@@ -430,7 +513,9 @@ function renderText(scaled = true){
 	}
 
 	var fontManager = new FontManager(context, rawtext, fonts)
-
+	if('wrap-width' in fontInfo && $('#wordwrap').prop('checked')){
+		fontManager.wordwrap(fontInfo['wrap-width'])
+	}
 	var justify = first(fontInfo.justify, 'left')
 
 	var textbox={
@@ -459,7 +544,7 @@ function renderText(scaled = true){
 	if(!scaled){
 		scale = fontScale
 	}
-	
+
 
 	context.canvas.width = outputSize.w * scale
 	context.canvas.height = outputSize.h * scale
@@ -651,12 +736,9 @@ function loadJSONForGenerator(){
 	$.getJSON(gamesPath + selectedGenerator + ".json",function(data){
 		fontInfo = data
 		resetOverlays()
+		$('.wordwrap').toggle('wrap-width' in fontInfo)
 		renderText()
-		if(fontInfo.gif){
-			$('#makegif').show()
-		}else{
-			$('#makegif').hide()
-		}
+		$('#makegif').toggle(!!fontInfo.gif)
 		if(fontInfo.script){
 			$.getScript(gamesPath + selectedGenerator + ".js");
 		}
@@ -674,6 +756,9 @@ function getNameForCurrentImage(ext){
 selectGenerator()
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
+
+$('.wordwrap').change(renderText)
+
 
 function getDataURLImage(){
 	// generate an unscaled version

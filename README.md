@@ -95,3 +95,9 @@ Other games to add
 * Every SCI game
 * AGI games?
 
+Software credits
+================
+* jQuery
+* [jQuery waitForImages plugin](https://github.com/alexanderdickson/waitForImages)
+* [linebreak](https://github.com/devongovett/linebreak)
+* [jsgif](https://github.com/antimatter15/jsgif)

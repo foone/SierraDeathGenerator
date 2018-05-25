@@ -4,6 +4,7 @@
 		"x": 93,
 		"y": 35
 	},
+	"wrap-width": 300,
 	"null-character": 32,
 	"overlays": {
 		"portrait": {

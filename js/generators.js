@@ -100,7 +100,7 @@ var generators={
 		'title': 'Deus Ex',
 		'source':'Ion Storm',
 		'sourceurl':'https://en.wikipedia.org/wiki/Ion_Storm',
-		'defaulttext':"NSF everywhere, JC.  Your orders are to\nshoot on sight.  A UNATCO informant on\nthe North Dock can get you inside the\nstatue.  Look for a Bum.  Identify\nyourself with the phrase 'Iron and\nCopper.'"
+		'defaulttext':"NSF everywhere, JC.  Your orders are to shoot on sight.  A UNATCO informant on the North Dock can get you inside the statue.  Look for a Bum.  Identify yourself with the phrase 'Iron and Copper.'"
 	},
 	'ddp':{
 		'title': 'DoDonPachi',
