@@ -157,11 +157,13 @@ class Snippet{
 
 	draw(context, scale, xStart, y){
 		var x=xStart
+		var last = 0
 		for(let char of this.parse()){
 			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
-			x+=char.w
+			x+=(char.w - char.unadvance)
+			last = char.unadvance
 		}
-		return x
+		return x + last
 	}
 
 	parse(fontOriginY=0){
@@ -193,7 +195,8 @@ class Snippet{
 				'x': x,
 				'y': first(info.y, defaultInfo.y, fontOriginY),
 				'w': first(info.w, defaultInfo.w),
-				'h': first(info.h, defaultInfo.h)
+				'h': first(info.h, defaultInfo.h),
+				'unadvance': first(info.unadvance, defaultInfo.unadvance, 0)
 			})
 		}
 		return out
@@ -201,10 +204,12 @@ class Snippet{
 
 	getWidth(){
 		var w=0
+		var last = 0
 		for(var char of this.parse()){
-			w += char.w
+			last = char.unadvance
+			w += char.w - char.unadvance
 		}
-		return w
+		return w + last
 	}
 
 	getHeight(firstLine){

@@ -302,6 +302,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Stardew_Valley',
 		'defaulttext':"Your grandpa used to complain\nabout the rickety old bed. But\nI think, deep down, he actually\nloved that house.",
 	},
+	'sc2':{
+		'title': 'Star Control II',
+		'source':'Toys for Bob',
+		'sourceurl':'https://en.wikipedia.org/wiki/Toys_for_Bob',
+		'defaulttext':"Juffo-Wup fills in my fibers and I\ngrow turgid. Violent action ensues.",
+	},	
 	'sf':{
 		'title': 'Star Fox',
 		'source':'Nintendo',

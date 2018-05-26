@@ -59,6 +59,7 @@ Right now, it supports:
 * Space Quest 3
 * Space Quest 4
 * Stardew Valley
+* Star Control II
 * Star Fox (Starwing in Europe)
 * Street Fighter II
 * Teenage Mutant Ninja Turtles 1 (NES)
