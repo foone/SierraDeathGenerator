@@ -6,7 +6,7 @@
 	},
 	"null-character": 32,
 	"hooks": {
-		"pre-text": "if(overlays.scene.name=='fortress'){y=151;originx=32}"
+		"pre-text": "if(overlays.scene.name=='fortress'){mainFont.y=151;originx=32}"
 	},
 	"overlays": {
 		"scene": {
