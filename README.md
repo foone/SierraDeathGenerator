@@ -13,6 +13,7 @@ Right now, it supports:
 * Bio Menace
 * Captain Novolin
 * Carmageddon
+* Castle of the Winds
 * Castlevania II: Simon's Quest
 * Castlevania: Symphony of the Night (PS1)
 * Cave Story

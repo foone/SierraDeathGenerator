@@ -42,6 +42,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Stainless_Games',
 		'defaulttext':'[white]Screwie[/]\nHave you got\nthe guts to\ntrade places,\nPunk?'
 	},
+	'cotw':{
+		'title': 'Castle of the Winds',
+		'source':'SaadaSoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Castle_of_the_Winds',
+		'defaulttext':'John Doe\nDied\n5-31-2018\n[small]Killed by a Kobold[/small]'
+	},
 	'cv2':{
 		'title': 'Castlevania II',
 		'source':'Konami',
