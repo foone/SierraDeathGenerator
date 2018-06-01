@@ -192,6 +192,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
 	},
+	'mbtt':{
+		'title': 'Mavis Beacon Teaches Typing',
+		'source':'The Software Toolworks',
+		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
+		'defaulttext':"[cyan]Mrs. Grimley (to her dog):  \"Oh[/]\n[blue]Mrs. Grimley[/][white]:_My dog's_[/][blue]g[/]ot no__\n\n[cyan]dear, what kind of cheese\n[white]nose![/] [cyan]_\n\nshould I put on our pizza?\"\n\nDog: \"Mutts-arella!\""
+	},
+
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
