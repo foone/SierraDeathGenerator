@@ -38,6 +38,7 @@ Right now, it supports:
 * Legend of Zelda
 * Life & Death
 * Manhunter: New York
+* Mavis Beacon Teaches Typing
 * Metal Gear Solid
 * Metroid
 * Minit
