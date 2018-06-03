@@ -48,6 +48,7 @@ Right now, it supports:
 * Pokemon Red/Blue/Yellow
 * Police Quest 2
 * Police Quest 3
+* Railroad Tycoon
 * Road Rash (for the Genesis/Megadrive)
 * Rygar
 * SimCity 2000 Advisors

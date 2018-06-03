@@ -257,6 +257,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?"
 	},
+	"rt":{
+		'title': 'Railroad Tycoon',
+		'source':'MPS Labs',
+		'sourceurl':'https://en.wikipedia.org/wiki/MicroProse',
+		'defaulttext':"Labor Violence!\nMilitia Called Out!\nRecession Feared."
+
+	},
 	"rr":{
 		'title': 'Road Rash',
 		'source':'Electronic Arts',
