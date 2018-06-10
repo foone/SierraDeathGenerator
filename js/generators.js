@@ -16,7 +16,8 @@ var generators={
 		'title': 'Ancients',
 		'source':'Farr-Ware Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Ancients_1:_Death_Watch',
-		'defaulttext':"You have never felt the\nneed to recall the\nmemories of your youth.\nThe dreams that have\nhaunted you these last\nnights act as a reminder\nof where you came from\nand what you have seen.\n\nPlaying in the fields\nare among the strongest\nmemories of your youth.\nthere you spent much \ntime exploring, playing\nthe role  of  a  wild"
+		'defaulttext':"You have never felt the\nneed to recall the\nmemories of your youth.\nThe dreams that have\nhaunted you these last\nnights act as a reminder\nof where you came from\nand what you have seen.\n\nPlaying in the fields\nare among the strongest\nmemories of your youth.\nthere you spent much \ntime exploring, playing\nthe role  of  a  wild",
+		'play':"https://archive.org/details/msdos_Ancients_1_Deathwatch"
 	},
 	'baddudes':{
 		'title': 'Bad Dudes',
@@ -28,7 +29,8 @@ var generators={
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
-		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!"
+		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!",
+		"play":"https://archive.org/details/BioMenace"
 	},
 	'cn':{
 		'title': 'Captain Novolin',
@@ -40,13 +42,15 @@ var generators={
 		'title': 'Carmageddon',
 		'source':'Stainless Games',
 		'sourceurl':'https://en.wikipedia.org/wiki/Stainless_Games',
-		'defaulttext':'[white]Screwie[/]\nHave you got\nthe guts to\ntrade places,\nPunk?'
+		'defaulttext':'[white]Screwie[/]\nHave you got\nthe guts to\ntrade places,\nPunk?',
+		'play':"https://archive.org/details/msdos_Carmageddon_Max_Pack_1998"
 	},
 	'cotw':{
 		'title': 'Castle of the Winds',
 		'source':'SaadaSoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Castle_of_the_Winds',
-		'defaulttext':'John Doe\nDied\n5-31-2018\n[small]Killed by a Kobold[/small]'
+		'defaulttext':'John Doe\nDied\n5-31-2018\n[small]Killed by a Kobold[/small]',
+		'play':"https://archive.org/details/win3_CasWin1"
 	},
 	'cv2':{
 		'title': 'Castlevania II',
@@ -76,25 +80,29 @@ var generators={
 		'title': 'Codename: ICEMAN',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"You've overestimated your strength\n and can't thread water any longer."
+		'defaulttext':"You've overestimated your strength\n and can't thread water any longer.",
+		'play':"https://archive.org/details/msdos_Codename_ICEMAN_1989"
 	},
 	'lb1':{
 		'title': 'The Colonel\'s Bequest',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'It\'s not a pretty sight'
+		'defaulttext':'It\'s not a pretty sight',
+		'play':"https://archive.org/details/msdos_Laura_Bow_1_-_The_Colonels_Bequest_1989"
 	},
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
-		'defaulttext':'Keen enters the\n     Shadowlands'
+		'defaulttext':'Keen enters the\n     Shadowlands',
+		'play':"https://archive.org/details/msdos_Commander_Keen_4_-_Secret_of_the_Oracle_1991"
 	},
 	'cosmo':{
 		'title': 'Cosmo\'s Cosmic Adventure',
 		'source':'Apogee Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
-		'defaulttext':'       COSMIC HINT!\n\n These hint globes will\n help you along your\n journey.  Press the up\n key to reread them.\n\n Press SPACE to hurry or\n  Press any key to exit.'
+		'defaulttext':'       COSMIC HINT!\n\n These hint globes will\n help you along your\n journey.  Press the up\n key to reread them.\n\n Press SPACE to hurry or\n  Press any key to exit.',
+		'play':"https://archive.org/details/CosmosCosmicAdventure"
 	},
 	'crowtel':{
 		'title': 'Crowtel Renovations',
@@ -118,7 +126,8 @@ var generators={
 		'title': 'Doom',
 		'source':'id Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
-		'defaulttext':"ONCE YOU BEAT THE BIG BADASSES AND\nCLEAN OUT THE MOON BASE YOU'RE SUPPOSED\nTO WIN, AREN'T YOU? AREN'T YOU? WHERE'S\nYOUR FAT REWARD AND TICKET HOME? WHAT\nTHE HELL IS THIS? IT'S NOT SUPPOSED TO\nEND THIS WAY!\n\nIT STINKS LIKE ROTTEN MEAT, BUT LOOKS\nLIKE THE LOST DEIMOS BASE. LOOKS LIKE\nYOU'RE STUCK ON THE SHORES OF HELL.\nTHE ONLY WAY OUT IS THROUGH.\n\nTO CONTINUE THE DOOM EXPERIENCE, PLAY\nTHE SHORES OF HELL AND ITS AMAZING\nSEQUEL, INFERNO!"
+		'defaulttext':"ONCE YOU BEAT THE BIG BADASSES AND\nCLEAN OUT THE MOON BASE YOU'RE SUPPOSED\nTO WIN, AREN'T YOU? AREN'T YOU? WHERE'S\nYOUR FAT REWARD AND TICKET HOME? WHAT\nTHE HELL IS THIS? IT'S NOT SUPPOSED TO\nEND THIS WAY!\n\nIT STINKS LIKE ROTTEN MEAT, BUT LOOKS\nLIKE THE LOST DEIMOS BASE. LOOKS LIKE\nYOU'RE STUCK ON THE SHORES OF HELL.\nTHE ONLY WAY OUT IS THROUGH.\n\nTO CONTINUE THE DOOM EXPERIENCE, PLAY\nTHE SHORES OF HELL AND ITS AMAZING\nSEQUEL, INFERNO!",
+		'play':"https://archive.org/details/DoomsharewareEpisode"
 	},
 	'dos':{
 		'title': 'MS-DOS',
@@ -130,7 +139,8 @@ var generators={
 		'title': 'Duke Nukem 1',
 		'source':'Apogee Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
-		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!"
+		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!",
+		'play':"https://archive.org/details/DukeNukem"
 	},
 	'ecco1':{
 		'title': 'Ecco the Dolphin',
@@ -172,7 +182,8 @@ var generators={
 		'title': 'King\'s Quest 5',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'"There\'s nothing interesting around here.\nCome on!"'
+		'defaulttext':'"There\'s nothing interesting around here.\nCome on!"',
+		'play':"https://archive.org/details/msdos_Kings_Quest_V_-_Absence_Makes_the_Heart_Go_Yonder_1990"
 	},
 	'zelda':{
 		'title': 'Legend of Zelda',
@@ -184,7 +195,8 @@ var generators={
 		'title': 'Life & Death',
 		'source':'The Software Toolworks',
 		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
-		'defaulttext':"Your patient has died of a burst\nappendix.  Report immediately to medical\nschool and pay attention!"
+		'defaulttext':"Your patient has died of a burst\nappendix.  Report immediately to medical\nschool and pay attention!",
+		'play':"https://archive.org/details/msdos_Life_and_Death_1988"
 	},
 	'mh1':{
 		'title': 'Manhunter: New York',
@@ -196,7 +208,8 @@ var generators={
 		'title': 'Mavis Beacon Teaches Typing',
 		'source':'The Software Toolworks',
 		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
-		'defaulttext':"[cyan]Mrs. Grimley (to her dog):  \"Oh[/]\n[blue]Mrs. Grimley[/][white]:_My dog's_[/][blue]g[/]ot no__\n\n[cyan]dear, what kind of cheese\n[white]nose![/] [cyan]_\n\nshould I put on our pizza?\"\n\nDog: \"Mutts-arella!\""
+		'defaulttext':"[cyan]Mrs. Grimley (to her dog):  \"Oh[/]\n[blue]Mrs. Grimley[/][white]:_My dog's_[/][blue]g[/]ot no__\n\n[cyan]dear, what kind of cheese\n[white]nose![/] [cyan]_\n\nshould I put on our pizza?\"\n\nDog: \"Mutts-arella!\"",
+		'play':"https://archive.org/details/msdos_Mavis_Beacon_Teaches_Typing_1987"
 	},
 
 	'mgs':{
@@ -244,7 +257,8 @@ var generators={
 		'title': 'Oregon Trail',
 		'source':'MECC',
 		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
-		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease"
+		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease",
+		'play':"https://archive.org/details/msdos_Oregon_Trail_The_1990"
 	},
 	'pokemon':{
 		'title': 'Pokemon',
@@ -268,7 +282,8 @@ var generators={
 		'title': 'Railroad Tycoon',
 		'source':'MPS Labs',
 		'sourceurl':'https://en.wikipedia.org/wiki/MicroProse',
-		'defaulttext':"Labor Violence!\nMilitia Called Out!\nRecession Feared."
+		'defaulttext':"Labor Violence!\nMilitia Called Out!\nRecession Feared.",
+		'play':"https://archive.org/details/railroad_tycoon_1990"
 
 	},
 	"rr":{
@@ -290,7 +305,8 @@ var generators={
 		'title': 'SimCity 2000 Advisor',
 		'source':'Maxis Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
-		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!"
+		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!",
+		'play':"https://archive.org/details/msdos_SimCity_2000_-_CD_Collection_1994"
 	},
 	'sb':{
 		'title': 'Skyblazer',

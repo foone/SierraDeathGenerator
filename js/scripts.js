@@ -391,6 +391,11 @@ function selectGenerator(){
 	}else{
 		$('#extra-contrib').text('')
 	}
+	if(gen['play']){
+		$('#playlink').attr('href',gen['play'])
+	}else{
+		$('#playlink').text('')
+	}
 	var sourcetext = $('#sourcetext');
 
 	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
@@ -608,6 +613,8 @@ function renderText(scaled = true){
 		eval(fontInfo['hooks']['pre-text'])
 	}
 	fontManager.draw(mainFont, scale, originx, justify, fontOriginY)
+
+	drawOverlays('post-text')
 
 
 	twitterifyCanvas(context)
