@@ -393,8 +393,9 @@ function selectGenerator(){
 	}
 	if(gen['play']){
 		$('#playlink').attr('href',gen['play'])
+		$('#playlink').show()
 	}else{
-		$('#playlink').text('')
+		$('#playlink').hide()
 	}
 	var sourcetext = $('#sourcetext');
 
