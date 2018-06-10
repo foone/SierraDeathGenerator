@@ -402,6 +402,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/American_Game_Cartridges',
 		'defaulttext':'Taking drugs is stupid,\nToby.'
 	},
+	'wof':{
+		'title': 'Wheel of Fortune',
+		'source':'SHAREDATA, Inc',
+		'sourceurl':'http://www.mobygames.com/game/wheel-of-fortune',
+		'defaulttext':'  _ _R__P __\n __LL-__SH_RS',
+		'play':"https://archive.org/details/msdos_Wheel_of_Fortune_1987"
+	},
 	'wh2':{
 		'title': 'World Heroes 2',
 		'source':'ADK',

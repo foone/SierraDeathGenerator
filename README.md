@@ -68,6 +68,7 @@ Right now, it supports:
 * Teenage Mutant Ninja Turtles 1 (NES)
 * ToeJam & Earl in Panic on Funkotron (ToeJame & Earl 2)
 * Wally Bear and the NO! Gang
+* Wheel of Fortune
 * World Heroes 2
 * Wrath of the Black Manta
 * Zelda 2: The Adventure of Link
