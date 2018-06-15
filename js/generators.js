@@ -278,6 +278,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?"
 	},
+	'psh':{
+		'title': 'Pugsley\'s Scavenger Hunt',
+		'source':'Ocean',
+		'sourceurl':"https://en.wikipedia.org/wiki/The_Addams_Family_(video_game_series)#The_Addams_Family:_Pugsley's_Scavenger_Hunt",
+		'defaulttext':"This door is\n locked.\nwhy not come back \n later ?"
+	},
 	"rt":{
 		'title': 'Railroad Tycoon',
 		'source':'MPS Labs',

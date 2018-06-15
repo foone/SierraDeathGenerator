@@ -6,6 +6,7 @@ The Death Generator
 This creates GAME OVER/YOU DIED screens as seen in Sierra Online's SCI engine.
 Right now, it supports:
 
+* The Addams Family: Pugsley's Scavenger Hunt
 * Adventures in the Magic Kingdom
 * Aero Fighters II
 * Ancients 1: Death Watch
