@@ -390,6 +390,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"I first battled the Metroids\non planet Zebes. It was there\nthat I foiled the plans of\nthe Space Pirate leader\nMother Brain to use the\ncreatures to attack\ngalactic civilization...\n_"
 	},
+	'ss2':{
+		'title': 'System Shock 2',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"POLITO 12.JUL.14\nre: Dawdling\n[sep] [/]\nWhy do you go so slowly?!  Do you think this is some kind of game?  It is only through luck and my continued forbearance that you are even alive!  Now move!"
+	},
 	'tmnt1':{
 		'title': 'TMNT',
 		'source':'Konami',

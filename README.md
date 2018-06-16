@@ -66,6 +66,7 @@ Right now, it supports:
 * Star Control II
 * Star Fox (Starwing in Europe)
 * Street Fighter II
+* System Shock 2
 * Teenage Mutant Ninja Turtles 1 (NES)
 * ToeJam & Earl in Panic on Funkotron (ToeJame & Earl 2)
 * Wally Bear and the NO! Gang
