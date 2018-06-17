@@ -392,8 +392,8 @@ var generators={
 	},
 	'ss2':{
 		'title': 'System Shock 2',
-		'source':'Nintendo',
-		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'source':'Irrational Games and Looking Glass Studios',
+		'sourceurl':'https://en.wikipedia.org/wiki/System_Shock_2',
 		'defaulttext':"POLITO 12.JUL.14\nre: Dawdling\n[sep] [/]\nWhy do you go so slowly?!  Do you think this is some kind of game?  It is only through luck and my continued forbearance that you are even alive!  Now move!"
 	},
 	'tmnt1':{
