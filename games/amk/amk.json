@@ -7,23 +7,83 @@
 	"null-character": 32,
 	"case-fold": "upper",
 	"overlays": {
-		"mouth": {
-			"x": 100,
-			"y": 24,
-			"title": "Mouth",
-			"default": "closed",
+		"characters": {
+			"x": 96,
+			"y": 22,
+			"title": "Charactors",
+			"default": "mickey",
 			"options": {
-				"closed": {
+				"mickey mouse": {
 					"x": 0,
 					"y": 8,
-					"w": 59,
-					"h": 64
+					"w": 64,
+					"h": 68
 				},
-				"open": {
-					"x": 59,
+				"mickey mouth": {
+					"x": 64,
 					"y": 8,
-					"w": 59,
-					"h": 64
+					"w": 64,
+					"h": 68
+				},
+				"mickey cosmonaut": {
+					"x": 128,
+					"y": 8,
+					"w": 64,
+					"h": 68
+				},
+				"mickey cowboy": {
+					"x": 192,
+					"y": 8,
+					"w": 64,
+					"h": 68
+				},
+				"goofy dog": {
+					"x": 0,
+					"y": 76,
+					"w": 64,
+					"h": 68
+				},
+				"goofy mouth": {
+					"x": 64,
+					"y": 76,
+					"w": 64,
+					"h": 68
+				},
+				"goofy cowboy": {
+					"x": 128,
+					"y": 76,
+					"w": 64,
+					"h": 68
+				},
+				"goofy cowmouth": {
+					"x": 192,
+					"y": 76,
+					"w": 64,
+					"h": 68
+				},
+				"pete panhandler": {
+					"x": 256,
+					"y": 8,
+					"w": 64,
+					"h": 68
+				},
+				"ghost": {
+					"x": 256,
+					"y": 76,
+					"w": 64,
+					"h": 68
+				},
+				"ghost mouth": {
+					"x": 320,
+					"y": 76,
+					"w": 64,
+					"h": 68
+				},
+				"pirate pete": {
+					"x": 320,
+					"y": 8,
+					"w": 64,
+					"h": 68
 				}
 			}
 		}
