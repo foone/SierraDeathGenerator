@@ -8,6 +8,43 @@
 	"scale": 1,
 	"twitterify": false,
 	"wrap-width": 820,
+	"overlays": {
+		"time": {
+			"x": 134,
+			"y": 489,
+			"title": "timezone",
+			"default": "Eastern",
+			"options": {
+				"Eastern": {
+					"x": 0,
+					"y": 58,
+					"w": 305,
+					"h": 56
+				},
+				"Central": {
+					"x": 955,
+					"y": 58,
+					"w": 325,
+					"h": 56
+				},
+				"Mountain": {
+					"x": 630,
+					"y": 58,
+					"w": 325,
+					"h": 56
+				},
+				"Pacific": {
+					"x": 305,
+					"y": 58,
+					"w": 325,
+					"h": 56
+				}
+			}
+		}
+	},
+	"hooks": {
+    	"pre-overlays": "overlays.time.y = Math.max(fontInfo.origin.y+textbox.h,489);"
+	},
 	"32": {
 		"x": 0,
 		"w": 12,
