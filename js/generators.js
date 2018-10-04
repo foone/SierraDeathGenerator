@@ -278,6 +278,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?"
 	},
+	'wea':{
+		'title': 'Presidental Alert',
+		'source':'FEMA',
+		'sourceurl':"https://www.fema.gov/emergency-alert-test",
+		'defaulttext':"THIS IS A TEST of the National\nWireless Emergency Alert System.\nNo action is needed."
+	},
 	'psh':{
 		'title': 'Pugsley\'s Scavenger Hunt',
 		'source':'Ocean',

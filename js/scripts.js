@@ -617,8 +617,9 @@ function renderText(scaled = true){
 
 	drawOverlays('post-text')
 
-
-	twitterifyCanvas(context)
+	if(first(fontInfo.twitterify, true)){
+		twitterifyCanvas(context)
+	}
 }
 
 
