@@ -32,6 +32,7 @@ Right now, it supports:
 * Duke Nukem 1
 * Ecco the Dolphin
 * Final Fantasy VII
+* God of Thunder
 * Gold Rush!
 * Golgo 13: Top Secret Episode
 * King's Quest 4

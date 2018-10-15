@@ -160,6 +160,13 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
 		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D"
 	},
+	'got':{
+		'title': 'God of Thunder',
+		'source':'Adept Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/God_of_Thunder_(video_game)',
+		'defaulttext':"My son, I know it is fun\nto shoot people, but if\nyou kill all the good\nguys you'll never complete\nyour mission.",
+		'play':"https://archive.org/details/msdos_God_of_Thunder_1993"
+	},
 	'gr':{
 		'title': 'Gold Rush!',
 		'source':'Sierra Online',
