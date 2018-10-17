@@ -58,6 +58,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.'
 	},
+	'cl':{
+		'title': 'Castlevania Legends',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':'\nCount\n\nDracula\n\nget away'
+	},
 	'sotn':{
 		'title': 'Castlevania: Symphony of the Night',
 		'source':'Konami',
