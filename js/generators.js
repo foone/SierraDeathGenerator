@@ -224,7 +224,15 @@ var generators={
 		'defaulttext':"[cyan]Mrs. Grimley (to her dog):  \"Oh[/]\n[blue]Mrs. Grimley[/][white]:_My dog's_[/][blue]g[/]ot no__\n\n[cyan]dear, what kind of cheese\n[white]nose![/] [cyan]_\n\nshould I put on our pizza?\"\n\nDog: \"Mutts-arella!\"",
 		'play':"https://archive.org/details/msdos_Mavis_Beacon_Teaches_Typing_1987"
 	},
-
+	'mmbn1':{
+		'title': 'Mega Man Battle Network 1',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Lan!! Jack into the\noven! Use the\nR Button!",
+		'gameinfo':'https://www.mobygames.com/game/mega-man-battle-network',
+		'platform':'gba',
+		'series':'megaman'
+	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
