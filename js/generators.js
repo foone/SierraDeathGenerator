@@ -32,6 +32,13 @@ var generators={
 		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!",
 		"play":"https://archive.org/details/BioMenace"
 	},
+	'bc':{
+		'title': 'Bionic Commando',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"GET THE HECK OUT\nOF HERE, YOU\nNERD!",
+		'platform':'nes'
+	},
 	'cn':{
 		'title': 'Captain Novolin',
 		'source':'Sculptured Software',
@@ -237,7 +244,10 @@ var generators={
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake..."
+		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake...",
+		'gameinfo':'https://www.mobygames.com/game/metal-gear-solid',
+		'platform':'ps1',
+		'series':'metal gear solid'	
 	},
 	'metroid':{
 		'title': 'Metroid',
