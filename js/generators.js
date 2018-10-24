@@ -123,6 +123,12 @@ var generators={
 		'sourceurl':'https://twitter.com/sinksadventure',
 		'defaulttext':"Someone clogged my\ntoilet. It wasn't me..."
 	},
+	'darius':{
+		'title': 'Darius',
+		'source':'Taito',
+		'sourceurl':'https://en.wikipedia.org/wiki/Taito',
+		'defaulttext':"      [big]WARNING![/]\n\n\n     A huge battleship\n \n       [red]King Fossil-A[/]\n\n    Is approaching fast.\n"
+	},
 	'deusex':{
 		'title': 'Deus Ex',
 		'source':'Ion Storm',
