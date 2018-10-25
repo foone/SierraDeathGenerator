@@ -451,6 +451,14 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/ToeJam_%26_Earl_Productions',
 		'defaulttext':"        Game Tip\nHold up on direction pad\nto shake trees, part\nbushes or push buttons."
 	},
+	'ts':{
+		'title': 'Toy Story',
+		'source':'Traveller\'s Tales',
+		'sourceurl':'https://en.wikipedia.org/wiki/Traveller%27s_Tales',
+		'defaulttext':"     That old army game\n\nopen the bucket of\nsoldiers and then\nlocate the baby \nmonitor and pass it\ndown to the sergeant's\ntroops.  The toys will\nthen meet you at the\nother baby monitor.\ngood luck and watch out\nfor the trains and\nplanes!!",
+		'gameinfo':'https://www.mobygames.com/game/snes/disneys-toy-story',
+		'platform':'snes'
+	},
 	'wally':{
 		'title': 'Wally Bear and the NO! Gang',
 		'source':'American Game Cartridges',
