@@ -11,7 +11,7 @@
   },
   "hooks": {
     "pre-overlays": "overlays.portrait.x = Math.floor(outputSize.w/2 - overlays.portrait.w/2) -1",
-    "pre-text": "y = 16 + overlays.portrait.h"
+    "pre-text": "mainFont.y = 16 + overlays.portrait.h"
   },
   "border":{
     "tl":{
