@@ -246,6 +246,15 @@ var generators={
 		'platform':'gba',
 		'series':'megaman'
 	},
+	'mmx1':{
+		'title': 'Mega Man X 1',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"You worthless piece\nof scrap metal, did\nyou think you\ncould defeat me?",
+		'gameinfo':'https://www.mobygames.com/game/snes/mega-man-x',
+		'platform':'snes',
+		'series':'megaman'
+	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
