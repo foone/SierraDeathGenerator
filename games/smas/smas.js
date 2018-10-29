@@ -12,5 +12,6 @@ function makeGIF(context){
 		encoder.addFrame(context)
 	}
 	encoder.finish()
+	source.val(fulltext)
 	return URL.createObjectURL(new Blob([new Uint8Array(encoder.stream().bin)], {type : "image/gif" } ))
 }
