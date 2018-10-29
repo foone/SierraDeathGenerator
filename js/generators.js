@@ -11,7 +11,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Aero_Fighters',
 		'defaulttext':"I am the world's first\ndolphin pilot."
 	},
-
+	'ag':{
+		'title': 'American Gladiators',
+		'source':'Incredible Technologies, inc.',
+		'sourceurl':'https://en.wikipedia.org/wiki/Incredible_Technologies',
+		'defaulttext':"\"To hit and not be hit, That\nis the answer.\" ",
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/nes/american-gladiators',
+		'platform':'nes'
+	},
 	'ancients':{
 		'title': 'Ancients',
 		'source':'Farr-Ware Software',
@@ -423,7 +431,8 @@ var generators={
 		'defaulttext':'Warning: It is a serious\ncrime to copy video games.\n\n18 USC 2319 Please refer\nto your Nintendo game\ninstruction booklet for\nfurther information.',
 		"year":1993,
 		'gameinfo':'https://www.mobygames.com/game/snes/super-mario-all-stars',
-		"platform":"snes"
+		"platform":"snes",
+		'series':'mario'
 	},
 	'smb':{
 		'title': 'Super Mario Bros',
@@ -431,25 +440,35 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'   THANK YOU MARIO!\n\nBUT OUR PRINCESS IS IN\nANOTHER CASTLE!',
 		'contributor': '@pixel_data',
-		'contributorurl':'https://twitter.com/pixel_data'
+		'contributorurl':'https://twitter.com/pixel_data',
+		'series':'mario',
+		'platform':'nes'
 	},
 	'm64':{
 		'title': 'Super Mario 64',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool"
+		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool",
+		'series':'mario',
+		'platform':'n64'
 	},
 	'smw':{
 		'title': 'Super Mario World',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"Welcome!   This is\nDinosaur Land.  In\nthis strange  land\nwe    find    that\nPrincess Toadstool\nis  missing again!\nLooks  like Bowser\nis at it again!"
+		'defaulttext':"Welcome!   This is\nDinosaur Land.  In\nthis strange  land\nwe    find    that\nPrincess Toadstool\nis  missing again!\nLooks  like Bowser\nis at it again!",
+		'platform':'snes',
+		'series':'mario'
 	},
 	'sm':{
 		'title': 'Super Metroid',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"I first battled the Metroids\non planet Zebes. It was there\nthat I foiled the plans of\nthe Space Pirate leader\nMother Brain to use the\ncreatures to attack\ngalactic civilization...\n_"
+		'defaulttext':"I first battled the Metroids\non planet Zebes. It was there\nthat I foiled the plans of\nthe Space Pirate leader\nMother Brain to use the\ncreatures to attack\ngalactic civilization...\n_",
+		'platform':'snes',
+		'series':'metroid',
+		'year': 1994,
+		'gameinfo':'https://www.mobygames.com/game/snes/super-metroid'
 	},
 	'ss2':{
 		'title': 'System Shock 2',
