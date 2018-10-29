@@ -447,7 +447,8 @@ function parseOverlays(fontInfo){
 				"source":{
 					"x":adv.x,
 					"y":adv.y
-				}
+				},
+				"data":adv
 			}
 
 		}
@@ -507,6 +508,17 @@ function renderText(scaled = true){
 	if('subfonts' in fontInfo){
 		for(var key of Object.keys(fontInfo.subfonts)){
 			fonts[key] = new BitmapFont(fontInfo.subfonts[key], fontImage)
+		}
+	}
+	if('shiftfonts' in fontInfo){
+		for(var key of Object.keys(fontInfo.shiftfonts)){
+			// Make a local clone of the JSON tree
+			var fontcopy = JSON.parse(JSON.stringify(fontInfo))
+			if(!'default' in fontcopy){
+				fontcopy['default'] = {}
+			}
+			fontcopy['default']['y'] = fontInfo.shiftfonts[key]
+			fonts[key] = new BitmapFont(fontcopy, fontImage)
 		}
 	}
 	var originx = first(fontInfo.origin.x, 0)
