@@ -6,6 +6,7 @@
 	},
 	"null-character": 32,
 	"case-fold": "upper",
+	"wrap-width": 208,
 	"gif": true,
 	"script": true,
 	"default": {
