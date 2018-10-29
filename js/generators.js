@@ -416,6 +416,15 @@ var generators={
 		'contributor': '@pixel_data',
 		'contributorurl':'https://twitter.com/pixel_data'
 	},
+	'smas':{
+		'title': 'Super Mario All-Stars',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':'Warning: It is a serious\ncrime to copy video games.\n\n18 USC 2319 Please refer\nto your Nintendo game\ninstruction booklet for\nfurther information.',
+		"year":1993,
+		'gameinfo':'https://www.mobygames.com/game/snes/super-mario-all-stars',
+		"platform":"snes"
+	},
 	'smb':{
 		'title': 'Super Mario Bros',
 		'source':'Nintendo',
