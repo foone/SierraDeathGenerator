@@ -187,6 +187,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
 		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D"
 	},
+	'finalfight1':{
+		'title': 'Final Fight 1',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"At the center of the problem is the\nhuge gang known as Mad Gear. Mad Gear\ncontrols all of the major criminal\nactivity in the city.",
+		"year":1989,
+		"platform":"arcade",
+		"series":"final fight"
+	},
 	'got':{
 		'title': 'God of Thunder',
 		'source':'Adept Software',
