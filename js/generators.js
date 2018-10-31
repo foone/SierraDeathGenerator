@@ -380,6 +380,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Ukiyotei',
 		'defaulttext':"[cyan]Sky[/cyan]\nDo you not know who I am?\nI am known as Sky. ▼"
 	},
+	'sth2':{
+		'title': 'Sonic The Hedgehog 2',
+		'source':'Sega',
+		'sourceurl':'https://en.wikipedia.org/wiki/SEGA',
+		'defaulttext':"Emerald Hill",
+		'platform':'genesis',
+		'series':'sonic',
+		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog-2'
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
