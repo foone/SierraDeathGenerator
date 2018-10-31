@@ -158,10 +158,15 @@ class Snippet{
 	draw(context, scale, xStart, y){
 		var x=xStart
 		var last = 0
+		var lastchar = -1 
 		for(let char of this.parse()){
+			if(lastchar in char['unadvance-after']){
+				x-= char['unadvance-after'][lastchar]
+			}
 			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
 			x+=(char.w - char.unadvance)
 			last = char.unadvance
+			lastchar = char.char
 		}
 		return x + last
 	}
@@ -196,7 +201,9 @@ class Snippet{
 				'y': first(info.y, defaultInfo.y, fontOriginY),
 				'w': first(info.w, defaultInfo.w),
 				'h': first(info.h, defaultInfo.h),
-				'unadvance': first(info.unadvance, defaultInfo.unadvance, 0)
+				'unadvance': first(info.unadvance, defaultInfo.unadvance, 0),
+				'unadvance-after': first(info['unadvance-after'],{}),
+				'char':c
 			})
 		}
 		return out
@@ -205,9 +212,14 @@ class Snippet{
 	getWidth(){
 		var w=0
 		var last = 0
+		var lastchar = -1
 		for(var char of this.parse()){
 			last = char.unadvance
 			w += char.w - char.unadvance
+			if(lastchar in char['unadvance-after']){
+				w-= char['unadvance-after'][lastchar]
+			}
+			lastchar = char.char
 		}
 		return w + last
 	}
@@ -547,6 +559,8 @@ function renderText(scaled = true){
 	}
 	if(justify == 'center-box'){
 		originx -= Math.floor(textbox.w/2)
+	}else if(justify == 'right-box'){
+		originx -= textbox.w
 	}
 
 
