@@ -403,6 +403,15 @@ function selectGenerator(){
 	}else{
 		$('#extra-contrib').text('')
 	}
+	if(gen['content-contributor']){
+		var ccontrib = gen['content-contributor']
+		if(gen['content-contributor-url']){
+			ccontrib = $('<a>').attr('href',gen['content-contributor-url']).text(ccontrib)
+		}
+		$('#content-contrib').text(' and ').append(ccontrib)
+	}else{
+		$('#content-contrib').text('')
+	}
 	if(gen['play']){
 		$('#playlink').attr('href',gen['play'])
 		$('#playlink').show()

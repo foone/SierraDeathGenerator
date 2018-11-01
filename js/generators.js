@@ -397,7 +397,9 @@ var generators={
 		'platform':'genesis',
 		'series':'sonic',
 		'year':1991,
-		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog'
+		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog',
+		'content-contributor': 'Ruari O\'Sullivan',
+		'content-contributor-url': 'https://twitter.com/randomnine'
 	},
 	'sth2':{
 		'title': 'Sonic The Hedgehog 2',
