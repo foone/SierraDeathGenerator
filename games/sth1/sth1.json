@@ -7,6 +7,8 @@
 	"null-character": 32,
 	"case-fold": "upper",
 	"justify": "center-box",
+	"gif": true,
+	"script": true,
 	"hooks": {
 		"pre-text": "mainFont.y=Math.max(9,mainFont.y-(textbox.h-21))",
 		"pre-overlays": "{let cx = (fontInfo.origin.x+textbox.w/2); overlays.blorb.x = cx-51; overlays.zone.x = cx-80; overlays.act.x = cx-44;}"
