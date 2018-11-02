@@ -594,7 +594,8 @@ function renderText(scaled = true){
 
 	context.canvas.width = outputSize.w * scale
 	context.canvas.height = outputSize.h * scale
-	if(scale == 2.0){
+	var scaleMode = first(fontInfo['scale-mode'],'auto')
+	if(scaleMode == 'nearest-neighbor' || (scaleMode == 'auto' && scale == 2.0)){
 		context.imageSmoothingEnabled = false
 	}
 
