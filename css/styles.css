@@ -1,9 +1,46 @@
+html, body {
+  padding-top: 20px;
+}
+
 html {
 	overflow-y: scroll;
 }
 
-img.source, canvas.source{
+textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+input, button, select, textarea {
+    color: #000;
+}
+
+.btn-primary {
+    color: #000000;
+    background: #bbbbbb;
+}
+
+.btn-large {
+    padding: 10px 10px;
+    font-size: 18px;
+    color: #000000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+img.source, canvas.source {
 	display: none;
+}
+
+canvas {
+  max-width: 100%;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 #sourcetext{
@@ -18,7 +55,8 @@ canvas#border{
 	display: none;
 }
 
-#makegif{
+div[data-supports='wordwrap']
+div[data-supports='gif'] {
 	display: none;
 }
 
