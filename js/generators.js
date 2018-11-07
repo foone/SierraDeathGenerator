@@ -294,7 +294,8 @@ var generators={
 		'defaulttext':'Please remember the difference\nbetween fantasy and reality.\nDo your fighting on the screen,\nnot at home or at school.',
 		'platform':'genesis',
 		'series':'mighty morphin power rangers',
-		'year':1995
+		'year':1995,
+		'added':'2018-11-06'
 	},
 	'minit':{
 		'title': 'Minit',
@@ -536,26 +537,29 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/snes/disneys-toy-story',
 		'platform':'snes'
 	},
-	'ul':{
+	'ul': {
 		'title': 'Undertale Logo',
-		'source':'Toby Fox',
-		'sourceurl':'https://en.wikipedia.org/wiki/Toby_Fox',
-		'defaulttext':"undeRtale",
+		'source': 'Toby Fox',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Toby_Fox',
+		'defaulttext': 'undeRtale',
 		'content-contributor': 'Haley Wakamatsu',
-		'content-contributor-url': 'https://www.behance.net/gallery/31378523/Monster-Friend-Undertale-Logo-Font'
+		'content-contributor-url': 'https://www.behance.net/gallery/31378523/Monster-Friend-Undertale-Logo-Font',
+		'platform': 'win32',
+		'year': 2015,
+		'added': '2018-11-07'
 	},
-	'wally':{
+	'wally': {
 		'title': 'Wally Bear and the NO! Gang',
-		'source':'American Game Cartridges',
-		'sourceurl':'https://en.wikipedia.org/wiki/American_Game_Cartridges',
-		'defaulttext':'Taking drugs is stupid,\nToby.'
+		'source': 'American Game Cartridges',
+		'sourceurl': 'https://en.wikipedia.org/wiki/American_Game_Cartridges',
+		'defaulttext': 'Taking drugs is stupid,\nToby.'
 	},
-	'wof':{
+	'wof': {
 		'title': 'Wheel of Fortune',
-		'source':'SHAREDATA, Inc',
-		'sourceurl':'http://www.mobygames.com/game/wheel-of-fortune',
-		'defaulttext':'  _ _R__P __\n __LL-__SH_RS',
-		'play':"https://archive.org/details/msdos_Wheel_of_Fortune_1987"
+		'source': 'SHAREDATA, Inc',
+		'sourceurl': 'http://www.mobygames.com/game/wheel-of-fortune',
+		'defaulttext': '  _ _R__P __\n __LL-__SH_RS',
+		'play': 'https://archive.org/details/msdos_Wheel_of_Fortune_1987'
 	},
 	'wh2':{
 		'title': 'World Heroes 2',
