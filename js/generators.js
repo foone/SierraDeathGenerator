@@ -287,6 +287,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'           GREAT!\n YOU FULFILED YOUR MISSION.\n IT WILL REVIVE PEACE IN\nSPACE. \n BUT,IT MAY BE INVADED BY\nTHE OTHER METROID.\n PRAY FOR A TRUE PEACE IN\nSPACE',
 	},
+	'mmprtm':{
+		'title': 'Mighty Morphin Power Rangers: The Movie',
+		'source':'Sims',
+		'sourceurl':'https://en.wikipedia.org/wiki/SIMS_Co.,_Ltd.',
+		'defaulttext':'Please remember the difference\nbetween fantasy and reality.\nDo your fighting on the screen,\nnot at home or at school.',
+		'platform':'genesis',
+		'series':'mighty morphin power rangers',
+		'year':1995
+	},
 	'minit':{
 		'title': 'Minit',
 		'source':'Jan Willem Nijman, Kitty Calis, Jukio Kallio, and Dominik Johann',
@@ -526,6 +535,14 @@ var generators={
 		'defaulttext':"     That old army game\n\nopen the bucket of\nsoldiers and then\nlocate the baby \nmonitor and pass it\ndown to the sergeant's\ntroops.  The toys will\nthen meet you at the\nother baby monitor.\ngood luck and watch out\nfor the trains and\nplanes!!",
 		'gameinfo':'https://www.mobygames.com/game/snes/disneys-toy-story',
 		'platform':'snes'
+	},
+	'ul':{
+		'title': 'Undertale Logo',
+		'source':'Toby Fox',
+		'sourceurl':'https://en.wikipedia.org/wiki/Toby_Fox',
+		'defaulttext':"undeRtale",
+		'content-contributor': 'Haley Wakamatsu',
+		'content-contributor-url': 'https://www.behance.net/gallery/31378523/Monster-Friend-Undertale-Logo-Font'
 	},
 	'wally':{
 		'title': 'Wally Bear and the NO! Gang',
