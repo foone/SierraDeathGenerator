@@ -91,6 +91,14 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Daisuke_Amaya',
 		'defaulttext':"Oh, sorry 'bout that.\nThe Doctor's such a cruel\nand evil person."
 	},
+	'a52cm':{
+		'title': 'The Cheetahmen',
+		'source':'Active Enterprises',
+		'sourceurl':'https://en.wikipedia.org/wiki/Action_52',
+		'defaulttext':"The Action Gamemaster was at\nhome playing his video game.\nWhen suddenly...",
+		"year": 1991,
+		"platform":"nes"
+	},
 	'caption':{
 		'title': 'Closed Captions',
 		'source':'FCC',

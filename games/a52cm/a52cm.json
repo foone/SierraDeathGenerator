@@ -1,0 +1,260 @@
+{
+	"height": 16,
+	"origin": {
+		"x": 8,
+		"y": 136
+	},
+	"case-fold": "upper",
+	"null-character": 32,
+	"overlays": {
+		"scene": {
+			"x": 0,
+			"y": 24,
+			"title": "scene",
+			"default": "player",
+			"options": {
+				"none": {
+					"x": 0,
+					"y": 32,
+					"w": 8,
+					"h": 8,
+					"info": {
+						"text": "During this game you will have\nThree cheetahmen... A different\none in every second level to\nfight for you......."
+					}
+				},
+				"player": {
+					"x": 0,
+					"y": 608,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "The Action Gamemaster was at\nhome playing his video game.\nWhen suddenly..."
+					}
+				},
+				"television": {
+					"x": 0,
+					"y": 704,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[violet]An arm reached out of the TV\nand pulled hime inside...."
+					}
+				},
+				"ground": {
+					"x": 0,
+					"y": 416,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[green]When he looked up he saw three\ngigantic yellow bodies. It was\nThe Cheetamen..."
+					}
+				},
+				"cheetahmen": {
+					"x": 0,
+					"y": 224,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[green]He began to explain.... The\nCheetahmen told of the enemies\nhere in game world. Dont worry\nwe will fight for you..."
+					}
+				},
+				"cheetahmen_running": {
+					"x": 0,
+					"y": 320,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[green]The Cheetahmen ran off.....\n....And now....\n        The Cheetahmen"
+					}
+				},
+				"apollo": {
+					"x": 0,
+					"y": 32,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[green]Apollo is the master of the\ncrossbow. Use the crossbow to\ndefeat the enemies on the last\ntwo levels and get Dr. Morbis"
+					}
+				},
+				"aries": {
+					"x": 0,
+					"y": 128,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[green]Use Aries wooden clubs and\nmartial arts skills to defeat\nthe enemies on the first two\nlevels."
+					}
+				},
+				"hercules": {
+					"x": 0,
+					"y": 512,
+					"w": 256,
+					"h": 96,
+					"info": {
+						"text": "[yellow]Hercules the largest of the\nthree uses his raw strength as\nhis only weapon. Jump if you\ncan but you must fight others."
+
+					}
+				}
+			}
+		}
+	},
+	"hooks": {
+		"pre-text": "if(overlays.scene.name=='none'){mainFont.y=72}",
+		"change-scene": "{let txt = $('#sourcetext').val(); if(isAnyDefaultText(txt) || Object.values(fontInfo.overlays.scene.options).map(o=>o.info.text).includes(txt)){$('#sourcetext').val(overlays.scene.options[$(this).val()].info.text)}}"
+	},
+
+	"default": {
+		"w": 8,
+		"h": 8
+	},
+	"shiftfonts": {
+		"violet": 8,
+		"green": 16,
+		"yellow": 24
+	},
+
+	"11044": {
+		"x": 0
+	},
+	"8626": {
+		"x": 8
+	},
+	"33": {
+		"x": 16
+	},
+	"35": {
+		"x": 24
+	},
+	"39": {
+		"x": 32
+	},
+	"43": {
+		"x": 40
+	},
+	"45": {
+		"x": 48
+	},
+	"46": {
+		"x": 56
+	},
+	"47": {
+		"x": 64
+	},
+	"48": {
+		"x": 72
+	},
+	"49": {
+		"x": 80
+	},
+	"50": {
+		"x": 88
+	},
+	"51": {
+		"x": 96
+	},
+	"52": {
+		"x": 104
+	},
+	"53": {
+		"x": 112
+	},
+	"54": {
+		"x": 120
+	},
+	"55": {
+		"x": 128
+	},
+	"56": {
+		"x": 136
+	},
+	"57": {
+		"x": 144
+	},
+	"63": {
+		"x": 152
+	},
+	"32": {
+		"x": 160
+	},
+	"65": {
+		"x": 168
+	},
+	"66": {
+		"x": 176
+	},
+	"67": {
+		"x": 184
+	},
+	"68": {
+		"x": 192
+	},
+	"69": {
+		"x": 200
+	},
+	"70": {
+		"x": 208
+	},
+	"71": {
+		"x": 216
+	},
+	"72": {
+		"x": 224
+	},
+	"73": {
+		"x": 232
+	},
+	"74": {
+		"x": 240
+	},
+	"75": {
+		"x": 248
+	},
+	"76": {
+		"x": 256
+	},
+	"77": {
+		"x": 264
+	},
+	"78": {
+		"x": 272
+	},
+	"79": {
+		"x": 280
+	},
+	"80": {
+		"x": 288
+	},
+	"81": {
+		"x": 296
+	},
+	"82": {
+		"x": 304
+	},
+	"83": {
+		"x": 312
+	},
+	"84": {
+		"x": 320
+	},
+	"85": {
+		"x": 328
+	},
+	"86": {
+		"x": 336
+	},
+	"87": {
+		"x": 344
+	},
+	"88": {
+		"x": 352
+	},
+	"89": {
+		"x": 360
+	},
+	"90": {
+		"x": 368
+	},
+	"92": {
+		"x": 376
+	}
+}
