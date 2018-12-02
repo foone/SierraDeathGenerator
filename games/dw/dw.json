@@ -1,11 +1,12 @@
 {
-  "height": 8,
-  "origin": {
-    "x": 76,
-    "y": 37
-  },
-  "null-character": 32,
-  "case-fold": "upper",
+	"height": 8,
+	"origin": {
+		"x": 76,
+		"y": 37
+	},
+	"null-character": 32,
+	"case-fold": "upper",
+	"wrap-width": 180,
 	"32": {
 		"x": 0,
 		"w": 5,
