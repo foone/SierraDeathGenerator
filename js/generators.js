@@ -97,7 +97,8 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Action_52',
 		'defaulttext':"The Action Gamemaster was at\nhome playing his video game.\nWhen suddenly...",
 		"year": 1991,
-		"platform":"nes"
+		"platform":"nes",
+		"added":"2018-11-18"
 	},
 	'caption':{
 		'title': 'Closed Captions',
@@ -169,6 +170,16 @@ var generators={
 		'source':'Microsoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
 		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\\>"
+	},
+	'dw':{
+		'title': 'DreamWeb',
+		'source':'Creative Reality',
+		'sourceurl':'https://en.wikipedia.org/wiki/DreamWeb',
+		'defaulttext':"--                       mailbox\nCHEMOCLEAN\n\n>read sparkes\nMessage from user 23445 Jake\nSparkes.\n\nRyan, you're fired. Get in here,\ntake your stuff and get out. I\ncan't pay a loser like you to\nwaste my time. PS. If you need a\nreference, you got it.\n\n>\u2588",
+		'play':'https://archive.org/details/DreamWeb_1020',
+		'platform':'dos',
+		'year':1994,
+		'added':'2018-12-02'
 	},
 	'dn1':{
 		'title': 'Duke Nukem 1',
