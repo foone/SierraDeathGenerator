@@ -175,7 +175,7 @@ var generators={
 		'title': 'DreamWeb',
 		'source':'Creative Reality',
 		'sourceurl':'https://en.wikipedia.org/wiki/DreamWeb',
-		'defaulttext':"--                       mailbox\nCHEMOCLEAN\n\n>read sparkes\nMessage from user 23445 Jake\nSparkes.\n\nRyan, you're fired. Get in here,\ntake your stuff and get out. I\ncan't pay a loser like you to\nwaste my time. PS. If you need a\nreference, you got it.\n\n>\u2588",
+		'defaulttext':"I thought the dreams had\ngone away, but last\nnight was worse than\never and I don't think\nit's just bad dreams.",
 		'play':'https://archive.org/details/DreamWeb_1020',
 		'platform':'dos',
 		'year':1994,
