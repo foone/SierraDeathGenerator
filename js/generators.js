@@ -504,6 +504,15 @@ var generators={
 		'series':'mario',
 		'platform':'nes'
 	},
+	'smrpg':{
+		'title': 'Super Mario RPG',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_(company)',
+		'defaulttext':" Lots of people use something\n called a \u201Cdoor\u201D to go in and out\n of their houses...",
+		'platform':'snes',
+		'year':1996,
+		"added":"2018-12-07"
+	},
 	'm64':{
 		'title': 'Super Mario 64',
 		'source':'Nintendo',
