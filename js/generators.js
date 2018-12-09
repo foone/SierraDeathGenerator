@@ -440,6 +440,16 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog-2'
 	},
+	'soulb':{
+		'title': 'Soul Blazer',
+		'source':'Quintet',
+		'sourceurl':'https://en.wikipedia.org/wiki/Quintet_(company)',
+		'defaulttext':"I used to live up\nin the sky just like\nyou.",
+		'platform':'snes',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/snes/soul-blazer',
+		'added':'2018-12-08'
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
