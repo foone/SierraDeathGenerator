@@ -412,6 +412,16 @@ var generators={
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!",
 		'play':"https://archive.org/details/msdos_SimCity_2000_-_CD_Collection_1994"
 	},
+	'skitchin':{
+		'title': "Skitchin'",
+		'source':'Electronic Arts',
+		'sourceurl':'https://en.wikipedia.org/wiki/Electronic_Arts',
+		'defaulttext':"Wait until your mother hears about this. It'll break her heart! She had dreams about you being a highly paid programmer. Instead you'll be a poor dead skitcher! Sighhh...",
+		'year':1994,
+		'platform':'genesis',
+		'gameinfo':'https://www.mobygames.com/game/genesis/skitchin',
+		'added': '2018-12-10'
+	},
 	'sb':{
 		'title': 'Skyblazer',
 		'source':'Ukiyotei',
