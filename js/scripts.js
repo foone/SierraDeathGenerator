@@ -353,13 +353,20 @@ function hideGenerators(){
 	$('#genlist').hide()
 }
 
-for(key in generators) {
-	if(generators.hasOwnProperty(key)) {
-		$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray"></a>').attr("href",'#'+key).text(generators[key].title).data('generator',key).click(function (){
-			selectedGenerator=$(this).data('generator')
-			selectGenerator()
-		})).append(' ')
+var week_ago = Date.now()-(7*24*3600000);
+
+for( let [gname, generator_item] of Object.entries(generators)){
+	var new_generator = false
+	if('added' in generator_item){
+		if(Date.parse(generator_item.added) > week_ago){
+			new_generator = true
+		}
 	}
+	console.log(gname,'is',new_generator)
+	$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray generator-switcher"></a>').attr("href",'#'+gname).text(generator_item.title).data('generator',gname).click(function (){
+		selectedGenerator=$(this).data('generator')
+		selectGenerator()
+	}).toggleClass('new-generator',new_generator)).append(' ')
 }
 
 function isAnyDefaultText(text){
@@ -385,9 +392,13 @@ function selectGenerator(){
 			source:'UNKNOWN'
 		}
 	}
+	$('a.generator-switcher').each(function(){
+		var active = $(this).data('generator')==selectedGenerator
+		$(this)
+			.toggleClass('bg-dark-gray', !active)
+			.toggleClass('bg-gray', active);
 
-	$('button.generator-switcher').each(function(){
-		$(this).prop('disabled',$(this).data('generator')==selectedGenerator)
+
 	})
 
 	$('.change-title').text(gen.title + " Generator");
