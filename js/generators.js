@@ -251,7 +251,20 @@ var generators={
 		'title': 'Legend of Zelda',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"It's dangerous to go\n alone! Take this."
+		'defaulttext':"It's dangerous to go\n alone! Take this.",
+		'series': 'zelda',
+		'platform':'nes',
+		'year':1986
+	},
+	'lttp':{
+		'title': 'Legend of Zelda: A Link To The Past',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Link, you can do it!\nSave the Princess\u2026\nZelda is your\u2026 \u2026 \u2026",
+		'series': 'zelda',
+		'platform':'snes',
+		'year':1991,
+		'added':'2018-12-17'
 	},
 	'lad':{
 		'title': 'Life & Death',
