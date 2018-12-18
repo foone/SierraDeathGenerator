@@ -6,6 +6,73 @@
 	},
 	"wrap-width": 176,
 	"null-character": 32,
+
+	"overlays": {
+		"background": {
+			"x": 5,
+			"y": 5,
+			"title": "Background",
+			"default": "hyrule_castle_dungeon",
+			"options": {
+				"transparent": {
+					"x": 0,
+					"y": 120,
+					"w": 180,
+					"h": 52
+				},
+				"black": {
+					"x": 0,
+					"y": 68,
+					"w": 180,
+					"h": 52
+				},
+				"grass": {
+					"x": 180,
+					"y": 16,
+					"w": 180,
+					"h": 52
+				},
+				"hyrule_castle_dungeon": {
+					"x": 0,
+					"y": 16,
+					"w": 180,
+					"h": 52
+				},
+				"hyrule_castle_carpet1": {
+					"x": 180,
+					"y": 68,
+					"w": 180,
+					"h": 52
+				},
+				"hyrule_castle_carpet2": {
+					"x": 360,
+					"y": 68,
+					"w": 180,
+					"h": 52
+				},
+				"hyrule_castle_carpet3": {
+					"x": 540,
+					"y": 16,
+					"w": 180,
+					"h": 52
+				},
+				"hyrule_castle_cobblestones": {
+					"x": 360,
+					"y": 16,
+					"w": 180,
+					"h": 52
+				},
+				"sewer_planks": {
+					"x": 540,
+					"y": 68,
+					"w": 180,
+					"h": 52
+				}
+
+			}
+		}
+	},
+
 	"default": {
 		"h": 16
 	},
