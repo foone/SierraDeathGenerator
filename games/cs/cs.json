@@ -6,7 +6,8 @@
 	},
 	"null-character": 32,
 	"hooks":{
-		"pre-text":"if($('#overlay-portrait option:selected').text()=='no_portrait'){originx=28}"
+		"pre-text":"if($('#overlay-portrait option:selected').text()=='no_portrait'){originx=28}",
+		"pre-overlays": "overlays.portrait.source.y += overlays.theme.data.info.offset"
 	},
 	"overlays": {
 		"portrait": {
@@ -139,7 +140,13 @@
 					"h": 90,
 					"w": 96,
 					"x": 0,
-					"y": 21
+					"y": 1448
+				},
+				"quote": {
+					"h": 90,
+					"w": 96,
+					"x": 1152,
+					"y": 117
 				},
 				"sue1": {
 					"h": 90,
@@ -168,8 +175,8 @@
 				"sue5": {
 					"h": 90,
 					"w": 96,
-					"x": 1152,
-					"y": 117
+					"x": 0,
+					"y": 15
 				},
 				"team9": {
 					"h": 90,
@@ -194,6 +201,50 @@
 					"w": 96,
 					"x": 1056,
 					"y": 21
+				}
+			}
+		},
+		"theme": {
+			"x": 0,
+			"y": 0,
+			"title": "Theme",
+			"default": "original",
+			"options": {
+				"original": {
+					"h": 8,
+					"w": 8,
+					"x": 0,
+					"y": 800,
+					"info":{
+						"offset":0
+					}
+				},
+				"high-res": {
+					"h": 8,
+					"w": 8,
+					"x": 8,
+					"y": 800,
+					"info":{
+						"offset":576
+					}
+				},
+				"christmas": {
+					"h": 8,
+					"w": 8,
+					"x": 16,
+					"y": 800,
+					"info":{
+						"offset":192
+					}
+				},
+				"halloween": {
+					"h": 8,
+					"w": 8,
+					"x": 24,
+					"y": 800,
+					"info":{
+						"offset":384
+					}
 				}
 			}
 		}
