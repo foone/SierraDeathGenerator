@@ -357,12 +357,12 @@ var week_ago = Date.now()-(7*24*3600000);
 
 for( let [gname, generator_item] of Object.entries(generators)){
 	var new_generator = false
-	if('added' in generator_item){
-		if(Date.parse(generator_item.added) > week_ago){
+	if('added' in generator_item || 'updated' in generator_item){
+
+		if(Date.parse(first(generator_item.updated,generator_item.added)) > week_ago){
 			new_generator = true
 		}
 	}
-	console.log(gname,'is',new_generator)
 	$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray generator-switcher"></a>').attr("href",'#'+gname).text(generator_item.title).data('generator',gname).click(function (){
 		selectedGenerator=$(this).data('generator')
 		selectGenerator()
@@ -419,7 +419,11 @@ function selectGenerator(){
 		if(gen['content-contributor-url']){
 			ccontrib = $('<a>').attr('href',gen['content-contributor-url']).text(ccontrib)
 		}
-		$('#content-contrib').text(' and ').append(ccontrib)
+		var message = ' and '
+		if(gen['content-type']){
+			message =', ' + gen['content-type'] + ' by '
+		}
+		$('#content-contrib').text(message).append(ccontrib)
 	}else{
 		$('#content-contrib').text('')
 	}

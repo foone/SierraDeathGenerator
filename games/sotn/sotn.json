@@ -146,7 +146,80 @@
 					"h": 80
 				}
 			}
+		},
+		"theme": {
+			"x": 0,
+			"y": 0,
+			"title": "Theme",
+			"default": "original",
+			"stage": "pre-border",
+			"options": {
+				"original": {
+					"x": 295,
+					"y": 98,
+					"w": 256,
+					"h": 208,
+					"info":{
+						"screenw":256,
+						"screenh":208
+					}
+				},
+				"christmas": {
+					"x": 280,
+					"y": 78,
+					"w": 280,
+					"h": 240,
+					"info":{
+						"screenw":280,
+						"screenh":240
+					}
+				},
+				"christmas-without-hat": {
+					"x": 280,
+					"y": 78,
+					"w": 280,
+					"h": 240,
+					"info":{
+						"screenw":280,
+						"screenh":240
+					}
+				}			}
+		},
+		"christmas": {
+			"x": 0,
+			"y": 0,
+			"title": "",
+			"default": "default",
+			"options": {
+				"default": {
+					"x": 0,
+					"y": 78,
+					"w": 280,
+					"h": 240
+				}
+			}
+		},
+		"hat": {
+			"x": 0,
+			"y": 0,
+			"title": "",
+			"default": "default",
+			"options": {
+				"default": {
+					"x": 560,
+					"y": 78,
+					"w": 64,
+					"h": 64
+				}
+			}
 		}
+	},
+	"hooks": {
+		"pre-overlays": "if(overlays.theme.name=='original'){overlays.christmas.x=1024;overlays.hat.x=1024}else{overlays.portrait.x=22;overlays.portrait.y=37;mainFont.y=42;offsetx=71;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}"
+	},
+	"dynamic-size": {
+		"w": "overlays.theme.data.info.screenw",
+		"h": "overlays.theme.data.info.screenh"
 	},
 	"default": {
 		"w": 8,

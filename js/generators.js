@@ -41,7 +41,8 @@ var generators={
 		'platform':'snes',
 		'year':1994,
 		'play':'https://archive.org/details/blackthorne_2013',
-		'gameinfo':'https://www.mobygames.com/game/blackthorne'
+		'gameinfo':'https://www.mobygames.com/game/blackthorne',
+		'added':'2018-12-26'
 	},
 	'bm':{
 		'title': 'Bio Menace',
@@ -81,19 +82,32 @@ var generators={
 		'title': 'Castlevania II',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.'
+		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.',
+		'platform':'nes',
+		'added':'2018-04-28',
+		'series':'castlevania'
 	},
 	'cl':{
 		'title': 'Castlevania Legends',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'\nCount\n\nDracula\n\nget away'
+		'defaulttext':'\nCount\n\nDracula\n\nget away',
+		'platform':'gameboy',
+		'added':'2018-10-27',
+		'series':'castlevania'
 	},
 	'sotn':{
 		'title': 'Castlevania: Symphony of the Night',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!'
+		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!',
+		'content-type':'christmas theme',
+		'content-contributor': '@Ashuraou',
+		'content-contributor-url': 'https://twitter.com/ashuraou',
+		'platform':'PS1',
+		'added':'2018-02-23',
+		'updated':'2018-12-26',
+		'series':'castlevania'
 	},
 	'cs':{
 		'title': 'Cave Story+',
