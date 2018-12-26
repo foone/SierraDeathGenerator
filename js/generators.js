@@ -33,6 +33,16 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
 		'defaulttext':" The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?"
 	},
+	'bt':{
+		'title': 'Blackthorne',
+		'source':'Blizzard',
+		'sourceurl':'https://en.wikipedia.org/wiki/Blizzard_Entertainment',
+		'defaulttext':"I AM GOING TO\nCRUSH YOU AND\nSPIT ON YOUR\nBONES, BOY!",
+		'platform':'snes',
+		'year':1994,
+		'play':'https://archive.org/details/blackthorne_2013',
+		'gameinfo':'https://www.mobygames.com/game/blackthorne'
+	},
 	'bm':{
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
