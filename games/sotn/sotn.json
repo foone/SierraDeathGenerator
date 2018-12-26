@@ -215,7 +215,8 @@
 		}
 	},
 	"hooks": {
-		"pre-overlays": "if(overlays.theme.name=='original'){overlays.christmas.x=1024;overlays.hat.x=1024}else{overlays.portrait.x=22;overlays.portrait.y=37;mainFont.y=42;offsetx=71;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}"
+		"pre-text": "if(overlays.theme.name!='original'){mainFont.y=42;originx=71}",
+		"pre-overlays": "if(overlays.theme.name=='original'){overlays.christmas.x=1024;overlays.hat.x=1024}else{overlays.portrait.x=22;overlays.portrait.y=37;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}"
 	},
 	"dynamic-size": {
 		"w": "overlays.theme.data.info.screenw",
