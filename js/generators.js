@@ -224,11 +224,24 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
 		'defaulttext':""
 	},
+	'ff6':{
+		'title': 'Final Fantasy VI',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"KEFKA: Hee, hee!\nNothing can beat the music of\nhundreds of voices screaming\nin unison!",
+		'year':1994,
+		'platform':'snes',
+		'series':'final fantasy',
+		'added':'2018-12-28'
+	},
 	'ff7':{
 		'title': 'Final Fantasy VII',
 		'source':'Square',
 		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
-		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D"
+		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D",
+		'platform':'ps1',
+		'year':1997,
+		'series':'final fantasy'
 	},
 	'finalfight1':{
 		'title': 'Final Fight 1',
