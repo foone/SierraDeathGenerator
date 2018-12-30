@@ -271,6 +271,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Tokai_Communications',
 		'defaulttext':"You shouldn't \nbe proud of \nclearing\neveryone out in \nrapid fire."
 	},
+	'it':{
+		'title': 'Iron Tank',
+		'source':'SNK',
+		'sourceurl':'https://en.wikipedia.org/wiki/SNK',
+		'defaulttext':'"SNAKE!"\n"Watch out -use radar-\ngigantic enemy objects\nup ahead!"',
+		'platform':'nes',
+		'year':1988,
+		'added':'2018-12-30'
+	},
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
