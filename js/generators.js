@@ -463,7 +463,16 @@ var generators={
 		'defaulttext':"from this\npoint you\ncan't go on\nwithout\ncrossbow."
 
 	},
-
+	'scnes':{
+		'title': 'SimCity NES',
+		'source':'Maxis Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
+		'defaulttext':"[bigwhite]    Tokyo,Japan 1961[/]\n[black] A large reptilian crea-\nture has been spooted\nheading for Tokyo. It\nseems to be attracted to\nthe heavy levels of in-\ndustrial pollution there.\n Try to control the\nfires,then rebuild the\nindustrial center.You \nhave 5 years.",
+		'platform': 'nes',
+		'series':'simcity',
+		'year':1991,
+		'added':'2019-01-01'
+	},
 	'sc2k':{
 		'title': 'SimCity 2000 Advisor',
 		'source':'Maxis Software',
