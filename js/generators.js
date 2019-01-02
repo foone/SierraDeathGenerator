@@ -480,6 +480,15 @@ var generators={
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!",
 		'play':"https://archive.org/details/msdos_SimCity_2000_-_CD_Collection_1994"
 	},
+	'sod':{
+		'title': 'Skate or Die',
+		'source':'Ultra Games (Konami)',
+		'sourceurl':'https://en.wikipedia.org/wiki/Ultra_Games',
+		'defaulttext':"Do your\nfolks\nknow what\nyer doing",
+		'year':1988,
+		'platform':'nes',
+		'added':'2019-01-01'
+	},
 	'skitchin':{
 		'title': "Skitchin'",
 		'source':'Electronic Arts',
