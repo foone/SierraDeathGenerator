@@ -329,7 +329,7 @@ class FontManager{
 		return width
 	}
 
-	draw(mainFont, scale, originx, justify, fontOriginY){
+	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY){
 		var y = mainFont.y
 		if(justify=='v-center'){
 			y -= Math.floor(this.getHeight()/2)
@@ -337,7 +337,8 @@ class FontManager{
 		for(var line of this.lines){
 			var x = originx
 			if(justify == 'center'){
-				x = originx - Math.floor(line.getWidth()/2)
+				var jadjust = Math.floor(line.getWidth()/2);
+				x = originx - (jadjust - (jadjust % justifyresolution));
 			}
 			line.draw(this.context, scale, x, y)
 			y+=line.getHeight()
@@ -664,7 +665,7 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
-	fontManager.draw(mainFont, scale, originx, justify, fontOriginY)
+	fontManager.draw(mainFont, scale, originx, justify, first(fontInfo['justify-resolution'],1), fontOriginY)
 
 	drawOverlays('post-text')
 
