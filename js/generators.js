@@ -686,6 +686,15 @@ var generators={
 		'defaulttext': '  _ _R__P __\n __LL-__SH_RS',
 		'play': 'https://archive.org/details/msdos_Wheel_of_Fortune_1987'
 	},
+	'ww':{
+		'title': 'Witchy Workshop',
+		'source': 'Deerbell',
+		'sourceurl': 'https://deerbell.games/witchyworkshop/',
+		'defaulttext': 'Books tend to burst info flame\nwhen I read them, so now I buy\nin bulk. So many bad romance\nnovels!',
+		'year':2018,
+		'platform':'win32',
+		'added':'2019-01-02'
+	},
 	'wh2':{
 		'title': 'World Heroes 2',
 		'source':'ADK',
