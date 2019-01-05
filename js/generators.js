@@ -170,6 +170,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Taito',
 		'defaulttext':"      [big]WARNING![/]\n\n\n     A huge battleship\n \n       [red]King Fossil-A[/]\n\n    Is approaching fast.\n"
 	},
+	'dejavu':{
+		'title': 'Deja Vu',
+		'source':'ICOM Simulations',
+		'sourceurl':'https://en.wikipedia.org/wiki/ICOM_Simulations',
+		'defaulttext':"Somebody had better look\nout",
+		'year': 1988,
+		'platform':'nes',
+		'added':'2019-01-05'
+	},
 	'deusex':{
 		'title': 'Deus Ex',
 		'source':'Ion Storm',
