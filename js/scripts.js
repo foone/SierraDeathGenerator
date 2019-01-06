@@ -229,7 +229,7 @@ class Snippet{
 		if(firstLine){
 			return first(info['first-height'], info['height'], fontInfo['height'])
 		}else{
-			return info['height']
+			return first(info['height'],fontInfo['height'])
 		}
 	}
 
