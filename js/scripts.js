@@ -227,7 +227,7 @@ class Snippet{
 	getHeight(firstLine){
 		var info = this.font.info
 		if(firstLine){
-			return first(info['first-height'], info['height'])
+			return first(info['first-height'], info['height'], fontInfo['height'])
 		}else{
 			return info['height']
 		}
@@ -555,6 +555,7 @@ function renderText(scaled = true){
 				fontcopy['default'] = {}
 			}
 			fontcopy['default']['y'] = fontInfo.shiftfonts[key]
+			delete fontcopy['height'] // Allow changes to the main object to be reflected into the subfont
 			fonts[key] = new BitmapFont(fontcopy, fontImage)
 		}
 	}
