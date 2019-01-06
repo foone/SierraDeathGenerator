@@ -289,6 +289,15 @@ var generators={
 		'year':1988,
 		'added':'2018-12-30'
 	},
+	'km':{
+		'title': 'Kick Master',
+		'source':'KID',
+		'sourceurl':'https://en.wikipedia.org/wiki/KID',
+		'defaulttext':"There's one of the\nscummy living skeletons\nwho attacked the King!\nLet's get him!",
+		'platform':'nes',
+		'year':1992,
+		'added':'2019-01-06'
+	},
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
