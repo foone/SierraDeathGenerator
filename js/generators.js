@@ -337,6 +337,16 @@ var generators={
 		'defaulttext':"Your patient has died of a burst\nappendix.  Report immediately to medical\nschool and pay attention!",
 		'play':"https://archive.org/details/msdos_Life_and_Death_1988"
 	},
+	'ms':{
+		'title': 'Major Stryker',
+		'source':'Apogee Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
+		'defaulttext':"Major Stryker, this is Fleet\nAdmiral Yoshira.  Due to the\ncritical importance of your mission\nI'll personally monitor your\nsuccess and feed you new data as\nintelligence gathers it.",
+		'play':"https://archive.org/details/msdos_Major_Stryker_1993",
+		'platform':'dos',
+		'year':1993,
+		'added':'2019-01-08'
+	},
 	'mh1':{
 		'title': 'Manhunter: New York',
 		'source':'Sierra Online',
