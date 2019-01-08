@@ -4,32 +4,55 @@
 		"x": 24,
 		"y": 144
 	},
-	"wrap-width":280,
+	"wrap-width": 280,
 	"null-character": 32,
 	"default": {
 		"w": 8,
 		"h": 8
 	},
 	"overlays": {
-		"mouth": {
-			"x": 170,
-			"y": 108,
-			"title": "Mouth",
-			"default": "closed",
+		"face": {
+			"x": 91,
+			"y": 60,
+			"title": "Face",
+			"default": "original_closed",
 			"options": {
-				"closed": {
+				"original_closed": {
 					"x": 0,
 					"y": 8,
-					"w": 19,
-					"h": 9
+					"w": 140,
+					"h": 76
 				},
-				"open": {
-					"x": 19,
+				"original_open": {
+					"x": 140,
 					"y": 8,
-					"w": 19,
-					"h": 9
+					"w": 140,
+					"h": 76
+				},
+				"original_smile": {
+					"x": 280,
+					"y": 8,
+					"w": 140,
+					"h": 76
+				},
+				"redraw_closed": {
+					"x": 420,
+					"y": 8,
+					"w": 140,
+					"h": 76
+				},
+				"redraw_open": {
+					"x": 0,
+					"y": 84,
+					"w": 140,
+					"h": 76
+				},
+				"redraw_smile": {
+					"x": 140,
+					"y": 84,
+					"w": 140,
+					"h": 76
 				}
-
 			}
 		}
 	},

@@ -345,7 +345,9 @@ var generators={
 		'play':"https://archive.org/details/msdos_Major_Stryker_1993",
 		'platform':'dos',
 		'year':1993,
-		'added':'2019-01-08'
+		'added':'2019-01-08',
+		'content-contributor': '@HDoomguy',
+		'content-contributor-url' :'https://twitter.com/HDoomguy'
 	},
 	'mh1':{
 		'title': 'Manhunter: New York',
