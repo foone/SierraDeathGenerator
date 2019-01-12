@@ -313,6 +313,16 @@ var generators={
 		'defaulttext':'"There\'s nothing interesting around here.\nCome on!"',
 		'play':"https://archive.org/details/msdos_Kings_Quest_V_-_Absence_Makes_the_Heart_Go_Yonder_1990"
 	},
+	'ka':{
+		'title': 'Kirby\'s Adventure',
+		'source':'HAL Laboratory',
+		'sourceurl':'https://en.wikipedia.org/wiki/HAL_Laboratory',
+		'defaulttext':'[red]      Normal[/]\nHit the Down Arrow\nwhen Kirby has an\nenemy in his mouth\nto copy the enemy\'s\nspecial ability!',
+		'platform':'nes',
+		'series':'kirby',
+		'year':1993,
+		'added':'2019-01-11'
+	},
 	'zelda':{
 		'title': 'Legend of Zelda',
 		'source':'Nintendo',
