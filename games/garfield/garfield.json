@@ -1,0 +1,435 @@
+{
+	"height": 8,
+	"origin": {
+		"x": 80,
+		"y": 48
+	},
+	"null-character": 32,
+	"case-fold": "upper",
+	"dynamic-size": {
+		"w": "overlays.scene.data.info.w",
+		"h": "overlays.scene.data.info.h"
+	},
+	"hooks": {
+		"border": "bw=16+Math.max(8,textbox.w);bh=16+textbox.h;if(overlays.scene.name=='title_screen'){border_x=120;border_y=64}else if(overlays.scene.name=='between_levels'){border_x=192-bw;border_y=40}else{border_x=136-(bw+bw%16)/2;border_y=48};originx=border_x+8",
+		"pre-text": "mainFont.y=border_y+8",
+		"pre-overlays": "overlays.garfield.x = overlays.garfield_position.value;overlays.odie.x = overlays.odie_position.value;if(overlays.scene.name=='title_screen'){overlays.garfield.x=95;overlays.garfield.y=81;overlays.odie.y=89}else if(overlays.scene.name=='ending'){overlays.garfield.y=145;overlays.jon.x=136;overlays.jon.y=97}else{overlays.odie.y=97}",
+		"change-scene": "{let info = overlays.scene.options[$(this).val()].info;$('#overlay-jon').val(info.jon);$('#overlay-garfield').val(info.garfield);$('#overlay-odie').val(info.odie)}"
+	},
+	"border": {
+		"tl": {
+			"x": 0,
+			"y": 8,
+			"w": 8,
+			"h": 8
+		},
+		"t": {
+			"x": 9,
+			"y": 8,
+			"w": 8,
+			"h": 8
+		},
+		"tr": {
+			"x": 18,
+			"y": 8,
+			"w": 8,
+			"h": 8
+		},
+		"l": {
+			"x": 0,
+			"y": 17,
+			"w": 8,
+			"h": 8
+		},
+		"c": {
+			"x": 9,
+			"y": 17,
+			"w": 8,
+			"h": 8
+		},
+		"r": {
+			"x": 18,
+			"y": 17,
+			"w": 8,
+			"h": 8
+		},
+		"bl": {
+			"x": 0,
+			"y": 26,
+			"w": 8,
+			"h": 8
+		},
+		"b": {
+			"x": 9,
+			"y": 26,
+			"w": 8,
+			"h": 8
+		},
+		"br": {
+			"x": 18,
+			"y": 26,
+			"w": 8,
+			"h": 8
+		}
+	},
+
+	"overlays": {
+		"scene": {
+			"x": 0,
+			"y": 0,
+			"title": "Scene",
+			"default": "between_levels",
+			"stage": "pre-border",
+			"options": {
+				"title_screen": {
+					"x": 0,
+					"y": 96,
+					"w": 256,
+					"h": 136,
+					"info": {
+						"w": 256,
+						"h": 136,
+						"jon": "none",
+						"garfield": "right_stand",
+						"odie": "none"
+					}
+				},
+				"between_levels": {
+					"x": 0,
+					"y": 34,
+					"w": 8,
+					"h": 8,
+					"info": {
+						"w": 256,
+						"h": 136,
+						"jon": "mouth_open",
+						"garfield": "right_walk1",
+						"odie": "none"
+
+					}
+				},
+				"ending": {
+					"x": 0,
+					"y": 232,
+					"w": 256,
+					"h": 224,
+					"info": {
+						"w": 256,
+						"h": 224,
+						"jon": "mouth_open",
+						"garfield": "right_walk1",
+						"odie": "right_walk1"
+					}
+				}
+			}
+		},
+		"jon": {
+			"x": 192,
+			"y": 41,
+			"title": "Jon",
+			"default": "mouth_open",
+			"options": {
+				"mouth_open": {
+					"x": 50,
+					"y": 8,
+					"w": 24,
+					"h": 88
+				},
+				"mouth_closed": {
+					"x": 26,
+					"y": 8,
+					"w": 24,
+					"h": 88
+				},
+				"none": {
+					"x": 0,
+					"y": 34,
+					"w": 8,
+					"h": 8
+				}
+			}
+		},
+		"garfield": {
+			"x": 109,
+			"y": 89,
+			"title": "Garfield",
+			"default": "right_walk1",
+			"options": {
+				"right_walk1": {
+					"x": 74,
+					"y": 8,
+					"w": 24,
+					"h": 40
+				},
+				"right_walk2": {
+					"x": 98,
+					"y": 8,
+					"w": 24,
+					"h": 40
+				},
+				"right_walk3": {
+					"x": 122,
+					"y": 8,
+					"w": 24,
+					"h": 40
+				},
+				"right_walk4": {
+					"x": 146,
+					"y": 8,
+					"w": 24,
+					"h": 40
+				},
+				"right_stand": {
+					"x": 170,
+					"y": 8,
+					"w": 24,
+					"h": 40
+				},
+				"left_walk1": {
+					"x": 74,
+					"y": 48,
+					"w": 24,
+					"h": 40
+				},
+				"left_walk2": {
+					"x": 98,
+					"y": 48,
+					"w": 24,
+					"h": 40
+				},
+				"left_walk3": {
+					"x": 122,
+					"y": 48,
+					"w": 24,
+					"h": 40
+				},
+				"left_walk4": {
+					"x": 146,
+					"y": 48,
+					"w": 24,
+					"h": 40
+				},
+				"left_stand": {
+					"x": 170,
+					"y": 48,
+					"w": 24,
+					"h": 40
+				},
+				"none": {
+					"x": 0,
+					"y": 34,
+					"w": 8,
+					"h": 8
+				}
+
+			}
+		},
+		"odie": {
+			"x": 17,
+			"y": 153,
+			"title": "Odie",
+			"default": "none",
+			"options": {
+				"right_walk1": {
+					"x": 194,
+					"y": 8,
+					"w": 16,
+					"h": 32
+				},
+				"right_walk2": {
+					"x": 210,
+					"y": 8,
+					"w": 16,
+					"h": 32
+				},
+				"right_walk3": {
+					"x": 226,
+					"y": 8,
+					"w": 16,
+					"h": 32
+				},
+				"left_walk1": {
+					"x": 194,
+					"y": 40,
+					"w": 16,
+					"h": 32
+				},
+				"left_walk2": {
+					"x": 210,
+					"y": 40,
+					"w": 16,
+					"h": 32
+				},
+				"left_walk3": {
+					"x": 226,
+					"y": 40,
+					"w": 16,
+					"h": 32
+				},
+				"none": {
+					"x": 0,
+					"y": 34,
+					"w": 8,
+					"h": 8
+				}
+			}
+		},
+		"garfield_position": {
+			"title": "Garfield's position",
+			"type": "slider",
+			"min": 0,
+			"max": 167,
+			"default": 109
+		},
+		"odie_position": {
+			"title": "Odie's position",
+			"type": "slider",
+			"min": 0,
+			"max": 167,
+			"default": 82
+		}
+
+	},
+
+
+	"default": {
+		"w": 8,
+		"h": 8
+	},
+
+	"65": {
+		"x": 0
+	},
+	"66": {
+		"x": 8
+	},
+	"67": {
+		"x": 16
+	},
+	"68": {
+		"x": 24
+	},
+	"69": {
+		"x": 32
+	},
+	"70": {
+		"x": 40
+	},
+	"71": {
+		"x": 48
+	},
+	"72": {
+		"x": 56
+	},
+	"73": {
+		"x": 64
+	},
+	"74": {
+		"x": 72
+	},
+	"75": {
+		"x": 80
+	},
+	"76": {
+		"x": 88
+	},
+	"77": {
+		"x": 96
+	},
+	"78": {
+		"x": 104
+	},
+	"79": {
+		"x": 112
+	},
+	"80": {
+		"x": 120
+	},
+	"81": {
+		"x": 128
+	},
+	"82": {
+		"x": 136
+	},
+	"83": {
+		"x": 144
+	},
+	"84": {
+		"x": 152
+	},
+	"85": {
+		"x": 160
+	},
+	"86": {
+		"x": 168
+	},
+	"87": {
+		"x": 176
+	},
+	"88": {
+		"x": 184
+	},
+	"89": {
+		"x": 192
+	},
+	"90": {
+		"x": 200
+	},
+	"58": {
+		"x": 208
+	},
+	"38": {
+		"x": 216
+	},
+	"63": {
+		"x": 224
+	},
+	"33": {
+		"x": 232
+	},
+	"39": {
+		"x": 240
+	},
+	"44": {
+		"x": 248
+	},
+	"169": {
+		"x": 256
+	},
+	"48": {
+		"x": 264
+	},
+	"49": {
+		"x": 272
+	},
+	"50": {
+		"x": 280
+	},
+	"51": {
+		"x": 288
+	},
+	"52": {
+		"x": 296
+	},
+	"53": {
+		"x": 304
+	},
+	"54": {
+		"x": 312
+	},
+	"55": {
+		"x": 320
+	},
+	"56": {
+		"x": 328
+	},
+	"57": {
+		"x": 336
+	},
+	"46": {
+		"x": 344
+	},
+	"32": {
+		"x": -8
+	}
+}

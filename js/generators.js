@@ -263,6 +263,15 @@ var generators={
 		"platform":"arcade",
 		"series":"final fight"
 	},
+	'garfield':{
+		'title': 'Garfield: Week of Garfield',
+		'source':'Towa Chiki',
+		'sourceurl':'https://en.wikipedia.org/wiki/Towa_Chiki',
+		'year':1989,
+		'platform':'nes',
+		'defaulttext':"Did you\n find Odie?",
+		'added':'2019-01-15'
+	},
 	'got':{
 		'title': 'God of Thunder',
 		'source':'Adept Software',
