@@ -468,26 +468,35 @@ function parseOverlays(fontInfo){
 		for(var i=0;i<overlayNames.length;i++){
 			var oname=overlayNames[i]
 			var currentOverlay=fontInfo.overlays[oname]
+			if(currentOverlay.type=='slider'){
+				overlays[oname] = {
+					"name":sname,
+					"type":"slider",
+					"min":currentOverlay.min,
+					"max":currentOverlay.max,
+					"value":$('#overlay-'+oname).val()
+				}
+			}else{
+				var sname = $('#overlay-'+oname+' option:selected').val()
+				var adv=currentOverlay.options[sname]
 
-			var sname = $('#overlay-'+oname+' option:selected').val()
-			var adv=currentOverlay.options[sname]
-
-			overlays[oname] = {
-				"name":sname,
-				"x":currentOverlay.x,
-				"y":currentOverlay.y,
-				"w":adv.w,
-				"h":adv.h,
-				"blend":first(currentOverlay['blend-mode'], 'source-over'),
-				"stage":first(currentOverlay.stage, "pre-text"),
-				"title":first(currentOverlay.title,sname),
-				"source":{
-					"x":adv.x,
-					"y":adv.y
-				},
-				"data":adv
+				overlays[oname] = {
+					"name":sname,
+					"type":"select",
+					"x":currentOverlay.x,
+					"y":currentOverlay.y,
+					"w":adv.w,
+					"h":adv.h,
+					"blend":first(currentOverlay['blend-mode'], 'source-over'),
+					"stage":first(currentOverlay.stage, "pre-text"),
+					"title":first(currentOverlay.title,sname),
+					"source":{
+						"x":adv.x,
+						"y":adv.y
+					},
+					"data":adv
+				}
 			}
-
 		}
 	}
 	return overlays
@@ -752,24 +761,34 @@ function resetOverlays(){
 					// Internal effect, don't show to the user
 					pwrapper.addClass('internal-overlay')
 				}
-				var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
-				for(opt in overlay.options){
-					if(overlay.options.hasOwnProperty(opt)){
-						$('<option>').text(first(overlay.options[opt].title,opt)).attr('value',opt).prop('selected',opt==overlay['default']).appendTo(select)
+				if(overlay.type=='slider'){
+					var range = $('<input type="range">').attr('id','overlay-'+key)
+					range.attr('min',first(overlay.min,0))
+					range.attr('max',first(overlay.max,100))
+					if(overlay.default){
+						range.attr('value',overlay.default)
 					}
-				}
-				select.appendTo(pwrapper)
-				if('replaceable' in overlay){
-					var uploadlabel=$(' <label>Replace image:</label>')
-					var upload=$('<input type="file" class="overlay-replacement" accept="image/*"/>').attr('id','replace-'+key)
-					upload.appendTo(uploadlabel)
-					uploadlabel.appendTo(pwrapper)
+					range.appendTo(pwrapper)
+				}else{
+					var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
+					for(opt in overlay.options){
+						if(overlay.options.hasOwnProperty(opt)){
+							$('<option>').text(first(overlay.options[opt].title,opt)).attr('value',opt).prop('selected',opt==overlay['default']).appendTo(select)
+						}
+					}
+					select.appendTo(pwrapper)
+					if('replaceable' in overlay){
+						var uploadlabel=$(' <label>Replace image:</label>')
+						var upload=$('<input type="file" class="overlay-replacement" accept="image/*"/>').attr('id','replace-'+key)
+						upload.appendTo(uploadlabel)
+						uploadlabel.appendTo(pwrapper)
+					}
 				}
 				pwrapper.appendTo($('.overlays'))
 			}
 		}
 	}
-	$('.overlays select').change(function(){
+	$('.overlays select, .overlays input[type=range]').change(function(){
 		var name = $(this).attr('id').split('-',2)[1]
 		var hookname = 'change-'+name
 		if('hooks' in fontInfo && hookname in fontInfo.hooks){
