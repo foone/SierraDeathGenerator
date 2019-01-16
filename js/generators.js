@@ -31,7 +31,14 @@ var generators={
 		'title': 'Bad Dudes',
 		'source':'Data East',
 		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
-		'defaulttext':" The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?"
+		'defaulttext':" The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?",
+		'content-type':'Trump edit',
+		'content-contributor': 'Dustin Gunn',
+		'content-contributor-url': 'https://twitter.com/dustin_gunn',
+		'platform':'nes',
+		'year':1989,
+		'added':'2018-03-30',
+		'updated':'2019-01-15'
 	},
 	'bt':{
 		'title': 'Blackthorne',
