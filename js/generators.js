@@ -71,6 +71,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Sculptured_Software',
 		'defaulttext':'You need to check your\nblood sugar four times a \nday,but you can check it \n more often if you like.'
 	},
+	'cpap':{
+		'title': 'Captain Planet',
+		'source':'Chris Gray Enterprises',
+		'sourceurl':'https://www.mobygames.com/company/chris-gray-enterprises-inc',
+		'defaulttext':'The Earth is dying, Planeteers.',
+		'year':1991,
+		'platform':'nes',
+		'added':'2019-01-26'
+	},
 	'carma':{
 		'title': 'Carmageddon',
 		'source':'Stainless Games',
@@ -130,6 +139,12 @@ var generators={
 		"year": 1991,
 		"platform":"nes",
 		"added":"2018-11-18"
+	},
+	'clippy':{
+		'title': 'Clippy',
+		'source':'Microsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
+		'defaulttext':'It looks like you\'re\nwriting a letter.\n\nWould you like help?\n\n●  Get help with\n       writing the letter\n\n●  Just type the\n       letter without help'
 	},
 	'caption':{
 		'title': 'Closed Captions',
