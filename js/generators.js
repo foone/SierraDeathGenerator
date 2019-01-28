@@ -140,12 +140,6 @@ var generators={
 		"platform":"nes",
 		"added":"2018-11-18"
 	},
-	'clippy':{
-		'title': 'Clippy',
-		'source':'Microsoft',
-		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
-		'defaulttext':'It looks like you\'re\nwriting a letter.\n\nWould you like help?\n\n●  Get help with\n       writing the letter\n\n●  Just type the\n       letter without help'
-	},
 	'caption':{
 		'title': 'Closed Captions',
 		'source':'FCC',
