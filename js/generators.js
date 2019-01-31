@@ -470,7 +470,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Tecmo',
 		'defaulttext':'"Just a girl.\n Get out of here!"',
 	},
-
+	'odallus':{
+		'title': 'Odallus',
+		'source':'JoyMasher',
+		'sourceurl':'https://joymasher.com/',
+		'defaulttext':"GODS? OUR GODS ARE\nDEAD, OLD AND NEW,\nI'M MY OWN GOD NOW!",
+		'year':2015,
+		'platform':'win32',
+		'added':'2019-01-31'
+	},
 	'oregon':{
 		'title': 'Oregon Trail',
 		'source':'MECC',
