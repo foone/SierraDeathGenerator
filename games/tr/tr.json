@@ -7,7 +7,7 @@
 	"null-character": 32,
 	"case-fold": "upper",
 	"hooks": {
-		"font": "if(overlays.scene.name.startsWith('act')){fontInfo['height']=8}",
+		"font": "if(overlays.scene.name.startsWith('act')){fontInfo['height']=8}else{fontInfo['height']=16}",
 		"pre-overlays": "overlays.scene.source.x += overlays.game_version.data.info.offset"
 	},
 	"overlays": {
