@@ -729,6 +729,15 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/ToeJam_%26_Earl_Productions',
 		'defaulttext':"        Game Tip\nHold up on direction pad\nto shake trees, part\nbushes or push buttons."
 	},
+	'tr':{
+		'title': 'Totally Rad',
+		'source':'Aicom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Aicom',
+		'defaulttext':"THEY ARE INTELLIGENT,\nBUT INCREDIBLY UGLY.",
+		'platform':'nes',
+		'year':'1991',
+		'added':'2019-02-01'
+	},
 	'ts':{
 		'title': 'Toy Story',
 		'source':'Traveller\'s Tales',
