@@ -164,7 +164,17 @@
 			}
 		}
 	},
-
+	"shiftfonts": {
+		"red": 14,
+		"blue": 28,
+		"yellow": 42,
+		"green":56,
+		"purple":70,
+		"black": 84
+	},
+	"default":{
+		"y":0
+	},
 	"12289": {
 		"x": 5879,
 		"w": 11,
