@@ -768,7 +768,7 @@ var generators={
 		'source': 'Chucklefish',
 		'sourceurl': 'https://en.wikipedia.org/wiki/Chucklefish',
 		'platform':'win32',
-		'defaulttext': 'Getting to the King shouldn\'t be much of a \nchallenge.',
+		'defaulttext': 'Hmph... So many humans. How unpleasant. Still,\nI can avoid most of them.',
 		'year':2019,
 		'added':'2019-02-04'
 	},
