@@ -763,6 +763,15 @@ var generators={
 		'sourceurl': 'https://en.wikipedia.org/wiki/American_Game_Cartridges',
 		'defaulttext': 'Taking drugs is stupid,\nToby.'
 	},
+	'wargroove': {
+		'title': 'Wargroove',
+		'source': 'Chucklefish',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Chucklefish',
+		'platform':'win32',
+		'defaulttext': 'Getting to the King shouldn\'t be much of a \nchallenge.',
+		'year':2019,
+		'added':'2019-02-04'
+	},
 	'wof': {
 		'title': 'Wheel of Fortune',
 		'source': 'SHAREDATA, Inc',
