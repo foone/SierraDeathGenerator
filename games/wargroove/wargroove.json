@@ -33,90 +33,110 @@
 					"w": 36,
 					"h": 36
 				},
-				"Cherrystone": {
+				"Mercival": {
 					"x": 0,
 					"y": 206,
 					"w": 36,
 					"h": 36
 				},
-				"Valder": {
+				"Cherrystone": {
 					"x": 0,
 					"y": 242,
 					"w": 36,
 					"h": 36
 				},
-				"Ragna": {
+				"Valder": {
 					"x": 0,
 					"y": 278,
 					"w": 36,
 					"h": 36
 				},
-				"Sigrid": {
+				"Ragna": {
 					"x": 0,
 					"y": 314,
 					"w": 36,
 					"h": 36
 				},
-				"Felheim": {
+				"Sigrid": {
 					"x": 0,
 					"y": 350,
 					"w": 36,
 					"h": 36
 				},
-				"Greenfinger": {
+				"Felheim": {
 					"x": 0,
 					"y": 386,
 					"w": 36,
 					"h": 36
 				},
-				"Nuru": {
+				"Greenfinger": {
 					"x": 0,
 					"y": 422,
 					"w": 36,
 					"h": 36
 				},
-				"Sedge": {
+				"Nuru": {
 					"x": 0,
 					"y": 458,
 					"w": 36,
 					"h": 36
 				},
-				"Floran": {
+				"Sedge": {
 					"x": 0,
 					"y": 494,
 					"w": 36,
 					"h": 36
 				},
-				"Tenri": {
+				"Floran": {
 					"x": 0,
 					"y": 530,
 					"w": 36,
 					"h": 36
 				},
-				"Ryota": {
+				"Elodie": {
 					"x": 0,
 					"y": 566,
 					"w": 36,
 					"h": 36
 				},
-				"Koji": {
+				"Dark_Mercia": {
 					"x": 0,
 					"y": 602,
 					"w": 36,
-					"h": 36
+					"h": 36,
+					"title":"Dark Mercia"
 				},
-				"Heavensong": {
+				"Tenri": {
 					"x": 0,
 					"y": 638,
 					"w": 36,
 					"h": 36
 				},
-				"Outlaws": {
+				"Ryota": {
 					"x": 0,
 					"y": 674,
 					"w": 36,
 					"h": 36
+				},
+				"Koji": {
+					"x": 0,
+					"y": 710,
+					"w": 36,
+					"h": 36
+				},
+				"Heavensong": {
+					"x": 0,
+					"y": 746,
+					"w": 36,
+					"h": 36
+				},
+				"Outlaws": {
+					"x": 0,
+					"y": 782,
+					"w": 36,
+					"h": 36
 				}
+
 			}
 		},
 		"expression": {
@@ -168,12 +188,12 @@
 		"red": 14,
 		"blue": 28,
 		"yellow": 42,
-		"green":56,
-		"purple":70,
+		"green": 56,
+		"purple": 70,
 		"black": 84
 	},
-	"default":{
-		"y":0
+	"default": {
+		"y": 0
 	},
 	"12289": {
 		"x": 5879,

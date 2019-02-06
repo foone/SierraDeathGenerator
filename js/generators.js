@@ -770,7 +770,8 @@ var generators={
 		'platform':'win32',
 		'defaulttext': 'Hmph... So many humans. How unpleasant. Still,\nI can avoid most of them.',
 		'year':2019,
-		'added':'2019-02-04'
+		'added':'2019-02-04',
+		'updated':'2019-02-05'
 	},
 	'wof': {
 		'title': 'Wheel of Fortune',
