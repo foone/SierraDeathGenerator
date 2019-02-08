@@ -711,6 +711,16 @@ var generators={
 		'year': 1994,
 		'gameinfo':'https://www.mobygames.com/game/snes/super-metroid'
 	},
+	'superman':{
+		'title': 'Superman',
+		'source':'Kemco',
+		'sourceurl':'https://en.wikipedia.org/wiki/Kemco',
+		'platform':'nes',
+		'year': 1988,
+		'gameinfo':'https://www.mobygames.com/game/nes/superman_',
+		'defaulttext':'\nYou are \n\nClark Kent',
+		'added':'2019-02-07'
+	},
 	'ss2':{
 		'title': 'System Shock 2',
 		'source':'Irrational Games and Looking Glass Studios',
