@@ -15,7 +15,8 @@
   },
   "hooks": {
     "border": "bw=Math.min(176,Math.max(128,textbox.w+16));bh=textbox.h+16;if(overlays.character.name=='none'){border_x=border_y=512;originx=8}else{border_x=160-bw/2+(textbox.w/8<15?0:8);border_y=27-bh/2+first(fontInfo.adjustments[textbox.h/8],0);originx=border_x+8;mainFont.y=border_y+7}",
-    "pre-overlays": "overlays.arrow.x = border_x+16;overlays.arrow.y=border_y+bh-8"
+    "pre-overlays": "overlays.arrow.x = border_x+16;overlays.arrow.y=border_y+bh-8",
+    "font":"if(overlays.character.name=='none'){fontInfo['wrap-width'] = 240}else{fontInfo['wrap-width'] = 160}"
   },
   "border": {
     "tl": {
