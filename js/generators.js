@@ -65,6 +65,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/blackthorne',
 		'added':'2018-12-26'
 	},
+	'billnted':{
+		'title': 'Bill & Ted',
+		'source':'Rocket Science Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rocket_Science_Games',
+		'defaulttext':'Ask the locals for\nhelp, but remember\nto be excellent to\neveryone... Don\'t\nmake them mad!',
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/nes/bill-teds-excellent-video-game-adventure',
+		'added':'2019-02-10'
+	},
 	'bm':{
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
