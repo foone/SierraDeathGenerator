@@ -533,14 +533,6 @@ function getAllPossibleOptions(){
 	return opts;
 }
 
-function twitterifyCanvas(context){
-	var pixel = context.getImageData(0,0,1,1)
-	if(pixel.data[3]==255){
-		pixel.data[3]=254
-	}
-	context.putImageData(pixel,0,0)
-}
-
 function renderText(scaled = true){
 	if(fontInfo == null || baseImage == null){
 		return
@@ -678,10 +670,6 @@ function renderText(scaled = true){
 	fontManager.draw(mainFont, scale, originx, justify, first(fontInfo['justify-resolution'],1), fontOriginY)
 
 	drawOverlays('post-text')
-
-	if(first(fontInfo.twitterify, true)){
-		twitterifyCanvas(context)
-	}
 }
 
 
