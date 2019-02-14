@@ -96,6 +96,16 @@ var generators={
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/bionic-commando_'
 	},
+	'bof4':{
+		'title': 'Breath of Fire IV',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"\"Whoa! Look at the\n size of that hole!\"",
+		'platform':'ps1',
+		'added':'2019-02-13',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/breath-of-fire-iv'
+	},
 	'cn':{
 		'title': 'Captain Novolin',
 		'source':'Sculptured Software',

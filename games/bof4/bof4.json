@@ -1,0 +1,2322 @@
+{
+	"height": 14,
+	"origin": {
+		"x": 48,
+		"y": 7
+	},
+	"null-character": 32,
+	"hooks": {
+		"font": "originx = overlays.side.data.text_x",
+		"pre-overlays": "overlays.portrait.source.y = overlays.side.data.offset; overlays.portrait.x = overlays.side.data.portrait_x"
+	},
+	"overlays": {
+		"portrait": {
+			"x": 4,
+			"y": 2,
+			"title": "Portrait",
+			"default": "nina_apprehensive",
+			"options": {
+				"ryu_blue": {
+					"x": 0,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ryu Blue"
+				},
+				"ryu_blue_yelling": {
+					"x": 40,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ryu Blue Yelling"
+				},
+				"ryu_blonde": {
+					"x": 80,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ryu Blonde"
+				},
+				"nina_normal": {
+					"x": 120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Normal"
+				},
+				"nina_happy": {
+					"x": 160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Happy"
+				},
+				"nina_apprehensive": {
+					"x": 200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Apprehensive"
+				},
+				"nina_straight_on": {
+					"x": 240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Straight on"
+				},
+				"nina_surprised": {
+					"x": 280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Surprised"
+				},
+				"nina_sad": {
+					"x": 320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Sad"
+				},
+				"nina_pleading": {
+					"x": 360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Pleading"
+				},
+				"nina_weeping": {
+					"x": 400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Weeping"
+				},
+				"nina_blushing": {
+					"x": 440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Blushing"
+				},
+				"nina_aside": {
+					"x": 480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Aside"
+				},
+				"nina_laughing": {
+					"x": 520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Laughing"
+				},
+				"nina_shirtless_normal": {
+					"x": 560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Shirtless Normal"
+				},
+				"nina_shirtless_blushing": {
+					"x": 600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nina Shirtless Blushing"
+				},
+				"ershin_normal": {
+					"x": 640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ershin Normal"
+				},
+				"ershin_close": {
+					"x": 680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ershin Close"
+				},
+				"ershin_very_close": {
+					"x": 720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ershin Very Close"
+				},
+				"ursula_normal": {
+					"x": 760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ursula Normal"
+				},
+				"ursula_aside": {
+					"x": 800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ursula Aside"
+				},
+				"ursula_profile": {
+					"x": 840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ursula Profile"
+				},
+				"ursula_eyes_closed": {
+					"x": 880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ursula Eyes Closed"
+				},
+				"ursula_happy": {
+					"x": 920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ursula Happy"
+				},
+				"ursula_annoyed": {
+					"x": 960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ursula Annoyed"
+				},
+				"cray_normal": {
+					"x": 1000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cray Normal"
+				},
+				"cray_normal_profile": {
+					"x": 1040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cray Normal Profile"
+				},
+				"cray_angry_profile": {
+					"x": 1080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cray Angry Profile"
+				},
+				"cray_angry": {
+					"x": 1120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cray Angry"
+				},
+				"scias_normal": {
+					"x": 1160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Scias Normal"
+				},
+				"scias_smiling": {
+					"x": 1200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Scias Smiling"
+				},
+				"scias_confused": {
+					"x": 1240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Scias Confused"
+				},
+				"scias_pink": {
+					"x": 1280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Scias Pink"
+				},
+				"deis": {
+					"x": 1320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Deis"
+				},
+				"fou-lu_normal": {
+					"x": 1360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Fou-Lu Normal"
+				},
+				"fou-lu_determined": {
+					"x": 1400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Fou-Lu Determined"
+				},
+				"fou-lu_serene": {
+					"x": 1440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Fou-Lu Serene"
+				},
+				"fou-lu_angry": {
+					"x": 1480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Fou-Lu Angry"
+				},
+				"fou-lu_dark_normal": {
+					"x": 1520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Fou-Lu Dark Normal"
+				},
+				"fou-lu_dark_serene": {
+					"x": 1560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Fou-Lu Dark Serene"
+				},
+				"won-qu": {
+					"x": 1600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Won-qu"
+				},
+				"a-tur": {
+					"x": 1640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "A-tur"
+				},
+				"yuna": {
+					"x": 1680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Yuna"
+				},
+				"yohm": {
+					"x": 1720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Yohm"
+				},
+				"ilgor": {
+					"x": 1760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ilgor"
+				},
+				"rasso_normal": {
+					"x": 1800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rasso Normal"
+				},
+				"rasso_smiling": {
+					"x": 1840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rasso Smiling"
+				},
+				"mami_normal": {
+					"x": 1880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Mami Normal"
+				},
+				"mami_smiling": {
+					"x": 1920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Mami Smiling"
+				},
+				"bunyan": {
+					"x": 1960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Bunyan"
+				},
+				"soniel": {
+					"x": 2000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soniel"
+				},
+				"elina_normal": {
+					"x": 2040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Elina Normal"
+				},
+				"elina_smiling": {
+					"x": 2080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Elina Smiling"
+				},
+				"abbess": {
+					"x": 2120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Abbess"
+				},
+				"rhem_happy": {
+					"x": 2160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rhem Happy"
+				},
+				"rhem_sad": {
+					"x": 2200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rhem Sad"
+				},
+				"iggy": {
+					"x": 2240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Iggy"
+				},
+				"zig": {
+					"x": 2280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Zig"
+				},
+				"kryrik": {
+					"x": 2320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Kryrik"
+				},
+				"kahn_normal": {
+					"x": 2360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Kahn Normal"
+				},
+				"kahn_beaten": {
+					"x": 2400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Kahn Beaten"
+				},
+				"tarhn": {
+					"x": 2440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Tarhn"
+				},
+				"beyd": {
+					"x": 2480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Beyd"
+				},
+				"momo": {
+					"x": 2520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Momo"
+				},
+				"teaching_girl_green": {
+					"x": 2560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Teaching Girl Green"
+				},
+				"teaching_girl_purple": {
+					"x": 2600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Teaching Girl Purple"
+				},
+				"teaching_girl_red": {
+					"x": 2640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Teaching Girl Red"
+				},
+				"p’ung_ryong_normal": {
+					"x": 2680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "P’ung Ryong Normal"
+				},
+				"p’ung_ryong_eye": {
+					"x": 2720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "P’ung Ryong Eye"
+				},
+				"ni_ryong": {
+					"x": 2760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ni Ryong"
+				},
+				"sa_ryong": {
+					"x": 2800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Sa Ryong"
+				},
+				"ch’o_ryong": {
+					"x": 2840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Ch’o Ryong"
+				},
+				"nameless_one": {
+					"x": 2880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nameless One"
+				},
+				"hae_ryong": {
+					"x": 2920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Hae Ryong"
+				},
+				"su_ryong": {
+					"x": 2960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Su Ryong"
+				},
+				"frog_bard": {
+					"x": 3000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog Bard"
+				},
+				"frog_1": {
+					"x": 3040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog 1"
+				},
+				"frog_2": {
+					"x": 3080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog 2"
+				},
+				"frog_3": {
+					"x": 3120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog 3"
+				},
+				"marlok": {
+					"x": 3160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Marlok"
+				},
+				"gyosil": {
+					"x": 3200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Gyosil"
+				},
+				"frog_4": {
+					"x": 3240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog 4"
+				},
+				"frog_5": {
+					"x": 3280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog 5"
+				},
+				"frog_6": {
+					"x": 3320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Frog 6"
+				},
+				"slug": {
+					"x": 3360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Slug"
+				},
+				"dog_soldier_1": {
+					"x": 3400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Soldier 1"
+				},
+				"dog_solder_2": {
+					"x": 3440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Solder 2"
+				},
+				"dog_man_1": {
+					"x": 3480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 1"
+				},
+				"dog_man_2": {
+					"x": 3520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 2"
+				},
+				"dog_man_3": {
+					"x": 3560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 3"
+				},
+				"dog_man_4": {
+					"x": 3600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 4"
+				},
+				"dog_man_5": {
+					"x": 3640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 5"
+				},
+				"dog_man_6": {
+					"x": 3680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 6"
+				},
+				"rwolf": {
+					"x": 3720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rwolf"
+				},
+				"dog_man_7": {
+					"x": 3760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog Man 7"
+				},
+				"una": {
+					"x": 3800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Una"
+				},
+				"old_bald_man_1": {
+					"x": 3840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Bald Man 1"
+				},
+				"old_bald_man_2": {
+					"x": 3880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Bald Man 2"
+				},
+				"old_bald_man_3": {
+					"x": 3920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Bald Man 3"
+				},
+				"man_1": {
+					"x": 3960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 1"
+				},
+				"rhoppe": {
+					"x": 4000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rhoppe"
+				},
+				"man_2": {
+					"x": 4040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 2"
+				},
+				"man_3": {
+					"x": 4080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 3"
+				},
+				"man_4": {
+					"x": 4120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 4"
+				},
+				"girl_1": {
+					"x": 4160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Girl 1"
+				},
+				"oracle_of_wind": {
+					"x": 4200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Oracle of Wind"
+				},
+				"old_man_1": {
+					"x": 4240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Man 1"
+				},
+				"old_man_2": {
+					"x": 4280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Man 2"
+				},
+				"man_5": {
+					"x": 4320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 5"
+				},
+				"stoll_blue": {
+					"x": 4360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Stoll Blue"
+				},
+				"stoll_red": {
+					"x": 4400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Stoll Red"
+				},
+				"man_6": {
+					"x": 4440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 6"
+				},
+				"prince_morley": {
+					"x": 4480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Prince Morley"
+				},
+				"king_of_wyndia": {
+					"x": 4520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "King of Wyndia"
+				},
+				"rhun_normal": {
+					"x": 4560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rhun Normal"
+				},
+				"rhun_happy": {
+					"x": 4600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rhun Happy"
+				},
+				"man_7": {
+					"x": 4640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 7"
+				},
+				"man_8": {
+					"x": 4680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 8"
+				},
+				"man_9": {
+					"x": 4720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 9"
+				},
+				"man_10": {
+					"x": 4760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 10"
+				},
+				"man_11": {
+					"x": 4800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 11"
+				},
+				"man_12": {
+					"x": 4840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 12"
+				},
+				"man_13": {
+					"x": 4880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 13"
+				},
+				"lyta": {
+					"x": 4920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Lyta"
+				},
+				"nun": {
+					"x": 4960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Nun"
+				},
+				"woman_1": {
+					"x": 5000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Woman 1"
+				},
+				"child_1": {
+					"x": 5040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 1"
+				},
+				"child_2": {
+					"x": 5080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 2"
+				},
+				"child_3": {
+					"x": 5120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 3"
+				},
+				"child_4": {
+					"x": 5160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 4"
+				},
+				"child_5": {
+					"x": 5200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 5"
+				},
+				"child_6": {
+					"x": 5240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 6"
+				},
+				"child_7": {
+					"x": 5280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 7"
+				},
+				"child_8": {
+					"x": 5320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 8"
+				},
+				"child_9": {
+					"x": 5360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 9"
+				},
+				"man_14": {
+					"x": 5400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 14"
+				},
+				"tahb": {
+					"x": 5440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Tahb"
+				},
+				"child_10": {
+					"x": 5480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 10"
+				},
+				"child_11": {
+					"x": 5520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 11"
+				},
+				"child_12": {
+					"x": 5560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 12"
+				},
+				"child_13": {
+					"x": 5600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Child 13"
+				},
+				"woman_2": {
+					"x": 5640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Woman 2"
+				},
+				"woman_3": {
+					"x": 5680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Woman 3"
+				},
+				"man_15": {
+					"x": 5720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 15"
+				},
+				"man_16": {
+					"x": 5760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 16"
+				},
+				"man_17": {
+					"x": 5800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 17"
+				},
+				"man_18": {
+					"x": 5840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 18"
+				},
+				"man_19": {
+					"x": 5880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 19"
+				},
+				"man_20": {
+					"x": 5920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 20"
+				},
+				"old_man_3": {
+					"x": 5960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Man 3"
+				},
+				"old_man_4": {
+					"x": 6000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Old Man 4"
+				},
+				"turtle": {
+					"x": 6040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Turtle"
+				},
+				"man_21": {
+					"x": 6080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Man 21"
+				},
+				"poko": {
+					"x": 6120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Poko"
+				},
+				"pabpab_2": {
+					"x": 6160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Pabpab 2"
+				},
+				"pabpab_3": {
+					"x": 6200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Pabpab 3"
+				},
+				"pabpab_4": {
+					"x": 6240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Pabpab 4"
+				},
+				"pabpab_5": {
+					"x": 6280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Pabpab 5"
+				},
+				"rock_man_1": {
+					"x": 6320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rock Man 1"
+				},
+				"rock_man_2": {
+					"x": 6360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rock Man 2"
+				},
+				"doll": {
+					"x": 6400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Doll"
+				},
+				"bird": {
+					"x": 6440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Bird"
+				},
+				"horse": {
+					"x": 6480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Horse"
+				},
+				"octopus": {
+					"x": 6520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Octopus"
+				},
+				"chicken_white": {
+					"x": 6560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Chicken White"
+				},
+				"chicken_brown": {
+					"x": 6600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Chicken Brown"
+				},
+				"dog_1": {
+					"x": 6640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog 1"
+				},
+				"dog_2": {
+					"x": 6680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog 2"
+				},
+				"dog_3": {
+					"x": 6720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Dog 3"
+				},
+				"cat_brown": {
+					"x": 6760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cat Brown"
+				},
+				"cat_purple": {
+					"x": 6800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cat Purple"
+				},
+				"cat_grey": {
+					"x": 6840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Cat Grey"
+				},
+				"parrot": {
+					"x": 6880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Parrot"
+				},
+				"rei": {
+					"x": 6920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Rei"
+				},
+				"teepo": {
+					"x": 6960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Teepo"
+				},
+				"elf": {
+					"x": 7000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Elf"
+				},
+				"masked_soldier_1": {
+					"x": 7040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Masked Soldier 1"
+				},
+				"masked_soldier_2": {
+					"x": 7080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Masked Soldier 2"
+				},
+				"masked_soldier_3": {
+					"x": 7120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Masked Soldier 3"
+				},
+				"masked_soldier_4": {
+					"x": 7160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Masked Soldier 4"
+				},
+				"soldier_moustached_blue": {
+					"x": 7200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Moustached Blue"
+				},
+				"soldier_young_blue": {
+					"x": 7240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Young Blue"
+				},
+				"soldier_angular_blue": {
+					"x": 7280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Angular Blue"
+				},
+				"soldier_moustached_red": {
+					"x": 7320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Moustached Red"
+				},
+				"soldier_young_red": {
+					"x": 7360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Young Red"
+				},
+				"soldier_angular_red": {
+					"x": 7400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Angular Red"
+				},
+				"soldier_moustached_green": {
+					"x": 7440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Moustached Green"
+				},
+				"soldier_young_green": {
+					"x": 7480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Young Green"
+				},
+				"soldier_angular_green": {
+					"x": 7520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Angular Green"
+				},
+				"soldier_moustached_yellow": {
+					"x": 7560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Moustached Yellow"
+				},
+				"soldier_young_yellow": {
+					"x": 7600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Young Yellow"
+				},
+				"soldier_angular_yellow": {
+					"x": 7640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Soldier Angular Yellow"
+				},
+				"faerie 1_normal": {
+					"x": 7680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 1 Normal"
+				},
+				"faerie 1_happy": {
+					"x": 7720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 1 Happy"
+				},
+				"faerie 1_angry": {
+					"x": 7760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 1 Angry"
+				},
+				"faerie 1_sad": {
+					"x": 7800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 1 Sad"
+				},
+				"faerie 2_normal": {
+					"x": 7840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 2 Normal"
+				},
+				"faerie 2_happy": {
+					"x": 7880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 2 Happy"
+				},
+				"faerie 2_angry": {
+					"x": 7920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 2 Angry"
+				},
+				"faerie 2_sad": {
+					"x": 7960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 2 Sad"
+				},
+				"faerie 3_normal": {
+					"x": 8000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 3 Normal"
+				},
+				"faerie 3_happy": {
+					"x": 8040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 3 Happy"
+				},
+				"faerie 3_angry": {
+					"x": 8080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 3 Angry"
+				},
+				"faerie 3_sad": {
+					"x": 8120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 3 Sad"
+				},
+				"faerie 4_normal": {
+					"x": 8160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 4 Normal"
+				},
+				"faerie 4_happy": {
+					"x": 8200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 4 Happy"
+				},
+				"faerie 4_angry": {
+					"x": 8240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 4 Angry"
+				},
+				"faerie 4_sad": {
+					"x": 8280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 4 Sad"
+				},
+				"faerie 5_normal": {
+					"x": 8320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 5 Normal"
+				},
+				"faerie 5_happy": {
+					"x": 8360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 5 Happy"
+				},
+				"faerie 5_angry": {
+					"x": 8400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 5 Angry"
+				},
+				"faerie 5_sad": {
+					"x": 8440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 5 Sad"
+				},
+				"faerie 6_normal": {
+					"x": 8480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 6 Normal"
+				},
+				"faerie 6_happy": {
+					"x": 8520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 6 Happy"
+				},
+				"faerie 6_angry": {
+					"x": 8560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 6 Angry"
+				},
+				"faerie 6_sad": {
+					"x": 8600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 6 Sad"
+				},
+				"faerie 7_normal": {
+					"x": 8640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 7 Normal"
+				},
+				"faerie 7_happy": {
+					"x": 8680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 7 Happy"
+				},
+				"faerie 7_angry": {
+					"x": 8720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 7 Angry"
+				},
+				"faerie 7_sad": {
+					"x": 8760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 7 Sad"
+				},
+				"faerie 8_normal": {
+					"x": 8800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 8 Normal"
+				},
+				"faerie 8_happy": {
+					"x": 8840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 8 Happy"
+				},
+				"faerie 8_angry": {
+					"x": 8880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 8 Angry"
+				},
+				"faerie 8_sad": {
+					"x": 8920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 8 Sad"
+				},
+				"faerie 9_normal": {
+					"x": 8960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 9 Normal"
+				},
+				"faerie 9_happy": {
+					"x": 9000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 9 Happy"
+				},
+				"faerie 9_angry": {
+					"x": 9040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 9 Angry"
+				},
+				"faerie 9_sad": {
+					"x": 9080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 9 Sad"
+				},
+				"faerie 10_normal": {
+					"x": 9120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 10 Normal"
+				},
+				"faerie 10_happy": {
+					"x": 9160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 10 Happy"
+				},
+				"faerie 10_angry": {
+					"x": 9200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 10 Angry"
+				},
+				"faerie 10_sad": {
+					"x": 9240,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 10 Sad"
+				},
+				"faerie 11_normal": {
+					"x": 9280,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 11 Normal"
+				},
+				"faerie 11_happy": {
+					"x": 9320,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 11 Happy"
+				},
+				"faerie 11_angry": {
+					"x": 9360,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 11 Angry"
+				},
+				"faerie 11_sad": {
+					"x": 9400,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 11 Sad"
+				},
+				"faerie 12_normal": {
+					"x": 9440,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 12 Normal"
+				},
+				"faerie 12_happy": {
+					"x": 9480,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 12 Happy"
+				},
+				"faerie 12_angry": {
+					"x": 9520,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 12 Angry"
+				},
+				"faerie 12_sad": {
+					"x": 9560,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 12 Sad"
+				},
+				"faerie 13_normal": {
+					"x": 9600,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 13 Normal"
+				},
+				"faerie 13_happy": {
+					"x": 9640,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 13 Happy"
+				},
+				"faerie 13_angry": {
+					"x": 9680,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 13 Angry"
+				},
+				"faerie 13_sad": {
+					"x": 9720,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 13 Sad"
+				},
+				"faerie 14_normal": {
+					"x": 9760,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 14 Normal"
+				},
+				"faerie 14_happy": {
+					"x": 9800,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 14 Happy"
+				},
+				"faerie 14_angry": {
+					"x": 9840,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 14 Angry"
+				},
+				"faerie 14_sad": {
+					"x": 9880,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 14 Sad"
+				},
+				"faerie 15_normal": {
+					"x": 9920,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 15 Normal"
+				},
+				"faerie 15_happy": {
+					"x": 9960,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 15 Happy"
+				},
+				"faerie 15_angry": {
+					"x": 10000,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 15 Angry"
+				},
+				"faerie 15_sad": {
+					"x": 10040,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 15 Sad"
+				},
+				"faerie 16_normal": {
+					"x": 10080,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 16 Normal"
+				},
+				"faerie 16_happy": {
+					"x": 10120,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 16 Happy"
+				},
+				"faerie 16_angry": {
+					"x": 10160,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 16 Angry"
+				},
+				"faerie 16_sad": {
+					"x": 10200,
+					"y": 96,
+					"w": 40,
+					"h": 48,
+					"title": "Faerie 16 Sad"
+				}
+
+			}
+		},
+		"side": {
+			"x": -8,
+			"y": 0,
+			"title": "Side",
+			"default": "left",
+			"options": {
+				"left": {
+					"x": 760,
+					"y": 0,
+					"w": 8,
+					"h": 8,
+					"offset": 96,
+					"text_x": 48,
+					"portrait_x": 4
+				},
+				"right": {
+					"x": 760,
+					"y": 8,
+					"w": 8,
+					"h": 8,
+					"offset": 144,
+					"text_x": 4,
+					"portrait_x": 196
+				},
+				"none": {
+					"x": 760,
+					"y": 8,
+					"w": 8,
+					"h": 8,
+					"offset": 96,
+					"text_x": 12,
+					"portrait_x": -48
+				}
+			}
+		}
+	},
+	"shiftfonts": {
+		"grey": 12,
+		"red": 24,
+		"blue": 36,
+		"green": 48,
+		"pink": 60,
+		"yellow": 72,
+		"purple": 84
+	},
+	"default": {
+		"y": 0
+	},
+	"32": {
+		"x": 0,
+		"w": 8,
+		"h": 12
+	},
+	"33": {
+		"x": 8,
+		"w": 8,
+		"h": 12
+	},
+	"34": {
+		"x": 16,
+		"w": 8,
+		"h": 12
+	},
+	"35": {
+		"x": 24,
+		"w": 8,
+		"h": 12
+	},
+	"11841": {
+		"x": 32,
+		"w": 8,
+		"h": 12
+	},
+	"37": {
+		"x": 40,
+		"w": 8,
+		"h": 12
+	},
+	"38": {
+		"x": 48,
+		"w": 8,
+		"h": 12
+	},
+	"39": {
+		"x": 56,
+		"w": 6,
+		"h": 12
+	},
+	"40": {
+		"x": 62,
+		"w": 8,
+		"h": 12
+	},
+	"41": {
+		"x": 70,
+		"w": 8,
+		"h": 12
+	},
+	"10005": {
+		"x": 78,
+		"w": 8,
+		"h": 12
+	},
+	"43": {
+		"x": 86,
+		"w": 8,
+		"h": 12
+	},
+	"44": {
+		"x": 94,
+		"w": 8,
+		"h": 12
+	},
+	"45": {
+		"x": 102,
+		"w": 8,
+		"h": 12
+	},
+	"46": {
+		"x": 110,
+		"w": 8,
+		"h": 12
+	},
+	"47": {
+		"x": 118,
+		"w": 8,
+		"h": 12
+	},
+	"48": {
+		"x": 126,
+		"w": 8,
+		"h": 12
+	},
+	"49": {
+		"x": 134,
+		"w": 8,
+		"h": 12
+	},
+	"50": {
+		"x": 142,
+		"w": 8,
+		"h": 12
+	},
+	"51": {
+		"x": 150,
+		"w": 8,
+		"h": 12
+	},
+	"52": {
+		"x": 158,
+		"w": 8,
+		"h": 12
+	},
+	"53": {
+		"x": 166,
+		"w": 8,
+		"h": 12
+	},
+	"54": {
+		"x": 174,
+		"w": 8,
+		"h": 12
+	},
+	"55": {
+		"x": 182,
+		"w": 8,
+		"h": 12
+	},
+	"56": {
+		"x": 190,
+		"w": 8,
+		"h": 12
+	},
+	"57": {
+		"x": 198,
+		"w": 8,
+		"h": 12
+	},
+	"58": {
+		"x": 206,
+		"w": 8,
+		"h": 12
+	},
+	"59": {
+		"x": 214,
+		"w": 8,
+		"h": 12
+	},
+	"12300": {
+		"x": 222,
+		"w": 8,
+		"h": 12
+	},
+	"61": {
+		"x": 230,
+		"w": 8,
+		"h": 12
+	},
+	"12301": {
+		"x": 238,
+		"w": 8,
+		"h": 12
+	},
+	"63": {
+		"x": 246,
+		"w": 8,
+		"h": 12
+	},
+	"183": {
+		"x": 254,
+		"w": 8,
+		"h": 12
+	},
+	"65": {
+		"x": 262,
+		"w": 8,
+		"h": 12
+	},
+	"66": {
+		"x": 270,
+		"w": 8,
+		"h": 12
+	},
+	"67": {
+		"x": 278,
+		"w": 8,
+		"h": 12
+	},
+	"68": {
+		"x": 286,
+		"w": 8,
+		"h": 12
+	},
+	"69": {
+		"x": 294,
+		"w": 8,
+		"h": 12
+	},
+	"70": {
+		"x": 302,
+		"w": 8,
+		"h": 12
+	},
+	"71": {
+		"x": 310,
+		"w": 8,
+		"h": 12
+	},
+	"72": {
+		"x": 318,
+		"w": 8,
+		"h": 12
+	},
+	"73": {
+		"x": 326,
+		"w": 5,
+		"h": 12
+	},
+	"74": {
+		"x": 331,
+		"w": 8,
+		"h": 12
+	},
+	"75": {
+		"x": 339,
+		"w": 8,
+		"h": 12
+	},
+	"76": {
+		"x": 347,
+		"w": 8,
+		"h": 12
+	},
+	"77": {
+		"x": 355,
+		"w": 8,
+		"h": 12
+	},
+	"78": {
+		"x": 363,
+		"w": 8,
+		"h": 12
+	},
+	"79": {
+		"x": 371,
+		"w": 8,
+		"h": 12
+	},
+	"80": {
+		"x": 379,
+		"w": 8,
+		"h": 12
+	},
+	"81": {
+		"x": 387,
+		"w": 8,
+		"h": 12
+	},
+	"82": {
+		"x": 395,
+		"w": 8,
+		"h": 12
+	},
+	"83": {
+		"x": 403,
+		"w": 8,
+		"h": 12
+	},
+	"84": {
+		"x": 411,
+		"w": 8,
+		"h": 12
+	},
+	"85": {
+		"x": 419,
+		"w": 8,
+		"h": 12
+	},
+	"86": {
+		"x": 427,
+		"w": 8,
+		"h": 12
+	},
+	"87": {
+		"x": 435,
+		"w": 8,
+		"h": 12
+	},
+	"88": {
+		"x": 443,
+		"w": 8,
+		"h": 12
+	},
+	"89": {
+		"x": 451,
+		"w": 8,
+		"h": 12
+	},
+	"90": {
+		"x": 459,
+		"w": 8,
+		"h": 12
+	},
+	"92": {
+		"x": 475,
+		"w": 8,
+		"h": 12
+	},
+	"126": {
+		"x": 491,
+		"w": 8,
+		"h": 12
+	},
+	"8547": {
+		"x": 507,
+		"w": 8,
+		"h": 12
+	},
+	"97": {
+		"x": 515,
+		"w": 8,
+		"h": 12
+	},
+	"98": {
+		"x": 523,
+		"w": 8,
+		"h": 12
+	},
+	"99": {
+		"x": 531,
+		"w": 8,
+		"h": 12
+	},
+	"100": {
+		"x": 539,
+		"w": 8,
+		"h": 12
+	},
+	"101": {
+		"x": 547,
+		"w": 8,
+		"h": 12
+	},
+	"102": {
+		"x": 555,
+		"w": 8,
+		"h": 12
+	},
+	"103": {
+		"x": 563,
+		"w": 8,
+		"h": 12
+	},
+	"104": {
+		"x": 571,
+		"w": 8,
+		"h": 12
+	},
+	"105": {
+		"x": 579,
+		"w": 4,
+		"h": 12
+	},
+	"106": {
+		"x": 583,
+		"w": 8,
+		"h": 12
+	},
+	"107": {
+		"x": 591,
+		"w": 8,
+		"h": 12
+	},
+	"108": {
+		"x": 599,
+		"w": 4,
+		"h": 12
+	},
+	"109": {
+		"x": 603,
+		"w": 8,
+		"h": 12
+	},
+	"110": {
+		"x": 611,
+		"w": 8,
+		"h": 12
+	},
+	"111": {
+		"x": 619,
+		"w": 8,
+		"h": 12
+	},
+	"112": {
+		"x": 627,
+		"w": 8,
+		"h": 12
+	},
+	"113": {
+		"x": 635,
+		"w": 8,
+		"h": 12
+	},
+	"114": {
+		"x": 643,
+		"w": 8,
+		"h": 12
+	},
+	"115": {
+		"x": 651,
+		"w": 8,
+		"h": 12
+	},
+	"116": {
+		"x": 659,
+		"w": 8,
+		"h": 12
+	},
+	"117": {
+		"x": 667,
+		"w": 8,
+		"h": 12
+	},
+	"118": {
+		"x": 675,
+		"w": 8,
+		"h": 12
+	},
+	"119": {
+		"x": 683,
+		"w": 8,
+		"h": 12
+	},
+	"120": {
+		"x": 691,
+		"w": 8,
+		"h": 12
+	},
+	"121": {
+		"x": 699,
+		"w": 8,
+		"h": 12
+	},
+	"122": {
+		"x": 707,
+		"w": 8,
+		"h": 12
+	},
+	"62": {
+		"x": 715,
+		"w": 8,
+		"h": 12
+	},
+	"8977": {
+		"x": 723,
+		"w": 8,
+		"h": 12
+	},
+	"12302": {
+		"x": 731,
+		"w": 8,
+		"h": 12
+	},
+	"12303": {
+		"x": 739,
+		"w": 8,
+		"h": 12
+	}
+}
