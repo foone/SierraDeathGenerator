@@ -590,12 +590,12 @@
 					"h": 48,
 					"title": "Frog 4"
 				},
-				"frog_5": {
+				"frog_child": {
 					"x": 3280,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Frog 5"
+					"title": "Frog Child"
 				},
 				"frog_6": {
 					"x": 3320,
@@ -660,12 +660,12 @@
 					"h": 48,
 					"title": "Dog Man 5"
 				},
-				"dog_man_6": {
+				"chino": {
 					"x": 3680,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Dog Man 6"
+					"title": "Chino"
 				},
 				"rwolf": {
 					"x": 3720,
@@ -688,26 +688,26 @@
 					"h": 48,
 					"title": "Una"
 				},
-				"old_bald_man_1": {
+				"woren_elder_1": {
 					"x": 3840,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Old Bald Man 1"
+					"title": "Woren Elder 1"
 				},
-				"old_bald_man_2": {
+				"woren_elder_2": {
 					"x": 3880,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Old Bald Man 2"
+					"title": "Woren Elder 2"
 				},
-				"old_bald_man_3": {
+				"woren_elder_3": {
 					"x": 3920,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Old Bald Man 3"
+					"title": "Woren Elder 3"
 				},
 				"man_1": {
 					"x": 3960,
@@ -744,12 +744,12 @@
 					"h": 48,
 					"title": "Man 4"
 				},
-				"girl_1": {
+				"dam_tech_girl": {
 					"x": 4160,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Girl 1"
+					"title": "Dam Tech Girl"
 				},
 				"oracle_of_wind": {
 					"x": 4200,
@@ -758,12 +758,12 @@
 					"h": 48,
 					"title": "Oracle of Wind"
 				},
-				"old_man_1": {
+				"mayor_of_kyria": {
 					"x": 4240,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Old Man 1"
+					"title": "Mayor of Kyria"
 				},
 				"old_man_2": {
 					"x": 4280,
@@ -1122,19 +1122,19 @@
 					"h": 48,
 					"title": "Pabpab 5"
 				},
-				"rock_man_1": {
+				"marl": {
 					"x": 6320,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Rock Man 1"
+					"title": "Marl"
 				},
-				"rock_man_2": {
+				"glebe": {
 					"x": 6360,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Rock Man 2"
+					"title": "Glebe"
 				},
 				"doll": {
 					"x": 6400,
@@ -1157,12 +1157,12 @@
 					"h": 48,
 					"title": "Horse"
 				},
-				"octopus": {
+				"whelk": {
 					"x": 6520,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Octopus"
+					"title": "Whelk"
 				},
 				"chicken_white": {
 					"x": 6560,
