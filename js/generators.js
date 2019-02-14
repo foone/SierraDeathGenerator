@@ -374,6 +374,16 @@ var generators={
 		'added':'2018-04-15',
 
 	},
+	'fwbt':{
+		'title': 'The Frog for Whom the Bell Tolls',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Hey, old man!\nWhat is it?",
+		'year':1992,
+		'platform':'gameboy',
+		'added':'2019-02-13',
+		'gameinfo':'https://www.mobygames.com/game/kaeru-no-tame-ni-kane-wa-naru',
+	},
 	'ff6':{
 		'title': 'Final Fantasy VI',
 		'source':'Square',
