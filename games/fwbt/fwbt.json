@@ -5,6 +5,7 @@
 		"y": 8
 	},
 	"null-character": 32,
+	"wrap-width":144,
 	"overlays": {
 		"arrow": {
 			"x": 152,
