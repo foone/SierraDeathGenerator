@@ -528,6 +528,17 @@ var generators={
 		'added':'2018-12-17',
 		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-a-link-to-the-past'
 	},
+	'la':{
+		'title': 'Legend of Zelda: Link\'s Awakening',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"YAHOO!   I'm\nfine, and you?!",
+		'series': 'zelda',
+		'platform':'gameboy',
+		'year':1993,
+		'added':'2019-02-13',
+		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'	
+	},
 	'lad':{
 		'title': 'Life & Death',
 		'source':'The Software Toolworks',
