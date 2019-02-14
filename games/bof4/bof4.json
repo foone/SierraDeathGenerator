@@ -737,12 +737,12 @@
 					"h": 48,
 					"title": "Man 3"
 				},
-				"man_4": {
+				"traveling_merchant": {
 					"x": 4120,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Man 4"
+					"title": "Traveling Merchant"
 				},
 				"dam_tech_girl": {
 					"x": 4160,
@@ -1248,33 +1248,33 @@
 					"h": 48,
 					"title": "Elf"
 				},
-				"masked_soldier_1": {
+				"imperial_soldier_1": {
 					"x": 7040,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Masked Soldier 1"
+					"title": "Imperial Soldier 1"
 				},
-				"masked_soldier_2": {
+				"imperial_soldier_2": {
 					"x": 7080,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Masked Soldier 2"
+					"title": "Imperial Soldier 2"
 				},
-				"masked_soldier_3": {
+				"imperial_soldier_3": {
 					"x": 7120,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Masked Soldier 3"
+					"title": "Imperial Soldier 3"
 				},
-				"masked_soldier_4": {
+				"imperial_soldier_4": {
 					"x": 7160,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Masked Soldier 4"
+					"title": "Imperial Soldier 4"
 				},
 				"soldier_moustached_blue": {
 					"x": 7200,
