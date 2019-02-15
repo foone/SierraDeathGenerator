@@ -673,6 +673,16 @@ var generators={
 		'added':'2018-04-25',
 
 	},
+	'mfpl':{
+		'title': 'Minnesota Fats: Pool Legend',
+		'source':'Data East',
+		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
+		'defaulttext':'So, you think you can\nchallenge me? Ha Ha Ha!!',
+		'platform':'genesis',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/minnesota-fats-pool-legend',
+		'added':'2019-02-15',
+	},
 	'mk2':{
 		'title': 'Mortal Kombat II',
 		'source':'Midway',
