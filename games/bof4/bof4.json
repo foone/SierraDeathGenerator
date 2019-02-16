@@ -1059,12 +1059,12 @@
 					"h": 48,
 					"title": "Man 20"
 				},
-				"old_man_3": {
+				"Blacksmith": {
 					"x": 5960,
 					"y": 96,
 					"w": 40,
 					"h": 48,
-					"title": "Old Man 3"
+					"title": "Blacksmith"
 				},
 				"old_man_4": {
 					"x": 6000,
