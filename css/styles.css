@@ -18,11 +18,7 @@ canvas#border{
 	display: none;
 }
 
-#makegif{
-	display: none;
-}
-
-#throbber{
+#makegif, #jsondump, #throbber{
 	display: none;
 }
 
@@ -40,4 +36,22 @@ a.new-generator{
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfXAxMIKSi5A2I/AAAASHRFWHRDb21tZW50AChjKSAyMDA2IEpha3ViIFN0ZWluZXIKCmNyZWF0ZWQgd2l0aCB0aGUgR0lNUCA6OiBodHRwOi8vZ2ltcC5vcmcj/1hAAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4xLjQTQGjEAAAApElEQVQoU62POw7CMBBEc7pcA45CQcVHCERHlEAHR3A2EZjQUCco3GZgFhnZFgVCFE/a9cxYswmAgOF4gHSUKpxjPVgIjfWtUjjHerCQ/wf8zg4/4EOv/ni5N7D98cnpbXZUnUDaEtKVGtKAtAa7psD2nCO3GTK7wbpeYSkLzM0MUzPB4bp/BT5VopnE71opPooCq7hArAcL+TlAvgr4N3EOdSQPBdGM09UBcfYAAAAASUVORK5CYII=);
 	background-repeat: no-repeat;
   background-position: right top;
+}
+
+.add-special{
+	text-decoration: none
+}
+.main-generator,#notes{
+	display: inline-block;
+	border: 1px solid red;
+	padding: 1em;
+	vertical-align: top;
+}
+
+.special-keys{
+	display: inline;
+}
+
+.debug-links a{
+	margin-left: 1em;
 }

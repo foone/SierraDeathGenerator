@@ -774,6 +774,17 @@ var generators={
 		'added':'2018-12-18',
 
 	},
+	'pw':{
+		'title': 'Pilotwings',
+		'source':'Nintendo',
+		'sourceurl':"https://en.wikipedia.org/wiki/Nintendo",
+		'defaulttext':"        Lesson 1\nHi, I am Tony,  and I'll\nbe  your  instructor for \nArea 1.     Our  lessons\nwill cover a few basics-\nlanding   an   airplane,\nand skydiving\nfor accuracy.",
+		'gameinfo':'https://www.mobygames.com/game/snes/pilotwings',
+		'year':1991,
+		'added':'2019-02-16',
+		'platform':'snes'
+
+	},
 	'wea':{
 		'title': 'Presidental Alert',
 		'source':'FEMA',
