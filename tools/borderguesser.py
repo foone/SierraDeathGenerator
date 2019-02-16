@@ -55,7 +55,7 @@ parser.add_argument('height', default=None, type=int,nargs='?',
                     help='Width of full border (default: image height)')
 args = parser.parse_args()
 
-fullimg = Image.open(args.filename)
+fullimg = Image.open(args.filename).convert('RGBA')
 if args.width is None:
 	args.width = fullimg.size[0]-args.x
 if args.height is None:
