@@ -43,8 +43,9 @@ a.new-generator{
 }
 .main-generator,#notes{
 	display: inline-block;
+/*
 	border: 1px solid red;
-	padding: 1em;
+	padding: 1em;*/
 	vertical-align: top;
 }
 
