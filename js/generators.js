@@ -860,6 +860,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/simcity-2000',
 		'added':'2017-12-18',
 	},
+	'sr':{
+		'title':'Shadowrun',
+		'source':'Beam Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Beam_Software',
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/shadowrun_',
+		'defaulttext':"[bold]Dog[/bold] controls your \ndestiny. Seek out three\nitems of his favor and\nthen seek his shrine.",
+		'added':'2019-02-17',
+	},
 	'sod':{
 		'title': 'Skate or Die',
 		'source':'Ultra Games (Konami)',
