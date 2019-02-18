@@ -68,10 +68,13 @@ answers={
 	True:'<span style="font-size: 60px; color: green">&#10003;</span>',
 	False:'<span style="font-size: 60px; color: red">&#10008;</span>'}
 
+cumdiff=0
 with open('results.html','wb') as f:
 	print >>f, '<table border="1">'
+	print >>f, '<tr><th>Filename</th><th>Expected</th><th>Resulting</th><th>Different pixels</th><th>GIF compare</th><th>OK?</th></tr>'
 	for key in keys:
 		diff_pixels, difference_image, flicker_compare = compare_files(key, results[key])
+		cumdiff+=int(diff_pixels)
 
 
 
@@ -84,7 +87,7 @@ with open('results.html','wb') as f:
 				<td><img src="{}"></td>
 				<td>{}</td>
 			</tr>""".format(
-				key,
+				os.path.splitext(key)[0],
 				data_for_file(key),results[key], 
 				base64_for_binary(difference_image),
 				base64_for_binary(flicker_compare),
@@ -92,3 +95,5 @@ with open('results.html','wb') as f:
 
 		)
 	print >>f, '</table>'
+
+print 'Total difference:',cumdiff
