@@ -935,6 +935,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/snes/soul-blazer',
 		'added':'2018-12-08'
 	},
+	'soulf':{
+		'title': 'Soul Falchion',
+		'source':'Vast Fame',
+		'sourceurl':'https://bootleggames.fandom.com/wiki/Vast_Fame',
+		'defaulttext':"YOU STILL GO HOME\nTO SUCK AT BREAST!",
+		'platform':'gameboy',
+		'year':2002,
+		'gameinfo':'https://bootleggames.fandom.com/wiki/Soul_Falchion',
+		'added':'2019-02-17'
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
