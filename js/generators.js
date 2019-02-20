@@ -40,6 +40,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/ancients-1-death-watch',
 		'platform':'dos'
 	},
+	'acww':{
+		'title':'Animal Crossing: Wild World',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':'Tom Nook\nAllow me an introduction.\nMy name is [pink]Tom Nook[/], and I\nown the store in this town.',
+		'year':2005,
+		'platform':'ds',
+		'added':'2019-02-20',
+		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/animal-crossing-wild-world',
+
+	},
 	'baddudes':{
 		'title': 'Bad Dudes',
 		'source':'Data East',
