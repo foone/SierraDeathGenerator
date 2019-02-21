@@ -216,8 +216,14 @@ var generators={
 		"added":"2018-11-18",
 		'gameinfo':'https://www.mobygames.com/game/action-52'
 	},
+	'cc':{
+		'title': 'Chrono Cross',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Mel:\nWhat is it,\nFoone?\nYou look troubled.",
+	},
 	'ct':{
-		'title': 'Chrono trigger',
+		'title': 'Chrono Trigger',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"FLEA: Male\u2026female\u2026\u2026what's the\n   difference?\n   Power is beautiful, and I've got the\n   power!",
