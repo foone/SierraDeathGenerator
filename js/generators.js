@@ -216,6 +216,17 @@ var generators={
 		"added":"2018-11-18",
 		'gameinfo':'https://www.mobygames.com/game/action-52'
 	},
+	'ct':{
+		'title': 'Chrono trigger',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"FLEA: Male\u2026female\u2026\u2026what's the\n   difference?\n   Power is beautiful, and I've got the\n   power!",
+		'added':'2019-02-21',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/chrono-trigger',
+		'platform':'snes',
+		'series':'chrono trigger'
+	},
 	'caption':{
 		'title': 'Closed Captions',
 		'source':'FCC',
