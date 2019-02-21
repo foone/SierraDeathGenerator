@@ -216,12 +216,6 @@ var generators={
 		"added":"2018-11-18",
 		'gameinfo':'https://www.mobygames.com/game/action-52'
 	},
-	'cc':{
-		'title': 'Chrono Cross',
-		'source':'Nintendo',
-		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"Mel:\nWhat is it,\nFoone?\nYou look troubled.",
-	},
 	'ct':{
 		'title': 'Chrono Trigger',
 		'source':'Nintendo',
