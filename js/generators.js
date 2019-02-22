@@ -1028,6 +1028,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/snes/star-fox_',
 		'added':'2018-05-02',
 	},
+	'stonekeep':{
+		'title': 'Stonekeep',
+		'source':'Interplay Productions',
+		'sourceurl':'https://en.wikipedia.org/wiki/Interplay_Entertainment',
+		'defaulttext':"Send a guard troop to Fort Thunder.\nThe Throgs are getting restless again.\n-Korzen",
+		'platform':'dos',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/stonekeep',
+		'added':'2019-02-22',
+	},
 	'sf2':{
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
