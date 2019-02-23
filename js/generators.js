@@ -1251,6 +1251,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/wrath-of-the-black-manta',
 		'added':'2018-04-20',
 	},
+	'yi':{
+		'title': "Yoshi's Island",
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"This paradise is\nYoshi's Island,\nwhere all the\nYoshies live.",
+		'platform':'snes',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/super-mario-world-2-yoshis-island',
+		'added':'2019-02-23',
+	},
 	'zelda2':{
 		'title': 'Zelda II: The Adventure of Link',
 		'source':'Nintendo',
