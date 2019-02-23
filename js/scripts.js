@@ -885,9 +885,7 @@ function loadJSONForGenerator(){
 		}else{
 			$('#notes').text('')
 		}
-		if(debugModeActive()){
-			addLinksForSpecialCharacters()
-		}
+		addLinksForSpecialCharacters()
 	})
 
 }
