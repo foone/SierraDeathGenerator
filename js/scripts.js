@@ -5,7 +5,7 @@ var fontImage = null
 var fontInfo = null
 var overlayNames = null
 var overlayOverrides = null
-var selectedGenerator = 'pq2'
+var selectedGenerator = null
 var glitch = false
 
 function applyHashChange(){
@@ -124,25 +124,25 @@ class Snippet{
 
 	split(maxwidth){
 		var chars = this.parse()
-		function widthSoFar(bk){
+		function widthSoFar(font, bk){
 			var w=0
 			for(var i=0;i<bk;i++){
-				w+=chars[i].w
+				w+=first(chars[i], font[font["null-character"]]).w
 			}
 			return w
 		}
 		var lb = new LineBreak(this.text)
 		var last=null
 		var bk
-		var first=true
+		var firstLine=true
 		while(bk = lb.nextBreak()){
-			if(widthSoFar(bk.position)>maxwidth){
-				if(first){
+			if(widthSoFar(this.font,bk.position)>maxwidth){
+				if(firstLine){
 					last=bk.position
 				}
 				break
 			}
-			first=false
+			firstLine=false
 			last=bk.position
 		}
 		if(last==null){
@@ -902,7 +902,7 @@ function addLinksForSpecialCharacters(){
 		}
 	});
 	if(specials.length>0){
-		var specialdiv = $('<div class="special-keys">Special characters: <br /></div>')
+		var specialdiv = $('<div class="special-keys"><b>Special characters:</b> <br /></div>')
 		for (character of specials) {
 			specialdiv.append('<a class="add-special" href="" data-character="'+character+'">[&#'+character+';]</a> ')
 		}
@@ -923,7 +923,10 @@ function getNameForCurrentImage(ext){
 	return selectedGenerator + "-" + text + "." + ext
 }
 
-
+if(selectedGenerator===null){
+	var generator_names = Object.keys(generators)
+	selectedGenerator = generator_names[Math.round(generator_names.length * Math.random())]
+}
 selectGenerator()
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
