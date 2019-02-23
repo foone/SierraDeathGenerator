@@ -1,11 +1,20 @@
 import sys,os,time,json,subprocess,pdb,glob,base64,tempfile
 import StringIO
 
-generator = sys.argv[1]
-base = os.path.join('..','games', generator)
+import argparse
+
+parser = argparse.ArgumentParser(description='Runs a generator through the test cases')
+parser.add_argument('generator', metavar='NAME', help='Generator to test')
+parser.add_argument('output', metavar='RESULTS.HTML',nargs='?',default='results.html', help='HTML filename to output to')
+
+args = parser.parse_args()
+
+
+
+base = os.path.join('..','games', args.generator)
 tests_dir = os.path.join(base, 'tests')
 test_cases = glob.glob(os.path.join(tests_dir,'*.json'))
-tests={'generator':generator,'tests':{}}
+tests={'generator':args.generator,'tests':{}}
 for path in test_cases:
 	name = os.path.basename(path)
 	with open(path, 'rb') as f:
@@ -72,7 +81,7 @@ answers={
 	False:'<span style="font-size: 60px; color: red">&#10008;</span>'}
 
 cumdiff=0
-with open('results.html','wb') as f:
+with open(args.output,'wb') as f:
 	print >>f, '<table border="1">'
 	print >>f, '<tr><th>Filename</th><th>Expected</th><th>Resulting</th><th>Different pixels</th><th>GIF compare</th><th>OK?</th></tr>'
 	for key in keys:
