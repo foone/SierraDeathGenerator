@@ -42,15 +42,20 @@ a.new-generator{
 	text-decoration: none
 }
 .main-generator,#notes{
-	display: inline-block;
-/*
-	border: 1px solid red;
-	padding: 1em;*/
-	vertical-align: top;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+#main-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.main-generator {
+  flex: 2;
 }
 
-.special-keys{
-	display: inline;
+#notes {
+  flex: 1;
 }
 
 .debug-links a{

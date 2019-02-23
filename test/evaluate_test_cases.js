@@ -1,13 +1,11 @@
 const puppeteer = require('puppeteer');
 
-const fs = require('fs');
-const util = require('util');
 const path = require('path');
-const readFile = util.promisify(fs.readFile);
+const getStdin = require('get-stdin');
 
 (async () => {
 	const browser = await puppeteer.launch({'args':['--allow-file-access-from-files','--no-sandbox'],'headless':true});
-	var testjson = await readFile("test.json")
+	var testjson = await getStdin()
 	var testinfo = JSON.parse(testjson)
 	const indexURL = 'file://' + path.resolve(__dirname,'../index.html') + '#' + testinfo['generator'];
 	var results = {}

@@ -14,6 +14,7 @@
 		"w": "20+textbox.w",
 		"h": "20+textbox.h"
 	},
+	"notes":"Use lowercase for regular letters, uppercase for letters with hearts",
 	"border": {
 		"c": {
 			"x": 474,

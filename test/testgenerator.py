@@ -1,4 +1,6 @@
 import sys,os,time,json,subprocess,pdb,glob,base64,tempfile
+import StringIO
+
 generator = sys.argv[1]
 base = os.path.join('..','games', generator)
 tests_dir = os.path.join(base, 'tests')
@@ -8,10 +10,11 @@ for path in test_cases:
 	name = os.path.basename(path)
 	with open(path, 'rb') as f:
 		tests['tests'][name] = json.load(f)
-with open('test.json','wb') as f:
-	json.dump(tests, f)
 
-results = json.loads(subprocess.check_output(['node','evaluate_test_cases.js']))
+
+proc = subprocess.Popen(['node','evaluate_test_cases.js'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+data,_ = proc.communicate(json.dumps(tests))
+results = json.loads(data)
 
 def base64_for_binary(data):
 	return 'data:image/png;base64,' + base64.b64encode(data)
