@@ -881,6 +881,7 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/simcity-2000',
 		'added':'2017-12-18',
+		'updated':'2019-02-23'
 	},
 	'sr':{
 		'title':'Shadowrun',
