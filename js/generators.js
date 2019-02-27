@@ -1043,13 +1043,14 @@ var generators={
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
-		'defaulttext':"Damme dude!",
+		'defaulttext':"I'M THE STRONGEST WOMAN\nIN THE WORLD.",
 		'contributor': '@pixel_data',
 		'contributorurl':'https://twitter.com/pixel_data',
 		'platform':'arcade',
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/street-fighter-ii-the-world-warrior',
 		'added':'2018-04-03',
+		'updated':'2019-02-26'
 	},
 	'smas':{
 		'title': 'Super Mario All-Stars',
