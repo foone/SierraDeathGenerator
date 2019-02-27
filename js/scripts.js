@@ -329,19 +329,25 @@ class FontManager{
 		return width
 	}
 
-	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY){
+	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, output_size){
 		var y = mainFont.y
 		if(justify=='v-center'){
 			y -= Math.floor(this.getHeight()/2)
 		}
+		var first_line = true;
 		for(var line of this.lines){
 			var x = originx
+			if(first_line && first_line_justify == 'output-center'){
+				x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
+				x = (x - (x % justifyresolution))
+			}
 			if(justify == 'center'){
 				var jadjust = Math.floor(line.getWidth()/2);
 				x = originx - (jadjust - (jadjust % justifyresolution));
 			}
 			line.draw(this.context, scale, x, y)
 			y+=line.getHeight()
+			first_line=false
 		}
 	}
 
@@ -533,6 +539,7 @@ function parseOverlays(fontInfo){
 					"blend":first(currentOverlay['blend-mode'], 'source-over'),
 					"stage":first(currentOverlay.stage, "pre-text"),
 					"title":first(currentOverlay.title,sname),
+					"flip":first(adv.flip, currentOverlay.flip, ''),
 					"source":{
 						"x":adv.x,
 						"y":adv.y
@@ -559,7 +566,10 @@ function setOptions(opts){
 	$('#sourcetext').val(opts['main-text'])
 
 	$('select').each(function(_,e){
-		$(this).val(opts[$(e).attr('id').split('-',2)[1]])
+		var new_value = opts[$(e).attr('id').split('-',2)[1]];
+		if(typeof new_value !== 'undefined'){
+			$(this).val(new_value)	
+		}
 	});
 	return opts;
 }
@@ -626,6 +636,8 @@ function renderText(scaled = true){
 		fontManager.wordwrap(fontInfo['wrap-width'])
 	}
 	var justify = first(fontInfo.justify, 'left')
+	var justify_resolution = first(fontInfo['justify-resolution'],1)
+	var first_line_justify = first(fontInfo['first-line-justify'], justify);
 
 	var textbox={
 		w: fontManager.getWidth(),
@@ -669,12 +681,37 @@ function renderText(scaled = true){
 			var adv = overlays[key]
 			if(adv.stage == stage){
 				context.globalCompositeOperation = adv.blend
-				if(key in overlayOverrides){
-					var img = overlayOverrides[key]
-					context.drawImage(img,0,0,img.width,img.height,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
-				}else{
-					context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+				var overlay_x = adv.x*scale, overlay_y = adv.y*scale;
+				var overlay_w = adv.w*scale, overlay_h = adv.h*scale
+				var source_x = adv.source.x, source_y = adv.source.y
+				var source_w = adv.w, source_h = adv.h
+				var source_image = fontImage
+
+				context.save()
+				if(adv.flip!==''){
+					context.translate(overlay_x, overlay_y)
+					overlay_x=overlay_y=0
+					if(adv.flip.toUpperCase().includes('H')){
+						overlay_x = -overlay_w
+						context.scale(-1, 1)
+					}
+					if(adv.flip.toUpperCase().includes('V')){
+						overlay_y = -overlay_h
+						context.scale(1, -1)
+					}
 				}
+				if(key in overlayOverrides){
+					source_image = overlayOverrides[key]
+					source_x = source_y = 0 
+					source_w = source_image.width
+					source_h = source_image.height
+				}
+				context.drawImage(
+					source_image,
+					source_x, source_y, source_w, source_h,
+					overlay_x,overlay_y,overlay_w,overlay_h
+				)
+				context.restore()
 			}
 		})
 		context.globalCompositeOperation = "source-over"
@@ -715,7 +752,7 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
-	fontManager.draw(mainFont, scale, originx, justify, first(fontInfo['justify-resolution'],1), fontOriginY)
+	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, outputSize)
 
 	drawOverlays('post-text')
 }
