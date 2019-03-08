@@ -42,7 +42,7 @@ def compare_files(correct_filename, resulting):
 		try:
 
 			proc = subprocess.Popen([
-				'magick','compare','-compose','src',
+				'compare','-compose','src',
 				path_for_file(correct_filename),
 				temp_file.name,
 				'png:-'
@@ -50,7 +50,7 @@ def compare_files(correct_filename, resulting):
 			difference_image = proc.communicate()[0]
 
 			proc = subprocess.Popen([
-				'magick','compare','-metric','AE',
+				'compare','-metric','AE','-fuzz','2%',
 				path_for_file(correct_filename),
 				temp_file.name,
 				'null:-'
@@ -62,7 +62,7 @@ def compare_files(correct_filename, resulting):
 			if int(diff_pixels.strip())<2:
 				badcolor = goodcolor
 			proc = subprocess.Popen([
-				'magick','convert','-delay','50',
+				'convert','-dispose','Background','-delay','50',
 				'(',path_for_file(correct_filename),'-background',goodcolor,'label:Correct','-gravity', 'Center','-append',')',
 				'(',temp_file.name,'-background',badcolor,'label:Resulting','-gravity', 'Center', '-append',')',
 				'+repage',
@@ -82,6 +82,13 @@ answers={
 
 cumdiff=0
 with open(args.output,'wb') as f:
+	print >>f,("""
+<style>
+	td.img-compare{
+		vertical-align: top;
+	}
+</style>
+""")
 	print >>f, '<table border="1">'
 	print >>f, '<tr><th>Filename</th><th>Expected</th><th>Resulting</th><th>Different pixels</th><th>GIF compare</th><th>OK?</th></tr>'
 	for key in keys:
@@ -93,10 +100,10 @@ with open(args.output,'wb') as f:
 		print >>f, """
 			<tr>
 				<td>{}</td>
-				<td><img src="{}"></td>
-				<td><img src="{}"></td>
-				<td><img src="{}"></td>
-				<td><img src="{}"></td>
+				<td class="img-compare"><img src="{}"></td>
+				<td class="img-compare"><img src="{}"></td>
+				<td class="img-compare"><img src="{}"></td>
+				<td class="img-compare"><img src="{}"></td>
 				<td>{}</td>
 			</tr>""".format(
 				os.path.splitext(key)[0],
