@@ -1107,6 +1107,7 @@ var generators={
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/super-mario-world',
 		'added':'2018-04-28',
+		'updated':'2019-03-10'
 	},
 	'sm':{
 		'title': 'Super Metroid',
