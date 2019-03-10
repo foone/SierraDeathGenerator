@@ -25,6 +25,16 @@ proc = subprocess.Popen(['node','evaluate_test_cases.js'], stdin=subprocess.PIPE
 data,_ = proc.communicate(json.dumps(tests))
 results = json.loads(data)
 
+def cmd_for_imagemagick(command,*args):
+	prefix=[]
+	if sys.platform == 'win32':
+		prefix=['magick']
+		#FIXME: This assumes we're already running on ImageMagick 7.x+
+		#How can we support ImageMagick 6.x on Windows? 
+		# We may have to manually spelunk the PATH and find ImageMagick, 
+		# or make the user pass an argument telling us where it is?
+	return prefix + [command] + list(args)
+
 def base64_for_binary(data):
 	return 'data:image/png;base64,' + base64.b64encode(data)
 
@@ -41,34 +51,34 @@ def compare_files(correct_filename, resulting):
 		temp_file.close()
 		try:
 
-			proc = subprocess.Popen([
-				'compare','-compose','src',
+			proc = subprocess.Popen(
+				cmd_for_imagemagick('compare', '-compose','src','-fuzz','2%',
 				path_for_file(correct_filename),
 				temp_file.name,
 				'png:-'
-			], stdout=subprocess.PIPE)
+			), stdout=subprocess.PIPE)
 			difference_image = proc.communicate()[0]
 
-			proc = subprocess.Popen([
-				'compare','-metric','AE','-fuzz','2%',
+			proc = subprocess.Popen(
+				cmd_for_imagemagick('compare','-metric','AE','-fuzz','2%',
 				path_for_file(correct_filename),
 				temp_file.name,
 				'null:-'
-			], stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+			), stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 			diff_pixels = proc.communicate()[1]
 
 			goodcolor = 'PaleGreen'
 			badcolor = 'pink'
 			if int(diff_pixels.strip())<2:
 				badcolor = goodcolor
-			proc = subprocess.Popen([
-				'convert','-dispose','Background','-delay','50',
+			proc = subprocess.Popen(
+				cmd_for_imagemagick('convert','-dispose','Background','-delay','50',
 				'(',path_for_file(correct_filename),'-background',goodcolor,'label:Correct','-gravity', 'Center','-append',')',
 				'(',temp_file.name,'-background',badcolor,'label:Resulting','-gravity', 'Center', '-append',')',
 				'+repage',
 				'-loop', '0',
 				'gif:-'
-			], stdout=subprocess.PIPE)
+			), stdout=subprocess.PIPE)
 			flicker_compare = proc.communicate()[0]
 
 			return diff_pixels, difference_image, flicker_compare
