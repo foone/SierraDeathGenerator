@@ -595,7 +595,17 @@ function renderText(scaled = true){
 	if('hooks' in fontInfo && 'pre-parse' in fontInfo['hooks']){
 		eval(fontInfo.hooks['pre-parse'])
 	}
-
+	if(!('null-character' in fontInfo)){
+		// Set a null character fallback if the JSON doesn't define one
+		if('32' in fontInfo){
+			// space is a good default, what font doesn't have space? 
+			// A BAD ONE!
+			fontInfo['null-character']='32'
+		}else{
+			var validcharacters = Object.keys(fontInfo).filter(x=>Number.isInteger(-x))
+			fontInfo['null-character'] = validcharacters[0]
+		}
+	}
 	// Define the top-level font
 	var mainFont = new BitmapFont(fontInfo, fontImage)
 	var fonts={
