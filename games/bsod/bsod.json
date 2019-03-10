@@ -11,6 +11,8 @@
 	},
 	"first-line-justify": "output-center",
 	"justify-resolution": 9,
+	"gif": true,
+	"script": true,
 	"shiftfonts": {
 		"inverse": 16
 	},
@@ -301,5 +303,8 @@
 	},
 	"127": {
 		"x": 1143
+	},
+	"65343": {
+		"x":2304
 	}
 }
