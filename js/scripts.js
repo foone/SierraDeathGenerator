@@ -953,10 +953,26 @@ function addLinksForSpecialCharacters(){
 			specialdiv.append('<a class="add-special" href="" data-character="'+character+'" title="U+'+(character-0).toString(16)+' #'+character+'">[&#'+character+';]</a> ')
 		}
 		$('#notes').append(specialdiv)
+		var sourcetext_focused = false
+		$('.add-special').mousedown(function(){
+			sourcetext_focused = $('#sourcetext').is(':focus')
+			return true
+		})
 		$('.add-special').click(function(){
 			var sourcetext = $('#sourcetext')
 			var before_text = sourcetext.val()
-			sourcetext.val(before_text + String.fromCodePoint($(this).data('character')))
+			var to_insert = String.fromCodePoint($(this).data('character'))
+			var caret_pos = sourcetext[0].selectionStart
+			if (typeof caret_pos === 'number') {
+				if (!sourcetext_focused) {
+					caret_pos = before_text.length
+				}
+				sourcetext.val(before_text.substring(0, caret_pos) + to_insert + before_text.substring(caret_pos))
+				sourcetext.focus()
+				sourcetext[0].selectionStart = sourcetext[0].selectionEnd = caret_pos + to_insert.length
+			} else {
+				sourcetext.val(before_text + to_insert)
+			}
 			renderText()
 			return false
 		})
