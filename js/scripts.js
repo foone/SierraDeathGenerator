@@ -163,7 +163,7 @@ class Snippet{
 			if(lastchar in char['unadvance-after']){
 				x-= char['unadvance-after'][lastchar]
 			}
-			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
+			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale + char['vertical-shift'],char.w*scale,char.h*scale)
 			x+=(char.w - char.unadvance)
 			last = char.unadvance
 			lastchar = char.char
@@ -203,6 +203,7 @@ class Snippet{
 				'h': first(info.h, defaultInfo.h),
 				'unadvance': first(info.unadvance, defaultInfo.unadvance, 0),
 				'unadvance-after': first(info['unadvance-after'],{}),
+				'vertical-shift': first(info['vertical-shift'], 0),
 				'char':c
 			})
 		}
@@ -331,7 +332,7 @@ class FontManager{
 
 	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, output_size){
 		var y = mainFont.y
-		if(justify=='v-center'){
+		if(['v-center','all-center'].includes(justify)){
 			y -= Math.floor(this.getHeight()/2)
 		}
 		var first_line = true;
@@ -341,7 +342,7 @@ class FontManager{
 				x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
 				x = (x - (x % justifyresolution))
 			}
-			if(justify == 'center'){
+			if(['center','all-center'].includes(justify)){
 				var jadjust = Math.floor(line.getWidth()/2);
 				x = originx - (jadjust - (jadjust % justifyresolution));
 			}
@@ -939,7 +940,7 @@ function addLinksForSpecialCharacters(){
 	if(specials.length>0){
 		var specialdiv = $('<div class="special-keys"><b>Special characters:</b> <br /></div>')
 		for (character of specials) {
-			specialdiv.append('<a class="add-special" href="" data-character="'+character+'">[&#'+character+';]</a> ')
+			specialdiv.append('<a class="add-special" href="" data-character="'+character+'" title="U+'+(character-0).toString(16)+' #'+character+'">[&#'+character+';]</a> ')
 		}
 		$('#notes').append(specialdiv)
 		$('.add-special').click(function(){
