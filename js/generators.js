@@ -76,6 +76,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/blackthorne',
 		'added':'2018-12-26'
 	},
+	'bsod':{
+		'title': 'BSOD',
+		'source':'Microsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
+		'defaulttext':"[inverse] Windows [/]\n\nA fatal exception 0E has occurred at 0028:C002ADB7 in VXD VFAT(01) +\n0000A3D7. The current application will be terminated.\n\n*  Press any key to terminate the current application.\n*  Press CTRL+ALT+DEL again to restart your computer. You will\n   lose any unsaved information in all applications.\n\n                      Press any key to continue",
+		'platform':'win32',
+		'year':1995,
+		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95',
+		'added':'2019-03-10'
+	},
 	'billnted':{
 		'title': 'Bill & Ted',
 		'source':'Rocket Science Games',
