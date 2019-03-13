@@ -65,6 +65,19 @@ var generators={
 		'added':'2018-03-30',
 		'updated':'2019-01-15'
 	},
+	'bsd':{
+		'title': 'Bishoujo Sexy Derby',
+		'source':'Super Pig',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hacker_International#Super_Pig_games',
+		'defaulttext':"You idiot! Can't\n you do better?",
+		'content-type':'Translation',
+		'content-contributor': 'Spinner 8',
+		'content-contributor-url': 'https://www.romhacking.net/translations/7',
+		'platform':'nes',
+		'year':1988,
+		'gameinfo':'https://www.romhacking.net/translations/7/',
+		'added':'2019-03-13'
+	},
 	'bt':{
 		'title': 'Blackthorne',
 		'source':'Blizzard',
