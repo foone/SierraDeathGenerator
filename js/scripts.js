@@ -90,13 +90,14 @@ class LineGroup{
 						lg.add(p)
 						out.push(lg)
 					}
+					
 					// TODO: rest of snippets?
 					return out
 				}else{
 					x+=w
 					var lg = new LineGroup(first)
 					lg.add(snippet)
-					out.add(snippet)
+					out.push(snippet)
 					first=false
 				}
 			}
@@ -127,7 +128,7 @@ class Snippet{
 		function widthSoFar(font, bk){
 			var w=0
 			for(var i=0;i<bk;i++){
-				w+=first(chars[i], font[font["null-character"]]).w
+				w+=first(chars[i], font.info[font.info["null-character"]]).w
 			}
 			return w
 		}
@@ -182,6 +183,8 @@ class Snippet{
 		}else if(font['case-fold'] == 'lower'){
 			line = line.toLowerCase()
 		}
+		var ligatures = first(font.ligatures, {})
+		
 		for(var i=0;i<line.length;i++){
 			var c=line.charCodeAt(i)
 			if(c>= 0xD800 && c<=0xDBFF){
@@ -191,6 +194,15 @@ class Snippet{
 			var info=font[c]
 			if(info==null){
 				info=font[font["null-character"]]
+			}
+
+			var matching_ligatures = Object.keys(ligatures).filter(x=>line.substring(i,i+x.length)==x)
+			if(matching_ligatures.length>0){
+				// Pick the longest match if there are multiple matches
+				matching_ligatures.sort((a,b) => b.length - a.length)
+				info = ligatures[matching_ligatures[0]]
+				// Extend i by the length of the ligature, minus 1 since the for loop will do i++
+				i+=(matching_ligatures[0].length -1 )
 			}
 			var x=first(info.x, defaultInfo.x)
 			if(glitch){
