@@ -517,6 +517,16 @@ var generators={
 		'added':'2018-04-21',
 
 	},
+	'hso':{
+		'title': 'Hypnospace Outlaw',
+		'source':'Tendershoot, Michael Lasch, ThatWhichIs Media',
+		'sourceurl':'http://www.hypnospace.net/team.html',
+		'defaulttext':'CARL PARKER III\nwhat, the hell',
+		'platform':'win32',
+		'year':2019,
+		'added':'2019-03-15',
+		'gameinfo':'http://www.hypnospace.net/'
+	},
 	'it':{
 		'title': 'Iron Tank',
 		'source':'SNK',
