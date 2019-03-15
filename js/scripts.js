@@ -342,7 +342,7 @@ class FontManager{
 		return width
 	}
 
-	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, output_size){
+	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, first_line_origin, output_size){
 		var y = mainFont.y
 		if(['v-center','all-center'].includes(justify)){
 			y -= Math.floor(this.getHeight()/2)
@@ -350,9 +350,12 @@ class FontManager{
 		var first_line = true;
 		for(var line of this.lines){
 			var x = originx
-			if(first_line && first_line_justify == 'output-center'){
-				x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
-				x = (x - (x % justifyresolution))
+			if(first_line){
+				x = first_line_origin
+				if(first_line_justify == 'output-center'){
+					x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
+					x = (x - (x % justifyresolution))
+				}
 			}
 			if(['center','all-center'].includes(justify)){
 				var jadjust = Math.floor(line.getWidth()/2);
@@ -660,7 +663,8 @@ function renderText(scaled = true){
 	}
 	var justify = first(fontInfo.justify, 'left')
 	var justify_resolution = first(fontInfo['justify-resolution'],1)
-	var first_line_justify = first(fontInfo['first-line-justify'], justify);
+	var first_line_justify = first(fontInfo['first-line-justify'], justify)
+	var first_line_origin = first(fontInfo['first-line-origin'], originx)
 
 	var textbox={
 		w: fontManager.getWidth(),
@@ -775,7 +779,7 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
-	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, outputSize)
+	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, first_line_origin, outputSize)
 
 	drawOverlays('post-text')
 }
