@@ -664,7 +664,7 @@ function renderText(scaled = true){
 	var justify = first(fontInfo.justify, 'left')
 	var justify_resolution = first(fontInfo['justify-resolution'],1)
 	var first_line_justify = first(fontInfo['first-line-justify'], justify)
-	var first_line_origin = first(fontInfo['first-line-origin'], originx)
+	var first_line_origin = fontInfo['first-line-origin']
 
 	var textbox={
 		w: fontManager.getWidth(),
@@ -779,6 +779,7 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
+	first_line_origin = first(first_line_origin, originx)
 	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, first_line_origin, outputSize)
 
 	drawOverlays('post-text')
