@@ -1,7 +1,7 @@
 import sys,os,glob
 from PIL import Image
 files = sorted(glob.glob('atlas/*.png')+glob.glob('atlas/*.bmp'))
-fontfile=Image.open(sys.argv[1])
+fontfile=Image.open(sys.argv[1]).convert('RGBA')
 width=fontfile.size[0]
 images = {}
 for path in files:

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "get-stdin": "^6.0.0",
     "puppeteer": "^1.4.0"
   }
 }

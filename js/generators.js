@@ -3,13 +3,21 @@ var generators={
 		'title': 'Adventures in the Magic Kingdom',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
-		'defaulttext':"999 ghosts are in this\n\nhouse. but they're always\n\nlooking for number 1,000.\n\nBe careful--They might\n\nwant you!\n             \u25bc"
+		'defaulttext':"999 ghosts are in this\n\nhouse. but they're always\n\nlooking for number 1,000.\n\nBe careful--They might\n\nwant you!\n             \u25bc",
+		'added':'2018-08-26',
+		'year': 1990,
+		'platform':'nes',
+		'gameinfo':'https://www.mobygames.com/game/disney-adventures-in-the-magic-kingdom'
 	},
 	'af2':{
 		'title': 'Aero Fighters 2',
 		'source':'Video System',
 		'sourceurl':'https://en.wikipedia.org/wiki/Aero_Fighters',
-		'defaulttext':"I am the world's first\ndolphin pilot."
+		'defaulttext':"I am the world's first\ndolphin pilot.",
+		'added':'2018-05-06',
+		'platform':'arcade',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/aero-fighters-2'
 	},
 	'ag':{
 		'title': 'American Gladiators',
@@ -18,174 +26,440 @@ var generators={
 		'defaulttext':"\"To hit and not be hit, That\nis the answer.\" ",
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/nes/american-gladiators',
-		'platform':'nes'
+		'platform':'nes',
+		'added':'2018-10-29'
 	},
 	'ancients':{
 		'title': 'Ancients',
 		'source':'Farr-Ware Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Ancients_1:_Death_Watch',
 		'defaulttext':"You have never felt the\nneed to recall the\nmemories of your youth.\nThe dreams that have\nhaunted you these last\nnights act as a reminder\nof where you came from\nand what you have seen.\n\nPlaying in the fields\nare among the strongest\nmemories of your youth.\nthere you spent much \ntime exploring, playing\nthe role  of  a  wild",
-		'play':"https://archive.org/details/msdos_Ancients_1_Deathwatch"
+		'play':"https://archive.org/details/msdos_Ancients_1_Deathwatch",
+		'year':1991,
+		'added':'2018-04-16',
+		'gameinfo':'https://www.mobygames.com/game/ancients-1-death-watch',
+		'platform':'dos'
+	},
+	'acww':{
+		'title':'Animal Crossing: Wild World',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':'Tom Nook\nAllow me an introduction.\nMy name is [pink]Tom Nook[/], and I\nown the store in this town.',
+		'year':2005,
+		'platform':'ds',
+		'added':'2019-02-20',
+		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/animal-crossing-wild-world',
+
 	},
 	'baddudes':{
 		'title': 'Bad Dudes',
 		'source':'Data East',
 		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
-		'defaulttext':" The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?"
+		'defaulttext':" The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?",
+		'content-type':'Trump edit',
+		'content-contributor': 'Dustin Gunn',
+		'content-contributor-url': 'https://twitter.com/dustin_gunn',
+		'platform':'nes',
+		'gameinfo':'https://www.mobygames.com/game/nes/bad-dudes',
+		'year':1989,
+		'added':'2018-03-30',
+		'updated':'2019-01-15'
+	},
+	'bsd':{
+		'title': 'Bishoujo Sexy Derby',
+		'source':'Super Pig',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hacker_International#Super_Pig_games',
+		'defaulttext':"You idiot! Can't\n you do better?",
+		'content-type':'Translation',
+		'content-contributor': 'Spinner 8',
+		'content-contributor-url': 'https://www.romhacking.net/translations/7',
+		'platform':'nes',
+		'year':1988,
+		'gameinfo':'https://www.romhacking.net/translations/7/',
+		'added':'2019-03-13'
+	},
+	'bt':{
+		'title': 'Blackthorne',
+		'source':'Blizzard',
+		'sourceurl':'https://en.wikipedia.org/wiki/Blizzard_Entertainment',
+		'defaulttext':"I AM GOING TO\nCRUSH YOU AND\nSPIT ON YOUR\nBONES, BOY!",
+		'platform':'snes',
+		'year':1994,
+		'play':'https://archive.org/details/blackthorne_2013',
+		'gameinfo':'https://www.mobygames.com/game/blackthorne',
+		'added':'2018-12-26'
+	},
+	'bsod':{
+		'title': 'BSOD',
+		'source':'Microsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
+		'defaulttext':"[inverse] Windows [/]\n\nA fatal exception 0E has occurred at 0028:C002ADB7 in VXD VFAT(01) +\n0000A3D7. The current application will be terminated.\n\n*  Press any key to terminate the current application.\n*  Press CTRL+ALT+DEL again to restart your computer. You will\n   lose any unsaved information in all applications.\n\n                      Press any key to continue ",
+		'platform':'win32',
+		'year':1995,
+		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95',
+		'added':'2019-03-10'
+	},
+	'billnted':{
+		'title': 'Bill & Ted',
+		'source':'Rocket Science Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rocket_Science_Games',
+		'defaulttext':'Ask the locals for\nhelp, but remember\nto be excellent to\neveryone... Don\'t\nmake them mad!',
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/nes/bill-teds-excellent-video-game-adventure',
+		'added':'2019-02-10'
 	},
 	'bm':{
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"  Somewhere in each level, there\nis someone like me who holds a key\nto each exit.  You must find them!",
-		"play":"https://archive.org/details/BioMenace"
+		"play":"https://archive.org/details/BioMenace",
+		'platform':'dos',
+		'gameinfo':'https://www.mobygames.com/game/bio-menace',
+		'year':1993,
+		'added':'2018-01-12'
 	},
 	'bc':{
 		'title': 'Bionic Commando',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
 		'defaulttext':"GET THE HECK OUT\nOF HERE, YOU\nNERD!",
-		'platform':'nes'
+		'platform':'nes',
+		'added':'2018-10-21',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/bionic-commando_'
+	},
+	'bof4':{
+		'title': 'Breath of Fire IV',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"\"Whoa! Look at the\n size of that hole!\"",
+		'platform':'ps1',
+		'added':'2019-02-13',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/breath-of-fire-iv'
 	},
 	'cn':{
 		'title': 'Captain Novolin',
 		'source':'Sculptured Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sculptured_Software',
-		'defaulttext':'You need to check your\nblood sugar four times a \nday,but you can check it \n more often if you like.'
+		'defaulttext':'You need to check your\nblood sugar four times a \nday,but you can check it \n more often if you like.',
+		'added':'2018-05-13',
+		'platform':'snes',
+		'gameinfo':'https://www.mobygames.com/game/snes/captain-novolin',
+		'year':1992
+	},
+	'cpap':{
+		'title': 'Captain Planet',
+		'source':'Chris Gray Enterprises',
+		'sourceurl':'https://www.mobygames.com/company/chris-gray-enterprises-inc',
+		'defaulttext':'The Earth is dying, Planeteers.',
+		'year':1991,
+		'platform':'nes',
+		'added':'2019-01-26',
+		'gameinfo':'https://www.mobygames.com/game/captain-planet-and-the-planeteers_'
 	},
 	'carma':{
 		'title': 'Carmageddon',
 		'source':'Stainless Games',
 		'sourceurl':'https://en.wikipedia.org/wiki/Stainless_Games',
 		'defaulttext':'[white]Screwie[/]\nHave you got\nthe guts to\ntrade places,\nPunk?',
-		'play':"https://archive.org/details/msdos_Carmageddon_Max_Pack_1998"
+		'play':"https://archive.org/details/msdos_Carmageddon_Max_Pack_1998",
+		'added':'2018-05-21',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/dos/carmageddon',
+		'platform':'dos'
 	},
 	'cotw':{
 		'title': 'Castle of the Winds',
 		'source':'SaadaSoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Castle_of_the_Winds',
 		'defaulttext':'John Doe\nDied\n5-31-2018\n[small]Killed by a Kobold[/small]',
-		'play':"https://archive.org/details/win3_CasWin1"
+		'play':"https://archive.org/details/win3_CasWin1",
+		'gameinfo':'https://www.mobygames.com/game/win3x/castle-of-the-winds',
+		'year':1993,
+		'platform':'win16',
+		'added':'2018-05-31'
 	},
 	'cv2':{
 		'title': 'Castlevania II',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.'
+		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.',
+		'platform':'nes',
+		'added':'2018-04-28',
+		'series':'castlevania',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/castlevania-ii-simons-quest'
 	},
 	'cl':{
 		'title': 'Castlevania Legends',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'\nCount\n\nDracula\n\nget away'
+		'defaulttext':'\nCount\n\nDracula\n\nget away',
+		'platform':'gameboy',
+		'added':'2018-10-27',
+		'series':'castlevania',
+		'year':1998,
+		'gameinfo':'https://www.mobygames.com/game/gameboy/castlevania-legends'
 	},
 	'sotn':{
 		'title': 'Castlevania: Symphony of the Night',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!'
+		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!',
+		'content-type':'christmas theme',
+		'content-contributor': '@Ashuraou',
+		'content-contributor-url': 'https://twitter.com/ashuraou',
+		'platform':'PS1',
+		'added':'2018-02-23',
+		'updated':'2018-12-26',
+		'series':'castlevania',
+		'gameinfo':'https://www.mobygames.com/game/castlevania-symphony-of-the-night',
+		'year':1997
 	},
 	'cs':{
 		'title': 'Cave Story+',
 		'source':'Pixel',
 		'sourceurl':'https://en.wikipedia.org/wiki/Daisuke_Amaya',
-		'defaulttext':"Oh, sorry 'bout that.\nThe Doctor's such a cruel\nand evil person."
+		'defaulttext':"Oh, sorry 'bout that.\nThe Doctor's such a cruel\nand evil person.",
+		'platform':'win32',
+		'added':'2018-04-12',
+		'year':2005,
+		'gameinfo':'https://www.mobygames.com/game/cave-story'
+	},
+	'a52cm':{
+		'title': 'The Cheetahmen',
+		'source':'Active Enterprises',
+		'sourceurl':'https://en.wikipedia.org/wiki/Action_52',
+		'defaulttext':"The Action Gamemaster was at\nhome playing his video game.\nWhen suddenly...",
+		"year": 1991,
+		"platform":"nes",
+		"added":"2018-11-18",
+		'gameinfo':'https://www.mobygames.com/game/action-52'
+	},
+	'ct':{
+		'title': 'Chrono Trigger',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"FLEA: Male\u2026female\u2026\u2026what's the\n   difference?\n   Power is beautiful, and I've got the\n   power!",
+		'added':'2019-02-21',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/chrono-trigger',
+		'platform':'snes',
+		'series':'chrono trigger'
 	},
 	'caption':{
 		'title': 'Closed Captions',
 		'source':'FCC',
 		'sourceurl':'https://en.wikipedia.org/wiki/Federal_Communications_Commission',
-		'defaulttext':"\n PUT SPACES BEFORE EACH LINE \n AND AFTER FOR BETTER LOOK "
+		'defaulttext':"\n PUT SPACES BEFORE EACH LINE \n AND AFTER FOR BETTER LOOK ",
+		'added':'2018-05-10',
+		'platform':'tv',
+		'year':1973,
+		'gameinfo':'https://en.wikipedia.org/wiki/Closed_captioning'
 	},
 	'ci':{
 		'title': 'Codename: ICEMAN',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':"You've overestimated your strength\n and can't thread water any longer.",
-		'play':"https://archive.org/details/msdos_Codename_ICEMAN_1989"
+		'play':"https://archive.org/details/msdos_Codename_ICEMAN_1989",
+		'platform':'dos',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/code-name-iceman',
+		'added':'2018-04-15',
 	},
 	'lb1':{
 		'title': 'The Colonel\'s Bequest',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'It\'s not a pretty sight',
-		'play':"https://archive.org/details/msdos_Laura_Bow_1_-_The_Colonels_Bequest_1989"
+		'play':"https://archive.org/details/msdos_Laura_Bow_1_-_The_Colonels_Bequest_1989",
+		'platform':'dos',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/colonels-bequest',
+		'added':'2018-04-25',
 	},
 	'keen4':{
 		'title': 'Commander Keen 4',
 		'source':'id Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
 		'defaulttext':'Keen enters the\n     Shadowlands',
-		'play':"https://archive.org/details/msdos_Commander_Keen_4_-_Secret_of_the_Oracle_1991"
+		'play':"https://archive.org/details/msdos_Commander_Keen_4_-_Secret_of_the_Oracle_1991",
+		'platform':'dos',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/commander-keen-goodbye-galaxy',
+		'added':'2017-12-19',
+
 	},
 	'cosmo':{
 		'title': 'Cosmo\'s Cosmic Adventure',
 		'source':'Apogee Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':'       COSMIC HINT!\n\n These hint globes will\n help you along your\n journey.  Press the up\n key to reread them.\n\n Press SPACE to hurry or\n  Press any key to exit.',
-		'play':"https://archive.org/details/CosmosCosmicAdventure"
+		'play':"https://archive.org/details/CosmosCosmicAdventure",
+		'platform':'dos',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/cosmos-cosmic-adventure',
+		'added':'2018-04-22',
+
 	},
 	'crowtel':{
 		'title': 'Crowtel Renovations',
 		'source':'Sink',
 		'sourceurl':'https://twitter.com/sinksadventure',
-		'defaulttext':"Someone clogged my\ntoilet. It wasn't me..."
+		'defaulttext':"Someone clogged my\ntoilet. It wasn't me...",
+		'platform':'win32',
+		'year':2017,
+		'gameinfo':'https://store.steampowered.com/app/573520/Crowtel_Renovations/',
+		'added':'2018-04-12',
+
 	},
 	'darius':{
 		'title': 'Darius',
 		'source':'Taito',
 		'sourceurl':'https://en.wikipedia.org/wiki/Taito',
-		'defaulttext':"      [big]WARNING![/]\n\n\n     A huge battleship\n \n       [red]King Fossil-A[/]\n\n    Is approaching fast.\n"
+		'defaulttext':"      [big]WARNING![/]\n\n\n     A huge battleship\n \n       [red]King Fossil-A[/]\n\n    Is approaching fast.\n",
+		'platform':'arcade',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/arcade/darius',
+		'added':'2018-10-23',
+
+	},
+	'dejavu':{
+		'title': 'Deja Vu',
+		'source':'ICOM Simulations',
+		'sourceurl':'https://en.wikipedia.org/wiki/ICOM_Simulations',
+		'defaulttext':"Somebody had better look\nout",
+		'year': 1988,
+		'platform':'nes',
+		'added':'2019-01-05',
+		'gameinfo':'https://www.mobygames.com/game/nes/deja-vu-a-nightmare-comes-true'
 	},
 	'deusex':{
 		'title': 'Deus Ex',
 		'source':'Ion Storm',
 		'sourceurl':'https://en.wikipedia.org/wiki/Ion_Storm',
-		'defaulttext':"NSF everywhere, JC.  Your orders are to shoot on sight.  A UNATCO informant on the North Dock can get you inside the statue.  Look for a Bum.  Identify yourself with the phrase 'Iron and Copper.'"
+		'defaulttext':"NSF everywhere, JC.  Your orders are to shoot on sight.  A UNATCO informant on the North Dock can get you inside the statue.  Look for a Bum.  Identify yourself with the phrase 'Iron and Copper.'",
+		'platform':'win32',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/deus-ex',
+		'added':'2018-04-17',
+
 	},
 	'ddp':{
 		'title': 'DoDonPachi',
 		'source':'CAVE',
 		'sourceurl':'https://en.wikipedia.org/wiki/Cave_(company)',
-		'defaulttext':"          [red]warning[/red]\n\nthis game is for use in\n[red]JAPAN ONLY.[/red]\nSales, export or operation\noutside this country may be\nconstrued as copyright and \ntrademark infringement and \nis strictly prohibited.\nviolator and subject to\nsevere penalties and will\nbe prosecutedt to the full\nextent of the jam.\n\n[blue]©atlus/cave 1995 1996 1997\n    all rights reserved[/blue]\n    [red]1997 2/5 master ver.[/red]"
+		'defaulttext':"          [red]warning[/red]\n\nthis game is for use in\n[red]JAPAN ONLY.[/red]\nSales, export or operation\noutside this country may be\nconstrued as copyright and \ntrademark infringement and \nis strictly prohibited.\nviolator and subject to\nsevere penalties and will\nbe prosecutedt to the full\nextent of the jam.\n\n[blue]©atlus/cave 1995 1996 1997\n    all rights reserved[/blue]\n    [red]1997 2/5 master ver.[/red]",
+		'platform':'arcade',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/dodonpachi',
+		'added':'2018-05-12',
+
 	},
 	'doom':{
 		'title': 'Doom',
 		'source':'id Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
 		'defaulttext':"ONCE YOU BEAT THE BIG BADASSES AND\nCLEAN OUT THE MOON BASE YOU'RE SUPPOSED\nTO WIN, AREN'T YOU? AREN'T YOU? WHERE'S\nYOUR FAT REWARD AND TICKET HOME? WHAT\nTHE HELL IS THIS? IT'S NOT SUPPOSED TO\nEND THIS WAY!\n\nIT STINKS LIKE ROTTEN MEAT, BUT LOOKS\nLIKE THE LOST DEIMOS BASE. LOOKS LIKE\nYOU'RE STUCK ON THE SHORES OF HELL.\nTHE ONLY WAY OUT IS THROUGH.\n\nTO CONTINUE THE DOOM EXPERIENCE, PLAY\nTHE SHORES OF HELL AND ITS AMAZING\nSEQUEL, INFERNO!",
-		'play':"https://archive.org/details/DoomsharewareEpisode"
+		'play':"https://archive.org/details/DoomsharewareEpisode",
+		'platform':'dos',
+		'updated':'2019-01-10',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/doom',
+		'added':'2018-04-10',
+
 	},
 	'dos':{
 		'title': 'MS-DOS',
 		'source':'Microsoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
-		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\\>"
+		'defaulttext':"Starting MS-DOS...\n\n\nHIMEM is testing extended memory...done.\nC:\\>",
+		'platform':'dos',
+		'year':1981,
+		'gameinfo':'https://en.wikipedia.org/wiki/DOS',
+		'added':'2018-05-05',
+
+	},
+	'dw':{
+		'title': 'DreamWeb',
+		'source':'Creative Reality',
+		'sourceurl':'https://en.wikipedia.org/wiki/DreamWeb',
+		'defaulttext':"--                       mailbox\nCHEMOCLEAN\n\n>read sparkes\nMessage from user 23445 Jake\nSparkes.\n\nRyan, you're fired. Get in here,\ntake your stuff and get out. I\ncan't pay a loser like you to\nwaste my time. PS. If you need a\nreference, you got it.\n\n>\u2588",
+		'play':'https://archive.org/details/DreamWeb_1020',
+		'platform':'dos',
+		'year':1994,
+		'added':'2018-12-02',
+		'gameinfo':'https://www.mobygames.com/game/dreamweb'
 	},
 	'dn1':{
 		'title': 'Duke Nukem 1',
 		'source':'Apogee Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
 		'defaulttext':"You're wrong, Proton\nbreath.  I'll be done\nwith you and still have\ntime to watch Oprah!",
-		'play':"https://archive.org/details/DukeNukem"
+		'play':"https://archive.org/details/DukeNukem",
+		'platform':'dos',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/dos/duke-nukum-episode-1-shrapnel-city',
+		'added':'2018-01-08',
+
 	},
 	'ecco1':{
 		'title': 'Ecco the Dolphin',
 		'source':'Novotrade International',
 		'sourceurl':'https://en.wikipedia.org/wiki/Appaloosa_Interactive',
-		'defaulttext':"\n\nThe marks on \nyour head look \nlike stars in \nthe sky  "
+		'defaulttext':"\n\nThe marks on \nyour head look \nlike stars in \nthe sky  ",
+		'platform':'genesis',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/ecco-the-dolphin',
+		'added':'2018-04-27',
+
 	},
 	'edit':{
 		'title': 'EDIT.COM',
 		'source':'Microsoft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Microsoft',
-		'defaulttext':""
+		'defaulttext':"",
+		'platform':'dos',
+		'year':1991,
+		'gameinfo':'https://en.wikipedia.org/wiki/MS-DOS_Editor',
+		'added':'2018-04-15',
+
+	},
+	'fwbt':{
+		'title': 'The Frog for Whom the Bell Tolls',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Hey, old man!\nWhat is it?",
+		'year':1992,
+		'platform':'gameboy',
+		'added':'2019-02-13',
+		'gameinfo':'https://www.mobygames.com/game/kaeru-no-tame-ni-kane-wa-naru',
+	},
+	'ff6':{
+		'title': 'Final Fantasy VI',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"KEFKA: Hee, hee!\nNothing can beat the music of\nhundreds of voices screaming\nin unison!",
+		'year':1994,
+		'platform':'snes',
+		'series':'final fantasy',
+		'added':'2018-12-28',
+		'gameinfo':'https://www.mobygames.com/game/final-fantasy-iii__',
 	},
 	'ff7':{
 		'title': 'Final Fantasy VII',
 		'source':'Square',
 		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
-		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D"
+		'defaulttext':"Aeris\n\u201CCloud, why don't you\n    dress up like a girl?\n    It's the only way.\u201D",
+		'platform':'ps1',
+		'year':1997,
+		'series':'final fantasy',
+		'added':'2018-04-27',
+		'gameinfo':'https://www.mobygames.com/game/final-fantasy-vii'
 	},
 	'finalfight1':{
 		'title': 'Final Fight 1',
@@ -194,65 +468,199 @@ var generators={
 		'defaulttext':"At the center of the problem is the\nhuge gang known as Mad Gear. Mad Gear\ncontrols all of the major criminal\nactivity in the city.",
 		"year":1989,
 		"platform":"arcade",
-		"series":"final fight"
+		"series":"final fight",
+		'gameinfo':'https://www.mobygames.com/game/arcade/final-fight',
+		'added':'2018-10-31',
+
+	},
+	'garfield':{
+		'title': 'Garfield: Week of Garfield',
+		'source':'Towa Chiki',
+		'sourceurl':'https://en.wikipedia.org/wiki/Towa_Chiki',
+		'year':1989,
+		'platform':'nes',
+		'defaulttext':"Did you\n find Odie?",
+		'added':'2019-01-15',
+		'gameinfo':'https://www.mobygames.com/game/nes/garfield-no-isshkan-a-week-of-garfield'
 	},
 	'got':{
 		'title': 'God of Thunder',
 		'source':'Adept Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/God_of_Thunder_(video_game)',
 		'defaulttext':"My son, I know it is fun\nto shoot people, but if\nyou kill all the good\nguys you'll never complete\nyour mission.",
-		'play':"https://archive.org/details/msdos_God_of_Thunder_1993"
+		'play':"https://archive.org/details/msdos_God_of_Thunder_1993",
+		'platform':'dos',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/dos/god-of-thunder',
+		'added':'2018-10-14',
+
 	},
 	'gr':{
 		'title': 'Gold Rush!',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'Last words: '
+		'defaulttext':'Last words: ',
+		'platform':'dos',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/dos/gold-rush',
+		'added':'2018-04-15',
+
 	},
 	'g13':{
 		'title': 'Golgo-13',
 		'source':'Vic Tokai',
 		'sourceurl':'https://en.wikipedia.org/wiki/Tokai_Communications',
-		'defaulttext':"You shouldn't \nbe proud of \nclearing\neveryone out in \nrapid fire."
+		'defaulttext':"You shouldn't \nbe proud of \nclearing\neveryone out in \nrapid fire.",
+		'platform':'nes',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/nes/golgo-13-top-secret-episode',
+		'added':'2018-04-21',
+
+	},
+	'hso':{
+		'title': 'Hypnospace Outlaw',
+		'source':'Tendershoot, Michael Lasch, ThatWhichIs Media',
+		'sourceurl':'http://www.hypnospace.net/team.html',
+		'defaulttext':'CARL PARKER III\nwhat, the hell',
+		'platform':'win32',
+		'year':2019,
+		'added':'2019-03-15',
+		'gameinfo':'http://www.hypnospace.net/'
+	},
+	'it':{
+		'title': 'Iron Tank',
+		'source':'SNK',
+		'sourceurl':'https://en.wikipedia.org/wiki/SNK',
+		'defaulttext':'"SNAKE!"\n"Watch out -use radar-\ngigantic enemy objects\nup ahead!"',
+		'platform':'nes',
+		'year':1988,
+		'added':'2018-12-30',
+		'gameinfo':'https://www.mobygames.com/game/nes/iron-tank-the-invasion-of-normandy'
+	},
+	'km':{
+		'title': 'Kick Master',
+		'source':'KID',
+		'sourceurl':'https://en.wikipedia.org/wiki/KID',
+		'defaulttext':"There's one of the\nscummy living skeletons\nwho attacked the King!\nLet's get him!",
+		'platform':'nes',
+		'year':1992,
+		'added':'2019-01-06',
+		'gameinfo':'https://www.mobygames.com/game/nes/kick-master'
 	},
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"'
+		'defaulttext':'    "Thank you for playing\n           King\'s Quest IV,\n      `The Perils of Rosella.\'\n\nNext time... be more careful!"',
+		'platform':'dos',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/kings-quest-iv-the-perils-of-rosella',
+		'added':'2018-01-25',
+
 	},
 	'kq5':{
 		'title': 'King\'s Quest 5',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
 		'defaulttext':'"There\'s nothing interesting around here.\nCome on!"',
-		'play':"https://archive.org/details/msdos_Kings_Quest_V_-_Absence_Makes_the_Heart_Go_Yonder_1990"
+		'play':"https://archive.org/details/msdos_Kings_Quest_V_-_Absence_Makes_the_Heart_Go_Yonder_1990",
+		'platform':'dos',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/kings-quest-v-absence-makes-the-heart-go-yonder',
+		'added':'2018-03-19',
+
+	},
+	'ka':{
+		'title': 'Kirby\'s Adventure',
+		'source':'HAL Laboratory',
+		'sourceurl':'https://en.wikipedia.org/wiki/HAL_Laboratory',
+		'defaulttext':'[red]      Normal[/]\nHit the Down Arrow\nwhen Kirby has an\nenemy in his mouth\nto copy the enemy\'s\nspecial ability!',
+		'platform':'nes',
+		'series':'kirby',
+		'year':1993,
+		'added':'2019-01-11',
+		'gameinfo':'https://www.mobygames.com/game/kirbys-adventure'
 	},
 	'zelda':{
 		'title': 'Legend of Zelda',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"It's dangerous to go\n alone! Take this."
+		'defaulttext':"It's dangerous to go\n alone! Take this.",
+		'series': 'zelda',
+		'platform':'nes',
+		'year':1986,
+		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda',
+		'added':'2018-05-21'
+	},
+	'lttp':{
+		'title': 'Legend of Zelda: A Link To The Past',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Link, you can do it!\nSave the Princess\u2026\nZelda is your\u2026 \u2026 \u2026",
+		'series': 'zelda',
+		'platform':'snes',
+		'year':1991,
+		'added':'2018-12-17',
+		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-a-link-to-the-past'
+	},
+	'la':{
+		'title': 'Legend of Zelda: Link\'s Awakening',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"YAHOO!   I'm\nfine, and you?!",
+		'series': 'zelda',
+		'platform':'gameboy',
+		'year':1993,
+		'added':'2019-02-13',
+		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'	
 	},
 	'lad':{
 		'title': 'Life & Death',
 		'source':'The Software Toolworks',
 		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
 		'defaulttext':"Your patient has died of a burst\nappendix.  Report immediately to medical\nschool and pay attention!",
-		'play':"https://archive.org/details/msdos_Life_and_Death_1988"
+		'play':"https://archive.org/details/msdos_Life_and_Death_1988",
+		'platform':'dos',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/life-death',
+		'added':'2018-04-19',
+
+	},
+	'ms':{
+		'title': 'Major Stryker',
+		'source':'Apogee Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/3D_Realms',
+		'defaulttext':"Major Stryker, this is Fleet\nAdmiral Yoshira.  Due to the\ncritical importance of your mission\nI'll personally monitor your\nsuccess and feed you new data as\nintelligence gathers it.",
+		'play':"https://archive.org/details/msdos_Major_Stryker_1993",
+		'platform':'dos',
+		'year':1993,
+		'added':'2019-01-08',
+		'content-contributor': '@HDoomguy',
+		'content-contributor-url' :'https://twitter.com/HDoomguy',
+		'gameinfo':'https://www.mobygames.com/game/major-stryker'
 	},
 	'mh1':{
 		'title': 'Manhunter: New York',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake..."
+		'defaulttext':"Now, let's back up to a few\nminutes before you made\nyour fatal mistake...",
+		'platform':'dos',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/manhunter-new-york',
+		'added':'2018-01-05',
+
 	},
 	'mbtt':{
 		'title': 'Mavis Beacon Teaches Typing',
 		'source':'The Software Toolworks',
 		'sourceurl':'https://en.wikipedia.org/wiki/The_Software_Toolworks',
 		'defaulttext':"[cyan]Mrs. Grimley (to her dog):  \"Oh[/]\n[blue]Mrs. Grimley[/][white]:_My dog's_[/][blue]g[/]ot no__\n\n[cyan]dear, what kind of cheese\n[white]nose![/] [cyan]_\n\nshould I put on our pizza?\"\n\nDog: \"Mutts-arella!\"",
-		'play':"https://archive.org/details/msdos_Mavis_Beacon_Teaches_Typing_1987"
+		'play':"https://archive.org/details/msdos_Mavis_Beacon_Teaches_Typing_1987",
+		'platform':'dos',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/mavis-beacon-teaches-typing',
+		'added':'2018-05-31',
+
 	},
 	'mmbn1':{
 		'title': 'Mega Man Battle Network 1',
@@ -261,7 +669,9 @@ var generators={
 		'defaulttext':"Lan!! Jack into the\noven! Use the\nR Button!",
 		'gameinfo':'https://www.mobygames.com/game/mega-man-battle-network',
 		'platform':'gba',
-		'series':'megaman'
+		'series':'megaman',
+		'added':'2018-10-19',
+		'year':2001
 	},
 	'mmx1':{
 		'title': 'Mega Man X 1',
@@ -270,7 +680,9 @@ var generators={
 		'defaulttext':"You worthless piece\nof scrap metal, did\nyou think you\ncould defeat me?",
 		'gameinfo':'https://www.mobygames.com/game/snes/mega-man-x',
 		'platform':'snes',
-		'series':'megaman'
+		'series':'megaman',
+		'added':'2018-10-27',
+		'year':1993
 	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
@@ -279,13 +691,20 @@ var generators={
 		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake...",
 		'gameinfo':'https://www.mobygames.com/game/metal-gear-solid',
 		'platform':'ps1',
-		'series':'metal gear solid'	
+		'series':'metal gear solid',
+		'added':'2018-03-07',
+		'year':1999
 	},
 	'metroid':{
 		'title': 'Metroid',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'           GREAT!\n YOU FULFILED YOUR MISSION.\n IT WILL REVIVE PEACE IN\nSPACE. \n BUT,IT MAY BE INVADED BY\nTHE OTHER METROID.\n PRAY FOR A TRUE PEACE IN\nSPACE',
+		'platform':'nes',
+		'year':1986,
+		'gameinfo':'https://www.mobygames.com/game/metroid',
+		'added':'2018-04-10',
+
 	},
 	'mmprtm':{
 		'title': 'Mighty Morphin Power Rangers: The Movie',
@@ -295,13 +714,29 @@ var generators={
 		'platform':'genesis',
 		'series':'mighty morphin power rangers',
 		'year':1995,
-		'added':'2018-11-06'
+		'added':'2018-11-06',
+		'gameinfo':'https://www.mobygames.com/game/genesis/mighty-morphin-power-rangers-the-movie__'
 	},
 	'minit':{
 		'title': 'Minit',
 		'source':'Jan Willem Nijman, Kitty Calis, Jukio Kallio, and Dominik Johann',
 		'sourceurl':'https://en.wikipedia.org/wiki/Minit_(video_game)',
-		'defaulttext':'Hello there...'
+		'defaulttext':'Hello there...',
+		'platform':'win32',
+		'year':2018,
+		'gameinfo':'https://www.mobygames.com/game/minit',
+		'added':'2018-04-25',
+
+	},
+	'mfpl':{
+		'title': 'Minnesota Fats: Pool Legend',
+		'source':'Data East',
+		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
+		'defaulttext':'So, you think you can\nchallenge me? Ha Ha Ha!!',
+		'platform':'genesis',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/minnesota-fats-pool-legend',
+		'added':'2019-02-15',
 	},
 	'mk2':{
 		'title': 'Mortal Kombat II',
@@ -309,7 +744,12 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
 		'defaulttext':'Can you take the cold?',
 		'contributor': '@pixel_data',
-		'contributorurl':'https://twitter.com/pixel_data'
+		'contributorurl':'https://twitter.com/pixel_data',
+		'platform':'arcade',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/mortal-kombat-ii',
+		'added':'2018-04-02',
+
 	},
 	'mt32':{
 		'title': 'MT-32',
@@ -317,87 +757,205 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Roland_MT-32',
 		'defaulttext':' ** Roland MT-32 ** ',
 		'contributor': '@NoxicoDev',
-		'contributorurl' :'https://twitter.com/noxicodev'
+		'contributorurl' :'https://twitter.com/noxicodev',
+		'platform':'hardware',
+		'year':1987,
+		'gameinfo':'https://en.wikipedia.org/wiki/Roland_MT-32',
+		'added':'2018-04-11',
+
 	},
 	'ng':{
 		'title': 'Ninja Gaiden',
 		'source':'Tecmo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Tecmo',
 		'defaulttext':'"Just a girl.\n Get out of here!"',
-	},
+		'platform':'nes',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/nes/ninja-gaiden',
+		'added':'2018-04-20',
 
+	},
+	'odallus':{
+		'title': 'Odallus',
+		'source':'JoyMasher',
+		'sourceurl':'https://joymasher.com/',
+		'defaulttext':"GODS? OUR GODS ARE\nDEAD, OLD AND NEW,\nI'M MY OWN GOD NOW!",
+		'year':2015,
+		'platform':'win32',
+		'added':'2019-01-31',
+		'gameinfo':'https://www.mobygames.com/game/odallus-the-dark-call'
+	},
 	'oregon':{
 		'title': 'Oregon Trail',
 		'source':'MECC',
 		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
 		'defaulttext':"     Here lies\n       andy\n\npeperony and\nchease",
-		'play':"https://archive.org/details/msdos_Oregon_Trail_The_1990"
+		'play':"https://archive.org/details/msdos_Oregon_Trail_The_1990",
+		'platform':'apple2',
+		'year':1985,
+		'gameinfo':'https://www.mobygames.com/game/oregon-trail',
+		'added':'2018-04-04',
+
 	},
 	'pokemon':{
 		'title': 'Pokemon',
 		'source':'Game Freak',
 		'sourceurl':'https://en.wikipedia.org/wiki/Game_Freak',
-		'defaulttext':'         CHARMANDER\nGary: WHAT?\nUnbelievable!'
+		'defaulttext':'         CHARMANDER\nGary: WHAT?\nUnbelievable!',
+		'platform':'gameboy',
+		'year':1998,
+		'gameinfo':'https://www.mobygames.com/game/pokmon-red-version',
+		'added':'2018-04-04',
+
 	},
 	'pq2':{
 		'title': 'Police Quest 2',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'Thank you for playing Police\nQuest 2. Next time, be a little more\ncareful.'
+		'defaulttext':'Thank you for playing Police\nQuest 2. Next time, be a little more\ncareful.',
+		'platform':'dos',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/police-quest-2-the-vengeance',
+		'added':'2017-10-26',
 	},
 	'pq3':{
 		'title': 'Police Quest 3',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?"
+		'defaulttext':"Those curbs just sneak right\n    up on you, don't they?",
+		'platform':'dos',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/police-quest-3-the-kindred',
+		'added':'2018-12-18',
+
+	},
+	'pw':{
+		'title': 'Pilotwings',
+		'source':'Nintendo',
+		'sourceurl':"https://en.wikipedia.org/wiki/Nintendo",
+		'defaulttext':"        Lesson 1\nHi, I am Tony,  and I'll\nbe  your  instructor for \nArea 1.     Our  lessons\nwill cover a few basics-\nlanding   an   airplane,\nand skydiving\nfor accuracy.",
+		'gameinfo':'https://www.mobygames.com/game/snes/pilotwings',
+		'year':1991,
+		'added':'2019-02-16',
+		'platform':'snes'
+
 	},
 	'wea':{
 		'title': 'Presidental Alert',
 		'source':'FEMA',
 		'sourceurl':"https://www.fema.gov/emergency-alert-test",
-		'defaulttext':"THIS IS A TEST of the National\nWireless Emergency Alert System.\nNo action is needed."
+		'defaulttext':"THIS IS A TEST of the National\nWireless Emergency Alert System.\nNo action is needed.",
+		'platform':'android',
+		'year':2018,
+		'gameinfo':'https://en.wikipedia.org/wiki/Wireless_Emergency_Alerts',
+		'added':'2018-10-04',
+
 	},
 	'psh':{
 		'title': 'Pugsley\'s Scavenger Hunt',
 		'source':'Ocean',
 		'sourceurl':"https://en.wikipedia.org/wiki/The_Addams_Family_(video_game_series)#The_Addams_Family:_Pugsley's_Scavenger_Hunt",
-		'defaulttext':"This door is\n locked.\nwhy not come back \n later ?"
+		'defaulttext':"This door is\n locked.\nwhy not come back \n later ?",
+		'platform':'nes',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/addams-family-pugsleys-scavenger-hunt',
+		'added':'2018-06-15',
+
 	},
 	"rt":{
 		'title': 'Railroad Tycoon',
 		'source':'MPS Labs',
 		'sourceurl':'https://en.wikipedia.org/wiki/MicroProse',
 		'defaulttext':"Labor Violence!\nMilitia Called Out!\nRecession Feared.",
-		'play':"https://archive.org/details/railroad_tycoon_1990"
-
+		'play':"https://archive.org/details/railroad_tycoon_1990",
+		'platform':'dos',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/sid-meiers-railroad-tycoon',
+		'added':'2018-06-02',
 	},
 	"rr":{
 		'title': 'Road Rash',
 		'source':'Electronic Arts',
 		'sourceurl':'https://en.wikipedia.org/wiki/Electronic_Arts',
-		'defaulttext':"It's a great day to\nface challenge on \nthe open road. Best\nof luck friend!"
-
+		'defaulttext':"It's a great day to\nface challenge on \nthe open road. Best\nof luck friend!",
+		'platform':'genesis',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/road-rash',
+		'added':'2018-04-15',
 	},
 	"rygar":{
 		'title': 'Rygar',
 		'source':'Tecmo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Tecmo',
-		'defaulttext':"from this\npoint you\ncan't go on\nwithout\ncrossbow."
-
+		'defaulttext':"from this\npoint you\ncan't go on\nwithout\ncrossbow.",
+		'platform':'nes',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/nes/rygar',
+		'added':'2018-05-09',
 	},
-
+	'scnes':{
+		'title': 'SimCity NES',
+		'source':'Maxis Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
+		'defaulttext':"[bigwhite]    Tokyo,Japan 1961[/]\n[black] A large reptilian crea-\nture has been spooted\nheading for Tokyo. It\nseems to be attracted to\nthe heavy levels of in-\ndustrial pollution there.\n Try to control the\nfires,then rebuild the\nindustrial center.You \nhave 5 years.",
+		'platform': 'nes',
+		'series':'simcity',
+		'year':1991,
+		'added':'2019-01-01',
+		'gameinfo':'https://gamehistory.org/simcity/'
+	},
 	'sc2k':{
-		'title': 'SimCity 2000 Advisor',
+		'title': 'SimCity 2000',
 		'source':'Maxis Software',
 		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
 		'defaulttext':"YOU CAN'T CUT BACK ON\nFUNDING! YOU WILL\nREGRET THIS!",
-		'play':"https://archive.org/details/msdos_SimCity_2000_-_CD_Collection_1994"
+		'play':"https://archive.org/details/msdos_SimCity_2000_-_CD_Collection_1994",
+		'platform':'dos',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/simcity-2000',
+		'added':'2017-12-18',
+		'updated':'2019-02-23'
+	},
+	'sr':{
+		'title':'Shadowrun',
+		'source':'Beam Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Beam_Software',
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/shadowrun_',
+		'defaulttext':"[bold]Dog[/bold] controls your \ndestiny. Seek out three\nitems of his favor and\nthen seek his shrine.",
+		'added':'2019-02-17',
+	},
+	'sod':{
+		'title': 'Skate or Die',
+		'source':'Ultra Games (Konami)',
+		'sourceurl':'https://en.wikipedia.org/wiki/Ultra_Games',
+		'defaulttext':"Do your\nfolks\nknow what\nyer doing",
+		'year':1988,
+		'platform':'nes',
+		'added':'2019-01-01',
+		'gameinfo':'https://www.mobygames.com/game/nes/skate-or-die'
+	},
+	'skitchin':{
+		'title': "Skitchin'",
+		'source':'Electronic Arts',
+		'sourceurl':'https://en.wikipedia.org/wiki/Electronic_Arts',
+		'defaulttext':"Wait until your mother hears about this. It'll break her heart! She had dreams about you being a highly paid programmer. Instead you'll be a poor dead skitcher! Sighhh...",
+		'year':1994,
+		'platform':'genesis',
+		'gameinfo':'https://www.mobygames.com/game/genesis/skitchin',
+		'added': '2018-12-10'
 	},
 	'sb':{
 		'title': 'Skyblazer',
 		'source':'Ukiyotei',
 		'sourceurl':'https://en.wikipedia.org/wiki/Ukiyotei',
-		'defaulttext':"[cyan]Sky[/cyan]\nDo you not know who I am?\nI am known as Sky. ▼"
+		'defaulttext':"[cyan]Sky[/cyan]\nDo you not know who I am?\nI am known as Sky. ▼",
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/snes/skyblazer',
+		'added':'2018-05-15',
+
 	},
 	'sth1':{
 		'title': 'Sonic The Hedgehog 1',
@@ -409,7 +967,8 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog',
 		'content-contributor': 'Ruari O\'Sullivan',
-		'content-contributor-url': 'https://twitter.com/randomnine'
+		'content-contributor-url': 'https://twitter.com/randomnine',
+		'added':'2018-10-31'
 	},
 	'sth2':{
 		'title': 'Sonic The Hedgehog 2',
@@ -419,51 +978,112 @@ var generators={
 		'platform':'genesis',
 		'series':'sonic',
 		'year':1992,
-		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog-2'
+		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog-2',
+		'added':'2018-10-31'
+	},
+	'soulb':{
+		'title': 'Soul Blazer',
+		'source':'Quintet',
+		'sourceurl':'https://en.wikipedia.org/wiki/Quintet_(company)',
+		'defaulttext':"I used to live up\nin the sky just like\nyou.",
+		'platform':'snes',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/snes/soul-blazer',
+		'added':'2018-12-08'
+	},
+	'soulf':{
+		'title': 'Soul Falchion',
+		'source':'Vast Fame',
+		'sourceurl':'https://bootleggames.fandom.com/wiki/Vast_Fame',
+		'defaulttext':"YOU STILL GO HOME\nTO SUCK AT BREAST!",
+		'platform':'gameboy',
+		'year':2002,
+		'gameinfo':'https://bootleggames.fandom.com/wiki/Soul_Falchion',
+		'added':'2019-02-17'
 	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"As you lie on the floor in a smoldering,\ncarbogelatinous heap, you just can't help\nbut wonder why you bothered getting up\nthis morning."
+		'defaulttext':"As you lie on the floor in a smoldering,\ncarbogelatinous heap, you just can't help\nbut wonder why you bothered getting up\nthis morning.",
+		'platform':'dos',
+		'year':1986,
+		'gameinfo':'https://www.mobygames.com/game/space-quest-chapter-i-the-sarien-encounter',
+		'added':'2018-05-08',
+
 	},
 	'sq3':{
 		'title': 'Space Quest 3',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':"Thanks for playing Space Quest\n]I[. As usual, you've been a real\n                    hoot."
+		'defaulttext':"Thanks for playing Space Quest\n]I[. As usual, you've been a real\n                    hoot.",
+		'platform':'dos',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/space-quest-iii-the-pirates-of-pestulon',
+		'added':'2017-12-21',
 	},
 	'sq4':{
 		'title': 'Space Quest 4',
 		'source':'Sierra Online',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
-		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"'
+		'defaulttext':'Just as you fade\nfrom the living \norganism club you\nthink, in\namazement, "So that\'s\nwhat my spleen looks\nlike!"',
+		'platform':'dos',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/space-quest-iv-roger-wilco-and-the-time-rippers',
+		'added':'2018-03-08',
 	},
 	'sv':{
 		'title': 'Stardew Valley',
 		'source':'ConcernedApe',
 		'sourceurl':'https://en.wikipedia.org/wiki/Stardew_Valley',
 		'defaulttext':"Your grandpa used to complain\nabout the rickety old bed. But\nI think, deep down, he actually\nloved that house.",
+		'platform':'win32',
+		'year':2016,
+		'gameinfo':'https://www.mobygames.com/game/stardew-valley',
+		'added':'2018-04-09',
 	},
 	'sc2':{
 		'title': 'Star Control II',
 		'source':'Toys for Bob',
 		'sourceurl':'https://en.wikipedia.org/wiki/Toys_for_Bob',
 		'defaulttext':"Juffo-Wup fills in my fibers and I\ngrow turgid. Violent action ensues.",
+		'platform':'dos',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/star-control-ii',
+		'added':'2018-05-26',
 	},	
 	'sf':{
 		'title': 'Star Fox',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"what's wrong\nwith you today\nfox?!",
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/snes/star-fox_',
+		'added':'2018-05-02',
+	},
+	'stonekeep':{
+		'title': 'Stonekeep',
+		'source':'Interplay Productions',
+		'sourceurl':'https://en.wikipedia.org/wiki/Interplay_Entertainment',
+		'defaulttext':"Send a guard troop to Fort Thunder.\nThe Throgs are getting restless again.\n-Korzen",
+		'platform':'dos',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/stonekeep',
+		'added':'2019-02-22',
 	},
 	'sf2':{
 		'title': 'Street Fighter 2',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
-		'defaulttext':"Damme dude!",
+		'defaulttext':"I'M THE STRONGEST WOMAN\nIN THE WORLD.",
 		'contributor': '@pixel_data',
-		'contributorurl':'https://twitter.com/pixel_data'
+		'contributorurl':'https://twitter.com/pixel_data',
+		'platform':'arcade',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/street-fighter-ii-the-world-warrior',
+		'added':'2018-04-03',
+		'updated':'2019-02-26'
 	},
 	'smas':{
 		'title': 'Super Mario All-Stars',
@@ -473,7 +1093,8 @@ var generators={
 		"year":1993,
 		'gameinfo':'https://www.mobygames.com/game/snes/super-mario-all-stars',
 		"platform":"snes",
-		'series':'mario'
+		'series':'mario',
+		'added':'2018-10-29'
 	},
 	'smb':{
 		'title': 'Super Mario Bros',
@@ -483,7 +1104,20 @@ var generators={
 		'contributor': '@pixel_data',
 		'contributorurl':'https://twitter.com/pixel_data',
 		'series':'mario',
-		'platform':'nes'
+		'platform':'nes',
+		'year':1985,
+		'gameinfo':'https://www.mobygames.com/game/nes/super-mario-bros',
+		'added':'2018-04-04',
+	},
+	'smrpg':{
+		'title': 'Super Mario RPG',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_(company)',
+		'defaulttext':" Lots of people use something\n called a \u201Cdoor\u201D to go in and out\n of their houses...",
+		'platform':'snes',
+		'year':1996,
+		"added":"2018-12-07",
+		'gameinfo':'https://www.mobygames.com/game/super-mario-rpg-legend-of-the-seven-stars'
 	},
 	'm64':{
 		'title': 'Super Mario 64',
@@ -491,7 +1125,10 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool",
 		'series':'mario',
-		'platform':'n64'
+		'platform':'n64',
+		'year':1996,
+		'gameinfo':'https://www.mobygames.com/game/super-mario-64',
+		'added':'2018-04-08',
 	},
 	'smw':{
 		'title': 'Super Mario World',
@@ -499,7 +1136,11 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"Welcome!   This is\nDinosaur Land.  In\nthis strange  land\nwe    find    that\nPrincess Toadstool\nis  missing again!\nLooks  like Bowser\nis at it again!",
 		'platform':'snes',
-		'series':'mario'
+		'series':'mario',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/super-mario-world',
+		'added':'2018-04-28',
+		'updated':'2019-03-10'
 	},
 	'sm':{
 		'title': 'Super Metroid',
@@ -509,25 +1150,58 @@ var generators={
 		'platform':'snes',
 		'series':'metroid',
 		'year': 1994,
-		'gameinfo':'https://www.mobygames.com/game/snes/super-metroid'
+		'gameinfo':'https://www.mobygames.com/game/snes/super-metroid',
+		'added':'2018-04-17'
+	},
+	'superman':{
+		'title': 'Superman',
+		'source':'Kemco',
+		'sourceurl':'https://en.wikipedia.org/wiki/Kemco',
+		'platform':'nes',
+		'year': 1988,
+		'gameinfo':'https://www.mobygames.com/game/nes/superman_',
+		'defaulttext':'\nYou are \n\nClark Kent',
+		'added':'2019-02-07'
 	},
 	'ss2':{
 		'title': 'System Shock 2',
 		'source':'Irrational Games and Looking Glass Studios',
 		'sourceurl':'https://en.wikipedia.org/wiki/System_Shock_2',
-		'defaulttext':"POLITO 12.JUL.14\nre: Dawdling\n[sep] [/]\nWhy do you go so slowly?!  Do you think this is some kind of game?  It is only through luck and my continued forbearance that you are even alive!  Now move!"
+		'defaulttext':"POLITO 12.JUL.14\nre: Dawdling\n[sep] [/]\nWhy do you go so slowly?!  Do you think this is some kind of game?  It is only through luck and my continued forbearance that you are even alive!  Now move!",
+		'platform':'win32',
+		'year':1999,
+		'gameinfo':'https://www.mobygames.com/game/system-shock-2',
+		'added':'2018-06-16',
 	},
 	'tmnt1':{
 		'title': 'TMNT',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':"Find and help\nyour friend\nin this stage.\n    You can\n    do it."
+		'defaulttext':"Find and help\nyour friend\nin this stage.\n    You can\n    do it.",
+		'platform':'nes',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/nes/teenage-mutant-ninja-turtles',
+		'added':'2018-04-23',
 	},
 	'tjae2':{
 		'title': 'ToeJam & Earl 2',
 		'source':'Johnson Voorsanger Productions',
 		'sourceurl':'https://en.wikipedia.org/wiki/ToeJam_%26_Earl_Productions',
-		'defaulttext':"        Game Tip\nHold up on direction pad\nto shake trees, part\nbushes or push buttons."
+		'defaulttext':"        Game Tip\nHold up on direction pad\nto shake trees, part\nbushes or push buttons.",
+		'platform':'genesis',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/toejam-earl-in-panic-on-funkotron',
+		'added':'2018-04-28',
+	},
+	'tr':{
+		'title': 'Totally Rad',
+		'source':'Aicom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Aicom',
+		'defaulttext':"THEY ARE INTELLIGENT,\nBUT INCREDIBLY UGLY.",
+		'platform':'nes',
+		'year':'1991',
+		'added':'2019-02-01',
+		'gameinfo':'https://www.mobygames.com/game/nes/totally-rad'
 	},
 	'ts':{
 		'title': 'Toy Story',
@@ -535,7 +1209,9 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Traveller%27s_Tales',
 		'defaulttext':"     That old army game\n\nopen the bucket of\nsoldiers and then\nlocate the baby \nmonitor and pass it\ndown to the sergeant's\ntroops.  The toys will\nthen meet you at the\nother baby monitor.\ngood luck and watch out\nfor the trains and\nplanes!!",
 		'gameinfo':'https://www.mobygames.com/game/snes/disneys-toy-story',
-		'platform':'snes'
+		'platform':'snes',
+		'year':1995,
+		'added':'2018-10-25'
 	},
 	'ul': {
 		'title': 'Undertale Logo',
@@ -546,43 +1222,99 @@ var generators={
 		'content-contributor-url': 'https://www.behance.net/gallery/31378523/Monster-Friend-Undertale-Logo-Font',
 		'platform': 'win32',
 		'year': 2015,
-		'added': '2018-11-07'
+		'added': '2018-11-07',
+		'gameinfo':'https://www.mobygames.com/game/undertale'
 	},
 	'wally': {
 		'title': 'Wally Bear and the NO! Gang',
 		'source': 'American Game Cartridges',
 		'sourceurl': 'https://en.wikipedia.org/wiki/American_Game_Cartridges',
-		'defaulttext': 'Taking drugs is stupid,\nToby.'
+		'defaulttext': 'Taking drugs is stupid,\nToby.',
+		'platform':'nes',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/nes/wally-bear-and-the-no-gang',
+		'added':'2018-04-05',
+	},
+	'wargroove': {
+		'title': 'Wargroove',
+		'source': 'Chucklefish',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Chucklefish',
+		'platform':'win32',
+		'defaulttext': 'Hmph... So many humans. How unpleasant. Still,\nI can avoid most of them.',
+		'year':2019,
+		'added':'2019-02-04',
+		'updated':'2019-02-05',
+		'gameinfo':'https://www.mobygames.com/game/wargroove'
 	},
 	'wof': {
 		'title': 'Wheel of Fortune',
 		'source': 'SHAREDATA, Inc',
 		'sourceurl': 'http://www.mobygames.com/game/wheel-of-fortune',
 		'defaulttext': '  _ _R__P __\n __LL-__SH_RS',
-		'play': 'https://archive.org/details/msdos_Wheel_of_Fortune_1987'
+		'play': 'https://archive.org/details/msdos_Wheel_of_Fortune_1987',
+		'platform':'dos',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/dos/wheel-of-fortune',
+		'added':'2018-06-09',
+	},
+	'ww':{
+		'title': 'Witchy Workshop',
+		'source': 'Deerbell',
+		'sourceurl': 'https://deerbell.games/witchyworkshop/',
+		'defaulttext': 'Books tend to burst info flame\nwhen I read them, so now I buy\nin bulk. So many bad romance\nnovels!',
+		'year':2018,
+		'platform':'win32',
+		'added':'2019-01-02',
+		'gameinfo':'https://deerbell.itch.io/witchy-workshop'
 	},
 	'wh2':{
 		'title': 'World Heroes 2',
 		'source':'ADK',
 		'sourceurl':'https://en.wikipedia.org/wiki/ADK_(company)',
-		'defaulttext':'Live my child,so i may\nsmack you around again\nsome day!'
+		'defaulttext':'Live my child,so i may\nsmack you around again\nsome day!',
+		'platform':'snes',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/snes/world-heroes-2',
+		'added':'2018-05-14',
 	},
 	'wbm':{
 		'title': 'Wrath of the Black Manta',
 		'source':'AI',
 		'sourceurl':'https://en.wikipedia.org/wiki/Wrath_of_the_Black_Manta',
-		'defaulttext':"It seems to be drug\nrelated. You don't use\ndrugs, do you?"
+		'defaulttext':"It seems to be drug\nrelated. You don't use\ndrugs, do you?",
+		'platform':'nes',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/nes/wrath-of-the-black-manta',
+		'added':'2018-04-20',
+	},
+	'yi':{
+		'title': "Yoshi's Island",
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"This paradise is\nYoshi's Island,\nwhere all the\nYoshies live.",
+		'platform':'snes',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/super-mario-world-2-yoshis-island',
+		'added':'2019-02-23',
 	},
 	'zelda2':{
 		'title': 'Zelda II: The Adventure of Link',
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
-		'defaulttext':"I AM\nERROR."
+		'defaulttext':"I AM\nERROR.",
+		'platform':'nes',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/zelda-ii-the-adventure-of-link',
+		'added':'2018-04-28',
 	},
 	'zerowing':{
 		'title': 'Zero Wing',
 		'source':'Toaplan',
 		'sourceurl':'https://en.wikipedia.org/wiki/Toaplan',
-		'defaulttext':"Cats: All your base are belong\n      to us."
+		'defaulttext':"Cats: All your base are belong\n      to us.",
+		'platform':'genesis',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/genesis/zero-wing',
+		'added':'2018-02-23',
 	}
 }

@@ -8,7 +8,69 @@
 	"case-fold": "upper",
 	"gif": true,
 	"script": true,
+	"hooks": {
+		"pre-text": "{let fnt = overlays.scene.data.info;mainFont.y = fnt.y;originx=fnt.x}",
+		"pre-overlays": "if(overlays.scene.name!='opening'){overlays.mouth.x=-256}",
+		"change-scene": "{let txt = $('#sourcetext').val(); if(isAnyDefaultText(txt) || Object.values(fontInfo.overlays.scene.options).map(o=>o.info.text).includes(txt)){$('#sourcetext').val(overlays.scene.options[$(this).val()].info.text)}}",
+		"font": "switchFont(overlays.scene.data.info.font)"
+	},
 	"overlays": {
+		"scene": {
+			"x": 0,
+			"y": 0,
+			"title": "Scene",
+			"default": "opening",
+			"options": {
+				"opening": {
+					"x": 256,
+					"y": 104,
+					"w": 8,
+					"h": 8,
+					"info": {
+						"text": " The president has been\n\nkidnapped by Ninjas.\n\n\n Are you a bad enough dude\n\nto rescue the president?",
+						"font": "main",
+						"x": 24,
+						"y": 32
+					}
+				},
+				"ending": {
+					"x": 0,
+					"y": 104,
+					"w": 256,
+					"h": 224,
+					"info": {
+						"text": "Hey Dudes, thanks\n\n\n    for rescuing me.\n\n\n        Let's go for\n\n\n        a burger....\n\n\n        Ha! Ha! Ha! Ha!",
+						"font": "red",
+						"x": 48,
+						"y": 24
+					}
+				},
+				"ending_trump": {
+					"x": 0,
+					"y": 552,
+					"w": 256,
+					"h": 224,
+					"info": {
+						"text": "Hey dudes, thanks\n\n\n    for winning.\n\n\n        let's go for\n\n\n        a hamberder....\n\n\n        ha! ha! ha! ha!",
+						"font": "orange",
+						"x": 48,
+						"y": 24
+					}
+				},
+				"credits": {
+					"x": 0,
+					"y": 328,
+					"w": 256,
+					"h": 224,
+					"info": {
+						"text": "\n        THE END",
+						"font": "cream",
+						"x": 32,
+						"y": 12
+					}
+				}
+			}
+		},
 		"mouth": {
 			"x": 147,
 			"y": 152,
@@ -17,18 +79,23 @@
 			"options": {
 				"closed": {
 					"x": 0,
-					"y": 8,
+					"y": 32,
 					"w": 100,
 					"h": 72
 				},
 				"open": {
 					"x": 100,
-					"y": 8,
+					"y": 32,
 					"w": 100,
 					"h": 72
 				}
 			}
 		}
+	},
+	"shiftfonts": {
+		"red": 8,
+		"cream": 16,
+		"orange": 24
 	},
 	"default": {
 		"w": 8,

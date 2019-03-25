@@ -5,7 +5,7 @@ var fontImage = null
 var fontInfo = null
 var overlayNames = null
 var overlayOverrides = null
-var selectedGenerator = 'pq2'
+var selectedGenerator = null
 var glitch = false
 
 function applyHashChange(){
@@ -90,13 +90,14 @@ class LineGroup{
 						lg.add(p)
 						out.push(lg)
 					}
+					
 					// TODO: rest of snippets?
 					return out
 				}else{
 					x+=w
 					var lg = new LineGroup(first)
 					lg.add(snippet)
-					out.add(snippet)
+					out.push(snippet)
 					first=false
 				}
 			}
@@ -124,25 +125,25 @@ class Snippet{
 
 	split(maxwidth){
 		var chars = this.parse()
-		function widthSoFar(bk){
+		function widthSoFar(font, bk){
 			var w=0
 			for(var i=0;i<bk;i++){
-				w+=chars[i].w
+				w+=first(chars[i], font.info[font.info["null-character"]]).w
 			}
 			return w
 		}
 		var lb = new LineBreak(this.text)
 		var last=null
 		var bk
-		var first=true
+		var firstLine=true
 		while(bk = lb.nextBreak()){
-			if(widthSoFar(bk.position)>maxwidth){
-				if(first){
+			if(widthSoFar(this.font,bk.position)>maxwidth){
+				if(firstLine){
 					last=bk.position
 				}
 				break
 			}
-			first=false
+			firstLine=false
 			last=bk.position
 		}
 		if(last==null){
@@ -163,7 +164,7 @@ class Snippet{
 			if(lastchar in char['unadvance-after']){
 				x-= char['unadvance-after'][lastchar]
 			}
-			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale,char.w*scale,char.h*scale)
+			context.drawImage(this.font.image,char.x,char.y,char.w,char.h,x*scale,y*scale + char['vertical-shift'],char.w*scale,char.h*scale)
 			x+=(char.w - char.unadvance)
 			last = char.unadvance
 			lastchar = char.char
@@ -182,6 +183,8 @@ class Snippet{
 		}else if(font['case-fold'] == 'lower'){
 			line = line.toLowerCase()
 		}
+		var ligatures = first(font.ligatures, {})
+		
 		for(var i=0;i<line.length;i++){
 			var c=line.charCodeAt(i)
 			if(c>= 0xD800 && c<=0xDBFF){
@@ -191,6 +194,15 @@ class Snippet{
 			var info=font[c]
 			if(info==null){
 				info=font[font["null-character"]]
+			}
+
+			var matching_ligatures = Object.keys(ligatures).filter(x=>line.substring(i,i+x.length)==x)
+			if(matching_ligatures.length>0){
+				// Pick the longest match if there are multiple matches
+				matching_ligatures.sort((a,b) => b.length - a.length)
+				info = ligatures[matching_ligatures[0]]
+				// Extend i by the length of the ligature, minus 1 since the for loop will do i++
+				i+=(matching_ligatures[0].length -1 )
 			}
 			var x=first(info.x, defaultInfo.x)
 			if(glitch){
@@ -203,6 +215,7 @@ class Snippet{
 				'h': first(info.h, defaultInfo.h),
 				'unadvance': first(info.unadvance, defaultInfo.unadvance, 0),
 				'unadvance-after': first(info['unadvance-after'],{}),
+				'vertical-shift': first(info['vertical-shift'], 0),
 				'char':c
 			})
 		}
@@ -227,9 +240,9 @@ class Snippet{
 	getHeight(firstLine){
 		var info = this.font.info
 		if(firstLine){
-			return first(info['first-height'], info['height'])
+			return first(info['first-height'], info['height'], fontInfo['height'])
 		}else{
-			return info['height']
+			return first(info['height'],fontInfo['height'])
 		}
 	}
 
@@ -329,18 +342,28 @@ class FontManager{
 		return width
 	}
 
-	draw(mainFont, scale, originx, justify, fontOriginY){
+	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, first_line_origin, output_size){
 		var y = mainFont.y
-		if(justify=='v-center'){
+		if(['v-center','all-center'].includes(justify)){
 			y -= Math.floor(this.getHeight()/2)
 		}
+		var first_line = true;
 		for(var line of this.lines){
 			var x = originx
-			if(justify == 'center'){
-				x = originx - Math.floor(line.getWidth()/2)
+			if(first_line){
+				x = first_line_origin
+				if(first_line_justify == 'output-center'){
+					x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
+					x = (x - (x % justifyresolution))
+				}
+			}
+			if(['center','all-center'].includes(justify)){
+				var jadjust = Math.floor(line.getWidth()/2);
+				x = originx - (jadjust - (jadjust % justifyresolution));
 			}
 			line.draw(this.context, scale, x, y)
 			y+=line.getHeight()
+			first_line=false
 		}
 	}
 
@@ -353,13 +376,20 @@ function hideGenerators(){
 	$('#genlist').hide()
 }
 
-for(key in generators) {
-	if(generators.hasOwnProperty(key)) {
-		$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray"></a>').attr("href",'#'+key).text(generators[key].title).data('generator',key).click(function (){
-			selectedGenerator=$(this).data('generator')
-			selectGenerator()
-		})).append(' ')
+var week_ago = Date.now()-(7*24*3600000);
+
+for( let [gname, generator_item] of Object.entries(generators)){
+	var new_generator = false
+	if('added' in generator_item || 'updated' in generator_item){
+
+		if(Date.parse(first(generator_item.updated,generator_item.added)) > week_ago){
+			new_generator = true
+		}
 	}
+	$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray generator-switcher"></a>').attr("href",'#'+gname).text(generator_item.title).data('generator',gname).click(function (){
+		selectedGenerator=$(this).data('generator')
+		selectGenerator()
+	}).toggleClass('new-generator',new_generator)).append(' ')
 }
 
 function isAnyDefaultText(text){
@@ -371,6 +401,39 @@ function isAnyDefaultText(text){
 		}
 	}
 	return false
+}
+
+function debugModeActive(){
+	return window.location.hostname == 'localhost'	
+}
+function addDebugAlerts(gen, debugdiv){
+	var mustHave = ['title','source','sourceurl','defaulttext','added','year','platform','gameinfo']
+	var missings = [] 
+	for (prop of mustHave) {
+		if(!(prop in gen)){
+			missings.push(prop)
+		}
+	}
+	if(missings.length>0){
+		var warn = $('<p class="w-90 ba br2 pa3 ma2 blue bg-washed-blue" role=alert></p>');
+		warn.text('Missing properties: ' + missings.join(', '))
+		var title=encodeURIComponent(gen.title)
+		var debuglinks = $('<span class="debug-links"></span>')
+		debuglinks.append(
+			$('<a href="">twitter</a>')
+			.attr('href','https://twitter.com/search?f=tweets&src=typd&q=from%3Afoone+'+title)
+		)
+		.append(
+			$('<a href="">moby</a>')
+			.attr('href','https://www.mobygames.com/search/quick?q='+title)
+		)
+		.append(
+			$('<a href="">git</a>')
+			.attr('href',`https://github.com/foone/SierraDeathGenerator/commits/master/games/${selectedGenerator}/${selectedGenerator}.json`)
+		)
+		warn.append(debuglinks)
+		debugdiv.append(warn)
+	}
 }
 
 function selectGenerator(){
@@ -385,9 +448,13 @@ function selectGenerator(){
 			source:'UNKNOWN'
 		}
 	}
+	$('a.generator-switcher').each(function(){
+		var active = $(this).data('generator')==selectedGenerator
+		$(this)
+			.toggleClass('bg-dark-gray', !active)
+			.toggleClass('bg-gray', active);
 
-	$('button.generator-switcher').each(function(){
-		$(this).prop('disabled',$(this).data('generator')==selectedGenerator)
+
 	})
 
 	$('.change-title').text(gen.title + " Generator");
@@ -408,7 +475,11 @@ function selectGenerator(){
 		if(gen['content-contributor-url']){
 			ccontrib = $('<a>').attr('href',gen['content-contributor-url']).text(ccontrib)
 		}
-		$('#content-contrib').text(' and ').append(ccontrib)
+		var message = ' and '
+		if(gen['content-type']){
+			message =', ' + gen['content-type'] + ' by '
+		}
+		$('#content-contrib').text(message).append(ccontrib)
 	}else{
 		$('#content-contrib').text('')
 	}
@@ -418,6 +489,15 @@ function selectGenerator(){
 	}else{
 		$('#playlink').hide()
 	}
+
+	var debugAlertsDiv = $('#debug-alerts')
+	debugAlertsDiv.text('')
+	if(debugModeActive()){
+		addDebugAlerts(gen, debugAlertsDiv)
+		$('#jsondump').show()
+	}
+
+
 	var sourcetext = $('#sourcetext');
 
 	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
@@ -444,6 +524,7 @@ function selectGenerator(){
 	});
 
 
+
 }
 
 function parseOverlays(fontInfo){
@@ -452,26 +533,36 @@ function parseOverlays(fontInfo){
 		for(var i=0;i<overlayNames.length;i++){
 			var oname=overlayNames[i]
 			var currentOverlay=fontInfo.overlays[oname]
+			if(currentOverlay.type=='slider'){
+				overlays[oname] = {
+					"name":sname,
+					"type":"slider",
+					"min":currentOverlay.min,
+					"max":currentOverlay.max,
+					"value":$('#overlay-'+oname).val()
+				}
+			}else{
+				var sname = $('#overlay-'+oname+' option:selected').val()
+				var adv=currentOverlay.options[sname]
 
-			var sname = $('#overlay-'+oname+' option:selected').val()
-			var adv=currentOverlay.options[sname]
-
-			overlays[oname] = {
-				"name":sname,
-				"x":currentOverlay.x,
-				"y":currentOverlay.y,
-				"w":adv.w,
-				"h":adv.h,
-				"blend":first(currentOverlay['blend-mode'], 'source-over'),
-				"stage":first(currentOverlay.stage, "pre-text"),
-				"title":first(currentOverlay.title,sname),
-				"source":{
-					"x":adv.x,
-					"y":adv.y
-				},
-				"data":adv
+				overlays[oname] = {
+					"name":sname,
+					"type":"select",
+					"x":currentOverlay.x,
+					"y":currentOverlay.y,
+					"w":adv.w,
+					"h":adv.h,
+					"blend":first(currentOverlay['blend-mode'], 'source-over'),
+					"stage":first(currentOverlay.stage, "pre-text"),
+					"title":first(currentOverlay.title,sname),
+					"flip":first(adv.flip, currentOverlay.flip, ''),
+					"source":{
+						"x":adv.x,
+						"y":adv.y
+					},
+					"data":adv
+				}
 			}
-
 		}
 	}
 	return overlays
@@ -491,7 +582,10 @@ function setOptions(opts){
 	$('#sourcetext').val(opts['main-text'])
 
 	$('select').each(function(_,e){
-		$(this).val(opts[$(e).attr('id').split('-',2)[1]])
+		var new_value = opts[$(e).attr('id').split('-',2)[1]];
+		if(typeof new_value !== 'undefined'){
+			$(this).val(new_value)	
+		}
 	});
 	return opts;
 }
@@ -508,19 +602,25 @@ function getAllPossibleOptions(){
 	return opts;
 }
 
-function twitterifyCanvas(context){
-	var pixel = context.getImageData(0,0,1,1)
-	if(pixel.data[3]==255){
-		pixel.data[3]=254
-	}
-	context.putImageData(pixel,0,0)
-}
-
 function renderText(scaled = true){
 	if(fontInfo == null || baseImage == null){
 		return
 	}
 
+	if('hooks' in fontInfo && 'pre-parse' in fontInfo['hooks']){
+		eval(fontInfo.hooks['pre-parse'])
+	}
+	if(!('null-character' in fontInfo)){
+		// Set a null character fallback if the JSON doesn't define one
+		if('32' in fontInfo){
+			// space is a good default, what font doesn't have space? 
+			// A BAD ONE!
+			fontInfo['null-character']='32'
+		}else{
+			var validcharacters = Object.keys(fontInfo).filter(x=>Number.isInteger(-x))
+			fontInfo['null-character'] = validcharacters[0]
+		}
+	}
 	// Define the top-level font
 	var mainFont = new BitmapFont(fontInfo, fontImage)
 	var fonts={
@@ -539,6 +639,7 @@ function renderText(scaled = true){
 				fontcopy['default'] = {}
 			}
 			fontcopy['default']['y'] = fontInfo.shiftfonts[key]
+			delete fontcopy['height'] // Allow changes to the main object to be reflected into the subfont
 			fonts[key] = new BitmapFont(fontcopy, fontImage)
 		}
 	}
@@ -561,6 +662,9 @@ function renderText(scaled = true){
 		fontManager.wordwrap(fontInfo['wrap-width'])
 	}
 	var justify = first(fontInfo.justify, 'left')
+	var justify_resolution = first(fontInfo['justify-resolution'],1)
+	var first_line_justify = first(fontInfo['first-line-justify'], justify)
+	var first_line_origin = fontInfo['first-line-origin']
 
 	var textbox={
 		w: fontManager.getWidth(),
@@ -604,12 +708,37 @@ function renderText(scaled = true){
 			var adv = overlays[key]
 			if(adv.stage == stage){
 				context.globalCompositeOperation = adv.blend
-				if(key in overlayOverrides){
-					var img = overlayOverrides[key]
-					context.drawImage(img,0,0,img.width,img.height,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
-				}else{
-					context.drawImage(fontImage,adv.source.x,adv.source.y,adv.w,adv.h,adv.x*scale,adv.y*scale,adv.w*scale,adv.h*scale)
+				var overlay_x = adv.x*scale, overlay_y = adv.y*scale;
+				var overlay_w = adv.w*scale, overlay_h = adv.h*scale
+				var source_x = adv.source.x, source_y = adv.source.y
+				var source_w = adv.w, source_h = adv.h
+				var source_image = fontImage
+
+				context.save()
+				if(adv.flip!==''){
+					context.translate(overlay_x, overlay_y)
+					overlay_x=overlay_y=0
+					if(adv.flip.toUpperCase().includes('H')){
+						overlay_x = -overlay_w
+						context.scale(-1, 1)
+					}
+					if(adv.flip.toUpperCase().includes('V')){
+						overlay_y = -overlay_h
+						context.scale(1, -1)
+					}
 				}
+				if(key in overlayOverrides){
+					source_image = overlayOverrides[key]
+					source_x = source_y = 0 
+					source_w = source_image.width
+					source_h = source_image.height
+				}
+				context.drawImage(
+					source_image,
+					source_x, source_y, source_w, source_h,
+					overlay_x,overlay_y,overlay_w,overlay_h
+				)
+				context.restore()
 			}
 		})
 		context.globalCompositeOperation = "source-over"
@@ -625,11 +754,12 @@ function renderText(scaled = true){
 		var bw=outputSize.w,bh=outputSize.h
 		var border_x = first(fontInfo.border.x, 0)
 		var border_y = first(fontInfo.border.y, 0)
+		var border_sides='ttttttttt'
 		if('hooks' in fontInfo && 'border' in fontInfo['hooks']){
 			// EVAL IS SAFE CODE, YES?
 			eval(fontInfo['hooks']['border'])
 		}
-		buildBorder(fontImage,fontInfo,bw,bh)
+		buildBorder(fontImage,fontInfo,bw,bh,border_sides)
 		var bordercanvas = document.querySelector('canvas#border')
 		context.drawImage(bordercanvas,0,0,bw,bh,border_x*scale,border_y*scale,bw*scale, bh*scale)
 	}
@@ -649,74 +779,86 @@ function renderText(scaled = true){
 		// EVAL IS SAFE CODE, YES?
 		eval(fontInfo['hooks']['pre-text'])
 	}
-	fontManager.draw(mainFont, scale, originx, justify, fontOriginY)
+	first_line_origin = first(first_line_origin, originx)
+	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, first_line_origin, outputSize)
 
 	drawOverlays('post-text')
-
-	if(first(fontInfo.twitterify, true)){
-		twitterifyCanvas(context)
-	}
 }
 
 
 
-function buildBorder(fontImage,fontInfo,w,h){
+function buildBorder(fontImage,fontInfo,w,h, border_sides){
 
 	function drawBorderPiece(x,y,piece){
 		bctx.drawImage(fontImage,piece.x,piece.y,piece.w,piece.h,x,y,piece.w,piece.h)
 	}
 	var bctx = document.querySelector('canvas#border').getContext('2d')
-	if(bctx.canvas.width == w && bctx.canvas.height == h){
+	if(bctx.canvas.width == w && bctx.canvas.height == h && bctx._border_sides == border_sides){
 		return
 	}
+	bctx._border_sides = border_sides
 	bctx.canvas.width = w
 	bctx.canvas.height = h
 	var border = fontInfo.border
 	// todo: support styles other than "copy", like "stretch"
 
-	// Draw center
-	if(border.c.mode=='stretch'){
-		var piece = border.c
-		bctx.drawImage(fontImage,
-			piece.x,piece.y,piece.w,piece.h,
-			border.l.w,border.t.h,
-			w-border.l.w-border.r.w,h-border.b.h-border.t.h
-		)
-	}else{
-		for(var x=border.l.w;x<w-border.r.w;x+=border.c.w){
-			for(var y=border.t.h;y<h-border.b.h;y+=border.c.h){
-				drawBorderPiece(x,y,border.c)
+	if(border_sides[4]=='t'){
+		// Draw center
+		if(border.c.mode=='stretch'){
+			var piece = border.c
+			bctx.drawImage(fontImage,
+				piece.x,piece.y,piece.w,piece.h,
+				border.l.w,border.t.h,
+				w-border.l.w-border.r.w,h-border.b.h-border.t.h
+			)
+		}else{
+			for(var x=border.l.w;x<w-border.r.w;x+=border.c.w){
+				for(var y=border.t.h;y<h-border.b.h;y+=border.c.h){
+					drawBorderPiece(x,y,border.c)
+				}
 			}
 		}
 	}
-
-	// Draw top-center edge
-	for(var x=border.tl.w;x<w-border.tr.w;x+=border.t.w){
-		drawBorderPiece(x,0,border.t)
+	if(border_sides[1]=='t'){
+		// Draw top-center edge
+		for(var x=border.tl.w;x<w-border.tr.w;x+=border.t.w){
+			drawBorderPiece(x,0,border.t)
+		}
 	}
-	// Draw bottom-center edge
-	for(var x=border.bl.w;x<w-border.br.w;x+=border.b.w){
-		drawBorderPiece(x,h-border.b.h,border.b)
+	if(border_sides[7]=='t'){
+		// Draw bottom-center edge
+		for(var x=border.bl.w;x<w-border.br.w;x+=border.b.w){
+			drawBorderPiece(x,h-border.b.h,border.b)
+		}
 	}
-	// Draw left edge
-	for(var y=border.tl.h;y<h-border.bl.h;y+=border.l.h){
-		drawBorderPiece(0,y,border.l)
+	if(border_sides[3]=='t'){
+		// Draw left edge
+		for(var y=border.tl.h;y<h-border.bl.h;y+=border.l.h){
+			drawBorderPiece(0,y,border.l)
+		}
 	}
-	// Draw right edge
-	for(var y=border.tr.h;y<h-border.br.h;y+=border.r.h){
-		drawBorderPiece(w-border.r.w,y,border.r)
+	if(border_sides[5]=='t'){
+		// Draw right edge
+		for(var y=border.tr.h;y<h-border.br.h;y+=border.r.h){
+			drawBorderPiece(w-border.r.w,y,border.r)
+		}
 	}
-
-	// Top-Left corner
-	drawBorderPiece(0,0,border.tl)
-	// Top-Right corner
-	drawBorderPiece(w-border.tr.w,0,border.tr)
-
-	// Bottom-Left corner
-	drawBorderPiece(0,h-border.bl.h,border.bl)
-
-	// Bottom-Right corner
-	drawBorderPiece(w-border.br.w,h-border.br.h,fontInfo.border.br)
+	if(border_sides[0]=='t'){
+		// Top-Left corner
+		drawBorderPiece(0,0,border.tl)
+	}
+	if(border_sides[8]=='t'){
+		// Top-Right corner
+		drawBorderPiece(w-border.tr.w,0,border.tr)
+	}
+	if(border_sides[6]=='t'){
+		// Bottom-Left corner
+		drawBorderPiece(0,h-border.bl.h,border.bl)
+	}
+	if(border_sides[8]=='t'){
+		// Bottom-Right corner
+		drawBorderPiece(w-border.br.w,h-border.br.h,fontInfo.border.br)
+	}
 
 }
 
@@ -735,24 +877,34 @@ function resetOverlays(){
 					// Internal effect, don't show to the user
 					pwrapper.addClass('internal-overlay')
 				}
-				var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
-				for(opt in overlay.options){
-					if(overlay.options.hasOwnProperty(opt)){
-						$('<option>').text(first(overlay.options[opt].title,opt)).attr('value',opt).prop('selected',opt==overlay['default']).appendTo(select)
+				if(overlay.type=='slider'){
+					var range = $('<input type="range">').attr('id','overlay-'+key)
+					range.attr('min',first(overlay.min,0))
+					range.attr('max',first(overlay.max,100))
+					if(overlay.default){
+						range.attr('value',overlay.default)
 					}
-				}
-				select.appendTo(pwrapper)
-				if('replaceable' in overlay){
-					var uploadlabel=$(' <label>Replace image:</label>')
-					var upload=$('<input type="file" class="overlay-replacement" accept="image/*"/>').attr('id','replace-'+key)
-					upload.appendTo(uploadlabel)
-					uploadlabel.appendTo(pwrapper)
+					range.appendTo(pwrapper)
+				}else{
+					var select = $('<select class="overlay-selector">').attr('id','overlay-'+key)
+					for(opt in overlay.options){
+						if(overlay.options.hasOwnProperty(opt)){
+							$('<option>').text(first(overlay.options[opt].title,opt)).attr('value',opt).prop('selected',opt==overlay['default']).appendTo(select)
+						}
+					}
+					select.appendTo(pwrapper)
+					if('replaceable' in overlay){
+						var uploadlabel=$(' <label>Replace image:</label>')
+						var upload=$('<input type="file" class="overlay-replacement" accept="image/*"/>').attr('id','replace-'+key)
+						upload.appendTo(uploadlabel)
+						uploadlabel.appendTo(pwrapper)
+					}
 				}
 				pwrapper.appendTo($('.overlays'))
 			}
 		}
 	}
-	$('.overlays select').change(function(){
+	$('.overlays select, .overlays input[type=range]').change(function(){
 		var name = $(this).attr('id').split('-',2)[1]
 		var hookname = 'change-'+name
 		if('hooks' in fontInfo && hookname in fontInfo.hooks){
@@ -792,8 +944,56 @@ function loadJSONForGenerator(){
 		if(fontInfo.script){
 			$.getScript(gamesPath + selectedGenerator + ".js");
 		}
+
+		if('notes' in fontInfo){
+			$('#notes').text(fontInfo.notes)
+		}else{
+			$('#notes').text('')
+		}
+		addLinksForSpecialCharacters()
 	})
 
+}
+
+function addLinksForSpecialCharacters(){
+	var specials = [] 
+	Object.keys(fontInfo).forEach(function (key) {
+		if($.isNumeric(key)){
+			if(key>=128){
+				specials.push(key)
+			}
+		}
+	});
+	if(specials.length>0){
+		var specialdiv = $('<div class="special-keys"><b>Special characters:</b> <br /></div>')
+		for (character of specials) {
+			specialdiv.append('<a class="add-special" href="" data-character="'+character+'" title="U+'+(character-0).toString(16)+' #'+character+'">[&#'+character+';]</a> ')
+		}
+		$('#notes').append(specialdiv)
+		var sourcetext_focused = false
+		$('.add-special').mousedown(function(){
+			sourcetext_focused = $('#sourcetext').is(':focus')
+			return true
+		})
+		$('.add-special').click(function(){
+			var sourcetext = $('#sourcetext')
+			var before_text = sourcetext.val()
+			var to_insert = String.fromCodePoint($(this).data('character'))
+			var caret_pos = sourcetext[0].selectionStart
+			if (typeof caret_pos === 'number') {
+				if (!sourcetext_focused) {
+					caret_pos = before_text.length
+				}
+				sourcetext.val(before_text.substring(0, caret_pos) + to_insert + before_text.substring(caret_pos))
+				sourcetext.focus()
+				sourcetext[0].selectionStart = sourcetext[0].selectionEnd = caret_pos + to_insert.length
+			} else {
+				sourcetext.val(before_text + to_insert)
+			}
+			renderText()
+			return false
+		})
+	}
 }
 
 function getNameForCurrentImage(ext){
@@ -802,7 +1002,10 @@ function getNameForCurrentImage(ext){
 	return selectedGenerator + "-" + text + "." + ext
 }
 
-
+if(selectedGenerator===null){
+	var generator_names = Object.keys(generators)
+	selectedGenerator = generator_names[Math.round(generator_names.length * Math.random())]
+}
 selectGenerator()
 $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
@@ -863,6 +1066,17 @@ $('a#upload').click(function(){
 $('#makegif').click(function(){
 	this.href = makeGIF(context)
 	this.download = getNameForCurrentImage("gif")
+	return true
+})
+$('#jsondump').click(function(){
+	function b64EncodeUnicode(str) {
+	    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+	        return String.fromCharCode('0x' + p1);
+	    }));
+	}
+	var jsonurl = 'data:application/json;charset=utf-8;base64,' + b64EncodeUnicode(JSON.stringify(getOptions()))
+	this.href = jsonurl;
+	this.download = getNameForCurrentImage("json")
 	return true
 })
 

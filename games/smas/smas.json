@@ -14,6 +14,7 @@
 		"h": 8
 	},
 	"justify": "v-center",
+	"notes":"This is the anti-piracy screen shown when Super Mario All-Stars detects it's running in a copier.",
 	"subfonts": {
 		"font2": {
 			"height": 16,
