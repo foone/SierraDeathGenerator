@@ -317,6 +317,16 @@ var generators={
 		'added':'2018-04-12',
 
 	},
+	'centy':{
+		'title': 'Crusader of Centy',
+		'source':'Nextech',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nex_Entertainment',
+		'defaulttext':'Tapir:"I am Tapir.\nThe Camelia Desert is\nfilled with sad dreams."',
+		'platform':'genesis',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/crusader-of-centy',
+		'added':'2019-04-02',
+	},
 	'darius':{
 		'title': 'Darius',
 		'source':'Taito',
