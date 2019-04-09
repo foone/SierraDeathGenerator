@@ -1072,6 +1072,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/snes/star-fox_',
 		'added':'2018-05-02',
 	},
+	'sttngafu':{
+		'title': 'Star Trek: A Final Unity',
+		'source':'Spectrum HoloByte',
+		'sourceurl':'https://en.wikipedia.org/wiki/Spectrum_HoloByte',
+		'defaulttext':"Welcome to Morassia. As it turns out, I'm \nconducting a little investigation of my\nown. I'm curious to know why the \nFederation allows so many male officers.\nDoesn't it cause morale problems?",
+		'platform':'dos',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/star-trek-the-next-generation-a-final-unity',
+		'added':'2019-04-09',
+	},
 	'stonekeep':{
 		'title': 'Stonekeep',
 		'source':'Interplay Productions',
