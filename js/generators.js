@@ -394,6 +394,16 @@ var generators={
 		'added':'2018-05-05',
 
 	},
+	'ddv':{
+		'title': 'Double Dragon V',
+		'source':'Leland Interactive Media',
+		'sourceurl':'https://en.wikipedia.org/wiki/Leland_Interactive_Media',
+		'defaulttext':"Remember, inside every\nliving person is a dead one\ntrying to get out!",
+		'platform':'snes',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/double-dragon-v-the-shadow-falls',
+		'added':'2019-04-12',
+	},
 	'dw':{
 		'title': 'DreamWeb',
 		'source':'Creative Reality',
