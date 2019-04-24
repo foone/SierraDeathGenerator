@@ -67,9 +67,9 @@
 			"x": 96,
 			"y": 46,
 			"title": "Who is talking?",
-			"default": "Toby",
+			"default": "Wally",
 			"options": {
-				"Toby": {
+				"Wally": {
 					"w": 16,
 					"h": 16,
 					"x": 16,
