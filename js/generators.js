@@ -667,8 +667,17 @@ var generators={
 		'platform':'dos',
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/manhunter-new-york',
-		'added':'2018-01-05',
-
+		'added':'2018-01-05'
+	},
+	'moo':{
+		'title': 'Master of Orion',
+		'source':'Simtex',
+		'sourceurl':'https://en.wikipedia.org/wiki/Simtex',
+		'defaulttext':'Make your childish threats. The young of the Meklar often throw tantrums as well.',
+		'platform':'dos',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/master-of-orion',
+		'added':'2019-04-23'
 	},
 	'mbtt':{
 		'title': 'Mavis Beacon Teaches Typing',
