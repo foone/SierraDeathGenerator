@@ -404,6 +404,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/double-dragon-v-the-shadow-falls',
 		'added':'2019-04-12',
 	},
+	'doug':{
+		'title': "Doug's Big Game",
+		'source':'ImaginEngine',
+		'sourceurl':'https://en.wikipedia.org/wiki/Backbone_Entertainment',
+		'defaulttext':"Have I been stood up?",
+		'platform':'gameboy',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/gameboy-color/disneys-doug-dougs-big-game',
+		'added':'2019-05-26',
+	},
 	'dw':{
 		'title': 'DreamWeb',
 		'source':'Creative Reality',
