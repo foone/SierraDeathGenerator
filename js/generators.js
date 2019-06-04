@@ -701,6 +701,17 @@ var generators={
 		'added':'2018-05-31',
 
 	},
+	'mm2':{
+		'title': 'Mega Man 2',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"\n-W-\n\n GET EQUIPPED\n\n WITH\n\n LEAF SHIELD",
+		'gameinfo':'https://www.mobygames.com/game/nes/mega-man-2',
+		'platform':'nes',
+		'series':'megaman',
+		'added':'2019-06-03',
+		'year':1989
+	},
 	'mmbn1':{
 		'title': 'Mega Man Battle Network 1',
 		'source':'Capcom',
