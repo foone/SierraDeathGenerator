@@ -302,7 +302,8 @@ var generators={
 		'platform':'c64',
 		'year':1982,
 		'gameinfo':'https://en.wikipedia.org/wiki/Commodore_64',
-		'added':'2019-06-11'
+		'added':'2019-06-11',
+		'how-to-use':'Emulate this console'
 	},
 	'cosmo':{
 		'title': 'Cosmo\'s Cosmic Adventure',

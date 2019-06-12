@@ -486,6 +486,16 @@ function selectGenerator(){
 	if(gen['play']){
 		$('#playlink').attr('href',gen['play'])
 		$('#playlink').show()
+		if(gen['how-to-use']){
+			$('#how-to-use').text(gen['how-to-use'])
+		}else{
+			$('#how-to-use').text('Play this game')
+		}
+		if(gen['where-to-use']){
+			$('#where-to-use').text(gen['where-to-use'])
+		}else{
+			$('#where-to-use').text('the Internet Archive')
+		}
 	}else{
 		$('#playlink').hide()
 	}
