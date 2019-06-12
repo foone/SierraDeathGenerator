@@ -292,7 +292,17 @@ var generators={
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/commander-keen-goodbye-galaxy',
 		'added':'2017-12-19',
-
+	},
+	'c64':{
+		'title': 'Commodore 64',
+		'source':'Commodore International',
+		'sourceurl':'https://en.wikipedia.org/wiki/Commodore_International',
+		'defaulttext':'\n    **** COMMODORE 64 BASIC V2 ****\n\n 64K RAM SYSTEM  38911 BASIC BYTES FREE\n\nREADY.\n[inverse] [/inverse]',
+		'play':"https://archive.org/details/c64_basic",
+		'platform':'c64',
+		'year':1982,
+		'gameinfo':'https://en.wikipedia.org/wiki/Commodore_64',
+		'added':'2019-06-11'
 	},
 	'cosmo':{
 		'title': 'Cosmo\'s Cosmic Adventure',
@@ -754,7 +764,6 @@ var generators={
 		'year':1986,
 		'gameinfo':'https://www.mobygames.com/game/metroid',
 		'added':'2018-04-10',
-
 	},
 	'mmprtm':{
 		'title': 'Mighty Morphin Power Rangers: The Movie',
