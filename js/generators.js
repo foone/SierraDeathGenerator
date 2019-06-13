@@ -51,6 +51,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/animal-crossing-wild-world',
 
 	},
+	'atari8bit':{
+		'title':'Atari 8-bit',
+		'source':'Atari, Inc.',
+		'sourceurl':'https://en.wikipedia.org/wiki/Atari,_Inc.',
+		'defaulttext':'READY\n[inverse] [/inverse]',
+		'year':1979,
+		'platform':'atari8bit',
+		'added':'2019-06-12',
+		'gameinfo':'https://en.wikipedia.org/wiki/Atari_8-bit_family',
+	},
 	'baddudes':{
 		'title': 'Bad Dudes',
 		'source':'Data East',
