@@ -986,6 +986,18 @@ var generators={
 		'added':'2017-12-18',
 		'updated':'2019-02-23'
 	},
+	'sqta':{
+		'title': 'Simon Quest: Transylvania Adventure',
+		'source':'Programancer',
+		'sourceurl':'https://twitter.com/Programancer',
+		'defaulttext':"The old man in the \nhouse with no torches\ncan show you the way.",
+		'gameinfo':"https://programancer.itch.io/simon-quest",
+		'play':"https://programancer.itch.io/simon-quest",
+		'where-to-use':'itch.io',
+		'platform':'windows',
+		'year':2019,
+		'added':'2019-07-06',
+	},
 	'sr':{
 		'title':'Shadowrun',
 		'source':'Beam Software',
