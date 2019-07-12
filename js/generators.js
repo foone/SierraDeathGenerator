@@ -1177,6 +1177,16 @@ var generators={
 		'added':'2018-04-03',
 		'updated':'2019-02-26'
 	},
+	'strider':{
+		'title': 'Strider',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"It penetrates into\nyour mind and makes\nyou crazy.",
+		'platform':'nes',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/nes/strider_',
+		'added':'2019-07-12'
+	},
 	'smas':{
 		'title': 'Super Mario All-Stars',
 		'source':'Nintendo',
