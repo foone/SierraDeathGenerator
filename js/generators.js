@@ -534,6 +534,16 @@ var generators={
 		'added':'2019-01-15',
 		'gameinfo':'https://www.mobygames.com/game/nes/garfield-no-isshkan-a-week-of-garfield'
 	},
+	'gijoe':{
+		'title': 'GI Joe: The Atlantis Factor',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'year':1992,
+		'platform':'nes',
+		'defaulttext':"Find the enemy\n\non the route.",
+		'added':'2019-07-12',
+		'gameinfo':'https://www.mobygames.com/game/gi-joe-the-atlantis-factor-'
+	},
 	'got':{
 		'title': 'God of Thunder',
 		'source':'Adept Software',
