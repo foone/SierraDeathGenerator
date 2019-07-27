@@ -27,6 +27,10 @@ parser.add_argument('--transparent', '-t', action='store_true',
 
 args = parser.parse_args()
 im=Image.open(args.filename)
+if im.mode=='P' and im.palette.mode=='RGB' and 'transparency' in im.info:
+	print 'Indexed color with PNG transparency, converting to RGBA'
+	im=im.convert('RGBA')
+
 w,h=args.width,args.height
 imgw,imgh=im.size
 for dimension,imgsize,size in (('width',imgw,w),('height',imgh,h)):
