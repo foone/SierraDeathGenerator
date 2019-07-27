@@ -687,6 +687,16 @@ var generators={
 		'added':'2018-04-19',
 
 	},
+	'ln':{
+		'title': 'Little Nemo',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"     Nemo: I bet she's still\n           a girl.",
+		'platform':'nes',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/little-nemo-the-dream-master',
+		'added':'2019-07-26'
+	},
 	'ms':{
 		'title': 'Major Stryker',
 		'source':'Apogee Software',
