@@ -19,6 +19,17 @@ var generators={
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/aero-fighters-2'
 	},
+	'aba':{
+		'title': 'All About America',
+		'source':'Unicorn Software',
+		'sourceurl':'https://www.mobygames.com/company/unicorn-software-company',
+		'defaulttext':"  Many, many years ago\na Spanish sailor named\nChristopher Columbus\nwanted to find a\nshorter way to get to\nthe East Indies.  The",
+		'added':'2019-07-29',
+		'platform':'apple2',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/apple2/all-about-america',
+		'play':'https://archive.org/details/AllAboutAmerica4amCrack'
+	},
 	'ag':{
 		'title': 'American Gladiators',
 		'source':'Incredible Technologies, inc.',

@@ -195,14 +195,20 @@ class Snippet{
 			if(info==null){
 				info=font[font["null-character"]]
 			}
-
+			var lig_unadvance = undefined
 			var matching_ligatures = Object.keys(ligatures).filter(x=>line.substring(i,i+x.length)==x)
 			if(matching_ligatures.length>0){
 				// Pick the longest match if there are multiple matches
 				matching_ligatures.sort((a,b) => b.length - a.length)
+				var old_info = info
 				info = ligatures[matching_ligatures[0]]
+				var lig_chain = first(info['ligature-chain'], defaultInfo['ligature-chain'], 0)
+				if(lig_chain>0){
+					// FIXME: This won't calculate the correct unadvance if the chain is >1! 
+					lig_unadvance = first(info.unadvance, defaultInfo.unadvance, 0) + first(old_info.w, defaultInfo.w) - 1 
+				}
 				// Extend i by the length of the ligature, minus 1 since the for loop will do i++
-				i+=(matching_ligatures[0].length -1 )
+				i+= Math.max(0, (matching_ligatures[0].length -1 ) - lig_chain) 
 			}
 			var x=first(info.x, defaultInfo.x)
 			if(glitch){
@@ -213,7 +219,7 @@ class Snippet{
 				'y': first(info.y, defaultInfo.y, fontOriginY),
 				'w': first(info.w, defaultInfo.w),
 				'h': first(info.h, defaultInfo.h),
-				'unadvance': first(info.unadvance, defaultInfo.unadvance, 0),
+				'unadvance': first(lig_unadvance, info.unadvance, defaultInfo.unadvance, 0),
 				'unadvance-after': first(info['unadvance-after'],{}),
 				'vertical-shift': first(info['vertical-shift'], 0),
 				'char':c
@@ -342,15 +348,20 @@ class FontManager{
 		return width
 	}
 
-	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, first_line_origin, output_size){
+	draw(mainFont, scale, originx, justify, justifyresolution, fontOriginY, first_line_justify, first_line_origin, explicit_origins, output_size){
 		var y = mainFont.y
 		if(['v-center','all-center'].includes(justify)){
 			y -= Math.floor(this.getHeight()/2)
 		}
-		var first_line = true;
-		for(var line of this.lines){
+		for(let [line_number, line] of this.lines.entries()){
 			var x = originx
-			if(first_line){
+			var origin_override = explicit_origins ? explicit_origins[line_number] : null
+			if(origin_override){
+				// We overwrite originx as well so this'll stick for later lines
+				originx = x = first(origin_override['x'], originx)
+				y = first(origin_override['y'], y)
+			}
+			if(line_number==0){
 				x = first_line_origin
 				if(first_line_justify == 'output-center'){
 					x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
@@ -363,7 +374,6 @@ class FontManager{
 			}
 			line.draw(this.context, scale, x, y)
 			y+=line.getHeight()
-			first_line=false
 		}
 	}
 
@@ -676,6 +686,9 @@ function renderText(scaled = true){
 	var first_line_justify = first(fontInfo['first-line-justify'], justify)
 	var first_line_origin = fontInfo['first-line-origin']
 
+	// TODO: Retire first_line_origin as explicit-origins can do everything it can and more
+	var explicit_origins = fontInfo['explicit-origins']
+
 	var textbox={
 		w: fontManager.getWidth(),
 		h: fontManager.getHeight()
@@ -790,7 +803,7 @@ function renderText(scaled = true){
 		eval(fontInfo['hooks']['pre-text'])
 	}
 	first_line_origin = first(first_line_origin, originx)
-	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, first_line_origin, outputSize)
+	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, first_line_origin, explicit_origins, outputSize)
 
 	drawOverlays('post-text')
 }
