@@ -388,7 +388,18 @@ function hideGenerators(){
 
 var week_ago = Date.now()-(7*24*3600000);
 
-for( let [gname, generator_item] of Object.entries(generators)){
+var sorted_generators = Object.entries(generators);
+sorted_generators.sort(function(a,b){
+	function getKey(x){
+		return x[1].title.toLowerCase().replace(/^the /,'')
+	}
+	var keya = getKey(a), keyb=getKey(b)
+	if(keya < keyb){return -1}
+	if(keyb > keya){return +1}
+	return 0;
+})
+
+for( let [gname, generator_item] of sorted_generators){
 	var new_generator = false
 	if('added' in generator_item || 'updated' in generator_item){
 
