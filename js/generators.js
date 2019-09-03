@@ -1346,6 +1346,16 @@ var generators={
 		'year':1995,
 		'added':'2018-10-25'
 	},
+	'ufouria':{
+		'title': 'Ufouria',
+		'source': 'Sunsoft',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Sunsoft',
+		'defaulttext': 'I must fight you and\nwin so that you will\nremember that we are\nfriends.',
+		'platform': 'nes',
+		'year': 1991,
+		'added': '2019-09-03',
+		'gameinfo':'https://www.mobygames.com/game/ufouria-the-saga'
+	},
 	'ul': {
 		'title': 'Undertale Logo',
 		'source': 'Toby Fox',
