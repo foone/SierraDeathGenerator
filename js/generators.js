@@ -535,6 +535,16 @@ var generators={
 		'added':'2018-10-31',
 
 	},
+	'f13':{
+		'title': 'Friday the 13th',
+		'source':'Atlus',
+		'sourceurl':'https://en.wikipedia.org/wiki/Atlus',
+		'defaulttext':"You have finally managed\nto defeat Jason ...\nBut is he really dead ? \nWe're not telling !\nEnd..",
+		"year":1989,
+		"platform":"nes",
+		'gameinfo':'https://www.mobygames.com/game/nes/friday-the-13th',
+		'added':'2019-09-13'
+	},
 	'garfield':{
 		'title': 'Garfield: Week of Garfield',
 		'source':'Towa Chiki',

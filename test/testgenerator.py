@@ -20,7 +20,7 @@ for path in test_cases:
 	with open(path, 'rb') as f:
 		tests['tests'][name] = json.load(f)
 
-
+print 'Found {} test cases'.format(len(tests['tests']))
 proc = subprocess.Popen(['node','evaluate_test_cases.js'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 data,_ = proc.communicate(json.dumps(tests))
 results = json.loads(data)
