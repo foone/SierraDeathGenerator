@@ -1378,6 +1378,16 @@ var generators={
 		'added': '2018-11-07',
 		'gameinfo':'https://www.mobygames.com/game/undertale'
 	},
+	'ugg': {
+		'title': 'Untitled Goose Game',
+		'source': 'House House',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Untitled_Goose_Game',
+		'defaulttext': '\u25CF get into the garden\n\u25CF get the groundskeeper wet\n\u25CF steal the groundskeeper\'s keys\n\u25CF make the groundskeeper wear his sun hat\n\u25CF rake in the lake\n\u25CF have a picnic\n    (bring to the picnic blanket : sandwich,\n      apple, pumpkin, carrot, jam, thermos, \n      radio, basket)',
+		'platform': 'win32',
+		'year': 2019,
+		'added': '2019-09-28',
+		'gameinfo':'https://www.mobygames.com/game/windows/untitled-goose-game'
+	},
 	'wally': {
 		'title': 'Wally Bear and the NO! Gang',
 		'source': 'American Game Cartridges',
