@@ -1382,10 +1382,11 @@ var generators={
 		'title': 'Untitled Goose Game',
 		'source': 'House House',
 		'sourceurl': 'https://en.wikipedia.org/wiki/Untitled_Goose_Game',
-		'defaulttext': '\u25CF get into the garden\n\u25CF get the groundskeeper wet\n\u25CF steal the groundskeeper\'s keys\n\u25CF make the groundskeeper wear his sun hat\n\u25CF rake in the lake\n\u25CF have a picnic\n    (bring to the picnic blanket : sandwich,\n      apple, pumpkin, carrot, jam, thermos, \n      radio, basket)',
+		'defaulttext': '[done]\u25CF get into the garden[/]\n\u25CF get the groundskeeper wet\n\u25CF steal the groundskeeper\'s keys\n\u25CF make the groundskeeper wear his sun hat\n\u25CF rake in the lake\n\u25CF have a picnic\n    (bring to the picnic blanket : sandwich,\n      apple, pumpkin, carrot, jam, thermos, \n      radio, basket)',
 		'platform': 'win32',
 		'year': 2019,
 		'added': '2019-09-28',
+		'updated': '2019-10-01',
 		'gameinfo':'https://www.mobygames.com/game/windows/untitled-goose-game'
 	},
 	'wally': {

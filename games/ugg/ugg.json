@@ -15,40 +15,66 @@
 			"x": 0,
 			"y": 0,
 			"title": "Size",
-			"default": "seven_lines",
+			"default": "seven_lines_todo",
 			"options": {
-				"seven_lines": {
+				"seven_lines_todo": {
 					"x": 0,
-					"y": 64,
+					"y": 640,
 					"w": 8,
 					"h": 8,
-					"title": "7 lines (twitter-friendly)",
+					"title": "To Do: 7 lines (twitter-friendly)",
 					"info": {
 						"w": 484,
 						"h": 272
 					}
 				},
-				"full_size": {
+				"full_size_todo": {
 					"x": 8,
-					"y": 64,
+					"y": 640,
 					"w": 8,
 					"h": 8,
-					"title": "Full Size",
+					"title": "To Do: Full Size",
 					"info": {
 						"w": 484,
 						"h": 546
+					}
+				},
+				"seven_lines_as_well": {
+					"x": 0,
+					"y": 62,
+					"w": 484,
+					"h": 545,
+					"title": "To Do (As Well): 7 lines (twitter-friendly)",
+					"info": {
+						"w": 484,
+						"h": 272
+					}
+				},
+				"full_size_as_well": {
+					"x": 0,
+					"y": 62,
+					"w": 484,
+					"h": 545,
+					"title": "To Do (As Well): Full Size",
+					"info": {
+						"w": 484,
+						"h": 454
 					}
 				}
 			}
 		}
 	},
+	"shiftfonts": {
+		"done": 31
+	},
 	"default": {
-		"unadvance": 11
+		"unadvance": 11,
+		"y":0
 	},
 	"32": {
-		"x": -32,
+		"x": 4747,
 		"w": 18,
-		"h": 12
+		"h": 31
 	},
 	"8706": {
 		"x": 4420,
