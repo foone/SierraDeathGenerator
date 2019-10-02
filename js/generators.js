@@ -718,6 +718,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/little-nemo-the-dream-master',
 		'added':'2019-07-26'
 	},
+	'madden95':{
+		'title': "Madden NFL '95",
+		'source':'EA Sports',
+		'sourceurl':'https://en.wikipedia.org/wiki/EA_Sports',
+		'defaulttext':"Although the two-time defending Super Bowl champs have a new coach this year, the core of their team returns.",
+		'platform':'genesis',
+		'year':1994,
+		'added':'2019-10-01',
+		'gameinfo':'https://www.mobygames.com/game/madden-nfl-95'
+	},
 	'ms':{
 		'title': 'Major Stryker',
 		'source':'Apogee Software',
