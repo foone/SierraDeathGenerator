@@ -1,5 +1,5 @@
 {
-	"height": 16,
+	"height": 4,
 	"origin": {
 		"x": 16,
 		"y": 19
@@ -11,7 +11,8 @@
 		"h": "overlays.scene.data.h"
 	},
 	"hooks": {
-		"pre-text": "{let fnt = overlays.scene.data.info;mainFont.y = fnt['y-origin']; originx = fnt['x-origin'];fontInfo['wrap-width']=fnt.wrap;fontInfo['height']=fnt.height}"
+		"pre-parse":"{fontInfo['height']=fontInfo['overlays']['scene']['options'][$('#overlay-scene option:selected').text()]['info']['height']}",
+		"pre-text": "{let fnt = overlays.scene.data.info;mainFont.y = fnt['y-origin']; originx = fnt['x-origin'];fontInfo['wrap-width']=fnt.wrap}"
 	},
 	"overlays": {
 		"scene": {
