@@ -838,6 +838,17 @@ var generators={
 		'added':'2018-11-06',
 		'gameinfo':'https://www.mobygames.com/game/genesis/mighty-morphin-power-rangers-the-movie__'
 	},
+	'minishcap':{
+		'title': 'Legend of Zelda: The Minish Cap',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"If only we had some way to defend\nourselves against [blue]those nuts of his[/].",
+		'platform':'gba',
+		'series': 'zelda',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/gameboy-advance/legend-of-zelda-the-minish-cap',
+		'added':'2019-10-25',
+	},
 	'minit':{
 		'title': 'Minit',
 		'source':'Jan Willem Nijman, Kitty Calis, Jukio Kallio, and Dominik Johann',
@@ -1477,6 +1488,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"I AM\nERROR.",
 		'platform':'nes',
+		'series': 'zelda',
 		'year':1987,
 		'gameinfo':'https://www.mobygames.com/game/zelda-ii-the-adventure-of-link',
 		'added':'2018-04-28',
