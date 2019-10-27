@@ -84,22 +84,44 @@ class LineGroup{
 				var w=snippet.getWidth()
 				if(x+w>maxwidth){
 					var parts = snippet.split(maxwidth-x)
+					var firstPart = parts[0]
+					var firstPartWidth = firstPart.getWidth()
+					if(x>0&&out.length>0) {
+						if((x+firstPartWidth)<=maxwidth){
+							// Put the first Snippet into the previous LineGroup, if there is one.
+							out[out.length-1].add(parts.shift())
+							x = 0
+						}else{
+							// Put the whole Snippet into its own LineGroup,
+							// as the firt part's too long to add to the previous line.
+							var lg = new LineGroup(first)
+							lg.add(snippet)
+							out.push(lg)
+							x = snippet.getWidth()
+							first=false
+							continue
+						}
+					}
 					for(var p of parts){
+						// Put each remaining part into its own LineGroup.
 						var lg = new LineGroup(first)
-						first=false
 						lg.add(p)
 						out.push(lg)
+						x = p.getWidth()
 					}
-					
-					// TODO: rest of snippets?
-					return out
 				}else{
 					x+=w
-					var lg = new LineGroup(first)
-					lg.add(snippet)
-					out.push(snippet)
-					first=false
+					if(out.length>0) {
+						// Put the Snippet into the previous LineGroup, if there is one.
+						out[out.length-1].add(snippet)
+					} else {
+						// Otherwise, put it into its own LineGroup.
+						var lg = new LineGroup(first)
+						lg.add(snippet)
+						out.push(lg)
+					}
 				}
+				first=false
 			}
 			return out
 		}else{
@@ -307,6 +329,7 @@ class FontManager{
 		for(var line of this.lines){
 			out = out.concat(splitLine(line))
 		}
+
 		this.lines = out
 	}
 
