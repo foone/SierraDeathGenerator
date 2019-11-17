@@ -619,6 +619,16 @@ var generators={
 		'added':'2018-12-30',
 		'gameinfo':'https://www.mobygames.com/game/nes/iron-tank-the-invasion-of-normandy'
 	},
+	'karnovr':{
+		'title': "Karnov's Revenge",
+		'source':'Data East',
+		'sourceurl':'https://en.wikipedia.org/wiki/Data_East',
+		'defaulttext':"YOU ARE A LOUSY FIGHTER,\nAND YOUR FEET STINK!",
+		'platform':'arcade',
+		'year':1994,
+		'added':'2019-11-16',
+		'gameinfo':'https://www.mobygames.com/game/fighters-history-dynamite'
+	},
 	'km':{
 		'title': 'Kick Master',
 		'source':'KID',
