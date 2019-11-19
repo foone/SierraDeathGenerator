@@ -916,7 +916,7 @@ var generators={
 		'platform':'dos',
 		'year':1997,
 		'gameinfo':'https://web.archive.org/web/20161116081727/bloodlust.zophar.net/NESticle/nes.html',
-		'added':'2018-11-18',
+		'added':'2019-11-18',
 	},
 	'ng':{
 		'title': 'Ninja Gaiden',
