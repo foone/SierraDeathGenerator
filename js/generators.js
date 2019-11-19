@@ -627,7 +627,9 @@ var generators={
 		'platform':'arcade',
 		'year':1994,
 		'added':'2019-11-16',
-		'gameinfo':'https://www.mobygames.com/game/fighters-history-dynamite'
+		'updated':'2019-11-17',
+		'gameinfo':'https://www.mobygames.com/game/fighters-history-dynamite',
+		'series':'fighters history'
 	},
 	'km':{
 		'title': 'Kick Master',
@@ -905,6 +907,16 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/Roland_MT-32',
 		'added':'2018-04-11',
 
+	},
+	'nesticle':{
+		'title': 'Nesticle',
+		'source':'Bloodlust Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/NESticle',
+		'defaulttext':'Bow to the fecal-lord\n\nNESticle DOS                 [red]V0.34[/]\nWatcom C++ 10.60 Jun 13 1997 16:12:18\n\nCopyright (C) 1997 Bloodlust Software\n\nThanks Shitman!',
+		'platform':'dos',
+		'year':1997,
+		'gameinfo':'https://web.archive.org/web/20161116081727/bloodlust.zophar.net/NESticle/nes.html',
+		'added':'2018-11-18',
 	},
 	'ng':{
 		'title': 'Ninja Gaiden',

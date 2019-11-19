@@ -262,6 +262,10 @@ class FontManager{
 		this.lines = this.applyMarkup()
 	}
 
+	subset(other_text) {
+		return new FontManager(this.context, other_text, this.fonts)
+	}
+
 	splitSnippet(font, text ){
 		var parts = text.split(/(\n)/)
 		var out=[]
