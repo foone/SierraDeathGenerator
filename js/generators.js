@@ -1524,5 +1524,17 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/genesis/zero-wing',
 		'added':'2018-02-23',
+	},
+	'zyuranger':{
+		'title': 'Zyuranger',
+		'source':'Arc System Works',
+		'sourceurl':'https://en.wikipedia.org/wiki/Arc_System_Works',
+		'defaulttext':"Oh, Pleprechaun, you've found\nthe perfect Poison Swamp! We\ncan build a creepy prison here\nto lock children in.",
+		'platform':'nes',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/nes/kyry-sentai-zyuranger',
+		'added':'2019-11-20',
+		'content-contributor': 'Grimm Translations & pacnsacdave',
+		'content-contributor-url': 'https://www.romhacking.net/games/1296/',
 	}
 }
