@@ -882,6 +882,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/minnesota-fats-pool-legend',
 		'added':'2019-02-15',
 	},
+	'mi1':{
+		'title': 'The Secret of Monkey Island',
+		'source':'Lucasfilm Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Lucasfilm_Games',
+		'defaulttext':'Never pay more than 20 bucks\nfor a computer game.',
+		'platform':'dos',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/secret-of-monkey-island',
+		'added':'2019-12-12',
+		'series':'monkey island'
+	},
 	'mk2':{
 		'title': 'Mortal Kombat II',
 		'source':'Midway',
@@ -893,7 +904,7 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/mortal-kombat-ii',
 		'added':'2018-04-02',
-
+		'series':'mortal kombat'
 	},
 	'mt32':{
 		'title': 'MT-32',
