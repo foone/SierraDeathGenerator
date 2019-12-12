@@ -5,8 +5,48 @@
 		"y": 8
 	},
 	"justify": "center",
-	"default":{
-		"unadvance": 1
+	"default": {
+		"unadvance": 1,
+		"y": 0
+	},
+	"shiftfonts": {
+		"pink": 10
+	},
+	"hooks": {
+		"pre-text": "{let fnt = overlays.position.data.info;mainFont.y = fnt.y;originx=fnt.x}",
+		"font": "switchFont(overlays.position.data.info.font)"
+	},
+	"overlays": {
+		"position": {
+			"x": 0,
+			"y": 0,
+			"title": "Text Position",
+			"default": "guybrush",
+			"options": {
+				"guybrush": {
+					"x": 0,
+					"y": -8,
+					"w": 1,
+					"h": 1,
+					"info": {
+						"x":220,
+						"y":8,
+						"font":"main"
+					}
+				},
+				"elaine": {
+					"x": 8,
+					"y": -8,
+					"w": 1,
+					"h": 1,
+					"info": {
+						"x":92,
+						"y":8,
+						"font":"pink"
+					}
+				}
+			}
+		}
 	},
 	"32": {
 		"x": 0,
