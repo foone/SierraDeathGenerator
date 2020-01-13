@@ -706,7 +706,7 @@ var generators={
 		'platform':'gameboy',
 		'year':1993,
 		'added':'2019-02-13',
-		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'	
+		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'
 	},
 	'lad':{
 		'title': 'Life & Death',
@@ -1228,7 +1228,7 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://www.mobygames.com/game/star-control-ii',
 		'added':'2018-05-26',
-	},	
+	},
 	'sf':{
 		'title': 'Star Fox',
 		'source':'Nintendo',
@@ -1535,6 +1535,16 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/genesis/zero-wing',
 		'added':'2018-02-23',
+	},
+	'zxspectrum':{
+		'title': 'ZX Spectrum',
+		'source':'Sinclair Research',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sinclair_Research',
+		'defaulttext':'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n© 1982 Sinclair Research Ltd',
+		'platform':'zxspectrum',
+		'year':1982,
+		'gameinfo':'https://en.wikipedia.org/wiki/ZX_Spectrum',
+		'added':'2020-01-13',
 	},
 	'zyuranger':{
 		'title': 'Zyuranger',
