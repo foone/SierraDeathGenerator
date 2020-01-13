@@ -1,4 +1,14 @@
 var generators={
+	'aw2':{
+		'title':'Advance Wars 2',
+		'source':'Intelligent Systems',
+		'sourceurl':'https://en.wikipedia.org/wiki/Intelligent_Systems',
+		'platform':'gba',
+		'defaulttext':'Really? Continents?',
+		'year':2003,
+		'added':'2019-08-08',
+		'gameinfo':'https://www.mobygames.com/game/advance-wars-2-black-hole-rising'
+	},
 	'amk':{
 		'title': 'Adventures in the Magic Kingdom',
 		'source':'Capcom',
@@ -706,7 +716,7 @@ var generators={
 		'platform':'gameboy',
 		'year':1993,
 		'added':'2019-02-13',
-		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'	
+		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'
 	},
 	'lad':{
 		'title': 'Life & Death',
@@ -1228,7 +1238,7 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://www.mobygames.com/game/star-control-ii',
 		'added':'2018-05-26',
-	},	
+	},
 	'sf':{
 		'title': 'Star Fox',
 		'source':'Nintendo',
