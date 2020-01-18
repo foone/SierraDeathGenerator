@@ -546,6 +546,16 @@ var generators={
 		'added':'2018-10-31',
 
 	},
+	'fbib':{
+		'title': 'Flintstones: Burgertime in Bedrock',
+		'source':'Conspiracy',
+		'sourceurl':'https://en.wikipedia.org/wiki/Conspiracy_Entertainment',
+		'defaulttext':"Yabba Dabba Doo!",
+		"year":2000,
+		"platform":"gameboy",
+		'gameinfo':'https://www.mobygames.com/game/gameboy-color/flintstones-burgertime-in-bedrock',
+		'added':'2020-01-17',
+	},
 	'f13':{
 		'title': 'Friday the 13th',
 		'source':'Atlus',
