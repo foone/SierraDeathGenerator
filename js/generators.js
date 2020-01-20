@@ -1600,6 +1600,7 @@ var generators={
 		'year':2000,
 		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
 		'added':'2020-01-19',
+		'updated':'2020-01-20',
 		'series':'yu-gi-oh'
 	},
 

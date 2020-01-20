@@ -6,7 +6,7 @@
 	},
 	"hooks": {
 		"font": "switchFont(overlays.opponent.data.color)",
-		"pre-overlays":"{let lines=fontManager.lines;fontInfo['height']=(lines.length>3?8:16)}"
+		"pre-overlays": "{let lines=fontManager.lines;fontInfo['height']=(lines.length>3?8:16)}"
 	},
 	"wrap-width": 146,
 	"overlays": {
@@ -14,200 +14,367 @@
 			"x": 0,
 			"y": 0,
 			"title": "Opponent",
-			"default": "dark_yugi",
+			"default": "dm3_dark_yugi",
 			"options": {
-				"dark_bakura": {
+				"dm3_dark_bakura": {
 					"x": 672,
 					"y": 8,
 					"w": 160,
 					"h": 144,
-					"color":"86e6db"
+					"color": "86e6db"
 				},
-				"dark_yugi": {
+				"dm3_dark_yugi": {
 					"x": 832,
 					"y": 8,
 					"w": 160,
 					"h": 144,
-					"color":"e4f8f3"
+					"color": "e4f8f3"
 				},
-				"darknite": {
+				"dm3_darknite": {
 					"x": 992,
 					"y": 8,
 					"w": 160,
 					"h": 144,
-					"color":"efd4a4"
+					"color": "efd4a4"
 				},
-				"espa_roba": {
+				"dm3_espa_roba": {
 					"x": 1152,
 					"y": 8,
 					"w": 160,
 					"h": 144,
-					"color":"e5e0b3"
+					"color": "e5e0b3"
 				},
-				"exodia": {
+				"dm3_exodia": {
 					"x": 672,
 					"y": 152,
 					"w": 160,
 					"h": 144,
-					"color":"ecc09c"
+					"color": "ecc09c"
 				},
-				"grandpa": {
+				"dm3_grandpa": {
 					"x": 832,
 					"y": 152,
 					"w": 160,
 					"h": 144,
-					"color":"f7f4ed"
+					"color": "f7f4ed"
 				},
-				"ishizu_ishtar": {
+				"dm3_ishizu_ishtar": {
 					"x": 992,
 					"y": 152,
 					"w": 160,
 					"h": 144,
-					"color":"f5ecd7"
+					"color": "f5ecd7"
 				},
-				"joey_wheeler": {
+				"dm3_joey_wheeler": {
 					"x": 1152,
 					"y": 152,
 					"w": 160,
 					"h": 144,
-					"color":"def8f2"
+					"color": "def8f2"
 				},
-				"mai_valentine": {
+				"dm3_mai_valentine": {
 					"x": 672,
 					"y": 296,
 					"w": 160,
 					"h": 144,
-					"color":"a8ece4"
+					"color": "a8ece4"
 				},
-				"mako": {
+				"dm3_mako": {
 					"x": 832,
 					"y": 296,
 					"w": 160,
 					"h": 144,
-					"color":"f5ecd7"
+					"color": "f5ecd7"
 				},
-				"marik": {
+				"dm3_marik": {
 					"x": 992,
 					"y": 296,
 					"w": 160,
 					"h": 144,
-					"color":"f3e2da"
+					"color": "f3e2da"
 				},
-				"nightmare": {
+				"dm3_nightmare": {
 					"x": 1152,
 					"y": 296,
 					"w": 160,
 					"h": 144,
-					"color":"f8f8f8"
+					"color": "f8f8f8"
 				},
-				"pandora": {
+				"dm3_pandora": {
 					"x": 672,
 					"y": 440,
 					"w": 160,
 					"h": 144,
-					"color":"e5e0b3"
+					"color": "e5e0b3"
 				},
-				"paradox": {
+				"dm3_paradox": {
 					"x": 832,
 					"y": 440,
 					"w": 160,
 					"h": 144,
-					"color":"f2e0c5"
+					"color": "f2e0c5"
 				},
-				"priest_seto": {
+				"dm3_priest_seto": {
 					"x": 992,
 					"y": 440,
 					"w": 160,
 					"h": 144,
-					"color":"efcec2"
+					"color": "efcec2"
 				},
-				"rex_raptor": {
+				"dm3_rex_raptor": {
 					"x": 1152,
 					"y": 440,
 					"w": 160,
 					"h": 144,
-					"color":"def8f2"
+					"color": "def8f2"
 				},
-				"seeker": {
+				"dm3_seeker": {
 					"x": 672,
 					"y": 584,
 					"w": 160,
 					"h": 144,
-					"color":"f2d4f2"
+					"color": "f2d4f2"
 				},
-				"seto_kaiba": {
+				"dm3_seto_kaiba": {
 					"x": 832,
 					"y": 584,
 					"w": 160,
 					"h": 144,
-					"color":"d0f2ee"
+					"color": "d0f2ee"
 				},
-				"shadi": {
+				"dm3_shadi": {
 					"x": 992,
 					"y": 584,
 					"w": 160,
 					"h": 144,
-					"color":"f1f8f6"
+					"color": "f1f8f6"
 				},
-				"slysheen": {
+				"dm3_slysheen": {
 					"x": 1152,
 					"y": 584,
 					"w": 160,
 					"h": 144,
-					"color":"f5ece6"
+					"color": "f5ece6"
 				},
-				"tea": {
+				"dm3_tea": {
 					"x": 672,
 					"y": 728,
 					"w": 160,
 					"h": 144,
-					"color":"efd4a4"
+					"color": "efd4a4"
 				},
-				"tristan": {
+				"dm3_tristan": {
 					"x": 832,
 					"y": 728,
 					"w": 160,
 					"h": 144,
-					"color":"efd4a4"
+					"color": "efd4a4"
 				},
-				"weevil_underwood": {
+				"dm3_weevil_underwood": {
 					"x": 992,
 					"y": 728,
 					"w": 160,
 					"h": 144,
-					"color":"e4f8f3"
+					"color": "e4f8f3"
 				},
-				"yugi_muto": {
+				"dm3_yugi_muto": {
 					"x": 1152,
 					"y": 728,
 					"w": 160,
 					"h": 144,
-					"color":"efd4a4"
+					"color": "efd4a4"
+				},
+				"dm2_bakura_ryou": {
+					"x": 0,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_bandit_keith": {
+					"x": 160,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_dark_bakura": {
+					"x": 320,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_dark_yugi": {
+					"x": 480,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_dox": {
+					"x": 640,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_exodia": {
+					"x": 800,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_grampa": {
+					"x": 960,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_ishizu_ishtar": {
+					"x": 1120,
+					"y": 872,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_joey_wheeler": {
+					"x": 0,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_mai_valentine": {
+					"x": 160,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_mako": {
+					"x": 320,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_maximillion_pegasus": {
+					"x": 480,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_mokuba_kaiba": {
+					"x": 640,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_panik": {
+					"x": 800,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_para": {
+					"x": 960,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_paradox": {
+					"x": 1120,
+					"y": 1016,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_puppeteer_of_doom": {
+					"x": 0,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_rex_raptor": {
+					"x": 160,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_seto_kaiba": {
+					"x": 320,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_shadi": {
+					"x": 480,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_tea_gardner": {
+					"x": 640,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_tristan_taylor": {
+					"x": 800,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_weevil_underwood": {
+					"x": 960,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0"
+				},
+				"dm2_yugi_muto": {
+					"x": 1120,
+					"y": 1160,
+					"w": 160,
+					"h": 144,
+					"color": "dcecf0sr"
 				}
 			}
 		}
 	},
-	"default":{
-	},
+	"default": {},
 	"shiftfonts": {
-		"86e6db":0,
-		"e4f8f3":8,
-		"efd4a4":16,
-		"e5e0b3":24,
-		"ecc09c":32,
-		"f7f4ed":40,
-		"f5ecd7":48,
-		"def8f2":56,
-		"a8ece4":64,
-		"e8a6b1":72,
-		"f3e2da":80,
-		"f8f8f8":88,
-		"f2e0c5":96,
-		"efcec2":104,
-		"f1f8f6":112,
-		"f5ece6":120,
-		"f2d4f2":128,
-		"d0f2ee":136
+		"86e6db": 0,
+		"e4f8f3": 8,
+		"efd4a4": 16,
+		"e5e0b3": 24,
+		"ecc09c": 32,
+		"f7f4ed": 40,
+		"f5ecd7": 48,
+		"def8f2": 56,
+		"a8ece4": 64,
+		"e8a6b1": 72,
+		"f3e2da": 80,
+		"f8f8f8": 88,
+		"f2e0c5": 96,
+		"efcec2": 104,
+		"f1f8f6": 112,
+		"f5ece6": 120,
+		"f2d4f2": 128,
+		"d0f2ee": 136
 	},
 	"32": {
 		"x": 0,
