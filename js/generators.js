@@ -1590,5 +1590,17 @@ var generators={
 		'content-contributor': 'Grimm Translations & pacnsacdave',
 		'content-contributor-url': 'https://www.romhacking.net/games/1296/',
 		'series':'power rangers'
-	}
+	},
+	'ygodds':{
+		'title': 'Yu-Gi-Oh! Dark Duel Stories',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Welcome to the\nworld of Yu-gi-oh\uD83D\uDCC4",
+		'platform':'gameboy',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
+		'added':'2020-01-19',
+		'series':'yu-gi-oh'
+	},
+
 }
