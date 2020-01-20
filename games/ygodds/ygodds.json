@@ -9,6 +9,7 @@
 		"pre-overlays": "{let lines=fontManager.lines;fontInfo['height']=(lines.length>3?8:16)}"
 	},
 	"wrap-width": 146,
+	"note":"This is a merger of the first 3 Yu-Gi-Oh! games for the Game Boy/Game Boy Color. Only the 3rd one had an English release, so this uses the font from III for all three games.",
 	"overlays": {
 		"opponent": {
 			"x": 0,
@@ -16,173 +17,124 @@
 			"title": "Opponent",
 			"default": "dm3_dark_yugi",
 			"options": {
-				"dm3_dark_bakura": {
-					"x": 672,
-					"y": 8,
+				"dm1_bakura_ryou": {
+					"x": 0,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "86e6db"
+					"color": "000000"
 				},
-				"dm3_dark_yugi": {
-					"x": 832,
-					"y": 8,
+				"dm1_bandit_keith": {
+					"x": 160,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "e4f8f3"
+					"color": "000000"
 				},
-				"dm3_darknite": {
-					"x": 992,
-					"y": 8,
+				"dm1_dark_yugi": {
+					"x": 320,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "efd4a4"
+					"color": "000000"
 				},
-				"dm3_espa_roba": {
-					"x": 1152,
-					"y": 8,
+				"dm1_joey_wheeler": {
+					"x": 480,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "e5e0b3"
+					"color": "000000"
 				},
-				"dm3_exodia": {
-					"x": 672,
-					"y": 152,
+				"dm1_mai_valentine": {
+					"x": 640,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "ecc09c"
+					"color": "000000"
 				},
-				"dm3_grandpa": {
-					"x": 832,
-					"y": 152,
+				"dm1_mako": {
+					"x": 800,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "f7f4ed"
+					"color": "000000"
 				},
-				"dm3_ishizu_ishtar": {
-					"x": 992,
-					"y": 152,
+				"dm1_maximillion_pegasus": {
+					"x": 960,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "f5ecd7"
+					"color": "000000"
 				},
-				"dm3_joey_wheeler": {
-					"x": 1152,
-					"y": 152,
+				"dm1_mokuba_kaiba": {
+					"x": 1120,
+					"y": 1304,
 					"w": 160,
 					"h": 144,
-					"color": "def8f2"
+					"color": "000000"
 				},
-				"dm3_mai_valentine": {
-					"x": 672,
-					"y": 296,
+				"dm1_panik": {
+					"x": 0,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "a8ece4"
+					"color": "000000"
 				},
-				"dm3_mako": {
-					"x": 832,
-					"y": 296,
+				"dm1_paradox": {
+					"x": 160,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "f5ecd7"
+					"color": "000000"
 				},
-				"dm3_marik": {
-					"x": 992,
-					"y": 296,
+				"dm1_puppeteer_of_doom": {
+					"x": 320,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "f3e2da"
+					"color": "000000"
 				},
-				"dm3_nightmare": {
-					"x": 1152,
-					"y": 296,
+				"dm1_rex_raptor": {
+					"x": 480,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "f8f8f8"
+					"color": "000000"
 				},
-				"dm3_pandora": {
-					"x": 672,
-					"y": 440,
+				"dm1_seto_kaiba": {
+					"x": 640,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "e5e0b3"
+					"color": "000000"
 				},
-				"dm3_paradox": {
-					"x": 832,
-					"y": 440,
+				"dm1_tea_gardner": {
+					"x": 800,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "f2e0c5"
+					"color": "000000"
 				},
-				"dm3_priest_seto": {
-					"x": 992,
-					"y": 440,
+				"dm1_tristen_taylor": {
+					"x": 960,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "efcec2"
+					"color": "000000"
 				},
-				"dm3_rex_raptor": {
-					"x": 1152,
-					"y": 440,
+				"dm1_weevil_underwood": {
+					"x": 1120,
+					"y": 1448,
 					"w": 160,
 					"h": 144,
-					"color": "def8f2"
+					"color": "000000"
 				},
-				"dm3_seeker": {
-					"x": 672,
-					"y": 584,
+				"dm1_yugi_muto": {
+					"x": 0,
+					"y": 1592,
 					"w": 160,
 					"h": 144,
-					"color": "f2d4f2"
-				},
-				"dm3_seto_kaiba": {
-					"x": 832,
-					"y": 584,
-					"w": 160,
-					"h": 144,
-					"color": "d0f2ee"
-				},
-				"dm3_shadi": {
-					"x": 992,
-					"y": 584,
-					"w": 160,
-					"h": 144,
-					"color": "f1f8f6"
-				},
-				"dm3_slysheen": {
-					"x": 1152,
-					"y": 584,
-					"w": 160,
-					"h": 144,
-					"color": "f5ece6"
-				},
-				"dm3_tea": {
-					"x": 672,
-					"y": 728,
-					"w": 160,
-					"h": 144,
-					"color": "efd4a4"
-				},
-				"dm3_tristan": {
-					"x": 832,
-					"y": 728,
-					"w": 160,
-					"h": 144,
-					"color": "efd4a4"
-				},
-				"dm3_weevil_underwood": {
-					"x": 992,
-					"y": 728,
-					"w": 160,
-					"h": 144,
-					"color": "e4f8f3"
-				},
-				"dm3_yugi_muto": {
-					"x": 1152,
-					"y": 728,
-					"w": 160,
-					"h": 144,
-					"color": "efd4a4"
+					"color": "000000"
 				},
 				"dm2_bakura_ryou": {
 					"x": 0,
@@ -351,6 +303,174 @@
 					"w": 160,
 					"h": 144,
 					"color": "dcecf0sr"
+				},
+				"dm3_dark_bakura": {
+					"x": 672,
+					"y": 8,
+					"w": 160,
+					"h": 144,
+					"color": "86e6db"
+				},
+				"dm3_dark_yugi": {
+					"x": 832,
+					"y": 8,
+					"w": 160,
+					"h": 144,
+					"color": "e4f8f3"
+				},
+				"dm3_darknite": {
+					"x": 992,
+					"y": 8,
+					"w": 160,
+					"h": 144,
+					"color": "efd4a4"
+				},
+				"dm3_espa_roba": {
+					"x": 1152,
+					"y": 8,
+					"w": 160,
+					"h": 144,
+					"color": "e5e0b3"
+				},
+				"dm3_exodia": {
+					"x": 672,
+					"y": 152,
+					"w": 160,
+					"h": 144,
+					"color": "ecc09c"
+				},
+				"dm3_grandpa": {
+					"x": 832,
+					"y": 152,
+					"w": 160,
+					"h": 144,
+					"color": "f7f4ed"
+				},
+				"dm3_ishizu_ishtar": {
+					"x": 992,
+					"y": 152,
+					"w": 160,
+					"h": 144,
+					"color": "f5ecd7"
+				},
+				"dm3_joey_wheeler": {
+					"x": 1152,
+					"y": 152,
+					"w": 160,
+					"h": 144,
+					"color": "def8f2"
+				},
+				"dm3_mai_valentine": {
+					"x": 672,
+					"y": 296,
+					"w": 160,
+					"h": 144,
+					"color": "a8ece4"
+				},
+				"dm3_mako": {
+					"x": 832,
+					"y": 296,
+					"w": 160,
+					"h": 144,
+					"color": "f5ecd7"
+				},
+				"dm3_marik": {
+					"x": 992,
+					"y": 296,
+					"w": 160,
+					"h": 144,
+					"color": "f3e2da"
+				},
+				"dm3_nightmare": {
+					"x": 1152,
+					"y": 296,
+					"w": 160,
+					"h": 144,
+					"color": "f8f8f8"
+				},
+				"dm3_pandora": {
+					"x": 672,
+					"y": 440,
+					"w": 160,
+					"h": 144,
+					"color": "e5e0b3"
+				},
+				"dm3_paradox": {
+					"x": 832,
+					"y": 440,
+					"w": 160,
+					"h": 144,
+					"color": "f2e0c5"
+				},
+				"dm3_priest_seto": {
+					"x": 992,
+					"y": 440,
+					"w": 160,
+					"h": 144,
+					"color": "efcec2"
+				},
+				"dm3_rex_raptor": {
+					"x": 1152,
+					"y": 440,
+					"w": 160,
+					"h": 144,
+					"color": "def8f2"
+				},
+				"dm3_seeker": {
+					"x": 672,
+					"y": 584,
+					"w": 160,
+					"h": 144,
+					"color": "f2d4f2"
+				},
+				"dm3_seto_kaiba": {
+					"x": 832,
+					"y": 584,
+					"w": 160,
+					"h": 144,
+					"color": "d0f2ee"
+				},
+				"dm3_shadi": {
+					"x": 992,
+					"y": 584,
+					"w": 160,
+					"h": 144,
+					"color": "f1f8f6"
+				},
+				"dm3_slysheen": {
+					"x": 1152,
+					"y": 584,
+					"w": 160,
+					"h": 144,
+					"color": "f5ece6"
+				},
+				"dm3_tea": {
+					"x": 672,
+					"y": 728,
+					"w": 160,
+					"h": 144,
+					"color": "efd4a4"
+				},
+				"dm3_tristan": {
+					"x": 832,
+					"y": 728,
+					"w": 160,
+					"h": 144,
+					"color": "efd4a4"
+				},
+				"dm3_weevil_underwood": {
+					"x": 992,
+					"y": 728,
+					"w": 160,
+					"h": 144,
+					"color": "e4f8f3"
+				},
+				"dm3_yugi_muto": {
+					"x": 1152,
+					"y": 728,
+					"w": 160,
+					"h": 144,
+					"color": "efd4a4"
 				}
 			}
 		}
@@ -374,7 +494,9 @@
 		"f1f8f6": 112,
 		"f5ece6": 120,
 		"f2d4f2": 128,
-		"d0f2ee": 136
+		"d0f2ee": 136,
+		"dcecf0": 144,
+		"000000": 152
 	},
 	"32": {
 		"x": 0,
