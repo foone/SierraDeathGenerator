@@ -1000,6 +1000,17 @@ var generators={
 		'added':'2018-04-04',
 		'series':'pokemon'
 	},
+	'pokesnap':{
+		'title': 'Pokemon Snap',
+		'source':'HAL Laboratory',
+		'sourceurl':'https://en.wikipedia.org/wiki/HAL_Laboratory',
+		'defaulttext':'Here on Pok\u00E9mon Island,\nwild Pok\u00E9mon can be\nfound everywhere.',
+		'platform':'n64',
+		'year':1999,
+		'gameinfo':'https://www.mobygames.com/game/pokmon-snap',
+		'added':'2020-01-26',
+		'series':'pokemon'
+	},
 	'pq2':{
 		'title': 'Police Quest 2',
 		'source':'Sierra Online',
