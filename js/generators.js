@@ -17,7 +17,8 @@ var generators={
 		'added':'2018-05-06',
 		'platform':'arcade',
 		'year':1994,
-		'gameinfo':'https://www.mobygames.com/game/aero-fighters-2'
+		'gameinfo':'https://www.mobygames.com/game/aero-fighters-2',
+		'series':'aero fighters'
 	},
 	'aba':{
 		'title': 'All About America',
@@ -60,6 +61,7 @@ var generators={
 		'platform':'ds',
 		'added':'2019-02-20',
 		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/animal-crossing-wild-world',
+		'series':'animal crossing'
 
 	},
 	'atari8bit':{
@@ -159,7 +161,8 @@ var generators={
 		'platform':'ps1',
 		'added':'2019-02-13',
 		'year':2000,
-		'gameinfo':'https://www.mobygames.com/game/breath-of-fire-iv'
+		'gameinfo':'https://www.mobygames.com/game/breath-of-fire-iv',
+		'series':'breath of fire'
 	},
 	'cn':{
 		'title': 'Captain Novolin',
@@ -190,7 +193,8 @@ var generators={
 		'added':'2018-05-21',
 		'year':1997,
 		'gameinfo':'https://www.mobygames.com/game/dos/carmageddon',
-		'platform':'dos'
+		'platform':'dos',
+		'series':'carmageddon'
 	},
 	'cotw':{
 		'title': 'Castle of the Winds',
@@ -226,14 +230,14 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/gameboy/castlevania-legends'
 	},
 	'sotn':{
-		'title': 'Castlevania: Symphony of the Night',
+		'title': 'Castlevania Symphony of the Night',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':'Richter\n  Die monster.\n  You don\'t belong\n  in this world!',
 		'content-type':'christmas theme',
 		'content-contributor': '@Ashuraou',
 		'content-contributor-url': 'https://twitter.com/ashuraou',
-		'platform':'PS1',
+		'platform':'ps1',
 		'added':'2018-02-23',
 		'updated':'2018-12-26',
 		'series':'castlevania',
@@ -302,6 +306,7 @@ var generators={
 		'year':1989,
 		'gameinfo':'https://www.mobygames.com/game/colonels-bequest',
 		'added':'2018-04-25',
+		'series':'laura bow',
 	},
 	'keen4':{
 		'title': 'Commander Keen 4',
@@ -313,6 +318,7 @@ var generators={
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/commander-keen-goodbye-galaxy',
 		'added':'2017-12-19',
+		'series':'commander keen'
 	},
 	'c64':{
 		'title': 'Commodore 64',
@@ -389,6 +395,7 @@ var generators={
 		'year':2000,
 		'gameinfo':'https://www.mobygames.com/game/deus-ex',
 		'added':'2018-04-17',
+		'series':'deus ex'
 
 	},
 	'ddp':{
@@ -413,6 +420,7 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/doom',
 		'added':'2018-04-10',
+		'series':'doom'
 
 	},
 	'dos':{
@@ -435,6 +443,7 @@ var generators={
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/double-dragon-v-the-shadow-falls',
 		'added':'2019-04-12',
+		'series':'double dragon'
 	},
 	'doug':{
 		'title': "Doug's Big Game",
@@ -467,6 +476,7 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/dos/duke-nukum-episode-1-shrapnel-city',
 		'added':'2018-01-08',
+		'series':'duke nukem'
 
 	},
 	'ecco1':{
@@ -478,6 +488,7 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://www.mobygames.com/game/ecco-the-dolphin',
 		'added':'2018-04-27',
+		'series':'ecco'
 
 	},
 	'edit':{
@@ -534,6 +545,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/arcade/final-fight',
 		'added':'2018-10-31',
 
+	},
+	'fbib':{
+		'title': 'Flintstones: Burgertime in Bedrock',
+		'source':'Conspiracy',
+		'sourceurl':'https://en.wikipedia.org/wiki/Conspiracy_Entertainment',
+		'defaulttext':"Yabba Dabba Doo!",
+		"year":2000,
+		"platform":"gameboy",
+		'gameinfo':'https://www.mobygames.com/game/gameboy-color/flintstones-burgertime-in-bedrock',
+		'added':'2020-01-17',
 	},
 	'f13':{
 		'title': 'Friday the 13th',
@@ -650,6 +671,7 @@ var generators={
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/kings-quest-iv-the-perils-of-rosella',
 		'added':'2018-01-25',
+		'series':'kings quest'
 
 	},
 	'kq5':{
@@ -662,7 +684,7 @@ var generators={
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/kings-quest-v-absence-makes-the-heart-go-yonder',
 		'added':'2018-03-19',
-
+		'series':'kings quest'
 	},
 	'ka':{
 		'title': 'Kirby\'s Adventure',
@@ -738,7 +760,8 @@ var generators={
 		'platform':'genesis',
 		'year':1994,
 		'added':'2019-10-01',
-		'gameinfo':'https://www.mobygames.com/game/madden-nfl-95'
+		'gameinfo':'https://www.mobygames.com/game/madden-nfl-95',
+		'series':'madden'
 	},
 	'ms':{
 		'title': 'Major Stryker',
@@ -761,7 +784,8 @@ var generators={
 		'platform':'dos',
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/manhunter-new-york',
-		'added':'2018-01-05'
+		'added':'2018-01-05',
+		'series':'manhunter'
 	},
 	'moo':{
 		'title': 'Master of Orion',
@@ -771,7 +795,8 @@ var generators={
 		'platform':'dos',
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/master-of-orion',
-		'added':'2019-04-23'
+		'added':'2019-04-23',
+		'series':'master of orion'
 	},
 	'mbtt':{
 		'title': 'Mavis Beacon Teaches Typing',
@@ -825,7 +850,7 @@ var generators={
 		'defaulttext':"I can't believe I'm being hit on\nby the famous Solid Snake...",
 		'gameinfo':'https://www.mobygames.com/game/metal-gear-solid',
 		'platform':'ps1',
-		'series':'metal gear solid',
+		'series':'metal gear',
 		'added':'2018-03-07',
 		'year':1999
 	},
@@ -838,6 +863,7 @@ var generators={
 		'year':1986,
 		'gameinfo':'https://www.mobygames.com/game/metroid',
 		'added':'2018-04-10',
+		'series':'metroid',
 	},
 	'mmprtm':{
 		'title': 'Mighty Morphin Power Rangers: The Movie',
@@ -845,7 +871,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/SIMS_Co.,_Ltd.',
 		'defaulttext':'Please remember the difference\nbetween fantasy and reality.\nDo your fighting on the screen,\nnot at home or at school.',
 		'platform':'genesis',
-		'series':'mighty morphin power rangers',
+		'series':'power rangers',
 		'year':1995,
 		'added':'2018-11-06',
 		'gameinfo':'https://www.mobygames.com/game/genesis/mighty-morphin-power-rangers-the-movie__'
@@ -938,6 +964,7 @@ var generators={
 		'year':1989,
 		'gameinfo':'https://www.mobygames.com/game/nes/ninja-gaiden',
 		'added':'2018-04-20',
+		'series':'ninja gaiden',
 
 	},
 	'odallus':{
@@ -971,7 +998,18 @@ var generators={
 		'year':1998,
 		'gameinfo':'https://www.mobygames.com/game/pokmon-red-version',
 		'added':'2018-04-04',
-
+		'series':'pokemon'
+	},
+	'pokesnap':{
+		'title': 'Pokemon Snap',
+		'source':'HAL Laboratory',
+		'sourceurl':'https://en.wikipedia.org/wiki/HAL_Laboratory',
+		'defaulttext':'Here on Pok\u00E9mon Island,\nwild Pok\u00E9mon can be\nfound everywhere.',
+		'platform':'n64',
+		'year':1999,
+		'gameinfo':'https://www.mobygames.com/game/pokmon-snap',
+		'added':'2020-01-26',
+		'series':'pokemon'
 	},
 	'pq2':{
 		'title': 'Police Quest 2',
@@ -982,6 +1020,7 @@ var generators={
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/police-quest-2-the-vengeance',
 		'added':'2017-10-26',
+		'series':'police quest'
 	},
 	'pq3':{
 		'title': 'Police Quest 3',
@@ -992,7 +1031,7 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/police-quest-3-the-kindred',
 		'added':'2018-12-18',
-
+		'series':'police quest'
 	},
 	'pw':{
 		'title': 'Pilotwings',
@@ -1037,6 +1076,7 @@ var generators={
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/sid-meiers-railroad-tycoon',
 		'added':'2018-06-02',
+		'series':'railroad tycoon'
 	},
 	"rr":{
 		'title': 'Road Rash',
@@ -1047,6 +1087,7 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/road-rash',
 		'added':'2018-04-15',
+		'series':'road rash'
 	},
 	"rygar":{
 		'title': 'Rygar',
@@ -1079,7 +1120,8 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/simcity-2000',
 		'added':'2017-12-18',
-		'updated':'2019-02-23'
+		'updated':'2019-02-23',
+		'series':'simcity'
 	},
 	'sqta':{
 		'title': 'Simon Quest: Transylvania Adventure',
@@ -1089,7 +1131,7 @@ var generators={
 		'gameinfo':"https://programancer.itch.io/simon-quest",
 		'play':"https://programancer.itch.io/simon-quest",
 		'where-to-use':'itch.io',
-		'platform':'windows',
+		'platform':'win32',
 		'year':2019,
 		'added':'2019-07-06',
 	},
@@ -1187,6 +1229,7 @@ var generators={
 		'year':1986,
 		'gameinfo':'https://www.mobygames.com/game/space-quest-chapter-i-the-sarien-encounter',
 		'added':'2018-05-08',
+		"series":"space quest"
 
 	},
 	'sq3':{
@@ -1198,6 +1241,7 @@ var generators={
 		'year':1989,
 		'gameinfo':'https://www.mobygames.com/game/space-quest-iii-the-pirates-of-pestulon',
 		'added':'2017-12-21',
+		"series":"space quest"
 	},
 	'sq4':{
 		'title': 'Space Quest 4',
@@ -1208,6 +1252,7 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/space-quest-iv-roger-wilco-and-the-time-rippers',
 		'added':'2018-03-08',
+		"series":"space quest"
 	},
 	'sv':{
 		'title': 'Stardew Valley',
@@ -1228,7 +1273,8 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://www.mobygames.com/game/star-control-ii',
 		'added':'2018-05-26',
-	},
+		'series':'star control'
+	},	
 	'sf':{
 		'title': 'Star Fox',
 		'source':'Nintendo',
@@ -1238,6 +1284,7 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/snes/star-fox_',
 		'added':'2018-05-02',
+		'series':'star fox'
 	},
 	'sttngafu':{
 		'title': 'Star Trek: A Final Unity',
@@ -1270,7 +1317,8 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/street-fighter-ii-the-world-warrior',
 		'added':'2018-04-03',
-		'updated':'2019-02-26'
+		'updated':'2019-02-26',
+		'series':'street fighter'
 	},
 	'strider':{
 		'title': 'Strider',
@@ -1369,6 +1417,7 @@ var generators={
 		'year':1999,
 		'gameinfo':'https://www.mobygames.com/game/system-shock-2',
 		'added':'2018-06-16',
+		'series':'system shock'
 	},
 	'tmnt1':{
 		'title': 'TMNT',
@@ -1379,6 +1428,7 @@ var generators={
 		'year':1989,
 		'gameinfo':'https://www.mobygames.com/game/nes/teenage-mutant-ninja-turtles',
 		'added':'2018-04-23',
+		'series':'tmnt',
 	},
 	'tjae2':{
 		'title': 'ToeJam & Earl 2',
@@ -1389,6 +1439,7 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/toejam-earl-in-panic-on-funkotron',
 		'added':'2018-04-28',
+		'series':'toejam and earl'
 	},
 	'tr':{
 		'title': 'Totally Rad',
@@ -1494,6 +1545,7 @@ var generators={
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/snes/world-heroes-2',
 		'added':'2018-05-14',
+		'series':'world heroes'
 	},
 	'wbm':{
 		'title': 'Wrath of the Black Manta',
@@ -1514,6 +1566,7 @@ var generators={
 		'year':1995,
 		'gameinfo':'https://www.mobygames.com/game/super-mario-world-2-yoshis-island',
 		'added':'2019-02-23',
+		'series':'mario'
 	},
 	'zelda2':{
 		'title': 'Zelda II: The Adventure of Link',
@@ -1557,5 +1610,19 @@ var generators={
 		'added':'2019-11-20',
 		'content-contributor': 'Grimm Translations & pacnsacdave',
 		'content-contributor-url': 'https://www.romhacking.net/games/1296/',
-	}
+		'series':'power rangers'
+	},
+	'ygodds':{
+		'title': 'Yu-Gi-Oh!',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Welcome to the\nworld of Yu-gi-oh\uD83D\uDCC4",
+		'platform':'gameboy',
+		'year':1998,
+		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
+		'added':'2020-01-19',
+		'updated':'2020-01-20',
+		'series':'yu-gi-oh'
+	},
+
 }
