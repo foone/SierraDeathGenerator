@@ -1220,6 +1220,18 @@ var generators={
 		'gameinfo':'https://bootleggames.fandom.com/wiki/Soul_Falchion',
 		'added':'2019-02-17'
 	},
+	'smurfs3':{
+		'title': "Smurfs' Nightmare",
+		'source':'Velez & Dubail',
+		'sourceurl':'https://en.wikipedia.org/wiki/VD-dev',
+		'defaulttext':"Go into their houses and rescue them.",
+		'platform':'gameboy',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/smurfs-nightmare',
+		'added':'2020-02-01',
+		'content-contributor': 'Monster Go! Go! Go!!',
+		'content-contributor-url' :'https://bootleggames.fandom.com/wiki/Monster_Go!_Go!_Go!!',
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
