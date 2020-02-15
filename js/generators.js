@@ -662,6 +662,16 @@ var generators={
 		'added':'2019-01-06',
 		'gameinfo':'https://www.mobygames.com/game/nes/kick-master'
 	},
+	'kc':{
+		'title': 'Kickle Cubicle',
+		'source':'Irem',
+		'sourceurl':'https://en.wikipedia.org/wiki/Irem',
+		'defaulttext':"The beautiful Fantasy Kingdom is now under the rule of the Wizard King.",
+		'platform':'nes',
+		'year':1990,
+		'added':'2020-02-14',
+		'gameinfo':'https://www.mobygames.com/game/kickle-cubicle'
+	},
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
