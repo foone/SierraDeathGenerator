@@ -672,6 +672,16 @@ var generators={
 		'added':'2020-02-14',
 		'gameinfo':'https://www.mobygames.com/game/kickle-cubicle'
 	},
+	'kok':{
+		'title': 'King of Kings',
+		'source':'Wisdom Tree',
+		'sourceurl':'https://en.wikipedia.org/wiki/Wisdom_Tree',
+		'defaulttext':"Who was the mother of\nJesus?\n(Matthew 1:18)\n\n\n\n\n  Martha\n  Mary\n  Joanna",
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/nes/king-of-kings-the-early-years',
+		'added':'2020-02-23',
+	},
 	'kq4':{
 		'title': 'King\'s Quest 4',
 		'source':'Sierra Online',
