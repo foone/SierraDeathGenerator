@@ -12,6 +12,7 @@
 	"hooks":{
 		"pre-overlays": "overlays.cursor.y=overlays.cursor.data.placement"
 	},
+	"wrap-width": 188,
 	"overlays": {
 		"cursor": {
 			"x": 36,
