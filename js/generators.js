@@ -502,6 +502,16 @@ var generators={
 		'added':'2018-04-15',
 
 	},
+	'exodus':{
+		'title': 'Exodus',
+		'source':'Wisdom Tree',
+		'sourceurl':'https://en.wikipedia.org/wiki/Wisdom_Tree',
+		'defaulttext':"\nPlayer  1\nLevel   1\n\nPress SPACE to start level...",
+		'platform':'dos',
+		'year':1991,
+		'gameinfo':'https://en.wikipedia.org/wiki/Wisdom_Tree',
+		'added':'2080-02-23',
+	},
 	'fwbt':{
 		'title': 'The Frog for Whom the Bell Tolls',
 		'source':'Nintendo',
