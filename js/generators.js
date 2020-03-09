@@ -1450,6 +1450,16 @@ var generators={
 		'defaulttext':'\nYou are \n\nClark Kent',
 		'added':'2019-02-07'
 	},
+	'swatkats':{
+		'title': 'SWAT Kats',
+		'source':'AIM',
+		'sourceurl':'https://en.wikipedia.org/wiki/Fortyfive',
+		'defaulttext':" To:The Swat Kats\n FR:Mayor Manx\n\n Trouble at MadKat\n Amusement Park. Children\n disappearing. Find Them!",
+		'platform':'snes',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/swat-kats-the-radical-squadron',
+		'added':'2020-03-08',
+	},
 	'ss2':{
 		'title': 'System Shock 2',
 		'source':'Irrational Games and Looking Glass Studios',
