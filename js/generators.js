@@ -214,6 +214,7 @@ var generators={
 		'defaulttext':'What a\nhorrible\nnight to\nhave a\ncurse.',
 		'platform':'nes',
 		'added':'2018-04-28',
+		'updated':'2020-03-11',
 		'series':'castlevania',
 		'year':1987,
 		'gameinfo':'https://www.mobygames.com/game/castlevania-ii-simons-quest'
