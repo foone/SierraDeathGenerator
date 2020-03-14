@@ -340,8 +340,9 @@ var generators={
 		'defaulttext':"THAT'S NOT THE UNMANNED ROBOT!\n\nSOMEBODY IS INSIDE THAT THING!",
 		'platform':'genesis',
 		'year':1994,
+		'series':'contra',
 		'gameinfo':'https://www.mobygames.com/game/contra-hard-corps',
-		'added':'2020-03-14',
+		'added':'2020-03-14'
 	},
 	'cosmo':{
 		'title': 'Cosmo\'s Cosmic Adventure',
