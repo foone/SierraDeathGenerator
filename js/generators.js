@@ -772,6 +772,18 @@ var generators={
 		'added':'2019-02-13',
 		'gameinfo':'https://www.mobygames.com/game/legend-of-zelda-links-awakening'	
 	},
+	'lsl1':{
+		'title': 'Leisure Suit Larry',
+		'source':'Sierra On-Line',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sierra_Entertainment',
+		'defaulttext':"I find computer games with\nadult content\n\n  a. offensive.\n  b. acceptable.\n  c. repulsive.\n  d. under my bed.",
+		'series': 'leisure suit larry',
+		'play':"https://archive.org/details/msdos_Leisure_Suit_Larry_1_-_Land_of_the_Lounge_Lizards_1987",
+		'platform':'dos',
+		'year':1987,
+		'added':'2020-03-15',
+		'gameinfo':'https://www.mobygames.com/game/leisure-suit-larry-in-the-land-of-the-lounge-lizards'	
+	},
 	'lad':{
 		'title': 'Life & Death',
 		'source':'The Software Toolworks',
