@@ -841,6 +841,16 @@ var generators={
 		'added':'2018-01-05',
 		'series':'manhunter'
 	},
+	'msh':{
+		'title': 'Marvel Super Heroes',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"I hear they're looking for people at the\nclown college.",
+		'platform':'arcade',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/marvel-super-heroes',
+		'added':'2020-03-17'
+	},
 	'moo':{
 		'title': 'Master of Orion',
 		'source':'Simtex',
