@@ -662,6 +662,16 @@ var generators={
 		'added':'2018-12-30',
 		'gameinfo':'https://www.mobygames.com/game/nes/iron-tank-the-invasion-of-normandy'
 	},
+	'jojo':{
+		'title': "JoJo's Bizarre Adventure",
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Stupid people can believe in anything,\nso you can believe in yourself!",
+		'platform':'arcade',
+		'year':1998,
+		'added':'2020-03-18',
+		'gameinfo':'https://www.mobygames.com/game/jojos-bizarre-adventure'
+	},
 	'karnovr':{
 		'title': "Karnov's Revenge",
 		'source':'Data East',
