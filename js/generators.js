@@ -524,6 +524,16 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/Wisdom_Tree',
 		'added':'2080-02-23',
 	},
+	'fatalfuryspecial':{
+		'title': 'Fatal Fury Special',
+		'source':'SNK',
+		'sourceurl':'https://en.wikipedia.org/wiki/SNK',
+		'defaulttext':"Oh, Andy. You've become so\nstrong. Not!",
+		'platform':'arcade',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/fatal-fury-2',
+		'added':'2080-03-21'
+	},
 	'fwbt':{
 		'title': 'The Frog for Whom the Bell Tolls',
 		'source':'Nintendo',
