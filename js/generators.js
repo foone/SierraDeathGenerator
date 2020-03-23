@@ -532,7 +532,8 @@ var generators={
 		'platform':'arcade',
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/fatal-fury-2',
-		'added':'2080-03-21'
+		'added':'2080-03-21',
+		'updated':'2080-03-22'
 	},
 	'fwbt':{
 		'title': 'The Frog for Whom the Bell Tolls',
