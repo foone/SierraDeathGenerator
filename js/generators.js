@@ -62,7 +62,17 @@ var generators={
 		'added':'2019-02-20',
 		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/animal-crossing-wild-world',
 		'series':'animal crossing'
-
+	},
+	'aof1':{
+		'title':'Art of Fighting',
+		'source':'SNK',
+		'sourceurl':'https://en.wikipedia.org/wiki/SNK',
+		'defaulttext':"Now you understand.\nDon't judge me by my looks.",
+		'year':1992,
+		'platform':'arcade',
+		'added':'2020-03-23',
+		'gameinfo':'https://www.mobygames.com/game/art-of-fighting',
+		'series':'art of fighting'
 	},
 	'atari8bit':{
 		'title':'Atari 8-bit',
