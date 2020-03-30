@@ -545,6 +545,16 @@ var generators={
 		'added':'2080-03-21',
 		'updated':'2080-03-22'
 	},
+	'faxanadu':{
+		'title': 'Faxanadu',
+		'source':'Nihon Falcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nihon_Falcom',
+		'defaulttext':"This is not \nenough Golds.",
+		'platform':'nes',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/faxanadu',
+		'added':'2080-03-30',
+	},
 	'fwbt':{
 		'title': 'The Frog for Whom the Bell Tolls',
 		'source':'Nintendo',
