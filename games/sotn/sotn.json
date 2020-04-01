@@ -1,17 +1,27 @@
 {
 	"height": 12,
-	"first-height": 14,
 	"origin": {
 		"x": 56,
 		"y": 22
 	},
+	"explicit-origins": {
+		"0": {
+			"x": 56,
+			"y": 22
+		},
+		"1": {
+			"x": 72,
+			"y": 36
+		}
+	},
 	"null-character": 32,
+	"wrap-width": 168,
 	"overlays": {
 		"portrait": {
 			"x": 7,
 			"y": 17,
 			"title": "Portrait",
-			"default": "richter-left",
+			"default": "dracula-right",
 			"options": {
 				"richter-right": {
 					"x": 0,
@@ -159,9 +169,9 @@
 					"y": 98,
 					"w": 256,
 					"h": 208,
-					"info":{
-						"screenw":256,
-						"screenh":208
+					"info": {
+						"screenw": 256,
+						"screenh": 208
 					}
 				},
 				"christmas": {
@@ -169,9 +179,9 @@
 					"y": 78,
 					"w": 280,
 					"h": 240,
-					"info":{
-						"screenw":280,
-						"screenh":240
+					"info": {
+						"screenw": 280,
+						"screenh": 240
 					}
 				},
 				"christmas-without-hat": {
@@ -179,11 +189,12 @@
 					"y": 78,
 					"w": 280,
 					"h": 240,
-					"info":{
-						"screenw":280,
-						"screenh":240
+					"info": {
+						"screenw": 280,
+						"screenh": 240
 					}
-				}			}
+				}
+			}
 		},
 		"christmas": {
 			"x": 0,
