@@ -780,6 +780,16 @@ var generators={
 		'added':'2019-01-11',
 		'gameinfo':'https://www.mobygames.com/game/kirbys-adventure'
 	},
+	'kkfeoe':{
+		'title': 'Kabuki Klash',
+		'source':'Racdym',
+		'sourceurl':'https://en.wikipedia.org/wiki/Racjin',
+		'defaulttext':"No one can defeat me!\nAt the end, the only one\nwho can defeat me is myself.",
+		'platform':'arcade',
+		'year':1995,
+		'added':'2020-04-04',
+		'gameinfo':'https://www.mobygames.com/game/kabuki-klash'
+	},
 	'zelda':{
 		'title': 'Legend of Zelda',
 		'source':'Nintendo',
