@@ -892,6 +892,17 @@ var generators={
 		'added':'2018-01-05',
 		'series':'manhunter'
 	},
+	'mpa':{
+		'title': 'Mario Party Advance',
+		'source':'Hudson Soft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hudson_Soft',
+		'defaulttext':'Mushroom Challenge time! Spin the wheel!',
+		"year":2005,
+		'gameinfo':'https://www.mobygames.com/game/mario-party-advance',
+		"platform":"gba",
+		'series':'mario party',
+		'added':'2020-04-09'
+	},
 	'msh':{
 		'title': 'Marvel Super Heroes',
 		'source':'Capcom',
