@@ -5,10 +5,77 @@
 		"y": 4
 	},
 	"null-character": 32,
-	"dynamic-size": {
-		"w": "20+textbox.w",
-		"h": "9+textbox.h"
+	"hooks": {
+		"font": "{switchFont(overlays.style.data.font);let fontorigin = overlays.style.data.origin;mainFont.y=fontorigin.y;originx=fontorigin.x}"
 	},
+	"dynamic-size": {
+		"w": "Math.max(20+textbox.w,overlays.style.data.minw)",
+		"h": "Math.max(9+textbox.h,overlays.style.data.minh)"
+	},
+
+	"overlays": {
+		"style": {
+			"x": 0,
+			"y": 0,
+			"title": "Style",
+			"default": "dialog_box",
+			"options": {
+				"dialog_box": {
+					"x": -32,
+					"y": 0,
+					"w": 8,
+					"h": 8,
+					"font":"main",
+					"minw":0,
+					"minh":0,
+					"origin":{
+						"x":8,
+						"y":4
+					}
+				},
+				"grey_on_black": {
+					"x": 0,
+					"y": 100,
+					"w": 320,
+					"h": 240,
+					"font":"grey",
+					"minw":320,
+					"minh":240,
+					"origin":{
+						"x":89,
+						"y":109
+					}
+				},
+				"white_on_black": {
+					"x": 320,
+					"y": 100,
+					"w": 320,
+					"h": 240,
+					"font":"main",
+					"minw":320,
+					"minh":240,
+					"origin":{
+						"x":91,
+						"y":109
+					}
+				},
+				"black_on_white": {
+					"x": 640,
+					"y": 100,
+					"w": 320,
+					"h": 240,
+					"font":"black",
+					"minw":320,
+					"minh":240,
+					"origin":{
+						"x":91,
+						"y":109
+					}
+				}
+			}
+		}
+	},
+
 	"border": {
 		"tl": {
 			"x": 0,
@@ -65,6 +132,14 @@
 			"w": 4,
 			"h": 4
 		}
+	},
+	"default":{
+		"y":0
+	},
+	"shiftfonts": {
+		"grey": 84,
+		"gray": 84,
+		"black": 340
 	},
 	"8216": {
 		"x": 1445,
@@ -729,6 +804,11 @@
 	"252": {
 		"x": 1051,
 		"w": 7,
+		"h": 16
+	},
+	"8230":{
+		"x": 1344,
+		"w": 9,
 		"h": 16
 	}
 }

@@ -585,6 +585,7 @@ var generators={
 		'year':1997,
 		'series':'final fantasy',
 		'added':'2018-04-27',
+		'updated':'2020-04-09',
 		'gameinfo':'https://www.mobygames.com/game/final-fantasy-vii'
 	},
 	'finalfight1':{
