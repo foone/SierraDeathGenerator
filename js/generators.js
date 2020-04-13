@@ -674,6 +674,18 @@ var generators={
 		'added':'2018-04-21',
 
 	},
+	'hkbcd':{
+		'title': 'Hello Kitty: Big City Dreams',
+		'source': 'Empire Interactive',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Empire_Interactive',
+		'defaulttext': 'Hello Kitty!',
+		'contributor': '@tesnos6921',
+		'contributorurl': 'https://twitter.com/tesnos6921',
+		'platform': 'ds',
+		'year': 2008,
+		'gameinfo': 'https://www.mobygames.com/game/nintendo-ds/hello-kitty-big-city-dreams',
+		'added': '2019-12-10',
+	},
 	'hso':{
 		'title': 'Hypnospace Outlaw',
 		'source':'Tendershoot, Michael Lasch, ThatWhichIs Media',
