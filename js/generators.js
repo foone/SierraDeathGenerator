@@ -678,7 +678,7 @@ var generators={
 		'title': 'Home Alone 2',
 		'source':'Imagineering, Inc.',
 		'sourceurl':'https://en.wikipedia.org/wiki/Imagineering_(company)',
-		'defaulttext':"Kevin Mc Callister!\nFive feet of trouble...\nBlonde hair, Blue eyes--",
+		'defaulttext':"\n\nKevin Mc Callister!\nFive feet of trouble...\nBlonde hair, Blue eyes--",
 		'platform':'snes',
 		'year':1992,
 		'added':'2020-04-14',
