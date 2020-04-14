@@ -674,6 +674,16 @@ var generators={
 		'added':'2018-04-21',
 
 	},
+	'ha2':{
+		'title': 'Home Alone 2',
+		'source':'Imagineering, Inc.',
+		'sourceurl':'https://en.wikipedia.org/wiki/Imagineering_(company)',
+		'defaulttext':"Kevin Mc Callister!\nFive feet of trouble...\nBlonde hair, Blue eyes--",
+		'platform':'snes',
+		'year':1992,
+		'added':'2020-04-14',
+		'gameinfo':'https://www.mobygames.com/game/snes/home-alone-2-lost-in-new-york_'
+	},
 	'hso':{
 		'title': 'Hypnospace Outlaw',
 		'source':'Tendershoot, Michael Lasch, ThatWhichIs Media',
