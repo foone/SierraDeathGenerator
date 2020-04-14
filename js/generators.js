@@ -1547,6 +1547,16 @@ var generators={
 		'defaulttext':'\nYou are \n\nClark Kent',
 		'added':'2019-02-07'
 	},
+	'sn':{
+		'title': 'Surf Ninjas',
+		'source':'NuFX',
+		'sourceurl':'https://en.wikipedia.org/wiki/NuFX',
+		'platform':'gamegear',
+		'year': 1993,
+		'gameinfo':'https://www.mobygames.com/game/surf-ninjas',
+		'defaulttext':'I can offer\nno help here',
+		'added':'2020-04-13'
+	},
 	'swatkats':{
 		'title': 'SWAT Kats',
 		'source':'AIM',
