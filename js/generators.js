@@ -640,6 +640,16 @@ var generators={
 		'added':'2019-07-12',
 		'gameinfo':'https://www.mobygames.com/game/gi-joe-the-atlantis-factor-'
 	},
+	'gizmos':{
+		'title': 'Gizmos & Gadgets!',
+		'source':'The Learning Computer',
+		'sourceurl':'https://en.wikipedia.org/wiki/The_Learning_Company',
+		'year':1993,
+		'platform':'dos',
+		'defaulttext':"Morty Maxwell, the Master of\nMischief, has moved into the Shady Glen\nTechnology Center and taken over as\nthe head scientist!",
+		'added':'2020-04-17',
+		'gameinfo':'https://www.mobygames.com/game/super-solvers-gizmos-gadgets'
+	},
 	'got':{
 		'title': 'God of Thunder',
 		'source':'Adept Software',
