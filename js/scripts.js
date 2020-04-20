@@ -885,7 +885,7 @@ function buildBorder(fontImage,fontInfo,w,h, border_sides){
 		// Top-Left corner
 		drawBorderPiece(0,0,border.tl)
 	}
-	if(border_sides[8]=='t'){
+	if(border_sides[2]=='t'){
 		// Top-Right corner
 		drawBorderPiece(w-border.tr.w,0,border.tr)
 	}
