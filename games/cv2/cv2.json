@@ -8,11 +8,34 @@
 		"w": "Math.max(128,32+textbox.w)",
 		"h": "Math.max(96,16+textbox.h)"
 	},
+	"hooks":{
+		"border":"//Dummy because the GIF needs to replace this"
+	},
 	"case-fold": "upper",
 	"null-character": 32,
+	"gif": true,
+	"script": true,
 	"default": {
 		"w": 8,
 		"h": 8
+	},
+	"overlays": {
+		"background": {
+			"x": 0,
+			"y": 0,
+			"title": "",
+			"default": "background",
+			"stage":"pre-border",
+			"options": {
+				"background": {
+					"x": 26,
+					"y": 8,
+					"w": 998,
+					"h": 1016
+
+				}
+			}
+		}
 	},
 	"border": {
 		"tl": {
