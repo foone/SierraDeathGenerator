@@ -1,0 +1,200 @@
+{
+	"height": 8,
+	"origin": {
+		"x": 0,
+		"y": 0
+	},
+	"case-fold": "upper",
+	"justify": "center",
+	"dynamic-size": {
+		"w": "overlays.scene.data.info.w",
+		"h": "overlays.scene.data.info.h"
+	},
+	"wrap-width":0,
+	"hooks": {
+		"pre-text": "if(overlays.scene.name=='story'){justify='left';mainFont.y=16;originx=32}",
+		"pre-text": "{let fnt = overlays.scene.data.info;mainFont.y = fnt.origin.y;originx=fnt.origin.x;justify=fnt.justify}",
+		"change-scene": "{let txt = $('#sourcetext').val(); if(isAnyDefaultText(txt) || Object.values(fontInfo.overlays.scene.options).map(o=>o.info.text).includes(txt)){$('#sourcetext').val(overlays.scene.options[$(this).val()].info.text)}}",
+		"font": "switchFont(overlays.scene.data.info.font);fontInfo['wrap-width'] = overlays.scene.data.info['wrap-width']"
+	},
+	"justify-resolution":8,
+		"overlays": {
+		"scene": {
+			"x": 0,
+			"y": 0,
+			"title": "Scene",
+			"default": "intro",
+			"options": {
+				"intro": {
+					"x": -8,
+					"y": 0,
+					"w": 8,
+					"h": 8,
+					"info": {
+						"w": 256,
+						"h": 224,
+						"font":"main",
+						"origin":{
+							"x":120,
+							"y":17
+						},
+						"text":"A.D.2020. A plague of\n\nnarcotics transcending\n\nthe bounds of race, \n\neconomy, and time have\n\nput a strangle hold on\n\namerica. You must destroy\n\npitbull, the drug kingpin\n\nwho has become the overlord \n\nof this sinister empire.\n\n\nYou, Shadow, are\n\nthe last hope ... ",
+						"justify":"center",
+						"wrap-width":240
+					}
+				},
+				"mission_briefing": {
+					"x": 0,
+					"y": 16,
+					"w": 216,
+					"h": 96,
+					"info": {
+						"w": 216,
+						"h": 96,
+						"font":"blue",
+						"text":"Mission Briefing\n\nYou must rid\nthe pier of all\ndrug dealers.\nGet to the boat\nshop to escape.\n\n      -Control",
+						"origin":{
+							"x":80,
+							"y":8
+						},
+						"justify":"left",
+						"wrap-width":128
+					}
+				}
+			}
+		}
+	},
+	"shiftfonts":{
+		"blue":8
+	},
+	"default": {
+		"w": 8,
+		"h": 8
+	},
+	"32": {
+		"x": 328
+	},
+	"48": {
+		"x": 0
+	},
+	"49": {
+		"x": 8
+	},
+	"50": {
+		"x": 16
+	},
+	"51": {
+		"x": 24
+	},
+	"52": {
+		"x": 32
+	},
+	"53": {
+		"x": 40
+	},
+	"54": {
+		"x": 48
+	},
+	"55": {
+		"x": 56
+	},
+	"56": {
+		"x": 64
+	},
+	"57": {
+		"x": 72
+	},
+	"65": {
+		"x": 80
+	},
+	"66": {
+		"x": 88
+	},
+	"67": {
+		"x": 96
+	},
+	"68": {
+		"x": 104
+	},
+	"69": {
+		"x": 112
+	},
+	"70": {
+		"x": 120
+	},
+	"71": {
+		"x": 128
+	},
+	"72": {
+		"x": 136
+	},
+	"73": {
+		"x": 144
+	},
+	"74": {
+		"x": 152
+	},
+	"75": {
+		"x": 160
+	},
+	"76": {
+		"x": 168
+	},
+	"77": {
+		"x": 176
+	},
+	"78": {
+		"x": 184
+	},
+	"79": {
+		"x": 192
+	},
+	"80": {
+		"x": 200
+	},
+	"81": {
+		"x": 208
+	},
+	"82": {
+		"x": 216
+	},
+	"83": {
+		"x": 224
+	},
+	"84": {
+		"x": 232
+	},
+	"85": {
+		"x": 240
+	},
+	"86": {
+		"x": 248
+	},
+	"87": {
+		"x": 256
+	},
+	"88": {
+		"x": 264
+	},
+	"89": {
+		"x": 272
+	},
+	"90": {
+		"x": 280
+	},
+	"45": {
+		"x": 288
+	},
+	"33": {
+		"x": 296
+	},
+	"44": {
+		"x": 304
+	},
+	"46": {
+		"x": 312
+	},
+	"39": {
+		"x": 320
+	}
+}

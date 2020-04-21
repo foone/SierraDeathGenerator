@@ -1213,6 +1213,16 @@ var generators={
 		'added':'2018-06-15',
 
 	},
+	"raid2020":{
+		'title': 'Raid 2020',
+		'source':'Color Dreams',
+		'sourceurl':'https://en.wikipedia.org/wiki/Wisdom_Tree',
+		'defaulttext':"A.D.2020. A plague of\n\nnarcotics transcending\n\nthe bounds of race, \n\neconomy, and time have\n\nput a strangle hold on\n\namerica. You must destroy\n\npitbull, the drug kingpin\n\nwho has become the overlord \n\nof this sinister empire.\n\n\nYou, Shadow, are\n\nthe last hope ... ",
+		'platform':'nes',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/raid-2020',
+		'added':'2018-06-02',
+	},
 	"rt":{
 		'title': 'Railroad Tycoon',
 		'source':'MPS Labs',
