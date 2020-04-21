@@ -532,7 +532,7 @@ var generators={
 		'platform':'dos',
 		'year':1991,
 		'gameinfo':'https://en.wikipedia.org/wiki/Wisdom_Tree',
-		'added':'2080-02-23',
+		'added':'2020-02-23',
 	},
 	'fatalfuryspecial':{
 		'title': 'Fatal Fury Special',
@@ -542,8 +542,8 @@ var generators={
 		'platform':'arcade',
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/fatal-fury-2',
-		'added':'2080-03-21',
-		'updated':'2080-03-22'
+		'added':'2020-03-21',
+		'updated':'2020-03-22'
 	},
 	'faxanadu':{
 		'title': 'Faxanadu',
@@ -553,7 +553,7 @@ var generators={
 		'platform':'nes',
 		'year':1987,
 		'gameinfo':'https://www.mobygames.com/game/faxanadu',
-		'added':'2080-03-30',
+		'added':'2020-03-30',
 	},
 	'fwbt':{
 		'title': 'The Frog for Whom the Bell Tolls',
