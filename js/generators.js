@@ -1221,7 +1221,7 @@ var generators={
 		'platform':'nes',
 		'year':1989,
 		'gameinfo':'https://www.mobygames.com/game/raid-2020',
-		'added':'2018-06-02',
+		'added':'2020-04-21',
 	},
 	"rt":{
 		'title': 'Railroad Tycoon',
