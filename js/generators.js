@@ -1683,6 +1683,16 @@ var generators={
 		'updated': '2019-10-01',
 		'gameinfo':'https://www.mobygames.com/game/windows/untitled-goose-game'
 	},
+	'wsk':{
+		'title': 'Wall Street Kid',
+		'source': 'SOFEL',
+		'sourceurl': 'https://en.wikipedia.org/wiki/SOFEL',
+		'defaulttext': "Hello.  I'm Larry, a lawyer\nemployed by your distant\nuncle, Mr. Benedict.  I'm\nsorry to say he's passed \naway.",
+		'platform':'nes',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/nes/wall-street-kid',
+		'added':'2020-04-26',
+	},
 	'wally': {
 		'title': 'Wally Bear and the NO! Gang',
 		'source': 'American Game Cartridges',
