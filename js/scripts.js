@@ -114,6 +114,14 @@ class LineGroup{
 			x = snippet.draw(context, scale, x, y)
 		}
 	}
+
+	asText(){
+		var out=[]
+		for(let snippet of this.snippets){
+			out.push(snippet.text)
+		}
+		return out.join("")
+	}
 }
 
 class Snippet{
@@ -381,6 +389,13 @@ class FontManager{
 		}
 	}
 
+	plainLines(){
+		let out=[]
+		for(var line of this.lines){
+			out.push(line.asText())
+		}
+		return out
+	}
 }
 
 
@@ -637,7 +652,7 @@ function getAllPossibleOptions(){
 	return opts;
 }
 
-function renderText(scaled = true){
+function renderText(scaled = true, wordwrap_dryrun=false){
 	if(fontInfo == null || baseImage == null){
 		return
 	}
@@ -696,6 +711,11 @@ function renderText(scaled = true){
 	if('wrap-width' in fontInfo && $('#wordwrap').prop('checked')){
 		fontManager.wordwrap(fontInfo['wrap-width'])
 	}
+
+	if(wordwrap_dryrun){
+		return fontManager
+	}
+
 	var justify = first(fontInfo.justify, 'left')
 	var justify_resolution = first(fontInfo['justify-resolution'],1)
 	var first_line_justify = first(fontInfo['first-line-justify'], justify)
