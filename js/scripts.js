@@ -384,6 +384,10 @@ class FontManager{
 				var jadjust = Math.floor(line.getWidth()/2);
 				x = originx - (jadjust - (jadjust % justifyresolution));
 			}
+			if(justify=='right'){
+				var jadjust = line.getWidth();
+				x = originx - (jadjust - (jadjust % justifyresolution));
+			}
 			line.draw(this.context, scale, x, y)
 			y+=line.getHeight()
 		}
