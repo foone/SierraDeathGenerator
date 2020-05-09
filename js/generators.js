@@ -1136,6 +1136,16 @@ var generators={
 		'added':'2018-04-04',
 
 	},
+	'phdq':{
+		'title': "Paris Hilton's Diamond Quest",
+		'source':'Gameloft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Gameloft',
+		'defaulttext':"You're a total\nEinstein, Baby.\nSmarts are hot.",
+		'platform':'j2me',
+		'year':2006,
+		'gameinfo':'https://www.mobygames.com/game/paris-hiltons-diamond-quest',
+		'added':'2020-05-09',
+	},
 	'pokemon':{
 		'title': 'Pokemon',
 		'source':'Game Freak',
