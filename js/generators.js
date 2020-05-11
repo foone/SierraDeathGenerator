@@ -878,6 +878,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/little-nemo-the-dream-master',
 		'added':'2019-07-26'
 	},
+	'lockon':{
+		'title': 'Lock On',
+		'source':'Copya Systems',
+		'sourceurl':'https://www.mobygames.com/company/shangri-la',
+		'defaulttext':"The MIG-37 is a mach 3\naircraft utilizing the\nlatest stealth\ntechnology!",
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/lock-on_',
+		'added':'2020-05-11'
+	},
 	'madden95':{
 		'title': "Madden NFL '95",
 		'source':'EA Sports',
