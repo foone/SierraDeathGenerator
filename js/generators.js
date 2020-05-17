@@ -1409,6 +1409,16 @@ var generators={
 		'content-contributor': 'Monster Go! Go! Go!!',
 		'content-contributor-url' :'https://bootleggames.fandom.com/wiki/Monster_Go!_Go!_Go!!',
 	},
+	'snakesrevenge':{
+		'title': "Snake's revenge",
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Snake, the pur-\npose of your\nmission is to\ninfiltrate the\nenemy's strong-\nhold.          _",
+		'platform':'nes',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/snakes-revenge',
+		'added':'2020-05-16'
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
