@@ -1417,6 +1417,7 @@ var generators={
 		'platform':'nes',
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/snakes-revenge',
+		'series':'metal gear',
 		'added':'2020-05-16'
 	},
 	'sq1vga':{
