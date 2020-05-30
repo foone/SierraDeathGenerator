@@ -1495,6 +1495,18 @@ var generators={
 		'year':1995,
 		'gameinfo':'https://www.mobygames.com/game/star-trek-the-next-generation-a-final-unity',
 		'added':'2019-04-09',
+		'series':'star trek'
+	},
+	'stv':{
+		'title': 'Star Trek V: The Final Frontier',
+		'source':'Bandai',
+		'sourceurl':'https://en.wikipedia.org/wiki/Bandai',
+		'defaulttext':"KIRK,SPOCK,McCOY ARE FREED.\nTHEY COME TO LEARN SYBOK'S\nREAL MISSION,AND DICIDE TO\nTRAVEL TO THE CREATION\nPLANET.\n\n\n                           ▼",
+		'platform':'nes',
+		'year':1989,
+		'gameinfo':'https://memory-alpha.fandom.com/wiki/Star_Trek_V:_The_Final_Frontier_(NES)',
+		'added':'2020-05-29',
+		'series':'star trek'
 	},
 	'stonekeep':{
 		'title': 'Stonekeep',
