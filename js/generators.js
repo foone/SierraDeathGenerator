@@ -1757,6 +1757,16 @@ var generators={
 		'updated':'2019-02-05',
 		'gameinfo':'https://www.mobygames.com/game/wargroove'
 	},
+	'win95': {
+		'title': 'Win95 Tips',
+		'source': 'Microsoft',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Microsoft',
+		'platform':'win32',
+		'defaulttext': "When you type, you should keep your wrists elevated or use a wristpad to minimize strain.",
+		'year':1995,
+		'added':'2020-06-02',
+		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95'
+	},
 	'wof': {
 		'title': 'Wheel of Fortune',
 		'source': 'SHAREDATA, Inc',
