@@ -1300,6 +1300,16 @@ var generators={
 		'updated':'2019-02-23',
 		'series':'simcity'
 	},
+	'simrefinery':{
+		'title': 'SimRefinery',
+		'source':'Maxis Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
+		'defaulttext':"Hydrocracker\nHydrocracker Unit cracks heavy oil into\nlighter components (in effect, synthetic\nmixtures), using a catalyst in the presence of\nhydrogen.",
+		'platform':'dos',
+		'year':1992,
+		'gameinfo':'https://en.wikipedia.org/wiki/SimRefinery',
+		'added':'2020-06-04',
+	},
 	'sqta':{
 		'title': 'Simon Quest: Transylvania Adventure',
 		'source':'Programancer',
