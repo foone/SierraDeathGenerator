@@ -16,6 +16,7 @@
 	},
 	"first-line-justify": "output-center",
 	"justify-resolution": 8,
+	"wrap-width": 368,
 	"dynamic-size": {
 		"w": "464",
 		"h": "Math.max(128,96+textbox.h)"
