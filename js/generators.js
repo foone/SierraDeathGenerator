@@ -642,7 +642,7 @@ var generators={
 	},
 	'gizmos':{
 		'title': 'Gizmos & Gadgets!',
-		'source':'The Learning Computer',
+		'source':'The Learning Company',
 		'sourceurl':'https://en.wikipedia.org/wiki/The_Learning_Company',
 		'year':1993,
 		'platform':'dos',
