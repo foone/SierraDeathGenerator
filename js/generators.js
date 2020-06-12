@@ -39,7 +39,7 @@ var generators={
 		'added':'2020-06-11',
 		'platform':'dos',
 		'year':1992,
-		'series':'alone in the dark'
+		'series':'alone in the dark',
 		'gameinfo':'https://archive.org/details/msdos_Alone_in_the_Dark_1992',
 	},
 	'ag':{
