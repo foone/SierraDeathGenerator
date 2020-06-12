@@ -31,6 +31,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/apple2/all-about-america',
 		'play':'https://archive.org/details/AllAboutAmerica4amCrack'
 	},
+	'aitd':{
+		'title': 'Alone in the Dark',
+		'source':'Infogrames',
+		'sourceurl':'https://en.wikipedia.org/wiki/Infogrames',
+		'defaulttext':"Artemis guide us as though we were an \narrow from her quiver.\"",
+		'added':'2020-06-11',
+		'platform':'dos',
+		'year':1992,
+		'series':'alone in the dark'
+		'gameinfo':'https://archive.org/details/msdos_Alone_in_the_Dark_1992',
+	},
 	'ag':{
 		'title': 'American Gladiators',
 		'source':'Incredible Technologies, inc.',
