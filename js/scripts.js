@@ -373,7 +373,7 @@ class FontManager{
 				originx = x = first(origin_override['x'], originx)
 				y = first(origin_override['y'], y)
 			}
-			if(line_number==0){
+			if(line_number==0 && !origin_override){
 				x = first_line_origin
 				if(first_line_justify == 'output-center'){
 					x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
