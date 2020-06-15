@@ -600,7 +600,7 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/final-fantasy-vii'
 	},
 	'fft':{
-		'title': 'Final Fantasy Factics',
+		'title': 'Final Fantasy Tactics',
 		'source':'Square',
 		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
 		'defaulttext':"[red]Lede[/]\nWe'll burn you to death,\nso don't run away.",
