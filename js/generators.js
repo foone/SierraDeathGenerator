@@ -599,6 +599,17 @@ var generators={
 		'updated':'2020-04-09',
 		'gameinfo':'https://www.mobygames.com/game/final-fantasy-vii'
 	},
+	'fft':{
+		'title': 'Final Fantasy Factics',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"[red]Lede[/]\nWe'll burn you to death,\nso don't run away.",
+		'platform':'ps1',
+		'year':1997,
+		'series':'final fantasy',
+		'added':'2020-06-14',
+		'gameinfo':'https://www.mobygames.com/game/playstation/final-fantasy-tactics'
+	},
 	'finalfight1':{
 		'title': 'Final Fight 1',
 		'source':'Capcom',
