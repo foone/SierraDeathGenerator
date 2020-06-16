@@ -174,6 +174,16 @@ var generators={
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/bionic-commando_'
 	},
+	'bl':{
+		'title': 'Brain Lord',
+		'source':'Enix',
+		'sourceurl':'https://en.wikipedia.org/wiki/Enix',
+		'defaulttext':"Welcome to Toronto.\nThis is your first\nvisit, isn't it?",
+		'platform':'snes',
+		'added':'2020-06-15',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/brain-lord'
+	},
 	'bof4':{
 		'title': 'Breath of Fire IV',
 		'source':'Capcom',
