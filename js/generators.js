@@ -1302,7 +1302,7 @@ var generators={
 		'title': 'RoboCop',
 		'source':'Ocean',
 		'sourceurl':'https://en.wikipedia.org/wiki/Ocean_Software',
-		'defaulttext':"Prime directives\n\n1. Serve the public \n   trust\n\n2. Protect the \n   innocent\n\n3. Uphold the law",
+		'defaulttext':"\n\nPrime directives\n\n1. Serve the public \n   trust\n\n2. Protect the \n   innocent\n\n3. Uphold the law",
 		'platform':'gameboy',
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/robocop__',

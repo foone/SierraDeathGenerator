@@ -2,7 +2,7 @@
 	"height": 8,
 	"origin": {
 		"x": 0,
-		"y": 65
+		"y": 49
 	},
 	"case-fold": "upper",
 	"wrap-width":160,
