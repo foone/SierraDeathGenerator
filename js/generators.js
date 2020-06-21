@@ -1351,6 +1351,7 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://en.wikipedia.org/wiki/SimRefinery',
 		'added':'2020-06-04',
+		'added':'2020-06-20',
 	},
 	'sqta':{
 		'title': 'Simon Quest: Transylvania Adventure',
