@@ -1539,6 +1539,17 @@ var generators={
 		'added':'2018-05-02',
 		'series':'star fox'
 	},
+	'sf64':{
+		'title': 'Star Fox 64',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"It's about time you\nshowed up, Fox.\nYou're the only hope\nfor our world!",
+		'platform':'n64',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/n64/star-fox-64',
+		'added':'2020-06-23',
+		'series':'star fox'
+	},
 	'sttngafu':{
 		'title': 'Star Trek: A Final Unity',
 		'source':'Spectrum HoloByte',
