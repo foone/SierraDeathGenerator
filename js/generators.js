@@ -1144,6 +1144,16 @@ var generators={
 		'gameinfo':'https://web.archive.org/web/20161116081727/bloodlust.zophar.net/NESticle/nes.html',
 		'added':'2019-11-18',
 	},
+	'neutopia':{
+		'title': 'Neutopia',
+		'source':'Hudson Soft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hudson_Soft',
+		'defaulttext':'The demon boss in this sphere is ugly indeed and he is also very powerful.              \uD83E\uDC47',
+		'platform':'turbografx16',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/neutopia',
+		'added':'2020-06-30',
+	},
 	'ng':{
 		'title': 'Ninja Gaiden',
 		'source':'Tecmo',
