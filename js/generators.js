@@ -1684,6 +1684,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/snes/super-metroid',
 		'added':'2018-04-17'
 	},
+	'sor':{
+		'title': 'Super Off Road: The Baja',
+		'source':'Leland Interactive Media',
+		'sourceurl':'https://en.wikipedia.org/wiki/Leland_Interactive_Media',
+		'defaulttext':"[yellow]LEG 1:  San Felipe[/]\n\nKeep all wheels on\nthe road to go fast.\nAvoid hitting\nthings which\nwill damage\nyour truck.",
+		'platform':'snes',
+		'series':'super off road',
+		'year': 1993,
+		'gameinfo':'https://www.mobygames.com/game/super-off-road-the-baja',
+		'added':'2020-07-01'
+	},
 	'superman':{
 		'title': 'Superman',
 		'source':'Kemco',
