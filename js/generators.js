@@ -543,7 +543,16 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://en.wikipedia.org/wiki/MS-DOS_Editor',
 		'added':'2018-04-15',
-
+	},
+	'ed':{
+		'title': 'Emerald Dragon',
+		'source':'Alfa System',
+		'sourceurl':'https://en.wikipedia.org/wiki/Alfa_System',
+		'defaulttext':"Don't be afraid. We\ndragons are very\ngentle.",
+		'platform':'snes',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/emerald-dragon_',
+		'added':'2020-07-04',
 	},
 	'exodus':{
 		'title': 'Exodus',
