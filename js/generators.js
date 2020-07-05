@@ -797,6 +797,17 @@ var generators={
 		'added':'2020-02-14',
 		'gameinfo':'https://www.mobygames.com/game/kickle-cubicle'
 	},
+	'kof94':{
+		'title': 'King of Fighters \'94',
+		'source':'SNK',
+		'sourceurl':'https://en.wikipedia.org/wiki/SNK',
+		'defaulttext':"GO HOME AND\nENJOY SPORTS!",
+		'platform':'arcade',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/king-of-fighters-94',
+		'added':'2020-07-05',
+		'series':'king of fighters'
+	},
 	'kok':{
 		'title': 'King of Kings',
 		'source':'Wisdom Tree',
