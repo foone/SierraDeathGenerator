@@ -863,6 +863,16 @@ var generators={
 		'added':'2020-04-04',
 		'gameinfo':'https://www.mobygames.com/game/kabuki-klash'
 	},
+	'lastblade2':{
+		'title': 'Last Blade 2',
+		'source':'SNK',
+		'sourceurl':'https://en.wikipedia.org/wiki/SNK',
+		'defaulttext':"I'm gonna bop you\nall the way to the stone age.",
+		'platform':'arcade',
+		'year':1998,
+		'added':'2020-07-07',
+		'gameinfo':'https://www.mobygames.com/game/last-blade-2'
+	},
 	'zelda':{
 		'title': 'Legend of Zelda',
 		'source':'Nintendo',
