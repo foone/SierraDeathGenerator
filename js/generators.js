@@ -1841,6 +1841,16 @@ var generators={
 		'updated': '2019-10-01',
 		'gameinfo':'https://www.mobygames.com/game/windows/untitled-goose-game'
 	},
+	'vfa': {
+		'title': 'Virtua Fighter Animation',
+		'source': 'Aspect Co.',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Aspect_Co.',
+		'defaulttext': 'You can never trust a ninja.',
+		'platform': 'gamegear',
+		'year': 1996,
+		'added': '2020-07-08',
+		'gameinfo':'https://www.mobygames.com/game/virtua-fighter-animation'
+	},
 	'wsk':{
 		'title': 'Wall Street Kid',
 		'source': 'SOFEL',
