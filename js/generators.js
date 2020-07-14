@@ -725,6 +725,17 @@ var generators={
 		'added':'2018-04-21',
 
 	},
+	'hrr':{
+		'title': 'Hamtaro: Rainbow Rescue',
+		'source':'AlphaDream',
+		'sourceurl':'https://en.wikipedia.org/wiki/AlphaDream',
+		'defaulttext':"It's over there! Let's \ngo see it! It's right\nover there!",
+		'platform':'gba',
+		'year':2003,
+		'added':'2020-07-14',
+		'series':'hamtaro',
+		'gameinfo':'https://www.mobygames.com/game/hamtaro-rainbow-rescue'
+	},
 	'ha2':{
 		'title': 'Home Alone 2',
 		'source':'Imagineering, Inc.',
