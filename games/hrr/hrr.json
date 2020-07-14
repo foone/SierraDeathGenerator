@@ -5,7 +5,7 @@
 		"y": 12
 	},
 	"wrap-width":158,
-	"notes":"NOTE: This still needs more names added, as well as names for the facial-expressions. Other colors are available, use: [pink] [green] [lightblue] [darkblue] [orange] [brown] [lightbrown] [tan]",
+	"notes":"NOTE: This still needs more names added, as well as names for the facial-expressions. It needs an optional 'next dialogue' button, and some duplicates removed. Other colors are available, use: [pink] [green] [lightblue] [darkblue] [orange] [brown] [lightbrown] [tan]",
 	"overlays": {
 		"portait": {
 			"x": 0,
