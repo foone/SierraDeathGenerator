@@ -307,6 +307,16 @@ var generators={
 		'platform':'snes',
 		'series':'chrono trigger'
 	},
+	'citycon':{
+		'title': 'City Connection',
+		'source':'Jaleco',
+		'sourceurl':'https://en.wikipedia.org/wiki/Jaleco',
+		'defaulttext':"Now, you have driven\n\n all the highway !!\n\n\n \uD83D\uDEE2 OIL  3*100=  300",
+		'added':'2020-07-15',
+		'year':1985,
+		'gameinfo':'https://www.mobygames.com/game/arcade/cruisin',
+		'platform':'arcade',
+	},
 	'caption':{
 		'title': 'Closed Captions',
 		'source':'FCC',
