@@ -1911,6 +1911,7 @@ var generators={
 		'defaulttext': "When you type, you should keep your wrists elevated or use a wristpad to minimize strain.",
 		'year':1995,
 		'added':'2020-06-02',
+		'updated':'2020-07-17',
 		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95'
 	},
 	'wof': {
