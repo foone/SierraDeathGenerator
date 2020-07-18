@@ -1851,6 +1851,16 @@ var generators={
 		'added': '2018-11-07',
 		'gameinfo':'https://www.mobygames.com/game/undertale'
 	},
+	'unreal':{
+		'title': 'Unreal',
+		'source': 'Epic MegaGames',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Epic_Games',
+		'defaulttext': "Benjamin Nathaniel's Diary,\nday 93: Today is my birthday.\nI will celebrate by attempting\nto start another prison riot.",
+		'platform': 'win32',
+		'year': 1998,
+		'added': '2020-07-17',
+		'gameinfo':'https://www.mobygames.com/game/unreal'
+	},
 	'ugg': {
 		'title': 'Untitled Goose Game',
 		'source': 'House House',
