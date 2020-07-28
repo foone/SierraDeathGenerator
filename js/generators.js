@@ -776,6 +776,17 @@ var generators={
 		'added':'2018-12-30',
 		'gameinfo':'https://www.mobygames.com/game/nes/iron-tank-the-invasion-of-normandy'
 	},
+	'jackbros':{
+		'title': "Jack Bros.",
+		'source':'Atlus',
+		'sourceurl':'https://en.wikipedia.org/wiki/Atlus',
+		'defaulttext':"This is\nAngel's floor.\n···Why is\nAngel here?",
+		'platform':'virtualboy',
+		'year':1995,
+		'added':'2020-07-27',
+		'gameinfo':'https://www.mobygames.com/game/jack-bros',
+		'series':'shin megami tensei'
+	},
 	'jojo':{
 		'title': "JoJo's Bizarre Adventure",
 		'source':'Capcom',
