@@ -1467,6 +1467,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/genesis/skitchin',
 		'added': '2018-12-10'
 	},
+	'skunkart':{
+		'title': "Skunny Kart",
+		'source':'Copysoft',
+		'sourceurl':'https://www.mobygames.com/company/copysoft',
+		'defaulttext':"PLAYER 1\n KART LEFT    : CTRL KEY\n KART RIGHT   : ALT KEY\n ACCELERATION : SHIFT KEY\n UTILITY      : TAB KEY\n\nPLAYER 2\n KART LEFT    : NUMPAD INS\n KART RIGHT   : NUMPAD DEL\n ACCELERATION : NUMPAD END\n UTILITY      : NUMPAD HOME\n      ESC TO ABORT GAME\n F9 TO CAPTURE A PCX SCREEN",
+		'year':1993,
+		'platform':'dos',
+		'gameinfo':'https://www.mobygames.com/game/dos/skunny-kart',
+		'added': '2020-08-01'
+	},
 	'sb':{
 		'title': 'Skyblazer',
 		'source':'Ukiyotei',
