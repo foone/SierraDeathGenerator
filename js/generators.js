@@ -1475,7 +1475,8 @@ var generators={
 		'year':1993,
 		'platform':'dos',
 		'gameinfo':'https://www.mobygames.com/game/dos/skunny-kart',
-		'added': '2020-08-01'
+		'added': '2020-08-01',
+		'play':'https://archive.org/details/msdos_Skunny_Kart_1993'
 	},
 	'sb':{
 		'title': 'Skyblazer',
