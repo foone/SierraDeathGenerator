@@ -1556,6 +1556,16 @@ var generators={
 		'series':'metal gear',
 		'added':'2020-05-16'
 	},
+	'spacecadet':{
+		'title': 'Space Cadet Pinball',
+		'source':'Cinematronics',
+		'sourceurl':'https://en.wikipedia.org/wiki/Cinematronics,_LLC',
+		'defaulttext':"Player 1\n\nAwaiting\nDeployment",
+		'platform':'win32',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/full-tilt-pinball',
+		'added':'2020-08-05'
+	},
 	'sq1vga':{
 		'title': 'Space Quest 1',
 		'source':'Sierra Online',
