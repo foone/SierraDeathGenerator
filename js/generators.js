@@ -1819,6 +1819,16 @@ var generators={
 		'added':'2018-06-16',
 		'series':'system shock'
 	},
+	'themehospital':{
+		'title': 'Theme Hospital',
+		'source':'Bullfrog Productions',
+		'sourceurl':'https://en.wikipedia.org/wiki/Bullfrog_Productions',
+		'defaulttext':"You have just killed your \nfirst patient.\nHow does it feel?",
+		'platform':'dos',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/theme-hospital',
+		'added':'2020-08-08'
+	},
 	'tmnt1':{
 		'title': 'TMNT',
 		'source':'Konami',
