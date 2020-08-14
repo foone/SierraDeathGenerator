@@ -109,6 +109,17 @@ var generators={
 		'added':'2018-03-30',
 		'updated':'2019-01-15'
 	},
+	'battletoads':{
+		'title': 'Battletoads',
+		'source':'Rare',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rare_(company)',
+		'defaulttext':"So, the rat rockets didn't\n\nget you, huh? Well, the\n\nice spikes certainly will!",
+		'platform':'nes',
+		'gameinfo':'https://www.mobygames.com/game/battletoads',
+		'year':1991,
+		'added':'2020-08-13',
+		'series':'battletoads'
+	},
 	'bsd':{
 		'title': 'Bishoujo Sexy Derby',
 		'source':'Super Pig',
