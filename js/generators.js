@@ -144,6 +144,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/blackthorne',
 		'added':'2018-12-26'
 	},
+	'blade':{
+		'title': 'Blade',
+		'source':'HAL Laboratory & Avit Inc',
+		'sourceurl':'https://en.wikipedia.org/wiki/HAL_Laboratory',
+		'defaulttext':"COME ON OUT, MONSTER!",
+		'platform':'gameboy',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/blade__',
+		'added':'2020-08-16'
+	},
 	'bsod':{
 		'title': 'BSOD',
 		'source':'Microsoft',
