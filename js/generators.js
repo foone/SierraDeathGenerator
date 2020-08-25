@@ -1995,6 +1995,7 @@ var generators={
 		'defaulttext': "Have more fun\nFrom its friendly, intuitive interface to its speedy performance,\nWindows 95 provides you with the most enjoyable computing\nexperience ever.\n\n - Faster video revs up the action in the games you play.\n\n\n - MS-DOS®-based games run better and more reliably.\n\n\n - High-quality multimedia performance will dazzle you.",
 		'year':1995,
 		'added':'2020-08-24',
+		'updated':'2020-08-25',
 		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95'
 	},
 	'wof': {
