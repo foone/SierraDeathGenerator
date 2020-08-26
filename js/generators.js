@@ -1281,6 +1281,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/paris-hiltons-diamond-quest',
 		'added':'2020-05-09',
 	},
+	'pictionary':{
+		'title': 'Pictionary',
+		'source':'Software Creations',
+		'sourceurl':'https://en.wikipedia.org/wiki/Acclaim_Studios_Manchester',
+		'defaulttext':"   Congratulations to\n      Potato Brains\n\n   You're the best!!!",
+		'platform':'nes',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/pictionary-the-game-of-video-quick-draw',
+		'added':'2020-08-26'
+	},
 	'pokemon':{
 		'title': 'Pokemon',
 		'source':'Game Freak',
