@@ -1986,6 +1986,16 @@ var generators={
 		'updated':'2019-02-05',
 		'gameinfo':'https://www.mobygames.com/game/wargroove'
 	},
+	'warioswoods':{
+		'title': "Wario's Woods",
+		'defaulttext':"what are you\n\ndoin' here?",
+		'source': 'Intelligent Systems',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Intelligent_Systems',
+		'platform':'nes',
+		'year':1994,
+		'added':'2020-09-13',
+		'gameinfo':'https://www.mobygames.com/game/nes/warios-woods'
+	},
 	'win95': {
 		'title': 'Win95 Tips',
 		'source': 'Microsoft',
