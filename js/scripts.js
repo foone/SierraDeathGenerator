@@ -379,6 +379,10 @@ class FontManager{
 					x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
 					x = (x - (x % justifyresolution))
 				}
+				if(first_line_justify == 'center'){
+					x = x - Math.floor(line.getWidth()/2);
+					x = (x - (x % justifyresolution))
+				}
 			}
 			if(['center','all-center'].includes(justify)){
 				var jadjust = Math.floor(line.getWidth()/2);

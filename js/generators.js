@@ -983,6 +983,17 @@ var generators={
 		'added':'2018-04-19',
 
 	},
+	'llac':{
+		'title': "Let's Learn About Computers",
+		'source':'Troll Associates',
+		'sourceurl':'https://archive.org/search.php?query=subject%3A%22trollassociates%22',
+		'defaulttext':"floppy disk\nA disk is like a\nlittle record.\nYou can save\ndata on a disk\nand then use it\nlater to tell\nyour computer\nwhat to do.",
+		'platform':'apple2',
+		'year':1994,
+		'gameinfo':'https://ia800903.us.archive.org/6/items/LetsLearnAboutComputers4amCrack/Let%27s%20Learn%20About%20Computers%20%284am%20crack%29.txt',
+		'added':'2020-09-19',
+		'play':'https://archive.org/details/LetsLearnAboutComputers4amCrack'
+	},
 	'ln':{
 		'title': 'Little Nemo',
 		'source':'Capcom',
