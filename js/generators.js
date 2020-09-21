@@ -1652,6 +1652,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/stardew-valley',
 		'added':'2018-04-09',
 	},
+	'sw':{
+		'title': 'Star Wars',
+		'source':'Atari',
+		'sourceurl':'https://en.wikipedia.org/wiki/Atari,_Inc.',
+		'defaulttext':"     Flight instructions to red five\n\n1. Your  x  wing  is  equipped  with an\n   invisible deflector shield that will\n   protect you for 9 collisions.\n\n2. Deflector  strength  is  lost when a\n   fireball impacts your shield or when\n   you  strike a laser  tower or trench\n   catwalk.\n\n3. Aim your  lasers  with the cursor to\n   explode empire  tie  fighters, laser\n   tower tops and trench turrets.\n\n4. Shoot fireballs  before  they impact\n   your shield.\n\n5. The rebel force  is depending on you\n   to stop the empire by blowing up the\n   death star.",
+		'platform':'dos',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/dos/star-wars',
+		'added':'2020-09-20',
+	},
 	'sc2':{
 		'title': 'Star Control II',
 		'source':'Toys for Bob',
