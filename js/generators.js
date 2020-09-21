@@ -1661,6 +1661,7 @@ var generators={
 		'year':1989,
 		'gameinfo':'https://www.mobygames.com/game/dos/star-wars',
 		'added':'2020-09-20',
+		'series':'star wars'
 	},
 	'sc2':{
 		'title': 'Star Control II',
