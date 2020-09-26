@@ -595,6 +595,16 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/Wisdom_Tree',
 		'added':'2020-02-23',
 	},
+	'familyfeud':{
+		'title': 'Family Feud',
+		'source':'Imagineering',
+		'sourceurl':'https://en.wikipedia.org/wiki/Imagineering_(company)',
+		'defaulttext':"  Name something\n that some people\n are embarrassed\n  to admit that\n    they wear\nToupee",
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/snes/family-feud_',
+		'added':'2020-09-25',
+	},
 	'fatalfuryspecial':{
 		'title': 'Fatal Fury Special',
 		'source':'SNK',
