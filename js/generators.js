@@ -1411,6 +1411,17 @@ var generators={
 		'added':'2018-06-02',
 		'series':'railroad tycoon'
 	},
+	"rambo":{
+		'title': 'Rambo',
+		'source':'Pack-in-Video',
+		'sourceurl':'https://en.wikipedia.org/wiki/Pack-In-Video',
+		'defaulttext':"Your mission is to\nsneak into the\nenemy camp and find\nthem.\nAre you up to it?\nI'm not afraid of\ndeath.\n\nI feel better in\nprison.",
+		'platform':'nes',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/rambo_',
+		'added':'2020-06-26',
+		'series':'rambo'
+	},
 	"rr":{
 		'title': 'Road Rash',
 		'source':'Electronic Arts',
