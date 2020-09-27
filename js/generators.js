@@ -1419,7 +1419,7 @@ var generators={
 		'platform':'nes',
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/rambo_',
-		'added':'2020-06-26',
+		'added':'2020-09-26',
 		'series':'rambo'
 	},
 	"rr":{
