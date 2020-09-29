@@ -1292,6 +1292,17 @@ var generators={
 		'added':'2018-04-04',
 
 	},
+	'pma':{
+		'title': "Pac-Man Arrangement",
+		'source':'Namco',
+		'sourceurl':'https://en.wikipedia.org/wiki/Namco',
+		'defaulttext':" [yellow]TAKE A BOW![/]\n\n[blue]You've finished the game.[/]\n[pink]\nBut \nTHE GAME NEVER REALLY ENDS.[/]\n[green]\nSOMEONE,\nSOMEWHERE \nIS BEING CHASED BY MONSTERS!",
+		'platform':'arcade',
+		'year':1996,
+		'gameinfo':'https://www.mobygames.com/game/namco-classic-collection-vol',
+		'series':'pac-man',
+		'added':'2020-09-29'
+	},
 	'phdq':{
 		'title': "Paris Hilton's Diamond Quest",
 		'source':'Gameloft',
