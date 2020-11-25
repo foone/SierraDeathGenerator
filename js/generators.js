@@ -1327,7 +1327,7 @@ var generators={
 		'title': 'Pokemon',
 		'source':'Game Freak',
 		'sourceurl':'https://en.wikipedia.org/wiki/Game_Freak',
-		'defaulttext':'         CHARMANDER\nGary: WHAT?\nUnbelievable!',
+		'defaulttext':'         CHARMANDER\nGARY: WHAT?\nUnbelievable!',
 		'platform':'gameboy',
 		'year':1998,
 		'gameinfo':'https://www.mobygames.com/game/pokmon-red-version',
