@@ -216,6 +216,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/breath-of-fire-iv',
 		'series':'breath of fire'
 	},
+	'codaw':{
+		'title': 'Call of Duty: Advanced Warfare',
+		'source':'Sledgehammer Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sledgehammer_Games',
+		'defaulttext':'Press [yellow]F[/] to Pay Respects',
+		'added':'2021-01-28',
+		'platform':'win32',
+		'gameinfo':'https://www.mobygames.com/game/call-of-duty-advanced-warfare',
+		'year':2014
+	},
 	'cn':{
 		'title': 'Captain Novolin',
 		'source':'Sculptured Software',
