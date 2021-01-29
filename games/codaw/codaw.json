@@ -9,7 +9,7 @@
 	"default":{
 		"h":33
 	},
-	"notes": "If you're uploading a new background, use 720x450. Other font colors available: [black] [red] [green] [yelllow] [blue] [cyan] [magenta]",
+	"notes": "If you're uploading a new background, use 720x450. Other font colors available: [black] [red] [green] [yellow] [blue] [cyan] [magenta]",
 	"shiftfonts": {
 		"black": 33,
 		"red": 66,
