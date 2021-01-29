@@ -9,7 +9,7 @@
 	"default":{
 		"h":33
 	},
-	"notes": "Other font colors: [black] [red] [green] [yelllow] [blue] [cyan] [magenta]",
+	"notes": "If you're uploading a new background, use 720x450. Other font colors available: [black] [red] [green] [yelllow] [blue] [cyan] [magenta]",
 	"shiftfonts": {
 		"black": 33,
 		"red": 66,
@@ -18,6 +18,23 @@
 		"blue": 165,
 		"cyan": 198,
 		"magenta": 231
+	},
+	"overlays": {
+		"background": {
+			"x": 0,
+			"y": 0,
+			"title": "Background",
+			"default": "upload",
+			"replaceable": true,
+			"options": {
+				"upload": {
+					"x": 0,
+					"y": 1024,
+					"w": 720,
+					"h": 450
+				}
+			}
+		}
 	},
 	"32": {
 		"x": 0,
