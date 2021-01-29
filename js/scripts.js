@@ -20,6 +20,7 @@ function applyHashChange(){
 }
 
 if(window.location.hash.length > 0){
+	hideGenerators()
 	applyHashChange()
 }
 
@@ -435,6 +436,7 @@ for( let [gname, generator_item] of sorted_generators){
 		}
 	}
 	$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray generator-switcher"></a>').attr("href",'#'+gname).text(generator_item.title).data('generator',gname).click(function (){
+		hideGenerators()
 		selectedGenerator=$(this).data('generator')
 		selectGenerator()
 	}).toggleClass('new-generator',new_generator)).append(' ')
