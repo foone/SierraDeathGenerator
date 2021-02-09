@@ -4,7 +4,7 @@
 		"x": 56,
 		"y": 22
 	},
-	"explicit-origins": {
+	"original-explicit-origins": {
 		"0": {
 			"x": 56,
 			"y": 22
@@ -12,6 +12,16 @@
 		"1": {
 			"x": 72,
 			"y": 36
+		}
+	},
+	"christmas-explicit-origins": {
+		"0": {
+			"x": 71,
+			"y": 41
+		},
+		"1": {
+			"x": 87,
+			"y": 53
 		}
 	},
 	"null-character": 32,
@@ -23,6 +33,12 @@
 			"title": "Portrait",
 			"default": "dracula-right",
 			"options": {
+				"none":{
+					"x": -1024,
+					"y": 0,
+					"w": 8,
+					"h": 8
+				},
 				"richter-right": {
 					"x": 0,
 					"y": 8,
@@ -193,6 +209,16 @@
 						"screenw": 280,
 						"screenh": 240
 					}
+				},
+				"bernie-sanders": {
+					"x": 1012,
+					"y": 0,
+					"w": 512,
+					"h": 416,
+					"info": {
+						"screenw": 512,
+						"screenh": 416
+					}
 				}
 			}
 		},
@@ -226,16 +252,310 @@
 		}
 	},
 	"hooks": {
-		"pre-text": "if(overlays.theme.name!='original'){mainFont.y=42;originx=71}",
-		"pre-overlays": "if(overlays.theme.name=='original'){overlays.christmas.x=1024;overlays.hat.x=1024}else{overlays.portrait.x=22;overlays.portrait.y=37;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}"
+		"font":"fontInfo['scale']=2;if(overlays.theme.name.startsWith('christmas')){fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['christmas-explicit-origins']));fontInfo['wrap-width']=176+15;}else if(overlays.theme.name=='bernie-sanders'){fontInfo['wrap-width']=352;switchFont('big');fontInfo['scale']=1;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo.subfonts.big['original-explicit-origins']))}else{fontInfo['wrap-width']=176;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['original-explicit-origins']))}",
+		"pre-overlays": "if(overlays.theme.name.startsWith('christmas')){overlays.portrait.x=22;overlays.portrait.y=37;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}else{overlays.christmas.x=1024;overlays.hat.x=1024;if(overlays.theme.name=='bernie-sanders'){overlays.portrait.y=-9999}}"
 	},
 	"dynamic-size": {
 		"w": "overlays.theme.data.info.screenw",
 		"h": "overlays.theme.data.info.screenh"
 	},
+	"subfonts": {
+		"big": {
+			"height": 24,
+			"original-explicit-origins": {
+				"0": {
+					"x": 112,
+					"y": 44
+				},
+				"1": {
+					"x": 144,
+					"y": 72
+				}
+			},
+			"default": {
+				"w": 16,
+				"h": 16,
+				"y": 416
+			},
+			"32": {
+				"x": 0
+			},
+			"33": {
+				"x": 16
+			},
+			"34": {
+				"x": 32
+			},
+			"35": {
+				"x": 48
+			},
+			"36": {
+				"x": 64
+			},
+			"37": {
+				"x": 80
+			},
+			"38": {
+				"x": 96
+			},
+			"39": {
+				"x": 112
+			},
+			"40": {
+				"x": 128
+			},
+			"41": {
+				"x": 144
+			},
+			"42": {
+				"x": 160
+			},
+			"43": {
+				"x": 176
+			},
+			"44": {
+				"x": 192
+			},
+			"45": {
+				"x": 208
+			},
+			"46": {
+				"x": 224
+			},
+			"47": {
+				"x": 240
+			},
+			"48": {
+				"x": 256
+			},
+			"49": {
+				"x": 272
+			},
+			"50": {
+				"x": 288
+			},
+			"51": {
+				"x": 304
+			},
+			"52": {
+				"x": 320
+			},
+			"53": {
+				"x": 336
+			},
+			"54": {
+				"x": 352
+			},
+			"55": {
+				"x": 368
+			},
+			"56": {
+				"x": 384
+			},
+			"57": {
+				"x": 400
+			},
+			"58": {
+				"x": 416
+			},
+			"59": {
+				"x": 432
+			},
+			"60": {
+				"x": 448
+			},
+			"61": {
+				"x": 464
+			},
+			"62": {
+				"x": 480
+			},
+			"63": {
+				"x": 496
+			},
+			"64": {
+				"x": 512
+			},
+			"65": {
+				"x": 528
+			},
+			"66": {
+				"x": 544
+			},
+			"67": {
+				"x": 560
+			},
+			"68": {
+				"x": 576
+			},
+			"69": {
+				"x": 592
+			},
+			"70": {
+				"x": 608
+			},
+			"71": {
+				"x": 624
+			},
+			"72": {
+				"x": 640
+			},
+			"73": {
+				"x": 656
+			},
+			"74": {
+				"x": 672
+			},
+			"75": {
+				"x": 688
+			},
+			"76": {
+				"x": 704
+			},
+			"77": {
+				"x": 720
+			},
+			"78": {
+				"x": 736
+			},
+			"79": {
+				"x": 752
+			},
+			"80": {
+				"x": 768
+			},
+			"81": {
+				"x": 784
+			},
+			"82": {
+				"x": 800
+			},
+			"83": {
+				"x": 816
+			},
+			"84": {
+				"x": 832
+			},
+			"85": {
+				"x": 848
+			},
+			"86": {
+				"x": 864
+			},
+			"87": {
+				"x": 880
+			},
+			"88": {
+				"x": 896
+			},
+			"89": {
+				"x": 912
+			},
+			"90": {
+				"x": 928
+			},
+			"91": {
+				"x": 944
+			},
+			"92": {
+				"x": 960
+			},
+			"93": {
+				"x": 976
+			},
+			"94": {
+				"x": 992
+			},
+			"95": {
+				"x": 1008
+			},
+			"96": {
+				"x": 1024
+			},
+			"97": {
+				"x": 1040
+			},
+			"98": {
+				"x": 1056
+			},
+			"99": {
+				"x": 1072
+			},
+			"100": {
+				"x": 1088
+			},
+			"101": {
+				"x": 1104
+			},
+			"102": {
+				"x": 1120
+			},
+			"103": {
+				"x": 1136
+			},
+			"104": {
+				"x": 1152
+			},
+			"105": {
+				"x": 1168
+			},
+			"106": {
+				"x": 1184
+			},
+			"107": {
+				"x": 1200
+			},
+			"108": {
+				"x": 1216
+			},
+			"109": {
+				"x": 1232
+			},
+			"110": {
+				"x": 1248
+			},
+			"111": {
+				"x": 1264
+			},
+			"112": {
+				"x": 1280
+			},
+			"113": {
+				"x": 1296
+			},
+			"114": {
+				"x": 1312
+			},
+			"115": {
+				"x": 1328
+			},
+			"116": {
+				"x": 1344
+			},
+			"117": {
+				"x": 1360
+			},
+			"118": {
+				"x": 1376
+			},
+			"119": {
+				"x": 1392
+			},
+			"120": {
+				"x": 1408
+			},
+			"121": {
+				"x": 1424
+			},
+			"122": {
+				"x": 1440
+			}
+		}
+	},
 	"default": {
 		"w": 8,
-		"h": 8
+		"h": 8,
+		"y":0
 	},
 	"32": {
 		"x": 0

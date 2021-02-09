@@ -297,12 +297,21 @@ var generators={
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':'Dracula\nWhat is a man?\nA miserable little pile of secrets.',
-		'content-type':'christmas theme',
-		'content-contributor': '@Ashuraou',
-		'content-contributor-url': 'https://twitter.com/ashuraou',
+		'contributions':[
+			{
+				'type':'christmas theme',
+				'contributor': '@Ashuraou',
+				'url': 'https://twitter.com/ashuraou'
+			},
+			{
+				'type':'Bernie Sanders theme',
+				'contributor': 'A_Rival, aka DJ iPad',
+				'url': 'https://twitter.com/8bitpimp'
+			}
+		],
 		'platform':'ps1',
 		'added':'2018-02-23',
-		'updated':'2020-03-31',
+		'updated':'2021-02-09',
 		'series':'castlevania',
 		'gameinfo':'https://www.mobygames.com/game/castlevania-symphony-of-the-night',
 		'year':1997
@@ -1054,8 +1063,11 @@ var generators={
 		'platform':'dos',
 		'year':1993,
 		'added':'2019-01-08',
-		'content-contributor': '@HDoomguy',
-		'content-contributor-url' :'https://twitter.com/HDoomguy',
+		'contributions':[{
+			'type':'high-res redraw',
+			'contributor': '@HDoomguy',
+			'url' :'https://twitter.com/HDoomguy',
+		}],
 		'gameinfo':'https://www.mobygames.com/game/major-stryker'
 	},
 	'mh1':{
@@ -1227,8 +1239,10 @@ var generators={
 		'source':'Midway',
 		'sourceurl':'https://en.wikipedia.org/wiki/Mortal_Kombat_II',
 		'defaulttext':'Can you take the cold?',
-		'contributor': '@pixel_data',
-		'contributorurl':'https://twitter.com/pixel_data',
+		'contributions':[{
+			'contributor': '@pixel_data',
+			'url':'https://twitter.com/pixel_data',
+		}],
 		'platform':'arcade',
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/mortal-kombat-ii',
@@ -1240,8 +1254,10 @@ var generators={
 		'source':'Roland',
 		'sourceurl':'https://en.wikipedia.org/wiki/Roland_MT-32',
 		'defaulttext':' ** Roland MT-32 ** ',
-		'contributor': '@NoxicoDev',
-		'contributorurl' :'https://twitter.com/noxicodev',
+		'contributions':[{
+			'contributor': '@NoxicoDev',
+			'url':'https://twitter.com/noxicodev',
+		}],
 		'platform':'hardware',
 		'year':1987,
 		'gameinfo':'https://en.wikipedia.org/wiki/Roland_MT-32',
@@ -1582,8 +1598,11 @@ var generators={
 		'series':'sonic',
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog',
-		'content-contributor': 'Ruari O\'Sullivan',
-		'content-contributor-url': 'https://twitter.com/randomnine',
+		'contributions':[{
+			'type':'extra letters',
+			'contributor': 'Ruari O\'Sullivan',
+			'url':'https://twitter.com/randomnine',
+		}],
 		'added':'2018-10-31'
 	},
 	'sth2':{
@@ -1626,8 +1645,10 @@ var generators={
 		'year':1997,
 		'gameinfo':'https://www.mobygames.com/game/smurfs-nightmare',
 		'added':'2020-02-01',
-		'content-contributor': 'Monster Go! Go! Go!!',
-		'content-contributor-url' :'https://bootleggames.fandom.com/wiki/Monster_Go!_Go!_Go!!',
+		'contributions':[{
+			'contributor': 'Monster Go! Go! Go!!',
+			'url':'https://bootleggames.fandom.com/wiki/Monster_Go!_Go!_Go!!',
+		}],
 	},
 	'snakesrevenge':{
 		'title': "Snake's revenge",
@@ -1775,8 +1796,10 @@ var generators={
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Super_Street_Fighter_II',
 		'defaulttext':"I'M THE STRONGEST WOMAN\nIN THE WORLD.",
-		'contributor': '@pixel_data',
-		'contributorurl':'https://twitter.com/pixel_data',
+		'contributions':[{
+			'contributor': '@pixel_data',
+			'url':'https://twitter.com/pixel_data',
+		}],
 		'platform':'arcade',
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/street-fighter-ii-the-world-warrior',
@@ -1810,8 +1833,10 @@ var generators={
 		'source':'Nintendo',
 		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':'   THANK YOU MARIO!\n\nBUT OUR PRINCESS IS IN\nANOTHER CASTLE!',
-		'contributor': '@pixel_data',
-		'contributorurl':'https://twitter.com/pixel_data',
+		'contributions':[{
+			'contributor': '@pixel_data',
+			'url':'https://twitter.com/pixel_data',
+		}],
 		'series':'mario',
 		'platform':'nes',
 		'year':1985,
@@ -1981,8 +2006,10 @@ var generators={
 		'source': 'Toby Fox',
 		'sourceurl': 'https://en.wikipedia.org/wiki/Toby_Fox',
 		'defaulttext': 'undeRtale',
-		'content-contributor': 'Haley Wakamatsu',
-		'content-contributor-url': 'https://www.behance.net/gallery/31378523/Monster-Friend-Undertale-Logo-Font',
+		'contributions':[{
+			'contributor': 'Haley Wakamatsu',
+			'url':'https://www.behance.net/gallery/31378523/Monster-Friend-Undertale-Logo-Font',
+		}],
 		'platform': 'win32',
 		'year': 2015,
 		'added': '2018-11-07',
@@ -2165,8 +2192,16 @@ var generators={
 		'year':1992,
 		'gameinfo':'https://www.mobygames.com/game/nes/kyry-sentai-zyuranger',
 		'added':'2019-11-20',
-		'content-contributor': 'Grimm Translations & pacnsacdave',
-		'content-contributor-url': 'https://www.romhacking.net/games/1296/',
+		'contributions':[
+			{
+				'contributor': 'pacnsacdave',
+				'url':'https://www.romhacking.net/translations/2604/',
+			},
+			{
+				'contributor': 'Grimm Translations',
+				'url':'https://www.romhacking.net/translations/1395/',
+			}
+		],
 		'series':'power rangers'
 	},
 	'ygodds':{
