@@ -38,7 +38,7 @@ class BitmapFont {
 	constructor(info, image) {
 		this.info = info
 		this.image = image
-		this.y = info.origin.y
+		this.y = first(info.origin,{'y':0}).y
 	}
 }
 
@@ -520,16 +520,24 @@ function selectGenerator(){
 	}else{
 		$('#extra-contrib').text('')
 	}
-	if(gen['content-contributor']){
-		var ccontrib = gen['content-contributor']
-		if(gen['content-contributor-url']){
-			ccontrib = $('<a>').attr('href',gen['content-contributor-url']).text(ccontrib)
+	if(gen['contributions']){
+		var contentcontrib = $('#content-contrib').text(', and ')
+		var first=true
+		for(contribution of gen['contributions']){
+			var ccontrib = contribution['contributor']
+			if(contribution['url']){
+				ccontrib = $('<a>').attr('href',contribution['url']).text(ccontrib)
+			}
+			if(!first){
+				contentcontrib.append(", ")
+			}
+			if(contribution['type']){
+				contentcontrib.append(contribution['type'] + ' by ').append(ccontrib)
+			}else{
+				contentcontrib.append(ccontrib)
+			}
+			first=false
 		}
-		var message = ' and '
-		if(gen['content-type']){
-			message =', ' + gen['content-type'] + ' by '
-		}
-		$('#content-contrib').text(message).append(ccontrib)
 	}else{
 		$('#content-contrib').text('')
 	}
