@@ -33,7 +33,7 @@
 			"title": "Portrait",
 			"default": "dracula-right",
 			"options": {
-				"none":{
+				"none": {
 					"x": -1024,
 					"y": 0,
 					"w": 8,
@@ -252,7 +252,7 @@
 		}
 	},
 	"hooks": {
-		"font":"fontInfo['scale']=2;if(overlays.theme.name.startsWith('christmas')){fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['christmas-explicit-origins']));fontInfo['wrap-width']=176+15;}else if(overlays.theme.name=='bernie-sanders'){fontInfo['wrap-width']=352;switchFont('big');fontInfo['scale']=1;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo.subfonts.big['original-explicit-origins']))}else{fontInfo['wrap-width']=176;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['original-explicit-origins']))}",
+		"font": "fontInfo['scale']=2;if(overlays.theme.name.startsWith('christmas')){fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['christmas-explicit-origins']));fontInfo['wrap-width']=176+15;}else if(overlays.theme.name=='bernie-sanders'){fontInfo['wrap-width']=352;switchFont('big');fontInfo['scale']=1;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo.subfonts.big['original-explicit-origins']))}else{fontInfo['wrap-width']=176;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['original-explicit-origins']))}",
 		"pre-overlays": "if(overlays.theme.name.startsWith('christmas')){overlays.portrait.x=22;overlays.portrait.y=37;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}else{overlays.christmas.x=1024;overlays.hat.x=1024;if(overlays.theme.name=='bernie-sanders'){overlays.portrait.y=-9999}}"
 	},
 	"dynamic-size": {
@@ -555,7 +555,7 @@
 	"default": {
 		"w": 8,
 		"h": 8,
-		"y":0
+		"y": 0
 	},
 	"32": {
 		"x": 0
