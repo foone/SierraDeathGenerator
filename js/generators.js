@@ -1191,6 +1191,16 @@ var generators={
 		'added':'2018-11-06',
 		'gameinfo':'https://www.mobygames.com/game/genesis/mighty-morphin-power-rangers-the-movie__'
 	},
+	'milon':{
+		'title': "Milon's Secret Castle",
+		'source':'Hudson Soft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hudson_Soft',
+		'defaulttext':'Please remember the difference\nbetween fantasy and reality.\nDo your fighting on the screen,\nnot at home or at school.',
+		'platform':'nes',
+		'year':1986,
+		'added':'2021-02-22',
+		'gameinfo':'https://www.mobygames.com/game/milons-secret-castle'
+	},
 	'minishcap':{
 		'title': 'Legend of Zelda: The Minish Cap',
 		'source':'Capcom',
