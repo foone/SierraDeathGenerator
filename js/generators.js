@@ -1195,7 +1195,7 @@ var generators={
 		'title': "Milon's Secret Castle",
 		'source':'Hudson Soft',
 		'sourceurl':'https://en.wikipedia.org/wiki/Hudson_Soft',
-		'defaulttext':'Please remember the difference\nbetween fantasy and reality.\nDo your fighting on the screen,\nnot at home or at school.',
+		'defaulttext':'MAY I HELP YOU\n\n?',
 		'platform':'nes',
 		'year':1986,
 		'added':'2021-02-22',
