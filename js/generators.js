@@ -1874,6 +1874,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/super-mario-64',
 		'added':'2018-04-08',
 	},
+	'mario64ds':{
+		'title': 'Super Mario 64 DS',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Dear Mario:\nPlease come to the\ncastle. I've baked\na cake for you.\nYours truly--\nPrincess Toadstool",
+		'series':'mario',
+		'platform':'ds',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/super-mario-64-ds',
+		'added':'2021-03-02',
+	},
 	'smw':{
 		'title': 'Super Mario World',
 		'source':'Nintendo',
