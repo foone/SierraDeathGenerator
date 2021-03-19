@@ -1978,7 +1978,7 @@ var generators={
 		'platform':'arcade',
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/arcade/teenage-mutant-ninja-turtles__',
-		'added':'2020-03-19',
+		'added':'2021-03-19',
 		'series':'tmnt'
 	},
 	'tmnt1':{
