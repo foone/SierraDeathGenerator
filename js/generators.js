@@ -1970,14 +1970,25 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/theme-hospital',
 		'added':'2020-08-08'
 	},
+	'tmnta':{
+		'title': 'TMNT Arcade',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Name    Leonardo\nAge     16\nHeight  5'01''\nweight  155 lbs\nweapon  katana blade\n\n\n\n Leader of the boys.\n if gets serious, his swords start\nSlicing everything in sight .....\nincluding salami pizza!",
+		'platform':'arcade',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/arcade/teenage-mutant-ninja-turtles__',
+		'added':'2020-03-19',
+		'series':'tmnt'
+	},
 	'tmnt1':{
 		'title': 'TMNT',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
 		'defaulttext':"Find and help\nyour friend\nin this stage.\n    You can\n    do it.",
 		'platform':'nes',
-		'year':1989,
-		'gameinfo':'https://www.mobygames.com/game/nes/teenage-mutant-ninja-turtles',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/nes/teenage-mutant-ninja-turtles__',
 		'added':'2018-04-23',
 		'series':'tmnt',
 	},
