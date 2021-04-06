@@ -74,6 +74,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nintendo-ds/animal-crossing-wild-world',
 		'series':'animal crossing'
 	},
+	'afist':{
+		'title':'Armored Fist',
+		'source':'NovaLogic',
+		'sourceurl':'https://en.wikipedia.org/wiki/NovaLogic',
+		'defaulttext':"Night Forger.\n\nEcho-1 has been caught in a running battle to escape enemy\noccupied territory.\n\nYour mission is to break free of enemy fields of fire and\nneutralize all fielded indian MBT's and IFV's.",
+		'year':1994,
+		'platform':'dos',
+		'added':'2021-04-06',
+		'gameinfo':'https://www.mobygames.com/game/armored-fist',
+		'series':'armored fist'
+	},
 	'aof1':{
 		'title':'Art of Fighting',
 		'source':'SNK',
