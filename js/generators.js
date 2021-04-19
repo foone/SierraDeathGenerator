@@ -1158,6 +1158,17 @@ var generators={
 		'added':'2018-10-19',
 		'year':2001
 	},
+	'mmbn4':{
+		'title': 'Mega Man Battle Network 4',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"What a polite young man she was!",
+		'gameinfo':'https://www.mobygames.com/game/mega-man-battle-network-4-red-sun',
+		'platform':'gba',
+		'series':'megaman',
+		'added':'2021-04-18',
+		'year':2003
+	},
 	'mmx1':{
 		'title': 'Mega Man X 1',
 		'source':'Capcom',
