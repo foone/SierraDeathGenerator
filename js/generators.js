@@ -120,6 +120,17 @@ var generators={
 		'added':'2018-03-30',
 		'updated':'2019-01-15'
 	},
+	'bpk':{
+		'title': 'Bakutoushi Patton-Kun',
+		'source':'Soft Pro',
+		'sourceurl':'https://strategywiki.org/wiki/Category:Soft_Pro',
+		'defaulttext':"[tan]turn[/] [green]to[/] [blue]side-b[/]  \n\n\n[green]and[/] [pink]insert[/] [green]to[/] [pink]fucking[/] [tan]box![/]",
+		'platform':'nes',
+		'gameinfo':'https://strategywiki.org/wiki/Bakutoushi_Patton-Kun',
+		'year':1988,
+		'added':'2021-05-22'
+	},
+
 	'battletoads':{
 		'title': 'Battletoads',
 		'source':'Rare',
