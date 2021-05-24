@@ -1361,6 +1361,16 @@ var generators={
 		'added':'2018-04-04',
 
 	},
+	'outrun':{
+		'title': 'Outrun',
+		'source':'Sega AM2',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sega_AM2',
+		'defaulttext':" \u266BMagical Sound Shower",
+		'platform':'genesis',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/genesis/outrun',
+		'added':'2021-05-23',
+	},
 	'pma':{
 		'title': "Pac-Man Arrangement",
 		'source':'Namco',
