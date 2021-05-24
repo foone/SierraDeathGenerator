@@ -1370,6 +1370,7 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://www.mobygames.com/game/genesis/outrun',
 		'added':'2021-05-23',
+		'updated':'2021-05-24',
 	},
 	'pma':{
 		'title': "Pac-Man Arrangement",
