@@ -1359,7 +1359,17 @@ var generators={
 		'year':1985,
 		'gameinfo':'https://www.mobygames.com/game/oregon-trail',
 		'added':'2018-04-04',
-
+	},
+	'oregonc':{
+		'title': 'Oregon Trail Deluxe',
+		'source':'MECC',
+		'sourceurl':'https://en.wikipedia.org/wiki/MECC',
+		'defaulttext':"Better take extra\nsets of clothing.\nTrade 'em to Indians\nfor fresh\nvegetables, fish, or\nmeat.  It's well\nworth hiring an\nIndian guide at river\ncrossings.  Expect\nto pay them!\nThey're sharp\ntraders, not easily\ncheated.",
+		'play':"https://archive.org/details/msdos_Oregon_Trail_Deluxe_The_1992",
+		'platform':'dos',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/oregon-trail',
+		'added':'2021-05-28',
 	},
 	'outrun':{
 		'title': 'Outrun',
