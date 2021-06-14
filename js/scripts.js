@@ -26,6 +26,40 @@ if(window.location.hash.length > 0){
 
 window.addEventListener("hashchange", applyHashChange,false)
 
+const smart_quote_map={
+	// Single quote: '
+	39: [0x2019,0x2018],
+	// Double quote: "
+	34: [0x201C,0x201D],
+	// Left Lenticular bracket: 【
+	12304: [91],
+	// Right lenticular bracket: 】
+	12305: [93],
+	// Left bracket: [
+	91: [12304],
+	// Right bracket: ]
+	93: [12305],
+	// RIGHT SINGLE QUOTATION MARK ’
+	0x2019:[39],
+	// LEFT SINGLE QUOTATION MARK ‘
+	0x2018:[39],
+	// LEFT DOUBLE QUOTATION MARK “
+	0x201C: [34],
+	// RIGHT DOUBLE QUOTATION MARK ”
+	0x201D: [34]
+}
+
+function map_smart_quotes(font, missing_char){
+	if(missing_char in smart_quote_map){
+		for(const replacement_char of smart_quote_map[missing_char]){
+			if(replacement_char in font){
+				return font[replacement_char];
+			}
+		}
+	}
+	return null;
+}
+
 function first(){
 	for(var i=0;i<arguments.length;i++){
 		if(arguments[i] !== undefined){
@@ -202,7 +236,10 @@ class Snippet{
 			}
 			var info=font[c]
 			if(info==null){
-				info=font[font["null-character"]]
+				info = map_smart_quotes(font, c)
+				if(info==null){
+					info=font[font["null-character"]]
+				}
 			}
 			var lig_unadvance = undefined
 			var matching_ligatures = Object.keys(ligatures).filter(x=>line.substring(i,i+x.length)==x)

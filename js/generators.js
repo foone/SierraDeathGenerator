@@ -700,6 +700,17 @@ var generators={
 		'updated':'2020-04-09',
 		'gameinfo':'https://www.mobygames.com/game/final-fantasy-vii'
 	},
+	'ff8':{
+		'title': 'Final Fantasy VIII',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"Quistis\n“GF gives us strength. The stronger\nthe GF, the stronger we become.”",
+		'platform':'ps1',
+		'year':1999,
+		'series':'final fantasy',
+		'added':'2021-06-14',
+		'gameinfo':'https://www.mobygames.com/game/playstation/final-fantasy-viii'
+	},
 	'fft':{
 		'title': 'Final Fantasy Tactics',
 		'source':'Square',
