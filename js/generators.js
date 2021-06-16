@@ -9,6 +9,16 @@ var generators={
 		'platform':'nes',
 		'gameinfo':'https://www.mobygames.com/game/disney-adventures-in-the-magic-kingdom'
 	},
+	'abar':{
+		'title': 'Adventures of Batman & Robin',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Hello,hello. This is\nThe Joker Channel.",
+		'added':'2021-06-16',
+		'year': 1994,
+		'platform':'snes',
+		'gameinfo':'https://www.mobygames.com/game/snes/adventures-of-batman-robin__'
+	},
 	'af2':{
 		'title': 'Aero Fighters 2',
 		'source':'Video System',
