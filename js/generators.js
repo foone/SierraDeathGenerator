@@ -1511,6 +1511,16 @@ var generators={
 		'added':'2018-06-15',
 
 	},
+	"quake":{
+		'title': 'Quake',
+		'source':'id Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Id_Software',
+		'defaulttext':"disabled.  Use \"-nocdaudio\" if you wish to avoid this message in the future.  See README.TXT for help.\nPress a key.\n―\n\n3-button mouse available\n\njoystick found\nCENTER the joystick\nand press button 1 (ESC to skip):\naborted.\nexecing quake.rc\nexecing default.cfg\nexecing config.cfg\ncouldn't exec autoexec.cfg\n3 demo(s) in loop\nPlaying demo from demo1.dem.\n\n\n―\n\n[red]the Necropolis[/]\n]",
+		'platform':'dos',
+		'year':1996,
+		'gameinfo':'https://www.mobygames.com/game/quake',
+		'added':'2020-06-23',
+	},
 	"raid2020":{
 		'title': 'Raid 2020',
 		'source':'Color Dreams',
