@@ -1592,7 +1592,7 @@ var generators={
 		'defaulttext':"Robotic Enemies          Pg. 11\n―\n\n:hardbot: \n   This robot is difficult to\n   destroy and fires at you.\n\n\n:halfbot: This half man-half robot\n   has only one weakness.\n\n\n\n:dogbot: This robot dog is not\n     man's best friend.\n―\nPress PgUp-PgDn        Esc-Exit",
 		'platform': 'dos',
 		'year':1992,
-		'added':'2021--07-02',
+		'added':'2021-07-02',
 		'gameinfo':'https://www.mobygames.com/game/secret-agent',
 		'play':'https://archive.org/details/msdos_Secret_Agent_1992'
 	},
