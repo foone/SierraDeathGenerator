@@ -227,6 +227,7 @@ class Snippet{
 			line = line.toLowerCase()
 		}
 		var ligatures = first(font.ligatures, {})
+		Object.assign(ligatures, first(font.insertables, {}))
 		
 		for(var i=0;i<line.length;i++){
 			var c=line.charCodeAt(i)
@@ -242,32 +243,37 @@ class Snippet{
 				}
 			}
 			var lig_unadvance = undefined
+			var ligature_default = {}
 			var matching_ligatures = Object.keys(ligatures).filter(x=>line.substring(i,i+x.length)==x)
 			if(matching_ligatures.length>0){
 				// Pick the longest match if there are multiple matches
 				matching_ligatures.sort((a,b) => b.length - a.length)
-				var old_info = info
-				info = ligatures[matching_ligatures[0]]
-				var lig_chain = first(info['ligature-chain'], defaultInfo['ligature-chain'], 0)
-				if(lig_chain>0){
-					// FIXME: This won't calculate the correct unadvance if the chain is >1! 
-					lig_unadvance = first(info.unadvance, defaultInfo.unadvance, 0) + first(old_info.w, defaultInfo.w) - 1 
+				var matched_text = matching_ligatures[0]
+				if(matched_text != 'default'){ // You can't have a ligature on the word default!
+					ligature_default = first(first(font.ligatures,font.insertables, {}).default,{})
+					var old_info = info
+					info = ligatures[matched_text]
+					var lig_chain = first(info['ligature-chain'], defaultInfo['ligature-chain'], 0)
+					if(lig_chain>0){
+						// FIXME: This won't calculate the correct unadvance if the chain is >1! 
+						lig_unadvance = first(info.unadvance, defaultInfo.unadvance, 0) + first(old_info.w, defaultInfo.w) - 1 
+					}
+					// Extend i by the length of the ligature, minus 1 since the for loop will do i++
+					i+= Math.max(0, (matching_ligatures[0].length -1 ) - lig_chain) 
 				}
-				// Extend i by the length of the ligature, minus 1 since the for loop will do i++
-				i+= Math.max(0, (matching_ligatures[0].length -1 ) - lig_chain) 
 			}
-			var x=first(info.x, defaultInfo.x)
+			var x=first(info.x, ligature_default.x, defaultInfo.x)
 			if(glitch){
 				x*=0.95
 			}
 			out.push({
 				'x': x,
-				'y': first(info.y, defaultInfo.y, fontOriginY),
-				'w': first(info.w, defaultInfo.w),
-				'h': first(info.h, defaultInfo.h),
-				'unadvance': first(lig_unadvance, info.unadvance, defaultInfo.unadvance, 0),
-				'unadvance-after': first(info['unadvance-after'],{}),
-				'vertical-shift': first(info['vertical-shift'], 0),
+				'y': first(info.y, ligature_default.y, defaultInfo.y, fontOriginY),
+				'w': first(info.w, ligature_default.w, defaultInfo.w),
+				'h': first(info.h, ligature_default.h, defaultInfo.h),
+				'unadvance': first(lig_unadvance, ligature_default.unadvance, info.unadvance, defaultInfo.unadvance, 0),
+				'unadvance-after': first(info['unadvance-after'],ligature_default['unadvance-after'], {}),
+				'vertical-shift': first(info['vertical-shift'], ligature_default['vertical-shift'], 0),
 				'char':c
 			})
 		}
@@ -1063,12 +1069,12 @@ function loadJSONForGenerator(){
 		}else{
 			$('#notes').text('')
 		}
-		addLinksForSpecialCharacters()
+		addLinksForSpecialCharactersAndInsertables()
 	})
 
 }
 
-function addLinksForSpecialCharacters(){
+function addLinksForSpecialCharactersAndInsertables(){
 	var specials = [] 
 	Object.keys(fontInfo).forEach(function (key) {
 		if($.isNumeric(key)){
@@ -1092,6 +1098,40 @@ function addLinksForSpecialCharacters(){
 			var sourcetext = $('#sourcetext')
 			var before_text = sourcetext.val()
 			var to_insert = String.fromCodePoint($(this).data('character'))
+			var caret_pos = sourcetext[0].selectionStart
+			if (typeof caret_pos === 'number') {
+				if (!sourcetext_focused) {
+					caret_pos = before_text.length
+				}
+				sourcetext.val(before_text.substring(0, caret_pos) + to_insert + before_text.substring(caret_pos))
+				sourcetext.focus()
+				sourcetext[0].selectionStart = sourcetext[0].selectionEnd = caret_pos + to_insert.length
+			} else {
+				sourcetext.val(before_text + to_insert)
+			}
+			renderText()
+			return false
+		})
+	}
+	var insertables = Object.keys(first(fontInfo.insertables,{})).filter((e)=>e!='default')
+	if(insertables.length>0){
+		var specialdiv = $('<div class="insertable-keys"><b>Insertables:</b> <br /></div>')
+		for (insertable of insertables) {
+			specialdiv.append(
+				'<a class="add-insertable" href="" data-insertable="' 
+				+ insertable + '" title="' 
+				+ insertable+'">['+insertable+']</a> ')
+		}
+		$('#notes').append(specialdiv)
+		var sourcetext_focused = false
+		$('.add-insertable').mousedown(function(){
+			sourcetext_focused = $('#sourcetext').is(':focus')
+			return true
+		})
+		$('.add-insertable').click(function(){
+			var sourcetext = $('#sourcetext')
+			var before_text = sourcetext.val()
+			var to_insert = $(this).data('insertable')
 			var caret_pos = sourcetext[0].selectionStart
 			if (typeof caret_pos === 'number') {
 				if (!sourcetext_focused) {
