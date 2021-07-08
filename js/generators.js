@@ -116,6 +116,16 @@ var generators={
 		'added':'2019-06-12',
 		'gameinfo':'https://en.wikipedia.org/wiki/Atari_8-bit_family',
 	},
+	'babyjo':{
+		'title': 'Baby Jo',
+		'source':'Loriciel',
+		'sourceurl':'https://en.wikipedia.org/wiki/Loriciel',
+		'defaulttext':"     Here's some\n  advice : find the\n     signs of the\n Hidden Treasures",
+		'platform':'dos',
+		'gameinfo':'https://www.mobygames.com/game/baby-jo-in-going-home',
+		'year':1991,
+		'added':'2021-07-07',
+	},
 	'baddudes':{
 		'title': 'Bad Dudes',
 		'source':'Data East',
