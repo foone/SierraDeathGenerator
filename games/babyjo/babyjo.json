@@ -5,7 +5,7 @@
 		"y": 92
 	},
 	"hooks": {
-		"border": "bw=Math.min(176,Math.max(48,textbox.w+15));bh=Math.min(113,Math.max(32,textbox.h+14));border_x=181-bw;border_y=121-bh;originx=border_x+4;mainFont.y=border_y+3;console.log(bh)"
+		"border": "bw=Math.min(176,Math.max(48,textbox.w+15));bh=Math.min(113,Math.max(32,textbox.h+14));border_x=181-bw;border_y=121-bh;originx=border_x+4;mainFont.y=border_y+3"
 	},
 	"case-fold": "upper",
 	"border": {
