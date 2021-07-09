@@ -900,6 +900,16 @@ var generators={
 		'added':'2020-03-18',
 		'gameinfo':'https://www.mobygames.com/game/jojos-bizarre-adventure'
 	},
+	'jp':{
+		'title': "Jurassic Park",
+		'source':'Ocean Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Ocean_Software',
+		'defaulttext':"BIOS Load..\n\nMessage\n\nError-\nMain system down.\n\nAction-\nTurn on generator.\nBefore trying to\nreboot system\n\n\nMessage ends...",
+		'platform':'snes',
+		'year':1993,
+		'added':'2021-07-09',
+		'gameinfo':'https://www.mobygames.com/game/jurassic-park____'
+	},
 	'karnovr':{
 		'title': "Karnov's Revenge",
 		'source':'Data East',
