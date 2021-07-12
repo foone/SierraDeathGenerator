@@ -1574,6 +1574,17 @@ var generators={
 		'added':'2020-09-26',
 		'series':'rambo'
 	},
+	"rightagain":{
+		'title': 'Right Again',
+		'source':'Ascension Designs',
+		'sourceurl':'https://www.mobygames.com/company/ascension-designs-inc',
+		'defaulttext':"Hannah says -\n\nMy grandfather used\nto talk about that.",
+		'platform':'apple2',
+		'year':1984,
+		'gameinfo':'https://www.mobygames.com/game/apple2/right-again',
+		'added':'2021-07-11',
+		'play':'https://archive.org/details/a2_Right_Again_1984_Ascension_Designs'
+	},
 	"rr":{
 		'title': 'Road Rash',
 		'source':'Electronic Arts',
