@@ -1853,6 +1853,16 @@ var generators={
 		'added':'2018-03-08',
 		"series":"space quest"
 	},
+	'stan':{
+		'title': 'Stanley: The Search for Dr. Livingston',
+		'source':'Sculptured Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/List_of_Acclaim_Entertainment_subsidiaries#Acclaim_Studios_Salt_Lake_City',
+		'defaulttext':"The ship\nsails\nwith or\nwithout\nyou\nStanley",
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/stanley-the-search-for-dr-livingston',
+		'added':'2021-07-23',
+	},
 	'sv':{
 		'title': 'Stardew Valley',
 		'source':'ConcernedApe',
