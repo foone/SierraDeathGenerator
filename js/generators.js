@@ -697,6 +697,17 @@ var generators={
 		'added':'2019-02-13',
 		'gameinfo':'https://www.mobygames.com/game/kaeru-no-tame-ni-kane-wa-naru',
 	},
+	'ff5':{
+		'title': 'Final Fantasy V',
+		'source':'Square',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"Bartz: Sweet Christmas,\nIt's a talking turtle!",
+		'year':2006,
+		'platform':'snes',
+		'series':'final fantasy',
+		'added':'2021-07-23',
+		'gameinfo':'https://www.mobygames.com/game/final-fantasy-v-advance',
+	},
 	'ff6':{
 		'title': 'Final Fantasy VI',
 		'source':'Square',
