@@ -1509,6 +1509,16 @@ var generators={
 		'added':'2018-12-18',
 		'series':'police quest'
 	},
+	'pieces':{
+		'title': 'Pieces',
+		'source':'Prism Kikaku Ltd',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nippon_Ichi_Software',
+		'defaulttext':"      RICE BOWL CRAB\nI'll be your first opponent!\nI have huge eyes, so I'm\npretty accurate. Now, if I\ncould only walk straight...",
+		'platform':'snes',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/snes/pieces',
+		'added':'2021-08-26'
+	},
 	'pw':{
 		'title': 'Pilotwings',
 		'source':'Nintendo',
