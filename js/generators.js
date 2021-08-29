@@ -614,6 +614,22 @@ var generators={
 		'series':'duke nukem'
 
 	},
+	'dragonwarrior':{
+		'title': 'Dragon Warrior',
+		'source':'Chunsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Spike_Chunsoft',
+		'defaulttext':'Fortune smiles upon thee.',
+		'gameinfo':'https://www.mobygames.com/game/nes/dragon-warrior',
+		'contributions':[{
+			'contributor': '@crschmidt',
+			'url':'https://twitter.com/crschmidt',
+		}],
+		'platform':'nes',
+		'year':1986,
+		'added':'2021-08-29',
+		'updated':'2021-08-29',
+		'series': 'dragonquest',
+	},
 	'ecco1':{
 		'title': 'Ecco the Dolphin',
 		'source':'Novotrade International',
