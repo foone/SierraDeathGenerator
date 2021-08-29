@@ -1774,6 +1774,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog-2',
 		'added':'2018-10-31'
 	},
+	'sth2i':{
+		'title': 'Sonic The Hedgehog 2 Intro/Credits',
+		'source':'Sega',
+		'sourceurl':'https://en.wikipedia.org/wiki/SEGA',
+		'defaulttext':"Sonic \n\n\nand\n\n\nMiles \"Tails\" Prower\n\n\nIn ",
+		'platform':'genesis',
+		'series':'sonic',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/genesis/sonic-the-hedgehog-2',
+		'added':'2021-08-28'
+	},
 	'soulb':{
 		'title': 'Soul Blazer',
 		'source':'Quintet',
