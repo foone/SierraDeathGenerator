@@ -1627,6 +1627,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/robocop__',
 		'added':'2020-06-17'
 	},
+	"robocop3":{
+		'title': 'RoboCop 3',
+		'source':'Digital Image Design',
+		'sourceurl':'https://en.wikipedia.org/wiki/Digital_Image_Design',
+		'defaulttext':"This is MEDIABREAK Give us two minutes and we'll\ngive you the WORLD!",
+		'platform':'dos',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/dos/robocop-3_',
+		'added':'2021-09-06'
+	},
 	"rygar":{
 		'title': 'Rygar',
 		'source':'Tecmo',
