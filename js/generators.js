@@ -1445,6 +1445,16 @@ var generators={
 		'series':'pac-man',
 		'added':'2020-09-29'
 	},
+	'pb2':{
+		'title': "Paperboy 2",
+		'source':'Tengen',
+		'sourceurl':'https://en.wikipedia.org/wiki/Tengen_(company)',
+		'defaulttext':"Monday\nPlayer 1\nBroken Panes Puzzle Police",
+		'platform':'snes',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/snes/paperboy-2',
+		'added':'2021-09-08',
+	},
 	'phdq':{
 		'title': "Paris Hilton's Diamond Quest",
 		'source':'Gameloft',
