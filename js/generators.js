@@ -2308,6 +2308,16 @@ var generators={
 		'added':'2020-09-13',
 		'gameinfo':'https://www.mobygames.com/game/nes/warios-woods'
 	},
+	'twtr': {
+		'title': 'The Wild Thornberrys: Rambler',
+		'source': 'Vicarious Visions',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Vicarious_Visions',
+		'platform':'gameboy',
+		'defaulttext': "It's the award given\nfor the Greatest\nNature Documentary Ever in the History of the World. Duh!",
+		'year':2000,
+		'added':'2021-09-14',
+		'gameinfo':'https://www.mobygames.com/game/wild-thornberrys-rambler_'
+	},
 	'win95': {
 		'title': 'Win95 Tips',
 		'source': 'Microsoft',
