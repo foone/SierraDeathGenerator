@@ -636,6 +636,16 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/MS-DOS_Editor',
 		'added':'2018-04-15',
 	},
+	'elvira':{
+		'title': 'Elvira',
+		'source':'Horror Soft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Adventure_Soft',
+		'defaulttext':"\"You're lucky he didn't tie\nyour weeny in a granny knot.\"",
+		'platform':'dos',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/elvira',
+		'added':'2021-09-23',
+	},
 	'ed':{
 		'title': 'Emerald Dragon',
 		'source':'Alfa System',
