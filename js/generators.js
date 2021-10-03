@@ -1209,6 +1209,16 @@ var generators={
 		'added':'2018-05-31',
 
 	},
+	'mckids':{
+		'title': 'M.C. Kids',
+		'source':'Virgin Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Virgin_Interactive',
+		'defaulttext':"Ronald was showing off his Magic Bag at a picnic in the Meadow, when all of a sudden...",
+		'platform':'nes',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/nes/mc-kids',
+		'added':'2021-10-02',
+	},
 	'mm2':{
 		'title': 'Mega Man 2',
 		'source':'Capcom',
