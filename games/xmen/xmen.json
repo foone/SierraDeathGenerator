@@ -1,0 +1,247 @@
+{
+	"height": 8,
+	"origin": {
+		"x": 16,
+		"y": 88
+	},
+	"case-fold": "upper",
+	"dynamic-size": {
+		"w": "overlays.layout.data.info.width",
+		"h": "144"
+	},
+	"hooks": {
+		"pre-text": "{let fnt = overlays.scene.data.info;originx=fnt['origin-x']+overlays.layout.data.info['text-offset'];fontInfo['wrap-width']=fnt.wrap}",
+		"pre-overlays": "overlays.scene.x=overlays.layout.data.info['background-offset']",
+		"font": "switchFont(overlays.scene.data.info.font)"
+	},
+	"overlays": {
+		"scene": {
+			"x": 0,
+			"y": 0,
+			"title": "Scene",
+			"default": "briefing",
+			"options": {
+				"briefing": {
+					"x": 0,
+					"y": 16,
+					"w": 256,
+					"h": 144,
+					"info": {
+						"origin-x": 16,
+						"font": "main",
+						"wrap": 136
+					}
+				},
+				"ending_apocalypse": {
+					"x": 0,
+					"y": 160,
+					"w": 256,
+					"h": 144,
+					"info": {
+						"origin-x": 8,
+						"font": "white",
+						"wrap": 152
+					}
+				},
+				"ending_professor_x": {
+					"x": 0,
+					"y": 304,
+					"w": 256,
+					"h": 144,
+					"info": {
+						"origin-x": 8,
+						"font": "white",
+						"wrap": 152
+					}
+				},
+				"ending_wolverine_and_apocalypse": {
+					"x": 0,
+					"y": 448,
+					"w": 256,
+					"h": 144,
+					"info": {
+						"origin-x": 8,
+						"font": "white",
+						"wrap": 152
+					}
+				}
+			}
+		},
+		"layout": {
+			"x": 0,
+			"y": 0,
+			"title": "Layout",
+			"default": "wide",
+			"options": {
+				"wide": {
+					"x": 256,
+					"y": 16,
+					"w": 8,
+					"h": 8,
+					"info":{
+						"text-offset":48,
+						"background-offset":0,
+						"width":256
+					}
+				},
+				"gameboy_color": {
+					"x": 264,
+					"y": 16,
+					"w": 8,
+					"h": 8,
+					"info":{
+						"text-offset":0,
+						"background-offset":-48,
+						"width":160
+					}
+				}
+			}
+		}
+	},
+	"shiftfonts": {
+		"white": 8
+	},
+	"wrap-width": 136,
+	"default": {
+		"w": 8,
+		"h": 8
+	},
+	"65": {
+		"x": 0
+	},
+	"66": {
+		"x": 8
+	},
+	"67": {
+		"x": 16
+	},
+	"68": {
+		"x": 24
+	},
+	"69": {
+		"x": 32
+	},
+	"70": {
+		"x": 40
+	},
+	"71": {
+		"x": 48
+	},
+	"72": {
+		"x": 56
+	},
+	"73": {
+		"x": 64
+	},
+	"74": {
+		"x": 72
+	},
+	"75": {
+		"x": 80
+	},
+	"76": {
+		"x": 88
+	},
+	"77": {
+		"x": 96
+	},
+	"78": {
+		"x": 104
+	},
+	"79": {
+		"x": 112
+	},
+	"80": {
+		"x": 120
+	},
+	"81": {
+		"x": 128
+	},
+	"82": {
+		"x": 136
+	},
+	"83": {
+		"x": 144
+	},
+	"84": {
+		"x": 152
+	},
+	"85": {
+		"x": 160
+	},
+	"86": {
+		"x": 168
+	},
+	"87": {
+		"x": 176
+	},
+	"88": {
+		"x": 184
+	},
+	"89": {
+		"x": 192
+	},
+	"90": {
+		"x": 200
+	},
+	"46": {
+		"x": 208
+	},
+	"33": {
+		"x": 216
+	},
+	"63": {
+		"x": 224
+	},
+	"49": {
+		"x": 232
+	},
+	"50": {
+		"x": 240
+	},
+	"51": {
+		"x": 248
+	},
+	"52": {
+		"x": 256
+	},
+	"53": {
+		"x": 264
+	},
+	"54": {
+		"x": 272
+	},
+	"55": {
+		"x": 280
+	},
+	"56": {
+		"x": 288
+	},
+	"57": {
+		"x": 296
+	},
+	"48": {
+		"x": 304
+	},
+	"44": {
+		"x": 312
+	},
+	"39": {
+		"x": 320
+	},
+	"45": {
+		"x": 328
+	},
+	"32": {
+		"x": 336
+	},
+	"8221": {
+		"x": 344
+	},
+	"8220": {
+		"x": 352
+	},
+	"9633": {
+		"x": 360
+	}
+}

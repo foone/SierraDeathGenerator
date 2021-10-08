@@ -2402,6 +2402,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/wrath-of-the-black-manta',
 		'added':'2018-04-20',
 	},
+	'xmen':{
+		'title': 'X-Men: Mutant Wars',
+		'source':'HAL Corporation',
+		'sourceurl':'https://www.mobygames.com/company/hal-corporation',
+		'defaulttext':"Our Cerebro computer has detected cyborgs rampaging through Canada.",
+		'platform':'gameboy',
+		'year':2002,
+		'gameinfo':'https://www.mobygames.com/game/gameboy-color/x-men-mutant-wars',
+		'added':'2021-10-07'
+	},
 	'yi':{
 		'title': "Yoshi's Island",
 		'source':'Nintendo',
