@@ -2169,6 +2169,16 @@ var generators={
 		'added':'2018-06-16',
 		'series':'system shock'
 	},
+	'tb':{
+		'title': 'Tecmo Bowl',
+		'source':'Tecmo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Tecmo',
+		'defaulttext':"Marcus Allen\ntouchdown!",
+		'platform':'nes',
+		'year':1989,
+		'gameinfo':'https://www.mobygames.com/game/tecmo-bowl',
+		'added':'2021-10-09'
+	},
 	'themehospital':{
 		'title': 'Theme Hospital',
 		'source':'Bullfrog Productions',
