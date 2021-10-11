@@ -479,6 +479,17 @@ var generators={
 		'added':'2018-04-22',
 
 	},
+	'crazycross':{
+		'title': 'Crazy Cross',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Someone clogged my\ntoilet. It wasn't me...",
+		'platform':'arcade',
+		'year':1994,
+		'gameinfo':'https://konami.fandom.com/wiki/Crazy_Cross',
+		'added':'2021-10-10',
+
+	},
 	'crowtel':{
 		'title': 'Crowtel Renovations',
 		'source':'Sink',
