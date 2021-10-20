@@ -18,7 +18,7 @@ canvas#border{
 	display: none;
 }
 
-#makegif, #jsondump, #throbber{
+#makegif, #throbber{
 	display: none;
 }
 
@@ -60,4 +60,8 @@ a.new-generator{
 
 .debug-links a{
 	margin-left: 1em;
+}
+
+.debug-only{
+	display:  none;
 }

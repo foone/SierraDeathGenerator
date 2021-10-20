@@ -467,6 +467,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/contra-hard-corps',
 		'added':'2020-03-14'
 	},
+	'coolspot':{
+		'title': 'Cool Spot',
+		'source':'Virgin Interactive',
+		'sourceurl':'https://en.wikipedia.org/wiki/Virgin_Interactive',
+		'defaulttext':"Pier\nPressure",
+		'platform':'snes',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/snes/cool-spot',
+		'added':'2021-10-20'
+	},
 	'cosmo':{
 		'title': 'Cosmo\'s Cosmic Adventure',
 		'source':'Apogee Software',
@@ -483,7 +493,7 @@ var generators={
 		'title': 'Crazy Cross',
 		'source':'Konami',
 		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':"Someone clogged my\ntoilet. It wasn't me...",
+		'defaulttext':"",
 		'platform':'arcade',
 		'year':1994,
 		'gameinfo':'https://konami.fandom.com/wiki/Crazy_Cross',
