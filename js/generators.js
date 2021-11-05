@@ -349,11 +349,16 @@ var generators={
 				'type':'Bernie Sanders theme',
 				'contributor': 'A_Rival, aka DJ iPad',
 				'url': 'https://twitter.com/8bitpimp'
+			},
+			{
+				'type':'Nacho Libre theme',
+				'contributor': 'JLuis',
+				'url': 'https://twitter.com/jluisestrada'
 			}
 		],
 		'platform':'ps1',
 		'added':'2018-02-23',
-		'updated':'2021-02-09',
+		'updated':'2021-11-04',
 		'series':'castlevania',
 		'gameinfo':'https://www.mobygames.com/game/castlevania-symphony-of-the-night',
 		'year':1997

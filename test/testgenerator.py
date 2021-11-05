@@ -21,6 +21,7 @@ for path in test_cases:
 		tests['tests'][name] = json.load(f)
 
 print 'Found {} test cases'.format(len(tests['tests']))
+start_time = time.time()
 proc = subprocess.Popen(['node','evaluate_test_cases.js'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 data,_ = proc.communicate(json.dumps(tests))
 results = json.loads(data)
@@ -126,3 +127,4 @@ with open(args.output,'wb') as f:
 	print >>f, '</table>'
 
 print 'Total difference:',cumdiff
+print 'Tested in {:0.2f}s'.format(time.time()-start_time)

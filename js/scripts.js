@@ -121,19 +121,23 @@ class LineGroup{
 					var parts = snippet.split(maxwidth-x)
 					for(var p of parts){
 						var lg = new LineGroup(first)
-						first=false
-						lg.add(p)
-						out.push(lg)
+						if(!p.isEmpty()){
+							first=false
+							lg.add(p)
+							out.push(lg)
+						}
 					}
 					
 					// TODO: rest of snippets?
 					return out
 				}else{
 					x+=w
-					var lg = new LineGroup(first)
-					lg.add(snippet)
-					out.push(snippet)
-					first=false
+					if(!snippet.isEmpty()){
+						var lg = new LineGroup(first)
+						lg.add(snippet)
+						out.push(snippet)
+						first=false
+					}
 				}
 			}
 			return out
@@ -320,7 +324,9 @@ class Snippet{
 			return first(info['height'],fontInfo['height'])
 		}
 	}
-
+	isEmpty(){
+		return this.text.length == 0
+	}
 }
 
 class FontManager{
@@ -329,6 +335,7 @@ class FontManager{
 		this.text = text
 		this.fonts = fonts
 		this.lines = this.applyMarkup()
+		console.log(this.lines)
 	}
 
 	subset(other_text) {
@@ -756,21 +763,25 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 	var fonts={
 		'main': mainFont
 	}
+	var parent_fonts = [fontInfo]
 	if('subfonts' in fontInfo){
 		for(var key of Object.keys(fontInfo.subfonts)){
 			fonts[key] = new BitmapFont(fontInfo.subfonts[key], fontImage)
+			parent_fonts.push(fontInfo.subfonts[key])
 		}
 	}
-	if('shiftfonts' in fontInfo){
-		for(var key of Object.keys(fontInfo.shiftfonts)){
-			// Make a local clone of the JSON tree
-			var fontcopy = JSON.parse(JSON.stringify(fontInfo))
-			if(!'default' in fontcopy){
-				fontcopy['default'] = {}
+	for(const parent_font of parent_fonts){
+		if('shiftfonts' in parent_font){
+			for(var key of Object.keys(parent_font.shiftfonts)){
+				// Make a local clone of the JSON tree
+				var fontcopy = JSON.parse(JSON.stringify(parent_font))
+				if(!('default' in fontcopy)){
+					fontcopy['default'] = {}
+				}
+				fontcopy['default']['y'] = parent_font.shiftfonts[key]
+				delete fontcopy['height'] // Allow changes to the main object to be reflected into the subfont
+				fonts[key] = new BitmapFont(fontcopy, fontImage)
 			}
-			fontcopy['default']['y'] = fontInfo.shiftfonts[key]
-			delete fontcopy['height'] // Allow changes to the main object to be reflected into the subfont
-			fonts[key] = new BitmapFont(fontcopy, fontImage)
 		}
 	}
 	var originx = first(fontInfo.origin.x, 0)

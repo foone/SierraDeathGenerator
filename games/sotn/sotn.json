@@ -4,24 +4,76 @@
 		"x": 56,
 		"y": 22
 	},
-	"original-explicit-origins": {
-		"0": {
-			"x": 56,
-			"y": 22
+	"meta-explicit-origins": {
+		"original": {
+			"0": {
+				"x": 56,
+				"y": 22
+			},
+			"1": {
+				"x": 72,
+				"y": 36
+			}
 		},
-		"1": {
-			"x": 72,
-			"y": 36
-		}
-	},
-	"christmas-explicit-origins": {
-		"0": {
-			"x": 71,
-			"y": 41
+		"christmas": {
+			"0": {
+				"x": 71,
+				"y": 41
+			},
+			"1": {
+				"x": 87,
+				"y": 53
+			}
 		},
-		"1": {
-			"x": 87,
-			"y": 53
+		"bigfont": {
+			"0": {
+				"x": 112,
+				"y": 44
+			},
+			"1": {
+				"x": 144,
+				"y": 72
+			}
+		},
+		"death": {
+			"0": {
+				"x": 56,
+				"y": 134
+			},
+			"1": {
+				"x": 72,
+				"y": 148
+			}
+		},
+		"maria": {
+			"0": {
+				"x": 56,
+				"y": 14
+			},
+			"1": {
+				"x": 72,
+				"y": 28
+			}
+		},
+		"dracula": {
+			"0": {
+				"x": 56,
+				"y": 14
+			},
+			"1": {
+				"x": 64,
+				"y": 28
+			}
+		},
+		"ferryman": {
+			"0": {
+				"x": 56,
+				"y": 10
+			},
+			"1": {
+				"x": 64,
+				"y": 24
+			}
 		}
 	},
 	"null-character": 32,
@@ -43,133 +95,133 @@
 					"x": 0,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"richter-left": {
 					"x": 46,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"alucard-right": {
 					"x": 92,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"alucard-left": {
 					"x": 138,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"dracula-right": {
 					"x": 184,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"dracula-left": {
 					"x": 230,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"death-right": {
 					"x": 276,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"death-left": {
 					"x": 322,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"maria-right": {
 					"x": 368,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"maria-left": {
 					"x": 414,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"ferryman-right": {
 					"x": 460,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"ferryman-left": {
 					"x": 506,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"librarian-right": {
 					"x": 552,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"librarian-left": {
 					"x": 598,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"possessed-richter-right": {
 					"x": 644,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"possessed-richter-left": {
 					"x": 690,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"lisa-right": {
 					"x": 736,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"lisa-left": {
 					"x": 782,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"succubus-right": {
 					"x": 828,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"succubus-left": {
 					"x": 874,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"shaft-right": {
 					"x": 920,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				},
 				"shaft-left": {
 					"x": 966,
 					"y": 8,
 					"w": 46,
-					"h": 80
+					"h": 70
 				}
 			}
 		},
@@ -185,9 +237,197 @@
 					"y": 98,
 					"w": 256,
 					"h": 208,
+					"title": "Intro: Pre-text",
 					"info": {
 						"screenw": 256,
-						"screenh": 208
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"tribute": {
+					"x": 0,
+					"y": 1328,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: Tribute?",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"you_steal_souls": {
+					"x": 256,
+					"y": 1328,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: You steal men's souls",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"your_words_are_empty": {
+					"x": 512,
+					"y": 1328,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: Your words are as empty...",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"as_your_soul": {
+					"x": 768,
+					"y": 1328,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: As your soul!",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"mankind_ill_needs_a": {
+					"x": 1024,
+					"y": 1328,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: Mankind ill needs a...",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"savior_such_a_you": {
+					"x": 1280,
+					"y": 1328,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: Savior such as you",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"what_is_a_man": {
+					"x": 0,
+					"y": 1536,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: What is a man?",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"a_miserable_little_pile_of_secrets": {
+					"x": 256,
+					"y": 1536,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: A miserable little pile of secrets",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"but_enough_talk": {
+					"x": 512,
+					"y": 1536,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: But enough talk...",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"have_at_you": {
+					"x": 768,
+					"y": 1536,
+					"w": 256,
+					"h": 208,
+					"title": "Intro: Have at you!",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
 					}
 				},
 				"christmas": {
@@ -195,9 +435,17 @@
 					"y": 78,
 					"w": 280,
 					"h": 240,
+					"title": "Intro: Christmas",
 					"info": {
 						"screenw": 280,
-						"screenh": 240
+						"screenh": 240,
+						"origin-set": "christmas",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 22,
+							"y": 37
+						}
 					}
 				},
 				"christmas-without-hat": {
@@ -205,9 +453,17 @@
 					"y": 78,
 					"w": 280,
 					"h": 240,
+					"title": "Intro: Christmas (hatless)",
 					"info": {
 						"screenw": 280,
-						"screenh": 240
+						"screenh": 240,
+						"origin-set": "christmas",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 22,
+							"y": 37
+						}
 					}
 				},
 				"bernie-sanders": {
@@ -215,9 +471,377 @@
 					"y": 0,
 					"w": 512,
 					"h": 416,
+					"title": "Intro: Bernie Sanders",
 					"info": {
 						"screenw": 512,
-						"screenh": 416
+						"screenh": 416,
+						"origin-set": "bigfont",
+						"title-font": "bigtitle",
+						"dialogue-font": "big",
+						"portrait-position": {
+							"x": 0,
+							"y": -9999
+						}
+					}
+				},
+				"nacho_libre": {
+					"x": 1024,
+					"y": 1536,
+					"w": 512,
+					"h": 416,
+					"title": "Intro: Nacho Libre",
+					"info": {
+						"screenw": 512,
+						"screenh": 416,
+						"origin-set": "bigfont",
+						"title-font": "bigtitle",
+						"dialogue-font": "big",
+						"portrait-position": {
+							"x": 0,
+							"y": -9999
+						}
+					}
+				},
+				"death": {
+					"x": 15,
+					"y": 452,
+					"w": 256,
+					"h": 208,
+					"title": "Death: First meeting",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "death",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 129
+						}
+					}
+				},
+				"death2": {
+					"x": 1280,
+					"y": 696,
+					"w": 256,
+					"h": 208,
+					"title": "Death: Fight",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"maria": {
+					"x": 280,
+					"y": 432,
+					"w": 256,
+					"h": 208,
+					"title": "Maria: Clock room",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"maria2": {
+					"x": 792,
+					"y": 432,
+					"w": 256,
+					"h": 208,
+					"title": "Maria: Alchemist Laboratory",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"maria3": {
+					"x": 1048,
+					"y": 432,
+					"w": 256,
+					"h": 208,
+					"title": "Maria: Royal Chapel",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"maria4": {
+					"x": 256,
+					"y": 696,
+					"w": 256,
+					"h": 208,
+					"title": "Maria: Royal Chapel Again",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"maria5": {
+					"x": 512,
+					"y": 696,
+					"w": 256,
+					"h": 208,
+					"title": "Maria: Castle Center",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"librarian": {
+					"x": 536,
+					"y": 432,
+					"w": 256,
+					"h": 208,
+					"title": "Librarian",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "original",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 17
+						}
+					}
+				},
+				"ferryman": {
+					"x": 0,
+					"y": 696,
+					"w": 256,
+					"h": 208,
+					"title": "Ferryman",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "ferryman",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 5
+						}
+					}
+				},
+				"shaft_start": {
+					"x": 0,
+					"y": 912,
+					"w": 256,
+					"h": 208,
+					"title": "Shaft: Pre-battle",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"shaft_end": {
+					"x": 256,
+					"y": 912,
+					"w": 256,
+					"h": 208,
+					"title": "Shaft: Post-battle",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"dracula_start1": {
+					"x": 512,
+					"y": 912,
+					"w": 256,
+					"h": 208,
+					"title": "Dracula: Pre-battle 1",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "ferryman",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 5
+						}
+					}
+				},
+				"dracula_start2": {
+					"x": 768,
+					"y": 912,
+					"w": 256,
+					"h": 208,
+					"title": "Dracula: Pre-battle 2",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "ferryman",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 5
+						}
+					}
+				},
+				"dracula_end": {
+					"x": 1024,
+					"y": 912,
+					"w": 256,
+					"h": 208,
+					"title": "Dracula: Post-battle",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "dracula",
+						"title-font": "title",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"ending_alucard": {
+					"x": 1024,
+					"y": 696,
+					"w": 256,
+					"h": 208,
+					"title": "Ending: Alucard alone",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "yellowtitle",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"ending_good1": {
+					"x": 256,
+					"y": 1120,
+					"w": 256,
+					"h": 208,
+					"title": "Ending: Alucard, Maria, and Richter",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "yellowtitle",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"ending_good2": {
+					"x": 1280,
+					"y": 912,
+					"w": 256,
+					"h": 208,
+					"title": "Ending: Maria and Richter 1",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "yellowtitle",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"ending_good3": {
+					"x": 0,
+					"y": 1120,
+					"w": 256,
+					"h": 208,
+					"title": "Ending: Maria and Richter 2",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "yellowtitle",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
+					}
+				},
+				"ending_maria": {
+					"x": 768,
+					"y": 696,
+					"w": 256,
+					"h": 208,
+					"title": "Ending: Alucard and Maria",
+					"info": {
+						"screenw": 256,
+						"screenh": 208,
+						"origin-set": "maria",
+						"title-font": "yellowtitle",
+						"dialogue-font": "main",
+						"portrait-position": {
+							"x": 7,
+							"y": 9
+						}
 					}
 				}
 			}
@@ -252,26 +876,305 @@
 		}
 	},
 	"hooks": {
-		"font": "fontInfo['scale']=2;if(overlays.theme.name.startsWith('christmas')){fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['christmas-explicit-origins']));fontInfo['wrap-width']=176+15;}else if(overlays.theme.name=='bernie-sanders'){fontInfo['wrap-width']=352;switchFont('big');fontInfo['scale']=1;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo.subfonts.big['original-explicit-origins']))}else{fontInfo['wrap-width']=176;fontInfo['explicit-origins']=JSON.parse(JSON.stringify(fontInfo['original-explicit-origins']))}",
-		"pre-overlays": "if(overlays.theme.name.startsWith('christmas')){overlays.portrait.x=22;overlays.portrait.y=37;if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}else{overlays.christmas.x=1024;overlays.hat.x=1024;if(overlays.theme.name=='bernie-sanders'){overlays.portrait.y=-9999}}"
+		"font": "{let lines=rawtext.split('\\n');if(lines.length>0){lines[0]='['+overlays.theme.data.info['title-font']+']'+lines[0]+'[/]'};if(lines.length>1){lines[1]='['+overlays.theme.data.info['dialogue-font']+']'+lines[1]};rawtext=lines.join('\\n');}{fontInfo['scale']=2;if(overlays.theme.name.startsWith('christmas')){fontInfo['wrap-width']=176+15;}else if(overlays.theme.name=='bernie-sanders'){fontInfo['wrap-width']=352;fontInfo['scale']=1;}else{fontInfo['wrap-width']=176;}var new_origins=fontInfo['meta-explicit-origins'][overlays.theme.data.info['origin-set']];fontInfo['explicit-origins']=JSON.parse(JSON.stringify(new_origins))}",
+		"pre-overlays": "{let portpos = overlays.theme.data.info['portrait-position'];overlays.portrait.x=portpos.x;overlays.portrait.y=portpos.y;if(overlays.theme.name.startsWith('christmas')){if(overlays.theme.name=='christmas-without-hat'){overlays.hat.x=1024}}else{overlays.christmas.x=1024;overlays.hat.x=1024;}}"
 	},
 	"dynamic-size": {
 		"w": "overlays.theme.data.info.screenw",
 		"h": "overlays.theme.data.info.screenh"
 	},
 	"subfonts": {
+		"title": {
+			"height": 12,
+			"origin": {
+				"x": 56,
+				"y": 22
+			},
+			"shiftfonts": {
+				"yellowtitle": 904
+			},
+			"default": {
+				"w": 8,
+				"h": 8,
+				"y": 672
+			},
+			"32": {
+				"x": 0,
+				"w": 4
+			},
+			"33": {
+				"x": 8
+			},
+			"34": {
+				"x": 16
+			},
+			"35": {
+				"x": 24
+			},
+			"36": {
+				"x": 32
+			},
+			"37": {
+				"x": 40
+			},
+			"38": {
+				"x": 48
+			},
+			"39": {
+				"x": 56
+			},
+			"40": {
+				"x": 64
+			},
+			"41": {
+				"x": 72
+			},
+			"42": {
+				"x": 80
+			},
+			"43": {
+				"x": 88
+			},
+			"44": {
+				"x": 96
+			},
+			"45": {
+				"x": 104
+			},
+			"46": {
+				"x": 112
+			},
+			"47": {
+				"x": 120
+			},
+			"48": {
+				"x": 128
+			},
+			"49": {
+				"x": 136
+			},
+			"50": {
+				"x": 144
+			},
+			"51": {
+				"x": 152
+			},
+			"52": {
+				"x": 160
+			},
+			"53": {
+				"x": 168
+			},
+			"54": {
+				"x": 176
+			},
+			"55": {
+				"x": 184
+			},
+			"56": {
+				"x": 192
+			},
+			"57": {
+				"x": 200
+			},
+			"58": {
+				"x": 208
+			},
+			"59": {
+				"x": 216
+			},
+			"60": {
+				"x": 224
+			},
+			"61": {
+				"x": 232
+			},
+			"62": {
+				"x": 240
+			},
+			"63": {
+				"x": 248
+			},
+			"64": {
+				"x": 256
+			},
+			"65": {
+				"x": 264
+			},
+			"66": {
+				"x": 272
+			},
+			"67": {
+				"x": 280
+			},
+			"68": {
+				"x": 288
+			},
+			"69": {
+				"x": 296
+			},
+			"70": {
+				"x": 304
+			},
+			"71": {
+				"x": 312
+			},
+			"72": {
+				"x": 320
+			},
+			"73": {
+				"x": 328
+			},
+			"74": {
+				"x": 336
+			},
+			"75": {
+				"x": 344
+			},
+			"76": {
+				"x": 352
+			},
+			"77": {
+				"x": 360
+			},
+			"78": {
+				"x": 368
+			},
+			"79": {
+				"x": 376
+			},
+			"80": {
+				"x": 384
+			},
+			"81": {
+				"x": 392
+			},
+			"82": {
+				"x": 400
+			},
+			"83": {
+				"x": 408
+			},
+			"84": {
+				"x": 416
+			},
+			"85": {
+				"x": 424
+			},
+			"86": {
+				"x": 432
+			},
+			"87": {
+				"x": 440
+			},
+			"88": {
+				"x": 448
+			},
+			"89": {
+				"x": 456
+			},
+			"90": {
+				"x": 464
+			},
+			"91": {
+				"x": 472
+			},
+			"92": {
+				"x": 480
+			},
+			"93": {
+				"x": 488
+			},
+			"94": {
+				"x": 496
+			},
+			"95": {
+				"x": 504
+			},
+			"96": {
+				"x": 512
+			},
+			"97": {
+				"x": 520
+			},
+			"98": {
+				"x": 528
+			},
+			"99": {
+				"x": 536
+			},
+			"100": {
+				"x": 544
+			},
+			"101": {
+				"x": 552
+			},
+			"102": {
+				"x": 560
+			},
+			"103": {
+				"x": 568
+			},
+			"104": {
+				"x": 576
+			},
+			"105": {
+				"x": 584
+			},
+			"106": {
+				"x": 592
+			},
+			"107": {
+				"x": 600
+			},
+			"108": {
+				"x": 608
+			},
+			"109": {
+				"x": 616
+			},
+			"110": {
+				"x": 624
+			},
+			"111": {
+				"x": 632
+			},
+			"112": {
+				"x": 640
+			},
+			"113": {
+				"x": 648
+			},
+			"114": {
+				"x": 656
+			},
+			"115": {
+				"x": 664
+			},
+			"116": {
+				"x": 672
+			},
+			"117": {
+				"x": 680
+			},
+			"118": {
+				"x": 688
+			},
+			"119": {
+				"x": 696
+			},
+			"120": {
+				"x": 704
+			},
+			"121": {
+				"x": 712
+			},
+			"122": {
+				"x": 720
+			}
+		},
 		"big": {
 			"height": 24,
-			"original-explicit-origins": {
-				"0": {
-					"x": 112,
-					"y": 44
-				},
-				"1": {
-					"x": 144,
-					"y": 72
-				}
-			},
 			"default": {
 				"w": 16,
 				"h": 16,
@@ -550,7 +1453,290 @@
 			"122": {
 				"x": 1440
 			}
+		},
+		"bigtitle": {
+			"height": 24,
+			"default": {
+				"w": 16,
+				"h": 16,
+				"y": 680
+			},
+			"32": {
+				"x": 0,
+				"w": 4
+			},
+			"33": {
+				"x": 16
+			},
+			"34": {
+				"x": 32
+			},
+			"35": {
+				"x": 48
+			},
+			"36": {
+				"x": 64
+			},
+			"37": {
+				"x": 80
+			},
+			"38": {
+				"x": 96
+			},
+			"39": {
+				"x": 112
+			},
+			"40": {
+				"x": 128
+			},
+			"41": {
+				"x": 144
+			},
+			"42": {
+				"x": 160
+			},
+			"43": {
+				"x": 176
+			},
+			"44": {
+				"x": 192
+			},
+			"45": {
+				"x": 208
+			},
+			"46": {
+				"x": 224
+			},
+			"47": {
+				"x": 240
+			},
+			"48": {
+				"x": 256
+			},
+			"49": {
+				"x": 272
+			},
+			"50": {
+				"x": 288
+			},
+			"51": {
+				"x": 304
+			},
+			"52": {
+				"x": 320
+			},
+			"53": {
+				"x": 336
+			},
+			"54": {
+				"x": 352
+			},
+			"55": {
+				"x": 368
+			},
+			"56": {
+				"x": 384
+			},
+			"57": {
+				"x": 400
+			},
+			"58": {
+				"x": 416
+			},
+			"59": {
+				"x": 432
+			},
+			"60": {
+				"x": 448
+			},
+			"61": {
+				"x": 464
+			},
+			"62": {
+				"x": 480
+			},
+			"63": {
+				"x": 496
+			},
+			"64": {
+				"x": 512
+			},
+			"65": {
+				"x": 528
+			},
+			"66": {
+				"x": 544
+			},
+			"67": {
+				"x": 560
+			},
+			"68": {
+				"x": 576
+			},
+			"69": {
+				"x": 592
+			},
+			"70": {
+				"x": 608
+			},
+			"71": {
+				"x": 624
+			},
+			"72": {
+				"x": 640
+			},
+			"73": {
+				"x": 656
+			},
+			"74": {
+				"x": 672
+			},
+			"75": {
+				"x": 688
+			},
+			"76": {
+				"x": 704
+			},
+			"77": {
+				"x": 720
+			},
+			"78": {
+				"x": 736
+			},
+			"79": {
+				"x": 752
+			},
+			"80": {
+				"x": 768
+			},
+			"81": {
+				"x": 784
+			},
+			"82": {
+				"x": 800
+			},
+			"83": {
+				"x": 816
+			},
+			"84": {
+				"x": 832
+			},
+			"85": {
+				"x": 848
+			},
+			"86": {
+				"x": 864
+			},
+			"87": {
+				"x": 880
+			},
+			"88": {
+				"x": 896
+			},
+			"89": {
+				"x": 912
+			},
+			"90": {
+				"x": 928
+			},
+			"91": {
+				"x": 944
+			},
+			"92": {
+				"x": 960
+			},
+			"93": {
+				"x": 976
+			},
+			"94": {
+				"x": 992
+			},
+			"95": {
+				"x": 1008
+			},
+			"96": {
+				"x": 1024
+			},
+			"97": {
+				"x": 1040
+			},
+			"98": {
+				"x": 1056
+			},
+			"99": {
+				"x": 1072
+			},
+			"100": {
+				"x": 1088
+			},
+			"101": {
+				"x": 1104
+			},
+			"102": {
+				"x": 1120
+			},
+			"103": {
+				"x": 1136
+			},
+			"104": {
+				"x": 1152
+			},
+			"105": {
+				"x": 1168
+			},
+			"106": {
+				"x": 1184
+			},
+			"107": {
+				"x": 1200
+			},
+			"108": {
+				"x": 1216
+			},
+			"109": {
+				"x": 1232
+			},
+			"110": {
+				"x": 1248
+			},
+			"111": {
+				"x": 1264
+			},
+			"112": {
+				"x": 1280
+			},
+			"113": {
+				"x": 1296
+			},
+			"114": {
+				"x": 1312
+			},
+			"115": {
+				"x": 1328
+			},
+			"116": {
+				"x": 1344
+			},
+			"117": {
+				"x": 1360
+			},
+			"118": {
+				"x": 1376
+			},
+			"119": {
+				"x": 1392
+			},
+			"120": {
+				"x": 1408
+			},
+			"121": {
+				"x": 1424
+			},
+			"122": {
+				"x": 1440
+			}
 		}
+
 	},
 	"default": {
 		"w": 8,
