@@ -335,7 +335,6 @@ class FontManager{
 		this.text = text
 		this.fonts = fonts
 		this.lines = this.applyMarkup()
-		console.log(this.lines)
 	}
 
 	subset(other_text) {
