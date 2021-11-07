@@ -851,6 +851,16 @@ var generators={
 		'added':'2020-04-17',
 		'gameinfo':'https://www.mobygames.com/game/super-solvers-gizmos-gadgets'
 	},
+	'goku2':{
+		'title': 'Dragon Ball Z: The Legacy of Goku II',
+		'source':'Webfoot Technologies',
+		'sourceurl':'https://en.wikipedia.org/wiki/Webfoot_Technologies',
+		'year':2003,
+		'platform':'gba',
+		'defaulttext':"GOKU: We're here!  Hey, looks like there's a parade today!",
+		'added':'2021-11-06',
+		'gameinfo':'https://www.mobygames.com/game/dragon-ball-z-the-legacy-of-goku-ii'
+	},
 	'got':{
 		'title': 'God of Thunder',
 		'source':'Adept Software',
