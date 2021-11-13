@@ -19,6 +19,17 @@ var generators={
 		'platform':'snes',
 		'gameinfo':'https://www.mobygames.com/game/snes/adventures-of-batman-robin__'
 	},
+	'af1':{
+		'title': 'Aero Fighters',
+		'source':'Video System',
+		'sourceurl':'https://en.wikipedia.org/wiki/Aero_Fighters',
+		'defaulttext':"Your mission:\nDestroy the secret weapons of the dictator.",
+		'added':'2021-11-12',
+		'platform':'arcade',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/aero-fighters',
+		'series':'aero fighters'
+	},
 	'af2':{
 		'title': 'Aero Fighters 2',
 		'source':'Video System',
@@ -1414,6 +1425,16 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/Roland_MT-32',
 		'added':'2018-04-11',
 
+	},
+	'mlprr':{
+		'title': 'My Little Pony: Crystal Princess - The Runaway Rainbow',
+		'source':'Webfoot Technologies',
+		'sourceurl':'https://en.wikipedia.org/wiki/Webfoot_Technologies',
+		'defaulttext':'[hotpink]Cheerilee:[/] Rarity?  Are you listening?',
+		'platform':'gba',
+		'year':2006,
+		'gameinfo':'https://www.mobygames.com/game/my-little-pony-crystal-princess-the-runaway-rainbow',
+		'added':'2021-11-06'
 	},
 	'nesticle':{
 		'title': 'Nesticle',
