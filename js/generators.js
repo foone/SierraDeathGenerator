@@ -1769,6 +1769,17 @@ var generators={
 		'updated':'2019-02-23',
 		'series':'simcity'
 	},
+	'simearth':{
+		'title': 'SimEarth',
+		'source':'Maxis Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
+		'defaulttext':"\nAmphibians\nAre Now Sentient.",
+		'play':"https://archive.org/details/msdos_SimEarth_-_The_Living_Planet_1990",
+		'platform':'dos',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/simearth-the-living-planet',
+		'added':'2021-11-13'
+	},
 	'simrefinery':{
 		'title': 'SimRefinery',
 		'source':'Maxis Software',
