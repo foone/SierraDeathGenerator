@@ -1,17 +1,27 @@
 {
 	"height": 16,
 	"origin": {
-		"x": 40,
-		"y": 16
+		"x": 0,
+		"y": 0
+	},
+	"hooks": {
+		"font": "{let lines=rawtext.split('\\n');if(lines.length>0){lines[0]='[red]'+lines[0]+'[/]'};rawtext=lines.join('\\n');}"
+	},
+	"first-line-justify": "center",
+	"justify-resolution": 8,
+
+	"explicit-origins": {
+		"0": {
+			"x": 116,
+			"y": 16
+		},
+		"1": {
+			"x": 40,
+			"y": 48
+		}
 	},
 	"null-character": 32,
-	"32": {
-		"x": 288,
-		"y": 8,
-		"w": 8,
-		"h": 8
-	},
-	"first-height": 32,
+	"wrap-width": 172,
 	"subfonts": {
 		"red": {
 			"height": 16,
@@ -147,6 +157,12 @@
 	},
 
 	"default": {
+		"w": 8,
+		"h": 8
+	},
+	"32": {
+		"x": 288,
+		"y": 8,
 		"w": 8,
 		"h": 8
 	},

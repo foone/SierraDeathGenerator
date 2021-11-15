@@ -1059,11 +1059,12 @@ var generators={
 		'title': 'Kirby\'s Adventure',
 		'source':'HAL Laboratory',
 		'sourceurl':'https://en.wikipedia.org/wiki/HAL_Laboratory',
-		'defaulttext':'[red]      Normal[/]\nHit the Down Arrow\nwhen Kirby has an\nenemy in his mouth\nto copy the enemy\'s\nspecial ability!',
+		'defaulttext':'Normal\nHit the Down Arrow\nwhen Kirby has an\nenemy in his mouth\nto copy the enemy\'s\nspecial ability!',
 		'platform':'nes',
 		'series':'kirby',
 		'year':1993,
 		'added':'2019-01-11',
+		'updated':'2021-11-15',
 		'gameinfo':'https://www.mobygames.com/game/kirbys-adventure'
 	},
 	'kkfeoe':{
