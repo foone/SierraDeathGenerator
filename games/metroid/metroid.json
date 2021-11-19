@@ -1,14 +1,69 @@
 {
 	"height": 16,
 	"origin": {
-		"x": 16,
-		"y": 16
+		"x": 0,
+		"y": 0
 	},
 	"null-character": 32,
-	"first-height": 24,
+	"explicit-origins":{
+		"0":{
+			"x":16,
+			"y":16
+		},
+		"1":{
+			"x":16,
+			"y":40
+		}
+	},
 	"gif": true,
 	"script": true,
+	"hooks": {
+		"font": "{let fnt=overlays.scene.data.info;switchFont(fnt.font);let origins=fontInfo['explicit-origins'];origins['0']={'x':fnt.origin.x,'y':fnt.origin.y};origins['1']={'x':fnt.origin.x,'y':fnt.origin.y+fnt.height};}",
+		"pre-overlays": "if(overlays.scene.name=='password_screen'){overlays.stars.x=-256;}",
+		"change-scene": "if((new Set([''].concat(Object.values(fontInfo.overlays.scene.options).map(x=>x.info.text)))).has($('#sourcetext').val())){$('#sourcetext').val(overlays.scene.options[$('#overlay-scene').val()].info.text)}"
+	},
+	"shiftfonts":{
+		"password":904
+	},
 	"overlays": {
+		"scene":{
+			"x": 0,
+			"y": 0,
+			"title": "Scene",
+			"default": "ending",
+			"options": {
+				"ending": {
+					"x": 256,
+					"y": 912,
+					"w": 256,
+					"h": 224,
+					"info":{
+						"font":"main",
+						"height":24,
+						"origin":{
+							"x":16,
+							"y":16
+						},
+						"text":"           GREAT!\n YOU FULFILED YOUR MISSION.\n IT WILL REVIVE PEACE IN\nSPACE. \n BUT,IT MAY BE INVADED BY\nTHE OTHER METROID.\n PRAY FOR A TRUE PEACE IN\nSPACE"
+					}
+				},
+				"password_screen": {
+					"x": 0,
+					"y": 912,
+					"w": 256,
+					"h": 224,
+					"info":{
+						"font":"password",
+						"origin":{
+							"x":32,
+							"y":56
+						},
+						"height":16,
+						"text":"     JUSTIN BAILEY\n     ------ ------"
+					}
+				}
+			}
+		},
 		"stars": {
 			"x": 0,
 			"y": 0,

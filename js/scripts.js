@@ -335,6 +335,7 @@ class FontManager{
 		this.text = text
 		this.fonts = fonts
 		this.lines = this.applyMarkup()
+		//console.log(this.lines)
 	}
 
 	subset(other_text) {
@@ -804,6 +805,7 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 	var fontManager = new FontManager(context, rawtext, fonts)
 	if('wrap-width' in fontInfo && $('#wordwrap').prop('checked')){
 		fontManager.wordwrap(fontInfo['wrap-width'])
+		//console.log(fontManager.lines)
 	}
 
 	if(wordwrap_dryrun){
