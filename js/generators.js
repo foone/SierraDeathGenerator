@@ -1155,6 +1155,16 @@ var generators={
 		'added':'2020-09-19',
 		'play':'https://archive.org/details/LetsLearnAboutComputers4amCrack'
 	},
+	'lm':{
+		'title': 'La-Mulana',
+		'source':'NIGORO',
+		'sourceurl':'http://nigoro.jp/en/about/',
+		'defaulttext':"These ruins are full of traps. I no longer have the energy to escape…",
+		'platform':'win32',
+		'year':2005,
+		'gameinfo':'https://www.mobygames.com/game/la-mulana',
+		'added':'2021-11-21'
+	},
 	'ln':{
 		'title': 'Little Nemo',
 		'source':'Capcom',
