@@ -269,6 +269,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/breath-of-fire-iv',
 		'series':'breath of fire'
 	},
+	'buckrog':{
+		'title': 'Buck Rogers',
+		'source':'Strategic Simulations, Inc.',
+		'sourceurl':'https://en.wikipedia.org/wiki/Strategic_Simulations',
+		'defaulttext':"Suddenly, ships scream in low from the north. Pandemonium reigns as the fighters drop their deadly cargo! Ships and control towers collapse in balls of crimson flame! People panic and scatter.",
+		'platform':'msdos',
+		'added':'2021-11-22',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/buck-rogers-countdown-to-doomsday'
+	},
 	'codaw':{
 		'title': 'Call of Duty: Advanced Warfare',
 		'source':'Sledgehammer Games',
