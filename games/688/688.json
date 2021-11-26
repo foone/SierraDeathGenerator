@@ -34,6 +34,7 @@
 		"white": "cyrillic_white",
 		"bridge": "cyrillic"
 	},
+	"wrap-width":320,
 	"notes":"Colors available: [red] [green] [yellow] [white]",
 	"case-fold": "upper",
 	"overlays": {
