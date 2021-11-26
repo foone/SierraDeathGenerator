@@ -1,4 +1,15 @@
 var generators={
+	'688':{
+		'title': '688 Attack Sub',
+		'source':'Electronic Arts',
+		'sourceurl':'https://en.wikipedia.org/wiki/Electronic_Arts',
+		'defaulttext':"\n\n\nEstablishing satellite uplink....\nSatellite uplink established\nSecurity access keycode follows:\n[white]Asheville:      Navy helicopters will be\n???",
+		'added':'2021-11-26',
+		'year': 1989,
+		'platform':'msdos',
+		'gameinfo':'https://www.mobygames.com/game/688-attack-sub',
+		'play':'https://archive.org/details/688AttackSub'
+	},
 	'amk':{
 		'title': 'Adventures in the Magic Kingdom',
 		'source':'Capcom',

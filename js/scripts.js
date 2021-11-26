@@ -330,10 +330,11 @@ class Snippet{
 }
 
 class FontManager{
-	constructor(context, text, fonts) {
+	constructor(context, text, fonts, aliases) {
 		this.context = context
 		this.text = text
 		this.fonts = fonts
+		this.aliases = aliases
 		this.lines = this.applyMarkup()
 		//console.log(this.lines)
 	}
@@ -401,6 +402,9 @@ class FontManager{
 				if(marker.startsWith('/')){
 					marker='main'
 				}
+				// Apply font aliases before looking up font name
+				marker = first(this.aliases[marker], marker)
+
 				if(!(marker in this.fonts)){
 					marker='main'
 				}
@@ -789,6 +793,7 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 	var overlays = parseOverlays(fontInfo)
 
 	var rawtext = document.querySelector("textarea#sourcetext").value
+	var fontAliases = first(fontInfo['font-aliases'],{})
 
 	function switchFont(newFont){
 		rawtext = '[' + newFont + ']' + rawtext
@@ -802,7 +807,7 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 		fontInfo.slope_offset=eval('['+fontInfo['slope-offset']+']')[0]
 	}
 
-	var fontManager = new FontManager(context, rawtext, fonts)
+	var fontManager = new FontManager(context, rawtext, fonts, fontAliases)
 	if('wrap-width' in fontInfo && $('#wordwrap').prop('checked')){
 		fontManager.wordwrap(fontInfo['wrap-width'])
 		//console.log(fontManager.lines)
