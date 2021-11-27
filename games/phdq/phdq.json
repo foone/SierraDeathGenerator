@@ -6,7 +6,7 @@
 	},
 	"hooks": {
 		"border": "{border_y=Math.min(71,overlays.scene.data.info.border_y-textbox.h);bh=overlays.scene.data.info.border_h-border_y;border_x=0;overlays.game_over.y=overlays.level_complete.y=border_y+8}",
-		"pre-text": "{let tbl = overlays.scene.data.info.textbox_location; mainFont.y=tbl.y-(overlays.scene.data.info.alignment=='bottom-up' ? textbox.h:0);originx=tbl.x;justify=overlays.scene.data.info.justify}",
+		"pre-text": "{let tbl = overlays.scene.data.info.textbox_location;explicit_origins['0']={'x':tbl.x,'y':tbl.y-(overlays.scene.data.info.alignment=='bottom-up' ? textbox.h:0)};justify=overlays.scene.data.info.justify}",
 		"pre-overlays": "overlays.scene.x=overlays.scene.data.info.overlay_x;overlays.scene.y=overlays.scene.data.info.overlay_y;overlays.level_complete.x=overlays.scene.data.info.level_complete_x;overlays.press_any_key.x=overlays.scene.data.info.press_any_key.x;overlays.press_any_key.y=overlays.scene.data.info.press_any_key.y;overlays.game_over.x=overlays.scene.data.info.game_over_x;explicit_origins={};if(overlays.scene.name=='fortune_cookie'){let lines=rawtext.split('\\n');var y=overlays.scene.data.info.textbox_location.y;for(var i=0;i<lines.length;i++){explicit_origins[i.toString()]={'x':overlays.scene.data.info.textbox_location.x,'y':y};y+=(lines[i]==''?8:overlays.scene.data.info['font-height'])}}",
 		"font": "switchFont(overlays.scene.data.info.color);fontInfo['height']=overlays.scene.data.info['font-height'];"
 	},
