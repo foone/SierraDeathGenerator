@@ -724,6 +724,17 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/Wisdom_Tree',
 		'added':'2020-02-23',
 	},
+	'f2b':{
+		'title': 'Fade to Black',
+		'source':'Delphine Software International',
+		'sourceurl':'https://en.wikipedia.org/wiki/Delphine_Software_International',
+		'defaulttext':"Message #1\nFrom:  John\n\nHello again, Conrad.\nYour first mission is to reach the infirmary\non Level 2. Mandragore agents left a radar\nscrambler there. It will allow us to escape\nwithout being detected by the prison\nsecurity system. The device is hidden inside\na \"MEDIKIT\". I'll be in touch.\nEnd of message.",
+		'platform':'msdos',
+		'year':1995,
+		'gameinfo':'https://www.mobygames.com/game/fade-to-black',
+		'added':'2021-11-29',
+		'play':'https://archive.org/details/msdos_Fade_to_Black_1995'
+	},
 	'familyfeud':{
 		'title': 'Family Feud',
 		'source':'Imagineering',
