@@ -1470,16 +1470,6 @@ var generators={
 		'added':'2018-04-11',
 
 	},
-	'mlprr':{
-		'title': 'My Little Pony: Crystal Princess - The Runaway Rainbow',
-		'source':'Webfoot Technologies',
-		'sourceurl':'https://en.wikipedia.org/wiki/Webfoot_Technologies',
-		'defaulttext':'[hotpink]Cheerilee:[/] Rarity?  Are you listening?',
-		'platform':'gba',
-		'year':2006,
-		'gameinfo':'https://www.mobygames.com/game/my-little-pony-crystal-princess-the-runaway-rainbow',
-		'added':'2021-11-06'
-	},
 	'nesticle':{
 		'title': 'Nesticle',
 		'source':'Bloodlust Software',
