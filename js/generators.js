@@ -2142,7 +2142,7 @@ var generators={
 		'title': 'Super Godzilla',
 		'source':'Toho',
 		'sourceurl':'https://en.wikipedia.org/wiki/Toho',
-		'defaulttext':'Warning: It is a serious\ncrime to copy video games.\n\n18 USC 2319 Please refer\nto your Nintendo game\ninstruction booklet for\nfurther information.',
+		'defaulttext':"Various enemies are lurking in the city.  Move carefully.",
 		"year":1994,
 		'gameinfo':'https://www.mobygames.com/game/snes/super-godzilla',
 		"platform":"snes",
