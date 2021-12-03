@@ -2138,6 +2138,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/strider_',
 		'added':'2019-07-12'
 	},
+	'sg':{
+		'title': 'Super Godzilla',
+		'source':'Toho',
+		'sourceurl':'https://en.wikipedia.org/wiki/Toho',
+		'defaulttext':'Warning: It is a serious\ncrime to copy video games.\n\n18 USC 2319 Please refer\nto your Nintendo game\ninstruction booklet for\nfurther information.',
+		"year":1994,
+		'gameinfo':'https://www.mobygames.com/game/snes/super-godzilla',
+		"platform":"snes",
+		'series':'godzilla',
+		'added':'2021-12-03'
+	},
 	'smas':{
 		'title': 'Super Mario All-Stars',
 		'source':'Nintendo',
