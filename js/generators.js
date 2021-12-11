@@ -2504,6 +2504,17 @@ var generators={
 		'added':'2019-01-02',
 		'gameinfo':'https://deerbell.itch.io/witchy-workshop'
 	},
+	'wbiml':{
+		'title': 'Wonder Boy in Monster Land',
+		'source':'Westone Bit Entertainment',
+		'sourceurl':'https://en.wikipedia.org/wiki/Westone_Bit_Entertainment',
+		'defaulttext':"Jump at fence,\nget time.",
+		'platform':'arcade',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/wonder-boy-in-monster-land',
+		'added':'2021-12-10',
+		'series':'wonder boy'
+	},
 	'wh2':{
 		'title': 'World Heroes 2',
 		'source':'ADK',
