@@ -2483,6 +2483,17 @@ var generators={
 		'updated':'2020-08-25',
 		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95'
 	},
+	'wizball':{
+		'title': 'Wizball',
+		'source': 'Sensible Software',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Sensible_Software',
+		'defaulttext': "select thrust and antigrav first.\narrows on the landscapes tell\nyou if the holes lead up or down.\n\nafter completing a colour,you\ncan have a permanent weapon,just   \nselect the one you want while      \nwizzy stirs his pot.               \n\nextra lives on bonus level.  \n\nwiggle joystick to select weapons. \n\n\n[pressreturn]press return for wiztips[/]",
+		'play': 'https://archive.org/details/msdos_Wizball_1987',
+		'platform':'dos',
+		'year':1987,
+		'gameinfo':'https://www.mobygames.com/game/dos/wizball',
+		'added':'2021-12-14'
+	},
 	'wof': {
 		'title': 'Wheel of Fortune',
 		'source': 'SHAREDATA, Inc',
