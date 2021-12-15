@@ -2400,6 +2400,16 @@ var generators={
 		'updated': '2019-10-01',
 		'gameinfo':'https://www.mobygames.com/game/windows/untitled-goose-game'
 	},
+	'victorious':{
+		'title': 'Victorious: Hollywood Arts Debut',
+		'source': 'Behaviour Interactive',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Behaviour_Interactive',
+		'defaulttext': "Help! I need to go to the bathroom and Jade has handcuffed me to the stairs!",
+		'platform': 'ds',
+		'year': 2011,
+		'added': '2021-12-15',
+		'gameinfo':'https://www.mobygames.com/game/victorious-hollywood-arts-debut'
+	},
 	'vfa': {
 		'title': 'Virtua Fighter Animation',
 		'source': 'Aspect Co.',
