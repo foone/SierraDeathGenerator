@@ -648,6 +648,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/gameboy-color/disneys-doug-dougs-big-game',
 		'added':'2019-05-26',
 	},
+	'drakejosh':{
+		'title': "Drake & Josh",
+		'source': 'Behaviour Interactive',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Behaviour_Interactive',
+		'defaulttext': "Nice try, Boober.  Have fun\ngetting through the basement.",
+		'platform':'gba',
+		'year':2007,
+		'gameinfo':'https://www.mobygames.com/game/drake-josh',
+		'added':'2021-12-17',
+	},
 	'dw':{
 		'title': 'DreamWeb',
 		'source':'Creative Reality',
