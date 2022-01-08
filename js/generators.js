@@ -969,6 +969,17 @@ var generators={
 		'added':'2020-04-14',
 		'gameinfo':'https://www.mobygames.com/game/snes/home-alone-2-lost-in-new-york_'
 	},
+	'hybrid':{
+		'title': 'Hybrid Cracktro',
+		'source':'HYBRID',
+		'sourceurl':'https://en.wikipedia.org/wiki/List_of_warez_groups#HYBRID',
+		'defaulttext':"\nhybrid\n\nproudly present:\n\nhellfire  zone\n\n(C) gametek ",
+		'platform':'dos',
+		'year':1996,
+		'added':'2022-01-08',
+		'gameinfo':'https://archive.org/details/msdos_Hellfire_Zone_1995',
+		'play':'https://archive.org/details/msdos_Hellfire_Zone_1995'
+	},
 	'hso':{
 		'title': 'Hypnospace Outlaw',
 		'source':'Tendershoot, Michael Lasch, ThatWhichIs Media',
