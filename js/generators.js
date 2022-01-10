@@ -1908,7 +1908,16 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/snes/skyblazer',
 		'added':'2018-05-15',
-
+	},
+	'sims2':{
+		'title': 'The Sims 2',
+		'source':'Maxis Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Maxis',
+		'defaulttext':"Tristan Legend\nYou ever caught a meteor with your bare hands? It takes time to get used to the heat and the pain, but it's a good cure for loneliness.",
+		'platform':'ds',
+		'year':2005,
+		'gameinfo':'https://www.mobygames.com/game/sims-2_',
+		'added':'2022-01-10'
 	},
 	'sth1':{
 		'title': 'Sonic The Hedgehog 1',
