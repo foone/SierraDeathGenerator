@@ -337,7 +337,7 @@ var generators={
 		'source':'Monkeystone Games',
 		'sourceurl':'https://en.wikipedia.org/wiki/Monkeystone_Games',
 		'defaulttext':'[blue]Tater Farm[/]\nIN ORDER TO WIN THE\nTATER FARM BOARD\nYOU MUST BE THE\nFIRST PLAYER TO\nCOLLECT FOUR\nPORKBUTTS, THEN',
-		'added':'2021-01-22',
+		'added':'2022-01-22',
 		'year':2004,
 		'gameinfo':'https://www.mobygames.com/game/cartoon-network-block-party',
 		'platform':'gba'
