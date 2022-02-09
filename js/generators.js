@@ -16,6 +16,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
 		'defaulttext':"999 ghosts are in this\n\nhouse. but they're always\n\nlooking for number 1,000.\n\nBe careful--They might\n\nwant you!\n             \u25bc",
 		'added':'2018-08-26',
+		'updated':'2022-02-08',
 		'year': 1990,
 		'platform':'nes',
 		'gameinfo':'https://www.mobygames.com/game/disney-adventures-in-the-magic-kingdom'

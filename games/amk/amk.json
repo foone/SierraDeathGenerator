@@ -10,7 +10,7 @@
 		"characters": {
 			"x": 96,
 			"y": 22,
-			"title": "Charactors",
+			"title": "Character",
 			"default": "mickey",
 			"options": {
 				"mickey mouse": {
