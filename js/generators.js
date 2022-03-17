@@ -2396,6 +2396,19 @@ var generators={
 		'year':1995,
 		'added':'2018-10-25'
 	},
+	'tynk':{
+		'title': 'Tynk! and the Final Phonorecord',
+		'source':'VirtualMoth',
+		'sourceurl':'https://tynkga.me/',
+		'defaulttext':"Tynk\nEveryone says '[yellow]Tynk[/] you should get\na dresser for all your clothes'\nlike they can't see my [grey]#Minimalist[/]\npile of clothes right here.",
+		'gameinfo':'https://tynkga.me/',
+		'platform':'win32',
+		'year':2022,
+		'added':'2022-03-16',
+		'how-to-use':'Play the demo',
+		'where-to-use':'itch.io',
+		'play':'https://virtualmoth.itch.io/tynk-and-the-final-phonorecord'
+	},
 	'ufouria':{
 		'title': 'Ufouria',
 		'source': 'Sunsoft',
