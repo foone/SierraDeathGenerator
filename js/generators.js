@@ -2464,6 +2464,16 @@ var generators={
 		'added': '2021-12-15',
 		'gameinfo':'https://www.mobygames.com/game/victorious-hollywood-arts-debut'
 	},
+	'victoriousttl':{
+		'title': 'Victorious: Taking the Lead',
+		'source': 'High Voltage Software',
+		'sourceurl': 'https://en.wikipedia.org/wiki/High_Voltage_Software',
+		'defaulttext': "Kittens are sooooo cute!",
+		'platform': 'wii',
+		'year': 2012,
+		'added': '2022-03-20',
+		'gameinfo':'https://www.mobygames.com/game/victorious-taking-the-lead'
+	},
 	'vfa': {
 		'title': 'Virtua Fighter Animation',
 		'source': 'Aspect Co.',
