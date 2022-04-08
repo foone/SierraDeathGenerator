@@ -2609,6 +2609,7 @@ var generators={
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/snes/world-heroes-2',
 		'added':'2018-05-14',
+		'updated':'2022-04-08',
 		'series':'world heroes'
 	},
 	'wbm':{
