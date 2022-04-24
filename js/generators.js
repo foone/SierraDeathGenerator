@@ -669,6 +669,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/drake-josh',
 		'added':'2021-12-17',
 	},
+	'drugs':{
+		'title': "Drugs: Their Effects on You",
+		'source': 'EduSystems',
+		'sourceurl': 'https://archive.org/details/DrugsTheirEffectsOnYou4amCrack',
+		'defaulttext': "What is a Drug?\nATHLETE DIES FROM\nDRUG OVERDOSE\nThe ancient Greek word for drugs\nwas [underline]pharmakon[/], a word that meant\nboth poison and medicine.  That\ndefinition is still valid.  Used under\nmedical supervision, drugs can\nperform miracles.  Drugs can be\ndeadly when self-administered or \nused for non-medical purposes.",
+		'platform':'apple2',
+		'year':1987,
+		'gameinfo':'https://archive.org/details/DrugsTheirEffectsOnYou4amCrack',
+		'added':'2022-04-24',
+	},
 	'dw':{
 		'title': 'DreamWeb',
 		'source':'Creative Reality',
@@ -1680,6 +1690,7 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/snes/pilotwings',
 		'year':1991,
 		'added':'2019-02-16',
+		'updated':'2022-04-24',
 		'platform':'snes'
 
 	},
