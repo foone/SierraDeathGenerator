@@ -238,7 +238,9 @@ class Snippet{
 				minfo.char.h*minfo.scale
 			)
 			x=minfo.x+(minfo.char.w - minfo.char.unadvance)
-			last = minfo.char.unadvance
+			if(!char['unadvance-through-font-changes']){
+				last = minfo.char.unadvance
+			}
 			lastchar = minfo.char.char
 		}
 		return x + last
@@ -301,6 +303,7 @@ class Snippet{
 				'w': first(info.w, ligature_default.w, defaultInfo.w),
 				'h': first(info.h, ligature_default.h, defaultInfo.h),
 				'unadvance': first(lig_unadvance, ligature_default.unadvance, info.unadvance, defaultInfo.unadvance, 0),
+				'unadvance-through-font-changes': first(font['unadvance-through-font-changes'], false),
 				'unadvance-after': first(info['unadvance-after'],ligature_default['unadvance-after'], {}),
 				'vertical-shift': first(info['vertical-shift'], ligature_default['vertical-shift'], 0),
 				'char':c
@@ -450,27 +453,33 @@ class FontManager{
 		for(let [line_number, line] of this.lines.entries()){
 			var x = originx
 			var origin_override = explicit_origins ? explicit_origins[line_number] : null
+			var local_justify = line_number==0 ? first_line_justify : justify
+
 			if(origin_override){
 				// We overwrite originx as well so this'll stick for later lines
 				originx = x = first(origin_override['x'], originx)
 				y = first(origin_override['y'], y)
+				if(origin_override['justify']){
+					local_justify = origin_override['justify']
+
+				}
 			}
 			if(line_number==0){
-				if(first_line_justify == 'output-center'){
+				if(local_justify == 'output-center'){
 					x = Math.floor(output_size.w/2) - Math.floor(line.getWidth()/2);
 					x = (x - (x % justifyresolution))
 				}
-				if(first_line_justify == 'center'){
+				if(local_justify == 'center'){
 					x = x - Math.floor(line.getWidth()/2);
 					x = (x - (x % justifyresolution))
 				}
 			}
 			if(line_number!=0 || first_line_justify==justify){
-				if(['center','all-center'].includes(justify)){
+				if(['center','all-center'].includes(local_justify)){
 					var jadjust = Math.floor(line.getWidth()/2);
 					x = originx - (jadjust - (jadjust % justifyresolution));
 				}
-				if(justify=='right'){
+				if(local_justify=='right'){
 					var jadjust = line.getWidth();
 					x = originx - (jadjust - (jadjust % justifyresolution));
 				}
