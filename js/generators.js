@@ -1373,6 +1373,17 @@ var generators={
 		'added':'2018-10-19',
 		'year':2001
 	},
+	'mt1':{
+		'title': 'MegaTraveller 1',
+		'source':'Paragon Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Paragon_Software',
+		'defaulttext':"\"Please, you must help me, I'm\nin grave danger!\" She removes\nthree objects from the folds of\nher torn cloak and hands them\nto you. \"I am a Transom agent,\na special investigator for\nSharushid Megacorporation, and\nI have discovered a traitor\nnamed Konrad Kiefer. He plans\nto aid the Zhodani in a\ntreacherous surprise attack\nagainst the Imperium. If he\nsucceeds, it will surely lead\nto another destructive Frontier\nWar.\"",
+		'gameinfo':'https://www.mobygames.com/game/megatraveller-1-the-zhodani-conspiracy',
+		'platform':'msdos',
+		'series':'megatraveller',
+		'added':'2022-05-10',
+		'year':1990
+	},
 	'mmbn4':{
 		'title': 'Mega Man Battle Network 4',
 		'source':'Capcom',
