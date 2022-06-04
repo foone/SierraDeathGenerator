@@ -11,6 +11,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "black_manta",
+			"background":true,
 			"options": {
 				"black_manta": {
 					"x": 0,

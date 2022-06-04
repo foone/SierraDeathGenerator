@@ -17,6 +17,7 @@
 			"y": 0,
 			"title": "Game",
 			"default": "gbc_smurfs_nightmare",
+			"background":true,
 			"options": {
 				"gbc_smurfs_nightmare": {
 					"x": 0,

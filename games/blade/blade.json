@@ -21,6 +21,7 @@
 			"y": 0,
 			"title": "scene",
 			"default": "ingame-final-battle1",
+			"background":true,
 			"options": {
 				"conversation-blade": {
 					"x": 0,

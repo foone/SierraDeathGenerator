@@ -18,6 +18,7 @@
 			"y": 0,
 			"title": "Background",
 			"default": "fatal_fury_special",
+			"background":true,
 			"options": {
 				"fatal_fury_2": {
 					"x": 0,

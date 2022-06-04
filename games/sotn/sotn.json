@@ -231,6 +231,7 @@
 			"title": "Theme",
 			"default": "original",
 			"stage": "pre-border",
+			"background":true,
 			"options": {
 				"original": {
 					"x": 295,

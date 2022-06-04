@@ -11,6 +11,7 @@
 			"y": 0,
 			"title": "Portrait",
 			"default": "grey_beard",
+			"background":true,
 			"options": {
 				"black_coat": {
 					"x": 0,

@@ -72,6 +72,7 @@
 			"y": 0,
 			"title": "Background",
 			"default": "blue",
+			"background":true,
 			"options": {
 				"blue": {
 					"x": 0,
@@ -694,6 +695,7 @@
 			"y": 130,
 			"title": "",
 			"default": "blackbox",
+			"background":true,
 			"options": {
 				"blackbox": {
 					"x": 608,

@@ -12,6 +12,7 @@
 			"y": 0,
 			"title": "Background",
 			"default": "l_amor",
+			"background":true,
 			"options": {
 				"china_town": {
 					"x": 0,

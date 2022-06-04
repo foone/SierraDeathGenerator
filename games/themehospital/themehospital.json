@@ -79,6 +79,7 @@
 			"title": "Background",
 			"default": "hospital",
 			"stage": "pre-border",
+			"background":true,
 			"options": {
 				"transparent": {
 					"x": 0,

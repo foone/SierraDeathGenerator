@@ -15,6 +15,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "book_ronald",
+			"background":true,
 			"options": {
 				"book_birdie": {
 					"x": 256,

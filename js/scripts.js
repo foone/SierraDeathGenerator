@@ -1,6 +1,7 @@
 var canvas = document.querySelector('canvas#death')
 var context = canvas.getContext('2d')
 var baseImage = null
+var transparentBG = null
 var fontImage = null
 var fontInfo = null
 var overlayNames = null
@@ -674,6 +675,7 @@ function selectGenerator(){
 	gamesPath = 'games/' + selectedGenerator + '/'
 	baseImage = $('<img id="template" class="source" />').attr('src', gamesPath + selectedGenerator + '-blank.png').appendTo('body')[0]
 	fontImage = $('<img id="font" class="source" />').attr('src', gamesPath + selectedGenerator + '-font.png').appendTo('body')[0]
+	transparentBG = $('<img id="transparent-background" class="source" src="imgs/transparent-bg.png" />').appendTo('body')[0]
 
 	baseImage = null
 	$('.source').waitForImages(true).done(function(){
@@ -712,6 +714,7 @@ function parseOverlays(fontInfo){
 					"y":currentOverlay.y,
 					"w":adv.w,
 					"h":adv.h,
+					"background":first(currentOverlay['background'], false),
 					"blend":first(currentOverlay['blend-mode'], 'source-over'),
 					"stage":first(currentOverlay.stage, "pre-text"),
 					"title":first(currentOverlay.title,sname),
@@ -831,6 +834,7 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 		fontManager.wordwrap(fontInfo['wrap-width'])
 		//console.log('Wordwrapped: ',fontManager.lines)
 	}
+	var hide_backgrounds = $('#hidebackground').prop('checked')
 
 	if(wordwrap_dryrun){
 		return fontManager
@@ -879,10 +883,13 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 		context.imageSmoothingEnabled = false
 	}
 
-	function drawOverlays(stage){
+	function drawOverlays(stage, hide_backgrounds){
 		Object.keys(overlays).forEach(function (key) {
 			var adv = overlays[key]
 			if(adv.stage == stage){
+				if(adv.background && hide_backgrounds){
+					return
+				}
 				context.globalCompositeOperation = adv.blend
 				var overlay_x = adv.x*scale, overlay_y = adv.y*scale;
 				var overlay_w = adv.w*scale, overlay_h = adv.h*scale
@@ -922,9 +929,17 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 
 	// Clear before drawing, as transparents might get overdrawn
 	context.clearRect(0, 0, canvas.width, canvas.height)
-	context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
+	if(hide_backgrounds){
+		// Only render the transparent-background when we're not saving the image
+		if(scaled){
+			context.drawImage(transparentBG, 0, 0, transparentBG.width*scale, transparentBG.height*scale)
+		}
+	}else{
+		context.drawImage(baseImage, 0, 0, baseImage.width*scale, baseImage.height*scale)
+	}
 
-	drawOverlays('pre-border')
+
+	drawOverlays('pre-border', hide_backgrounds)
 
 	if('border' in fontInfo) {
 		var bw=outputSize.w,bh=outputSize.h
@@ -937,7 +952,9 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 		}
 		buildBorder(fontImage,fontInfo,bw,bh,border_sides)
 		var bordercanvas = document.querySelector('canvas#border')
-		context.drawImage(bordercanvas,0,0,bw,bh,border_x*scale,border_y*scale,bw*scale, bh*scale)
+		if(!hide_backgrounds){
+			context.drawImage(bordercanvas,0,0,bw,bh,border_x*scale,border_y*scale,bw*scale, bh*scale)
+		}
 	}
 
 	if('hooks' in fontInfo && 'pre-overlays' in fontInfo['hooks']){
@@ -946,7 +963,7 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 	}
 
 
-	drawOverlays('pre-text')
+	drawOverlays('pre-text', hide_backgrounds)
 
 	var fontOriginY=0
 
@@ -958,7 +975,7 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 	var first_line_justify = first(first_line_justify, justify)
 	fontManager.draw(mainFont, scale, originx, justify, justify_resolution, fontOriginY, first_line_justify, explicit_origins, outputSize)
 
-	drawOverlays('post-text')
+	drawOverlays('post-text', hide_backgrounds)
 }
 
 
@@ -1222,7 +1239,12 @@ $('#sourcetext').keyup(renderText)
 $(window).resize(function () { renderText() });
 
 $('.wordwrap').change(renderText)
-
+$('#hidebackground').change(
+	function(){
+		$('#background-explanation').toggle($('#hidebackground').prop('checked'))
+		renderText()
+	}
+)
 
 function getDataURLImage(){
 	// generate an unscaled version

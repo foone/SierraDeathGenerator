@@ -31,6 +31,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "ending",
+			"background":true,
 			"options": {
 				"ending": {
 					"x": 256,
@@ -69,6 +70,7 @@
 			"y": 0,
 			"title": "Stars",
 			"default": "stars1",
+			"background":true,
 			"options": {
 				"stars1": {
 					"x": 0,

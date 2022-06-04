@@ -15,11 +15,12 @@
 		"font": "switchFont(overlays.scene.data.info.font)"
 	},
 	"overlays": {
-		"scene": {
+		"scene": { 
 			"x": 0,
 			"y": 0,
 			"title": "Scene",
 			"default": "briefing",
+			"background":true,
 			"options": {
 				"briefing": {
 					"x": 0,

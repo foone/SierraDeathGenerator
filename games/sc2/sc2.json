@@ -23,6 +23,7 @@
       "y": 0,
       "title": "Race",
       "default": "mycon",
+      "background":true,
       "options": {
         "arilou": {
           "x": 0,

@@ -21,6 +21,7 @@
 			"y": 0,
 			"title": "",
 			"default": "with-portrait",
+			"background":true,
 			"options": {
 				"with-portrait": {
 					"x": 0,

@@ -12,6 +12,7 @@
 			"y": 0,
 			"title": "Dialog Theme",
 			"default": "inside",
+			"background": true,
 			"options": {
 				"inside": {
 					"x": 0,

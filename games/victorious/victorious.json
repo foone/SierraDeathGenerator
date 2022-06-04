@@ -18,6 +18,7 @@
 			"y": 0,
 			"title": "Portrait",
 			"default": "cat",
+			"background":true,
 			"options": {
 				"andre": {
 					"x": 0,

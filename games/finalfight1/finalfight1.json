@@ -11,6 +11,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "city_map",
+			"background":true,
 			"options": {
 				"city_map": {
 					"x": 0,

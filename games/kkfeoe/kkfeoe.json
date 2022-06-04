@@ -297,6 +297,7 @@
 			"y": 152,
 			"title": "",
 			"default": "textbox",
+			"background":true,
 			"options": {
 				"textbox": {
 					"x": 0,

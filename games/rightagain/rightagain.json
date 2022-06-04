@@ -20,6 +20,7 @@
 				"y": 0,
 				"title": "Portrait",
 				"default": "hannah",
+				"background":true,
 				"options": {
 					"ashpenaz": {
 						"x": 0,

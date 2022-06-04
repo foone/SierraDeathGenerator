@@ -13,6 +13,7 @@
 			"y": 5,
 			"title": "Background",
 			"default": "hyrule_castle_dungeon",
+			"background":true,
 			"options": {
 				"transparent": {
 					"x": 0,

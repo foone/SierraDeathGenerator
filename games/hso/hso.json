@@ -1,14 +1,22 @@
 {
 	"height": 8,
 	"origin": {
-		"x": 46,
-		"y": 7
+		"x": 0,
+		"y": 0
 	},
 	"default": {
 		"h": 7
 	},
-	"first-line-origin": 6,
-	"first-height": 12,
+	"explicit-origins":{
+		"0":{
+			"x":6,
+			"y":7
+		},
+		"1":{
+			"x":46,
+			"y":19
+		}
+	},
 	"wrap-width": 249,
 	"hooks": {
 		"font": "{let lines=rawtext.split('\\n');lines[0]=lines[0].toUpperCase()+'`S STATUS';rawtext=lines.join('\\n')}"

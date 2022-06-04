@@ -114,6 +114,7 @@
 			"y": 57,
 			"title": "Family",
 			"default": "black_family",
+			"background":true,
 			"options": {
 				"asian_family": {
 					"x": 0,
@@ -197,6 +198,7 @@
 			"title": "Aspect ratio",
 			"default": "twitter_optimized",
 			"stage": "pre-border",
+			"background":true,
 			"options": {
 				"twitter_optimized": {
 					"x": 0,
@@ -223,6 +225,7 @@
 			"y": 150,
 			"title": "",
 			"default": "dialog_box",
+			"background":true,
 			"options": {
 				"dialog_box": {
 					"x": 0,

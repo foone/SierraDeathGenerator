@@ -28,6 +28,9 @@ a#showlink{
 h2.inline{
 	display: inline;
 }
+#background-explanation{
+	display: none;
+}
 span#uploading{
 	display: none;
 }

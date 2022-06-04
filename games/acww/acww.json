@@ -17,6 +17,7 @@
 			"y": 0,
 			"title": "Box Type",
 			"default": "dialogue",
+			"background":true,
 			"options": {
 				"dialogue": {
 					"x": 0,

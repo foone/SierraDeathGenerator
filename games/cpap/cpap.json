@@ -17,6 +17,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "intro",
+			"background":true,
 			"options": {
 				"gaia_intro": {
 					"x": 0,

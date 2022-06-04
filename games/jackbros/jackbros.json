@@ -15,6 +15,7 @@
 			"y": 0,
 			"title": "Color palette",
 			"default": "greyscale",
+			"background":true,
 			"options": {
 				"red": {
 					"x": 0,

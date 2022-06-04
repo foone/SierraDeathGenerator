@@ -44,6 +44,7 @@
 			"title": "Scene",
 			"default": "688_radio_room",
 			"stage": "post-text",
+			"background":true,
 			"options": {
 				"688_bridge": {
 					"x": 320,

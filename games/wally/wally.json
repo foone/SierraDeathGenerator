@@ -12,6 +12,7 @@
 			"y": 46,
 			"title": "Scene",
 			"default": "toby-turtle",
+			"background":true,
 			"options": {
 				"parents": {
 					"x": 0,
@@ -68,6 +69,7 @@
 			"y": 46,
 			"title": "Who is talking?",
 			"default": "Wally",
+			"background":true,
 			"options": {
 				"Wally": {
 					"w": 16,

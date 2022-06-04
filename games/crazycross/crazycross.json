@@ -12,6 +12,7 @@
             "y": 0,
             "title": "emotion",
             "default": "neutral",
+            "background":true,
             "options": {
                 "arms_crossed": {
                     "x": 0,

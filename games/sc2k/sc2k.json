@@ -20,6 +20,7 @@
       "y": 0,
       "title": "OS",
       "default": "dos",
+      "background":true,
       "options": {
         "dos": {
           "x": 276,

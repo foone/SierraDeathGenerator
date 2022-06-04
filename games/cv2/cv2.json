@@ -26,6 +26,7 @@
 			"title": "",
 			"default": "background",
 			"stage":"pre-border",
+			"background":true,
 			"options": {
 				"background": {
 					"x": 26,

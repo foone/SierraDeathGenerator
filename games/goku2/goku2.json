@@ -27,6 +27,7 @@
 			"y": 0,
 			"title": "Dialog box type",
 			"default": "blue_right",
+			"background":true,
 			"options": {
 				"green_left": {
 					"x": 0,

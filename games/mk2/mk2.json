@@ -11,6 +11,7 @@
       "y": 3,
       "title": "Champion",
       "default": "sub_zero",
+      "background":true,
       "options": {
         "sub_zero": {
           "x": 0,

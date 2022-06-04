@@ -74,6 +74,7 @@
 			"title": "scene",
 			"default": "dragon_bartender",
 			"stage": "pre-border",
+			"background":true,
 			"options": {
 				"bird": {
 					"x": 388,

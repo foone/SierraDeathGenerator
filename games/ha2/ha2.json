@@ -15,6 +15,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "hotel_concierge",
+			"background":true,
 			"options": {
 				"hotel_concierge": {
 					"x": 0,

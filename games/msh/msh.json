@@ -11,6 +11,7 @@
 			"y": 0,
 			"title": "Character",
 			"default": "spiderman",
+			"background":true,
 			"options": {
 				"blackheart": {
 					"x": 0,

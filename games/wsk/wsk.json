@@ -15,6 +15,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "happy",
+			"background":true,
 			"options": {
 				"happy": {
 					"x": 0,

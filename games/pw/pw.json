@@ -20,6 +20,7 @@
 			"y": 0,
 			"title": "scene",
 			"default": "lesson",
+			"background":true,
 			"options": {
 				"intro": {
 					"x": 512,
@@ -90,6 +91,7 @@
 			"title": "Background",
 			"default": "plane",
 			"stage": "pre-border",
+			"background":true,
 			"options": {
 				"hangglider": {
 					"x": 0,

@@ -36,6 +36,7 @@
 			"y": 0,
 			"title": "screen",
 			"default": "metronome",
+			"background":true,
 			"options": {
 				"blackboard": {
 					"x": 0,

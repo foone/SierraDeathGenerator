@@ -46,6 +46,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "doctor1",
+			"background":true,
 			"options": {
 				"doctor1": {
 					"x": 0,

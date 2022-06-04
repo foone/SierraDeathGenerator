@@ -16,6 +16,7 @@
 			"y": 0,
 			"title": "Opponent",
 			"default": "dm3_dark_yugi",
+			"background":true,
 			"options": {
 				"dm1_bakura_ryou": {
 					"x": 0,

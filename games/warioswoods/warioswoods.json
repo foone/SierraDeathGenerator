@@ -281,6 +281,7 @@
 			"y": 0,
 			"title": "",
 			"default": "5",
+			"background":true,
 			"options": {
 				"0": {
 					"x": -320,

@@ -19,6 +19,7 @@
 			"y": 0,
 			"title": "",
 			"default": "blue",
+			"background":true,
 			"options": {
 				"blue": {
 					"x": 0,
@@ -33,6 +34,7 @@
 			"y": 160,
 			"title": "",
 			"default": "yellow",
+			"background":true,
 			"options": {
 				"yellow": {
 					"x": 0,
@@ -47,6 +49,7 @@
 			"y": 0,
 			"title": "",
 			"default": "red",
+			"background":true,
 			"options": {
 				"red": {
 					"x": 0,

@@ -12,6 +12,7 @@
 			"y": 0,
 			"title": "Window Theme",
 			"default": "style_1",
+			"background":true,
 			"options": {
 				"style_1": {
 					"x": 0,

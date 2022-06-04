@@ -11,6 +11,7 @@
 			"y": 0,
 			"title": "Scene",
 			"default": "oldman-standing",
+			"background":true,
 			"options": {
 				"ashura1": {
 					"x": 0,

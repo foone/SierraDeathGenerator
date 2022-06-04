@@ -17,6 +17,7 @@
 			"title": "",
 			"default": "overlay",
 			"stage":"post-text",
+			"background":true,
 			"options": {
 				"overlay": {
 					"x": 104,
