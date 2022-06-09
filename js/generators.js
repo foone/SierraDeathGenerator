@@ -1598,6 +1598,24 @@ var generators={
 		'added':'2021-05-23',
 		'updated':'2021-05-24',
 	},
+	'pf1gba':{
+		'title': "Puyo Puyo Fever",
+		'source':'Sega',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sega',
+		'contributions':[
+			{
+				'type':'template',
+				'contributor': '@Tasos500',
+				'url': 'https://twitter.com/tasos500'
+			}
+		],
+		'defaulttext':"[pink]Oh, Klug\n(Damn! If it isn't Mr. Goody Two\nShoes.)[/]",
+		'platform':'gba',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/gameboy-advance/puyo-pop-fever',
+		'series':'puyo puyo',
+		'added':'2022-06-09'
+	},
 	'pma':{
 		'title': "Pac-Man Arrangement",
 		'source':'Namco',
