@@ -1399,11 +1399,11 @@ var generators={
 		'title': 'Mega Man Battle Network 5',
 		'source':'Capcom',
 		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
-		'defaulttext':"What a polite young man she was!",
+		'defaulttext':"Clearly, Lan\nyou do not\nown an air fryer.",
 		'gameinfo':'https://www.mobygames.com/game/mega-man-battle-network-5-team-protoman',
 		'platform':'gba',
 		'series':'megaman',
-		'added':'2022-05-26',
+		'added':'2022-07-04',
 		'year':2004
 	},
 	'mmx1':{
