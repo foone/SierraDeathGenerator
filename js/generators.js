@@ -1429,6 +1429,16 @@ var generators={
 		'updated':'2021-11-19',
 		'series':'metroid',
 	},
+	'mmgg':{
+		'title': 'Mick & Mack as the Global Gladiators',
+		'source':'Virgin Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Virgin_Interactive',
+		'defaulttext':'Chill out you toxic pests.',
+		'platform':'genesis',
+		'year':1993,
+		'added':'2022-07-20',
+		'gameinfo':'https://www.mobygames.com/game/mick-mack-as-the-global-gladiators'
+	},
 	'mmprtm':{
 		'title': 'Mighty Morphin Power Rangers: The Movie',
 		'source':'Sims',
