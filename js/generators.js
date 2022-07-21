@@ -980,6 +980,17 @@ var generators={
 		'series':'hamtaro',
 		'gameinfo':'https://www.mobygames.com/game/hamtaro-rainbow-rescue'
 	},
+	'wwtbam':{
+		'title': 'Who Wants to Be a Millionaire',
+		'source':'Hothouse Creations',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hothouse_Creations',
+		'defaulttext':"Which of the following is the largest?\n\n\nA Peanut\nAn Elephant\nThe Moon\nKettle",
+		'platform':'gba',
+		'year':2003,
+		'added':'2022-07-21',
+		'series':'wwtbam',
+		'gameinfo':'https://www.mobygames.com/game/who-wants-to-be-a-millionaire-2nd-edition'
+	},
 	'ha2':{
 		'title': 'Home Alone 2',
 		'source':'Imagineering, Inc.',
