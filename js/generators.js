@@ -969,6 +969,23 @@ var generators={
 		'added':'2018-04-21',
 
 	},
+	'sksgw':{
+		'title': 'Gundam Wing: Endless Duel',
+		'source':'Natsume',
+		'sourceurl':'https://en.wikipedia.org/wiki/Natsume_(company)',
+		'defaulttext':"Looks like you couldn't take it, huh?",
+		'platform':'snes',
+		'year':1996,
+		'gameinfo':'https://www.mobygames.com/game/snes/shin-kid-senki-gundam-wing-endless-duel',
+		'added':'2022-08-08',
+		'series':'gundam',
+		'contributions':[
+			{
+				'contributor': 'Aeon Genesis',
+				'url':'https://aeongenesis.net/projects/gwed',
+			}
+		]
+	},
 	'hrr':{
 		'title': 'Hamtaro: Rainbow Rescue',
 		'source':'AlphaDream',
