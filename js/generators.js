@@ -198,6 +198,16 @@ var generators={
 		'gameinfo':'https://www.romhacking.net/translations/7/',
 		'added':'2019-03-13'
 	},
+	'bcv':{
+		'title': 'Battle Construction Vehicles',
+		'source':'Artdink',
+		'sourceurl':'https://en.wikipedia.org/wiki/Artdink',
+		'defaulttext':"Hayato \"We have no one left?\"",
+		'platform':'ps2',
+		'year':2000,
+		'gameinfo':'https://www.mobygames.com/game/bcv-battle-construction-vehicles',
+		'added':'2022-08-19'
+	},
 	'bt':{
 		'title': 'Blackthorne',
 		'source':'Blizzard',
@@ -2491,6 +2501,7 @@ var generators={
 		'platform': 'win32',
 		'year': 2015,
 		'added': '2018-11-07',
+		'updated': '2022-08-25',
 		'gameinfo':'https://www.mobygames.com/game/undertale'
 	},
 	'unreal':{
