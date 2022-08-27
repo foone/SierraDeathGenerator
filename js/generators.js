@@ -198,16 +198,6 @@ var generators={
 		'gameinfo':'https://www.romhacking.net/translations/7/',
 		'added':'2019-03-13'
 	},
-	'bcv':{
-		'title': 'Battle Construction Vehicles',
-		'source':'Artdink',
-		'sourceurl':'https://en.wikipedia.org/wiki/Artdink',
-		'defaulttext':"Hayato \"We have no one left?\"",
-		'platform':'ps2',
-		'year':2000,
-		'gameinfo':'https://www.mobygames.com/game/bcv-battle-construction-vehicles',
-		'added':'2022-08-19'
-	},
 	'bt':{
 		'title': 'Blackthorne',
 		'source':'Blizzard',
@@ -2200,6 +2190,17 @@ var generators={
 		'year':1995,
 		'gameinfo':'https://www.mobygames.com/game/star-trek-the-next-generation-a-final-unity',
 		'added':'2019-04-09',
+		'series':'star trek'
+	},
+	'st25':{
+		'title': 'Star Trek: 25th Anniversary',
+		'source':'Interplay Productions',
+		'sourceurl':'https://en.wikipedia.org/wiki/Interplay_Entertainment',
+		'defaulttext':"     Captain's log\nthough the enterprise's\nprimary mission is \npeaceful exploration,\nthe galaxy holds many\nsurprises. to be\nprepared, we are\nconducting a mock battle\nwith the u.s.s.\nrepublic.",
+		'platform':'dos',
+		'year':1992,
+		'gameinfo':'https://www.mobygames.com/game/star-trek-25th-anniversary',
+		'added':'2022-08-25',
 		'series':'star trek'
 	},
 	'stv':{
