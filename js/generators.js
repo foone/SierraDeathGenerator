@@ -609,7 +609,7 @@ var generators={
 		'platform':'ps1',
 		'year':1999,
 		'gameinfo':'https://www.mobygames.com/game/dino-crisis',
-		'added':'2020-08-30',
+		'added':'2022-08-30',
 		'series':'dinocrisis'
 	},
 	'ddp':{
