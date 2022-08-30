@@ -600,7 +600,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/deus-ex',
 		'added':'2018-04-17',
 		'series':'deus ex'
-
+	},
+	'dinocrisis':{
+		'title': 'Dino Crisis',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Dr.Kirk was alleged to have\ndied in an accident during\nthe course of an experiment\nthree years ago.",
+		'platform':'ps1',
+		'year':1999,
+		'gameinfo':'https://www.mobygames.com/game/dino-crisis',
+		'added':'2020-08-30',
+		'series':'dinocrisis'
 	},
 	'ddp':{
 		'title': 'DoDonPachi',
@@ -2190,17 +2200,6 @@ var generators={
 		'year':1995,
 		'gameinfo':'https://www.mobygames.com/game/star-trek-the-next-generation-a-final-unity',
 		'added':'2019-04-09',
-		'series':'star trek'
-	},
-	'st25':{
-		'title': 'Star Trek: 25th Anniversary',
-		'source':'Interplay Productions',
-		'sourceurl':'https://en.wikipedia.org/wiki/Interplay_Entertainment',
-		'defaulttext':"     Captain's log\nthough the enterprise's\nprimary mission is \npeaceful exploration,\nthe galaxy holds many\nsurprises. to be\nprepared, we are\nconducting a mock battle\nwith the u.s.s.\nrepublic.",
-		'platform':'dos',
-		'year':1992,
-		'gameinfo':'https://www.mobygames.com/game/star-trek-25th-anniversary',
-		'added':'2022-08-25',
 		'series':'star trek'
 	},
 	'stv':{
