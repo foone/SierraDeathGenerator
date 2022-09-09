@@ -569,6 +569,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/crusader-of-centy',
 		'added':'2019-04-02',
 	},
+	'ds3':{
+		'title': 'Darkstalkers 3',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"I hope you can find something worth devoting your life too.",
+		'platform':'arcade',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/darkstalkers-3',
+		'added':'2022-09-08',
+		'series':'darkstalkers'
+	},
 	'darius':{
 		'title': 'Darius',
 		'source':'Taito',
