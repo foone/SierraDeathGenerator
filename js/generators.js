@@ -1190,6 +1190,17 @@ var generators={
 		'updated':'2021-11-15',
 		'gameinfo':'https://www.mobygames.com/game/kirbys-adventure'
 	},
+	'kz':{
+		'title': 'Kitsune Zero',
+		'source':'Kitsune Games',
+		'sourceurl':'https://kitsunegames.com/',
+		'defaulttext':" It was smart of the onmyouji to \nsend such a cutie to ask for help.",
+		'platform':'pc',
+		'series':'kitsune tails',
+		'year':2022,
+		'added':'2022-09-12',
+		'gameinfo':'https://kitsunegames.com/games/kitsunezero/'
+	},
 	'kkfeoe':{
 		'title': 'Kabuki Klash',
 		'source':'Racdym',
