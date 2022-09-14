@@ -1903,6 +1903,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/secret-agent',
 		'play':'https://archive.org/details/msdos_Secret_Agent_1992'
 	},
+	'sh2':{
+		'title': 'Silent Hill 2',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"In my restless dreams,\nI see that town.\nSilent Hill.",
+		'platform': 'pc',
+		'year':2001,
+		'added':'2022-09-14',
+		'gameinfo':'https://www.mobygames.com/game/silent-hill-2'
+	},
 	'scnes':{
 		'title': 'SimCity NES',
 		'source':'Maxis Software',
