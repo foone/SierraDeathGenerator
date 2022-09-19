@@ -2377,12 +2377,25 @@ var generators={
 		'title': 'Super Off Road: The Baja',
 		'source':'Leland Interactive Media',
 		'sourceurl':'https://en.wikipedia.org/wiki/Leland_Interactive_Media',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"[yellow]LEG 1:  San Felipe[/]\n\nKeep all wheels on\nthe road to go fast.\nAvoid hitting\nthings which\nwill damage\nyour truck.",
 		'platform':'snes',
 		'series':'super off road',
 		'year': 1993,
 		'gameinfo':'https://www.mobygames.com/game/super-off-road-the-baja',
 		'added':'2020-07-01'
+	},
+	'spo':{
+		'title': 'Super Punch-Out!!',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Let me win. I've lost\nso many times I forget\nhow winning feels.",
+		'platform':'snes',
+		'series':'punch-out',
+		'year': 1994,
+		'gameinfo':'https://www.mobygames.com/game/snes/super-punch-out',
+		'added':'2022-09-19'
 	},
 	'superman':{
 		'title': 'Superman',
