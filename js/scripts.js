@@ -939,6 +939,10 @@ function renderText(scaled = true, wordwrap_dryrun=false){
 	}
 
 
+	if('hooks' in fontInfo && 'pre-border' in fontInfo['hooks']){
+		// EVAL IS SAFE CODE, YES?
+		eval(fontInfo['hooks']['pre-border'])
+	}
 	drawOverlays('pre-border', hide_backgrounds)
 
 	if('border' in fontInfo) {
@@ -1151,9 +1155,30 @@ function loadJSONForGenerator(){
 
 function addLinksForSpecialCharactersAndInsertables(){
 	var specials = [] 
+	var CJK_blocks=[
+		[0x3040,0x309F], // Hiragana
+		[0x30A0,0x30FF], // Katakana
+		[0x3130,0x318F], // Hangul Compatibility Jamo
+		[0x3200,0x32FF], // Enclosed CJK Letters and Months
+		[0x3300,0x33FF], // CJK Compatibility
+		[0x4E00,0x9FFF], // CJK Unified Ideographs
+		[0x3400,0x4DBF], // CJK Unified Ideographs Extension A
+		[0xE000,0xF8FF], // Private Use Area
+		[0xAC00,0xD7AF], // Hangul Syllables
+		[0xF900,0xFAFF], // CJK Compatibility Ideographs
+		[0xFF00,0xFFEF], // CJK Compatibility Ideographs
+	]
+	function isCJK(k){
+		for (let span of CJK_blocks){
+			if(span[0]<=k && k<=span[1]){
+				return true
+			}
+		}
+		return false
+	}
 	Object.keys(fontInfo).forEach(function (key) {
 		if($.isNumeric(key)){
-			if(key>=128){
+			if(key>=128 && !(isCJK(key))){
 				specials.push(key)
 			}
 		}

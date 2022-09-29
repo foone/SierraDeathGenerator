@@ -333,6 +333,18 @@ var generators={
 		'platform':'dos',
 		'series':'carmageddon'
 	},
+	'carmen':{
+		'title': 'Where in the World Is Carmen Sandiego?',
+		'source':'Brøderbund Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Broderbund',
+		'defaulttext':'Detective at keyboard, please identify yourself:\n',
+		'play':"https://archive.org/details/msdos_Where_in_the_World_is_Carmen_Sandiego_Enhanced_1989",
+		'added':'2022-09-29',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/where-in-the-world-is-carmen-sandiego-enhanced',
+		'platform':'dos',
+		'series':'carmen_sandiego'
+	},
 	'cnbp':{
 		'title': 'Cartoon Network Block Party',
 		'source':'Monkeystone Games',
