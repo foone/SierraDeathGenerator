@@ -7,7 +7,7 @@
 	"null-character": 32,
 	"hooks":{
 		"font": "rawtext=rawtext+'\\u{E000}'",
-		"pre-overlays": "{mainFont.y=148-textbox.h;overlays.paper.y=mainFont.y-11}"
+		"pre-overlays": "{mainFont.y=148-textbox.h;overlays.paper.y=Math.max(47,mainFont.y-11)}"
 
 	},
 	"gif": true,
@@ -28,7 +28,7 @@
 					"x": 146,
 					"y": 10,
 					"w": 114,
-					"h": 2038
+					"h": 100
 				}
 			}
 		},
