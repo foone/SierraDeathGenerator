@@ -527,11 +527,30 @@ for( let [gname, generator_item] of sorted_generators){
 			new_generator = true
 		}
 	}
-	$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray generator-switcher"></a>').attr("href",'#'+gname).text(generator_item.title).data('generator',gname).click(function (){
-		hideGenerators()
-		selectedGenerator=$(this).data('generator')
-		selectGenerator()
-	}).toggleClass('new-generator',new_generator)).append(' ')
+	var clickfunc=function (){
+			hideGenerators()
+			selectedGenerator=$(this).data('generator')
+			selectGenerator()
+	}
+	$('#genlist').append($('<a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray generator-switcher"></a>')
+		.attr("href",'#'+gname)
+		.text(generator_item.title)
+		.data('generator',gname)
+		.click(clickfunc)
+		.toggleClass('new-generator',new_generator)).append(' ')
+	var galdiv = $('<div class="generator-gallery-item tc ph1 pv1 " ><a class="f6 link dim mb2 dib black db"></div>')
+	
+	var wrapdiv = $('<div class="gallery-image-wrapper flex items-center justify-center"><img></div>')
+	wrapdiv.find('img').attr("src","games/"+gname+"/_thumb.jpeg")
+	galdiv.find('a').attr("href","#"+gname)
+		.append($('<span class="db sans-serif f4" />').toggleClass('new-generator',new_generator)
+		.text(generator_item.title))
+		.data('generator',gname)
+		.prepend(wrapdiv)
+		.click(clickfunc)
+		.toggleClass('new-generator-box',new_generator)
+	$('#generator-collection').append(galdiv)
+
 }
 
 function isAnyDefaultText(text){
@@ -579,6 +598,14 @@ function addDebugAlerts(gen, debugdiv){
 }
 
 function selectGenerator(){
+	if(selectedGenerator=='gallery'){
+		$('#main-generator-box').hide()
+		$('#gallery-box').show()
+	}else{
+		$('#main-generator-box').show()
+		$('#gallery-box').hide()
+	}
+
 
 	var gen=generators[selectedGenerator]
 	window.location.hash=(glitch?'-':'') + selectedGenerator
@@ -1254,10 +1281,15 @@ function getNameForCurrentImage(ext){
 	text = text.replace(/\n/g," ").replace(/[^-._a-zA-Z0-9 ]/g,"")
 	return selectedGenerator + "-" + text + "." + ext
 }
-
-if(selectedGenerator===null){
+function pickRandomGenerator(){
 	var generator_names = Object.keys(generators)
 	selectedGenerator = generator_names[Math.round(generator_names.length * Math.random())]
+}
+if(selectedGenerator===null){
+	selectedGenerator = 'gallery'
+}
+if(selectedGenerator=='random'){
+	pickRandomGenerator();
 }
 selectGenerator()
 $('#sourcetext').keyup(renderText)
@@ -1347,6 +1379,13 @@ $('a#showlink').click(function(){
 
 $('a#hidelink').click(function(){
 	hideGenerators()
+	return false
+})
+
+$('a#random-generator').click(function(){
+	hideGenerators()
+	pickRandomGenerator()
+	selectGenerator()
 	return false
 })
 
