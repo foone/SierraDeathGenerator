@@ -541,7 +541,7 @@ for( let [gname, generator_item] of sorted_generators){
 	var galdiv = $('<div class="generator-gallery-item tc ph1 pv1 " ><a class="f6 link dim mb2 dib black db"></div>')
 	
 	var wrapdiv = $('<div class="gallery-image-wrapper flex items-center justify-center"><img></div>')
-	wrapdiv.find('img').attr("src","games/"+gname+"/_thumb.jpeg")
+	wrapdiv.find('img').attr("src","games/"+gname+"/thumbnail.jpeg")
 	galdiv.find('a').attr("href","#"+gname)
 		.append($('<span class="db sans-serif f4" />').toggleClass('new-generator',new_generator)
 		.text(generator_item.title))
