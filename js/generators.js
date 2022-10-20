@@ -1487,6 +1487,7 @@ var generators={
 		'platform':'ds',
 		'series':'megaman',
 		'added':'2022-10-19',
+		'updated':'2022-10-20',
 		'year':2006
 	},
 	'mgs':{
