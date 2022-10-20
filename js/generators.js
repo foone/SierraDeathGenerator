@@ -1478,6 +1478,17 @@ var generators={
 		'added':'2018-10-27',
 		'year':1993
 	},
+	'mmsf':{
+		'title': 'Mega Man Star Force',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Geo, your\nTranser isn't on.",
+		'gameinfo':'https://www.mobygames.com/game/mega-man-star-force-dragon',
+		'platform':'ds',
+		'series':'megaman',
+		'added':'2022-10-19',
+		'year':2006
+	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
