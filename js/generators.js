@@ -991,6 +991,16 @@ var generators={
 		'added':'2018-04-15',
 
 	},
+	'goldeneye007':{
+		'title': 'Goldeneye 007',
+		'source':'Rare',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rare_(company)',
+		'defaulttext':"Agent: James Bond\nMission 1: Arkangelsk\nPart i: Dam\nBACKGROUND:\nMI6 has confirmed the existence of a secret\nchemical warfare facility at the Byelomorye dam,\nUSSR. Its heavily guarded location and workings\nare a cause for major concert. Nerve gas\nproduced there has been turning up in the hands\nof hostile regimes around the world and deals\nwith international terrorists have been rumored.\nThis facility should be destroyed with extreme\nprejudice.",
+		'platform':'n64',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/n64/goldeneye-007',
+		'added':'2022-10-26',
+	},
 	'g13':{
 		'title': 'Golgo-13',
 		'source':'Vic Tokai',
