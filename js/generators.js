@@ -1737,7 +1737,7 @@ var generators={
 		'title': "Phantasy Star III: Generations of Doom",
 		'source':'Sega',
 		'sourceurl':'https://en.wikipedia.org/wiki/Sega',
-		'defaulttext':"Perhaps someday we will\nfind our where I'm from",
+		'defaulttext':"Perhaps someday we will\nfind out where I'm from",
 		'platform':'genesis',
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/phantasy-star-iii-generations-of-doom',
