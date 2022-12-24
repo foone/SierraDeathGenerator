@@ -2193,6 +2193,17 @@ var generators={
 		'added':'2018-03-08',
 		"series":"space quest"
 	},
+	'spyro2gba':{
+		'title': 'Spyro 2: Season of Flame',
+		'source':'Digital Eclipse',
+		'sourceurl':'https://en.wikipedia.org/wiki/Digital_Eclipse',
+		'defaulttext':"Sparx: It's about time we\nfinally got some vacation\ntime, isn't it? Getting rid",
+		'platform':'gba',
+		'year':2002,
+		'gameinfo':'https://www.mobygames.com/game/spyro-2-season-of-flame',
+		'added':'2022-12-23',
+		"series":"spyro"
+	},
 	'stan':{
 		'title': 'Stanley: The Search for Dr. Livingston',
 		'source':'Sculptured Software',
