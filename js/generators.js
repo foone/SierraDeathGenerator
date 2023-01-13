@@ -758,6 +758,17 @@ var generators={
 		'gameinfo':'https://en.wikipedia.org/wiki/MS-DOS_Editor',
 		'added':'2018-04-15',
 	},
+	'estsk':{
+		'title': 'Elder Scrolls Travels: Shadowkey',
+		'source':'Vir2L Studios',
+		'sourceurl':'https://en.wikipedia.org/wiki/Vir2L_Studios',
+		'defaulttext':"Rats are low to the ground. Press Key 8 to\nlook down, which lowers your attacks as well. Aim\nfor the head, and keep it in sight in front of  you.\n                 -----\n[white]                More[/]",
+		'platform':'n-gage',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/ngage/elder-scrolls-travels-shadowkey',
+		'added':'2023-01-13',
+		'series':'elder scrolls'
+	},
 	'elvira':{
 		'title': 'Elvira',
 		'source':'Horror Soft',
