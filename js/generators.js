@@ -333,6 +333,18 @@ var generators={
 		'platform':'dos',
 		'series':'carmageddon'
 	},
+	'carmen':{
+		'title': 'Where in the World Is Carmen Sandiego?',
+		'source':'Brøderbund Software',
+		'sourceurl':'https://en.wikipedia.org/wiki/Broderbund',
+		'defaulttext':'Detective at keyboard, please identify yourself:\n',
+		'play':"https://archive.org/details/msdos_Where_in_the_World_is_Carmen_Sandiego_Enhanced_1989",
+		'added':'2022-09-29',
+		'year':1988,
+		'gameinfo':'https://www.mobygames.com/game/where-in-the-world-is-carmen-sandiego-enhanced',
+		'platform':'dos',
+		'series':'carmen_sandiego'
+	},
 	'cnbp':{
 		'title': 'Cartoon Network Block Party',
 		'source':'Monkeystone Games',
@@ -569,6 +581,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/crusader-of-centy',
 		'added':'2019-04-02',
 	},
+	'ds3':{
+		'title': 'Darkstalkers 3',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"I hope you can find something worth devoting your life too.",
+		'platform':'arcade',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/darkstalkers-3',
+		'added':'2022-09-08',
+		'series':'darkstalkers'
+	},
 	'darius':{
 		'title': 'Darius',
 		'source':'Taito',
@@ -600,7 +623,17 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/deus-ex',
 		'added':'2018-04-17',
 		'series':'deus ex'
-
+	},
+	'dinocrisis':{
+		'title': 'Dino Crisis',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Dr.Kirk was alleged to have\ndied in an accident during\nthe course of an experiment\nthree years ago.",
+		'platform':'ps1',
+		'year':1999,
+		'gameinfo':'https://www.mobygames.com/game/dino-crisis',
+		'added':'2022-08-30',
+		'series':'dinocrisis'
 	},
 	'ddp':{
 		'title': 'DoDonPachi',
@@ -724,6 +757,17 @@ var generators={
 		'year':1991,
 		'gameinfo':'https://en.wikipedia.org/wiki/MS-DOS_Editor',
 		'added':'2018-04-15',
+	},
+	'estsk':{
+		'title': 'Elder Scrolls Travels: Shadowkey',
+		'source':'Vir2L Studios',
+		'sourceurl':'https://en.wikipedia.org/wiki/Vir2L_Studios',
+		'defaulttext':"Rats are low to the ground. Press Key 8 to\nlook down, which lowers your attacks as well. Aim\nfor the head, and keep it in sight in front of  you.\n                 -----\n[white]                More[/]",
+		'platform':'n-gage',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/ngage/elder-scrolls-travels-shadowkey',
+		'added':'2023-01-13',
+		'series':'elder scrolls'
 	},
 	'elvira':{
 		'title': 'Elvira',
@@ -958,6 +1002,16 @@ var generators={
 		'added':'2018-04-15',
 
 	},
+	'goldeneye007':{
+		'title': 'Goldeneye 007',
+		'source':'Rare',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rare_(company)',
+		'defaulttext':"Agent: James Bond\nMission 1: Arkangelsk\nPart i: Dam\nBACKGROUND:\nMI6 has confirmed the existence of a secret\nchemical warfare facility at the Byelomorye dam,\nUSSR. Its heavily guarded location and workings\nare a cause for major concern. Nerve gas\nproduced there has been turning up in the hands\nof hostile regimes around the world and deals\nwith international terrorists have been rumored.\nThis facility should be destroyed with extreme\nprejudice.",
+		'platform':'n64',
+		'year':1997,
+		'gameinfo':'https://www.mobygames.com/game/n64/goldeneye-007',
+		'added':'2022-10-26',
+	},
 	'g13':{
 		'title': 'Golgo-13',
 		'source':'Vic Tokai',
@@ -969,6 +1023,23 @@ var generators={
 		'added':'2018-04-21',
 
 	},
+	'sksgw':{
+		'title': 'Gundam Wing: Endless Duel',
+		'source':'Natsume',
+		'sourceurl':'https://en.wikipedia.org/wiki/Natsume_(company)',
+		'defaulttext':"Looks like you couldn't take it, huh?",
+		'platform':'snes',
+		'year':1996,
+		'gameinfo':'https://www.mobygames.com/game/snes/shin-kid-senki-gundam-wing-endless-duel',
+		'added':'2022-08-08',
+		'series':'gundam',
+		'contributions':[
+			{
+				'contributor': 'Aeon Genesis',
+				'url':'https://aeongenesis.net/projects/gwed',
+			}
+		]
+	},
 	'hrr':{
 		'title': 'Hamtaro: Rainbow Rescue',
 		'source':'AlphaDream',
@@ -979,6 +1050,17 @@ var generators={
 		'added':'2020-07-14',
 		'series':'hamtaro',
 		'gameinfo':'https://www.mobygames.com/game/hamtaro-rainbow-rescue'
+	},
+	'wwtbam':{
+		'title': 'Who Wants to Be a Millionaire',
+		'source':'Hothouse Creations',
+		'sourceurl':'https://en.wikipedia.org/wiki/Hothouse_Creations',
+		'defaulttext':"Which of the following is the largest?\n\n\nA Peanut\nAn Elephant\nThe Moon\nKettle",
+		'platform':'gba',
+		'year':2003,
+		'added':'2022-07-21',
+		'series':'wwtbam',
+		'gameinfo':'https://www.mobygames.com/game/who-wants-to-be-a-millionaire-2nd-edition'
 	},
 	'ha2':{
 		'title': 'Home Alone 2',
@@ -1140,6 +1222,17 @@ var generators={
 		'added':'2019-01-11',
 		'updated':'2021-11-15',
 		'gameinfo':'https://www.mobygames.com/game/kirbys-adventure'
+	},
+	'kz':{
+		'title': 'Kitsune Zero',
+		'source':'Kitsune Games',
+		'sourceurl':'https://kitsunegames.com/',
+		'defaulttext':" It was smart of the onmyouji to \nsend such a cutie to ask for help.",
+		'platform':'pc',
+		'series':'kitsune tails',
+		'year':2022,
+		'added':'2022-09-12',
+		'gameinfo':'https://kitsunegames.com/games/kitsunezero/'
 	},
 	'kkfeoe':{
 		'title': 'Kabuki Klash',
@@ -1406,6 +1499,18 @@ var generators={
 		'added':'2018-10-27',
 		'year':1993
 	},
+	'mmsf':{
+		'title': 'Mega Man Star Force',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Geo, your\nTranser isn't on.",
+		'gameinfo':'https://www.mobygames.com/game/mega-man-star-force-dragon',
+		'platform':'ds',
+		'series':'megaman',
+		'added':'2022-10-19',
+		'updated':'2022-10-20',
+		'year':2006
+	},
 	'mgs':{
 		'title': 'Metal Gear Solid',
 		'source':'Konami',
@@ -1428,6 +1533,16 @@ var generators={
 		'added':'2018-04-10',
 		'updated':'2021-11-19',
 		'series':'metroid',
+	},
+	'mmgg':{
+		'title': 'Mick & Mack as the Global Gladiators',
+		'source':'Virgin Games',
+		'sourceurl':'https://en.wikipedia.org/wiki/Virgin_Interactive',
+		'defaulttext':'Chill out you toxic pests.',
+		'platform':'genesis',
+		'year':1993,
+		'added':'2022-07-20',
+		'gameinfo':'https://www.mobygames.com/game/mick-mack-as-the-global-gladiators'
 	},
 	'mmprtm':{
 		'title': 'Mighty Morphin Power Rangers: The Movie',
@@ -1851,6 +1966,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/secret-agent',
 		'play':'https://archive.org/details/msdos_Secret_Agent_1992'
 	},
+	'sh2':{
+		'title': 'Silent Hill 2',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"In my restless dreams,\nI see that town.\nSilent Hill.",
+		'platform': 'pc',
+		'year':2001,
+		'added':'2022-09-14',
+		'gameinfo':'https://www.mobygames.com/game/silent-hill-2'
+	},
 	'scnes':{
 		'title': 'SimCity NES',
 		'source':'Maxis Software',
@@ -2097,6 +2222,17 @@ var generators={
 		'added':'2018-03-08',
 		"series":"space quest"
 	},
+	'spyro2gba':{
+		'title': 'Spyro 2: Season of Flame',
+		'source':'Digital Eclipse',
+		'sourceurl':'https://en.wikipedia.org/wiki/Digital_Eclipse',
+		'defaulttext':"Sparx: It's about time we\nfinally got some vacation\ntime, isn't it? Getting rid",
+		'platform':'gba',
+		'year':2002,
+		'gameinfo':'https://www.mobygames.com/game/spyro-2-season-of-flame',
+		'added':'2022-12-23',
+		"series":"spyro"
+	},
 	'stan':{
 		'title': 'Stanley: The Search for Dr. Livingston',
 		'source':'Sculptured Software',
@@ -2315,12 +2451,25 @@ var generators={
 		'title': 'Super Off Road: The Baja',
 		'source':'Leland Interactive Media',
 		'sourceurl':'https://en.wikipedia.org/wiki/Leland_Interactive_Media',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
 		'defaulttext':"[yellow]LEG 1:  San Felipe[/]\n\nKeep all wheels on\nthe road to go fast.\nAvoid hitting\nthings which\nwill damage\nyour truck.",
 		'platform':'snes',
 		'series':'super off road',
 		'year': 1993,
 		'gameinfo':'https://www.mobygames.com/game/super-off-road-the-baja',
 		'added':'2020-07-01'
+	},
+	'spo':{
+		'title': 'Super Punch-Out!!',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"Let me win. I've lost\nso many times I forget\nhow winning feels.",
+		'platform':'snes',
+		'series':'punch-out',
+		'year': 1994,
+		'gameinfo':'https://www.mobygames.com/game/snes/super-punch-out',
+		'added':'2022-09-19'
 	},
 	'superman':{
 		'title': 'Superman',
@@ -2471,6 +2620,7 @@ var generators={
 		'platform': 'win32',
 		'year': 2015,
 		'added': '2018-11-07',
+		'updated': '2022-08-25',
 		'gameinfo':'https://www.mobygames.com/game/undertale'
 	},
 	'unreal':{

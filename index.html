@@ -32,13 +32,25 @@
 <body class="w-100 sans-serif bg-white black-80 code">
 
 	<main>
-
-		<div class="mw9 center ph1-ns">
+		<div id="gallery-box">
+			<div class="mw9 center ph1-ns flex items-center">
+				<h1 class="mw9f3 fw6 ttu ph3">The Death Generator</h1>
+				<div class="credits ph3">
+					By <a href="http://floppy.foone.org/w/Main_Page">Foone Turing</a> (<a href="https://twitter.com/Foone">@foone</a>)<br />
+					Project source code on <a href="https://github.com/foone/SierraDeathGenerator">github</a>.<br />
+					Support this project on <a href="https://ko-fi.com/fooneturing">Ko-fi</a> or <a href="https://www.patreon.com/foone">Patreon</a>!
+				</div>
+			</div>
+			<div id="generator-collection" class="flex flex-wrap">
+			</div>
+		</div>
+		<div id="main-generator-box" class="mw9 center ph1-ns">
 			<div class="cf ph1-ns">
 				<div  class="fl w-100 w-100-ns pa1">
 
 						<h1 class="f3 fw6 ttu change-title">The Death Generator</h1>
-
+						<a href="#gallery" id="gallery-link" class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">Gallery</a>
+						<a href="#random" id="random-generator" class="f6 link dim ph2 pv2 mb2 dib white bg-dark-gray" title="Random generator">&#x1f3b2;</a>
 						<a href="#" id="hidelink" class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">- Hide generators</a>
 						<a href="#" id="showlink" class="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">+ Show other generators</a>
 						<div class="tracked" id="genlist"> </div>
