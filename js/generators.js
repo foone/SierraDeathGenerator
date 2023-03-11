@@ -692,6 +692,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/gameboy-color/disneys-doug-dougs-big-game',
 		'added':'2019-05-26',
 	},
+	'dott':{
+		'title': "Day of the Tentacle",
+		'source':'LucasArts',
+		'sourceurl':'https://en.wikipedia.org/wiki/Lucasfilm_Games',
+		'defaulttext':"Rash of Cow Tipping\nBaffles Police\nTriangular Man Spotted\nat Scene",
+		'platform':'dos',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/719/maniac-mansion-day-of-the-tentacle/',
+		'added':'2023-03-11'
+	},
 	'drakejosh':{
 		'title': "Drake & Josh",
 		'source': 'Behaviour Interactive',
