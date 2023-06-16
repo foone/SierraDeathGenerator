@@ -216,6 +216,7 @@
 			"y": 215,
 			"title": "",
 			"default": "credits",
+			"background": true,
 			"options": {
 				"credits": {
 					"x": 792,
