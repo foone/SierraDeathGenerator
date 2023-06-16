@@ -9,6 +9,14 @@
 		"w": 8,
 		"h": 16
 	},
+	"dynamic-size": {
+		"w": "320",
+		"h": "Math.max(224,168+8+textbox.h)"
+	},
+	"wrap-width": 256,
+	"hooks": {
+		"pre-overlays": "overlays.credit_overlay.y = outputSize.h - 9"
+	},
 	"overlays": {
 		"player1": {
 			"x": 16,
@@ -202,6 +210,29 @@
 				}
 
 			}
+		},
+		"credit_overlay": {
+			"x": 0,
+			"y": 215,
+			"title": "",
+			"default": "credits",
+			"options": {
+				"credits": {
+					"x": 792,
+					"y": 135,
+					"w": 320,
+					"h": 9
+				}
+			}
+		}
+
+	},
+	"border": {
+		"c": {
+			"x": 792,
+			"y": 119,
+			"w": 320,
+			"h": 16
 		}
 	},
 	"48": {

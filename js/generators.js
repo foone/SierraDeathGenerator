@@ -48,6 +48,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Aero_Fighters',
 		'defaulttext':"I am the world's first\ndolphin pilot.",
 		'added':'2018-05-06',
+		'updated':'2023-06-16',
 		'platform':'arcade',
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/aero-fighters-2',
@@ -2503,6 +2504,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/system-shock-2',
 		'added':'2018-06-16',
 		'series':'system shock'
+	},
+	'top':{
+		'title': 'Tales of Phantasia',
+		'source':'Wolf Team',
+		'sourceurl':'https://en.wikipedia.org/wiki/Namco_Tales_Studio',
+		'defaulttext':"Female Swordsman\n\"Can't wait to cross swords \nwith you.\"",
+		'platform':'gba',
+		'year':2003,
+		'gameinfo':'https://www.mobygames.com/game/10905/tales-of-phantasia/',
+		'added':'2023-05-12'
 	},
 	'tb':{
 		'title': 'Tecmo Bowl',
