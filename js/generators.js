@@ -950,6 +950,21 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/friday-the-13th',
 		'added':'2019-09-13'
 	},
+	'fmgh':{
+		'title': 'Front Mission: Gun Hazard',
+		'source':'Omiya Soft',
+		'sourceurl':'https://www.mobygames.com/company/5313/omiya-soft-co-ltd/',
+		'year':1996,
+		'platform':'snes',
+		'defaulttext':"We've got rebel Wanzers inbound!",
+		'added':'2023-08-16',
+		'gameinfo':'https://www.mobygames.com/game/14591/front-mission-gun-hazard/',
+		'contributions':[{
+			'type':'translation',
+			'contributor': 'Aeon Genesis',
+			'url':'https://aeongenesis.net/projects/fmgh',
+		}],
+	},
 	'garfield':{
 		'title': 'Garfield: Week of Garfield',
 		'source':'Towa Chiki',
