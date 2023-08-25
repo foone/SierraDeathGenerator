@@ -713,6 +713,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/drake-josh',
 		'added':'2021-12-17',
 	},
+	'dm':{
+		'title': "Dragon Master",
+		'source': 'UNiCO Electronics',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Dragon_Master',
+		'defaulttext': "YOU ARE A\nSUCKING BABY",
+		'platform':'arcade',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/75260/dragon-master/',
+		'added':'2023-08-25'
+	},
 	'drugs':{
 		'title': "Drugs: Their Effects on You",
 		'source': 'EduSystems',
