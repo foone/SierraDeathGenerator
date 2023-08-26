@@ -48,6 +48,7 @@ var generators={
 		'sourceurl':'https://en.wikipedia.org/wiki/Aero_Fighters',
 		'defaulttext':"I am the world's first\ndolphin pilot.",
 		'added':'2018-05-06',
+		'updated':'2023-06-16',
 		'platform':'arcade',
 		'year':1994,
 		'gameinfo':'https://www.mobygames.com/game/aero-fighters-2',
@@ -692,6 +693,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/gameboy-color/disneys-doug-dougs-big-game',
 		'added':'2019-05-26',
 	},
+	'dott':{
+		'title': "Day of the Tentacle",
+		'source':'LucasArts',
+		'sourceurl':'https://en.wikipedia.org/wiki/Lucasfilm_Games',
+		'defaulttext':"Rash of Cow Tipping\nBaffles Police\nTriangular Man Spotted\nat Scene",
+		'platform':'dos',
+		'year':1993,
+		'gameinfo':'https://www.mobygames.com/game/719/maniac-mansion-day-of-the-tentacle/',
+		'added':'2023-03-11'
+	},
 	'drakejosh':{
 		'title': "Drake & Josh",
 		'source': 'Behaviour Interactive',
@@ -701,6 +712,16 @@ var generators={
 		'year':2007,
 		'gameinfo':'https://www.mobygames.com/game/drake-josh',
 		'added':'2021-12-17',
+	},
+	'dm':{
+		'title': "Dragon Master",
+		'source': 'UNiCO Electronics',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Dragon_Master',
+		'defaulttext': "YOU ARE A\nSUCKING BABY",
+		'platform':'arcade',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/75260/dragon-master/',
+		'added':'2023-08-25'
 	},
 	'drugs':{
 		'title': "Drugs: Their Effects on You",
@@ -938,6 +959,21 @@ var generators={
 		"platform":"nes",
 		'gameinfo':'https://www.mobygames.com/game/nes/friday-the-13th',
 		'added':'2019-09-13'
+	},
+	'fmgh':{
+		'title': 'Front Mission: Gun Hazard',
+		'source':'Omiya Soft',
+		'sourceurl':'https://www.mobygames.com/company/5313/omiya-soft-co-ltd/',
+		'year':1996,
+		'platform':'snes',
+		'defaulttext':"We've got rebel Wanzers inbound!",
+		'added':'2023-08-16',
+		'gameinfo':'https://www.mobygames.com/game/14591/front-mission-gun-hazard/',
+		'contributions':[{
+			'type':'translation',
+			'contributor': 'Aeon Genesis',
+			'url':'https://aeongenesis.net/projects/fmgh',
+		}],
 	},
 	'garfield':{
 		'title': 'Garfield: Week of Garfield',
@@ -2511,6 +2547,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/system-shock-2',
 		'added':'2018-06-16',
 		'series':'system shock'
+	},
+	'top':{
+		'title': 'Tales of Phantasia',
+		'source':'Wolf Team',
+		'sourceurl':'https://en.wikipedia.org/wiki/Namco_Tales_Studio',
+		'defaulttext':"Female Swordsman\n\"Can't wait to cross swords \nwith you.\"",
+		'platform':'gba',
+		'year':2003,
+		'gameinfo':'https://www.mobygames.com/game/10905/tales-of-phantasia/',
+		'added':'2023-05-12'
 	},
 	'tb':{
 		'title': 'Tecmo Bowl',
