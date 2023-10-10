@@ -1108,6 +1108,16 @@ var generators={
 		'added':'2020-04-14',
 		'gameinfo':'https://www.mobygames.com/game/snes/home-alone-2-lost-in-new-york_'
 	},
+	'housemd':{
+		'title': 'House M.D.',
+		'source':'Legacy Interactive',
+		'sourceurl':'https://en.wikipedia.org/wiki/Legacy_Games',
+		'defaulttext':"Does Henry work around\nany respiratory irritants,\nlike silicone? What I\nmean is, are your breasts\nreal?",
+		'platform':'ds',
+		'year':2010,
+		'added':'2023-10-10',
+		'gameinfo':'https://www.mobygames.com/game/48549/house-md/'
+	},
 	'hybrid':{
 		'title': 'Hybrid Cracktro',
 		'source':'HYBRID',
