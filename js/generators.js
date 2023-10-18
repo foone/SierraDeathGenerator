@@ -1714,7 +1714,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/ninja-gaiden',
 		'added':'2018-04-20',
 		'series':'ninja gaiden',
-
+	},
+	'nokia':{
+		'title': 'Nokia phone',
+		'source':'Nokia',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nokia',
+		'defaulttext':'dracula\nMy name is dvd normal',
+		'platform':'phone',
+		'year':2002,
+		'gameinfo':'https://en.wikipedia.org/wiki/Nokia_3410',
+		'added':'2023-10-18'
 	},
 	'odallus':{
 		'title': 'Odallus',
