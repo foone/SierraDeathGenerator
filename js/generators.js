@@ -1715,6 +1715,17 @@ var generators={
 		'added':'2018-04-20',
 		'series':'ninja gaiden',
 	},
+	'nintendogs':{
+		'title': 'Nintendogs',
+		'source':'Nintendo',
+		'sourceurl':'https://en.wikipedia.org/wiki/Nintendo',
+		'defaulttext':"\u2026You may want to think about where that tongue's been, Archie.",
+		'platform':'ds',
+		'year':2005,
+		'gameinfo':'https://www.mobygames.com/game/19275/nintendogs/',
+		'added':'2024-01-20'
+	},
+
 	'nokia':{
 		'title': 'Nokia phone',
 		'source':'Nokia',
