@@ -2773,6 +2773,21 @@ var generators={
 		'added':'2020-09-13',
 		'gameinfo':'https://www.mobygames.com/game/nes/warios-woods'
 	},
+	'wdud':{
+		'title': "Winners Don't Use Drugs",
+		'defaulttext':"“WINNERS DON'T USE DRUGS” \nWILLIAMS.SESSIONS,DIRECTOR,🅵🅱🅸",
+		'source': 'FBI',
+		'sourceurl': 'https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation',
+		'platform':'arcade',
+		'year':1989,
+		'added':'2024-03-12',
+		'gameinfo':'https://en.wikipedia.org/wiki/Winners_Don%27t_Use_Drugs',
+		'contributions':[{
+			'type':'extra letters',
+			'contributor': 'Foone Turing',
+			'url':'https://digipres.club/@foone',
+		}],
+	},
 	'twtr': {
 		'title': 'The Wild Thornberrys: Rambler',
 		'source': 'Vicarious Visions',
