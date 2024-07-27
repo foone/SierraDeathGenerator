@@ -228,7 +228,8 @@ var generators={
 		'platform':'win32',
 		'year':1995,
 		'gameinfo':'https://en.wikipedia.org/wiki/Windows_95',
-		'added':'2019-03-10'
+		'added':'2019-03-10',
+		'updated':'2024-07-26'
 	},
 	'billnted':{
 		'title': 'Bill & Ted',
@@ -850,7 +851,11 @@ var generators={
 		'year':1993,
 		'gameinfo':'https://www.mobygames.com/game/fatal-fury-2',
 		'added':'2020-03-21',
-		'updated':'2020-03-22'
+		'updated':'2020-03-22',
+		'contributions':[{
+			'type':'percent sign',
+			'contributor': 'an anonymous tumblr user'
+		}],
 	},
 	'faxanadu':{
 		'title': 'Faxanadu',

@@ -10,7 +10,7 @@
 		"w": 16,
 		"h": 16
 	},
-	"wrap-width":260,
+	"wrap-width": 260,
 	"notes": "This is a merge of Fatal Fury Special with Fatal Fury 2's alternate palettes.",
 	"overlays": {
 		"background": {
@@ -18,7 +18,7 @@
 			"y": 0,
 			"title": "Background",
 			"default": "fatal_fury_special",
-			"background":true,
+			"background": true,
 			"options": {
 				"fatal_fury_2": {
 					"x": 0,
@@ -756,5 +756,10 @@
 	"11113": {
 		"x": 1328,
 		"w": 16
+	},
+	"37": {
+		"x": 1344,
+		"w": 16
 	}
+
 }
