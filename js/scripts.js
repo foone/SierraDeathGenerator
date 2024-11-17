@@ -1275,10 +1275,15 @@ function addLinksForSpecialCharactersAndInsertables(){
 		})
 	}
 }
+// Slightly misnamed: This is just the part between the generator name and the extension. 
+const MAX_FILENAME_LENTH = 64; 
 
 function getNameForCurrentImage(ext){
 	var text = document.querySelector("textarea#sourcetext").value
 	text = text.replace(/\n/g," ").replace(/[^-._a-zA-Z0-9 ]/g,"")
+	if(text.length>=MAX_FILENAME_LENTH){
+		text = text.substring(0,MAX_FILENAME_LENTH);
+	}
 	return selectedGenerator + "-" + text + "." + ext
 }
 function pickRandomGenerator(){
