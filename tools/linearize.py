@@ -28,14 +28,14 @@ parser.add_argument('--transparent', '-t', action='store_true',
 args = parser.parse_args()
 im=Image.open(args.filename)
 if im.mode=='P' and im.palette.mode=='RGB' and 'transparency' in im.info:
-	print 'Indexed color with PNG transparency, converting to RGBA'
+	print('Indexed color with PNG transparency, converting to RGBA')
 	im=im.convert('RGBA')
 
 w,h=args.width,args.height
 imgw,imgh=im.size
 for dimension,imgsize,size in (('width',imgw,w),('height',imgh,h)):
 	if imgsize%size != 0:
-		print 'Image {} is {}, not an even multiple of {}!'.format(dimension,imgsize,size)
+		print('Image {} is {}, not an even multiple of {}!'.format(dimension,imgsize,size))
 		sys.exit()
 chunks = []
 for (x,y) in getCoords(imgw//w,imgh//h,not args.columnrow):
@@ -44,7 +44,7 @@ for (x,y) in getCoords(imgw//w,imgh//h,not args.columnrow):
 	if im.mode == 'RGBA' and not args.transparent:
 		R,G,B,A = tile.getextrema()
 		if A[1]==0:
-			print 'Skipping empty tile at',src[:2]
+			print('Skipping empty tile at',src[:2])
 			continue # the whole tile is transparent, skip it.
 	chunks.append(tile)
 
