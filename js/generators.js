@@ -186,6 +186,16 @@ var generators={
 		'added':'2020-08-13',
 		'series':'battletoads'
 	},
+	'beetlejuice':{
+		'title': 'Beetlejuice',
+		'source':'Rare',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rare_(company)',
+		'defaulttext':"It's showtime.",
+		'platform':'nes',
+		'gameinfo':'https://www.mobygames.com/game/29829/beetlejuice/',
+		'year':1991,
+		'added':'2024-11-16'
+	},
 	'bsd':{
 		'title': 'Bishoujo Sexy Derby',
 		'source':'Super Pig',
