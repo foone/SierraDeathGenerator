@@ -620,8 +620,8 @@ function selectGenerator(){
 	$('a.generator-switcher').each(function(){
 		var active = $(this).data('generator')==selectedGenerator
 		$(this)
-			.toggleClass('bg-dark-gray', !active)
-			.toggleClass('bg-gray', active);
+			.toggleClass('unselected-generator', !active)
+			.toggleClass('selected-generator', active);
 
 
 	})

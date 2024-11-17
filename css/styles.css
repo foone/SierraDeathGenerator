@@ -1,6 +1,50 @@
 html {
 	overflow-y: scroll;
 }
+.themeswitch {
+    background: white;
+    color: black;
+}
+.unselected-generator{
+	background-color:rgb(51, 51, 51);
+}
+.selected-generator{
+	background-color:#777;
+}
+.darkimg{
+	display: none;
+}
+@media (prefers-color-scheme: dark) {
+  .themeswitch {
+    background: rgb(30,30,30);
+    color: rgb(190,190,190);
+  }
+  a:visited{
+  	color: rgb(166, 131, 198);
+  }
+  a:link{
+  	color: rgb(101,169,242);
+  }
+  .selected-generator{
+  	background-color: rgb(80, 80, 80);
+  }
+  a.selected-generator:visited, a.selected-generator:link{
+  	color: rgb(190, 190, 190);
+  }
+  a.unselected-generator:visited{
+  	color: rgb(166, 131, 198);
+  }
+  .lightimg{
+  	display: none;
+  }
+  .darkimg{
+  	display: inline;
+  }
+  #sourcetext{
+  	background: rgb(40,40,40);
+  	color: rgb(250,250,250);
+  }
+}
 
 img.source, canvas.source{
 	display: none;
