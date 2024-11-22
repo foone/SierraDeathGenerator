@@ -1272,6 +1272,17 @@ var generators={
 		'added':'2018-03-19',
 		'series':'kings quest'
 	},
+	'khcom':{
+		'title': 'Kingdom Hearts: Chain of Memories',
+		'source':'Square Enix',
+		'sourceurl':'https://en.wikipedia.org/wiki/Square_Enix',
+		'defaulttext':"Hold the card before you.\nThe door will open, and beyond it a new world.",
+		'platform':'gba',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/15798/kingdom-hearts-chain-of-memories/',
+		'added':'2024-11-21',
+		'series':'kingdom hearts'
+	},
 	'ka':{
 		'title': 'Kirby\'s Adventure',
 		'source':'HAL Laboratory',
