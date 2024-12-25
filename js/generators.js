@@ -766,7 +766,6 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/dos/duke-nukum-episode-1-shrapnel-city',
 		'added':'2018-01-08',
 		'series':'duke nukem'
-
 	},
 	'ecco1':{
 		'title': 'Ecco the Dolphin',
@@ -2168,6 +2167,21 @@ var generators={
 		'year':2005,
 		'gameinfo':'https://www.mobygames.com/game/sims-2_',
 		'added':'2022-01-10'
+	},
+	'snatcher':{
+		'title': 'Snatcher',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"This story is dedicated\n\n to all those cyberpunks\n\nwho fight against injustice\n\nand corruption every day\n\nof their lives.",
+		'platform':'sega cd',
+		'year':1994,
+		'gameinfo':'https://www.mobygames.com/game/7524/snatcher/',
+		'contributions':[{
+			'type':'extra letters/punctuation',
+			'contributor': 'Foone',
+			'url':'https://digipres.club/@foone',
+		}],
+		'added':'2024-12-24'
 	},
 	'sth1':{
 		'title': 'Sonic The Hedgehog 1',
