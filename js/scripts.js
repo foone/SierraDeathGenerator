@@ -565,7 +565,7 @@ function isAnyDefaultText(text){
 }
 
 function debugModeActive(){
-	return window.location.hostname == 'localhost'	
+	return window.location.hostname.match(/^(localhost|10\.)/)
 }
 function addDebugAlerts(gen, debugdiv){
 	var mustHave = ['title','source','sourceurl','defaulttext','added','year','platform','gameinfo']
