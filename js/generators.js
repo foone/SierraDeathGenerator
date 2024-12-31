@@ -2946,6 +2946,18 @@ var generators={
 		'added':'2019-02-23',
 		'series':'mario'
 	},
+	'ygodds':{
+		'title': 'Yu-Gi-Oh!',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Welcome to the\nworld of Yu-gi-oh\uD83D\uDCC4",
+		'platform':'gameboy',
+		'year':1998,
+		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
+		'added':'2020-01-19',
+		'updated':'2020-01-20',
+		'series':'yu-gi-oh'
+	},
 	'zelda2':{
 		'title': 'Zelda II: The Adventure of Link',
 		'source':'Nintendo',
@@ -2987,18 +2999,6 @@ var generators={
 			}
 		],
 		'series':'power rangers'
-	},
-	'ygodds':{
-		'title': 'Yu-Gi-Oh!',
-		'source':'Konami',
-		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':"Welcome to the\nworld of Yu-gi-oh\uD83D\uDCC4",
-		'platform':'gameboy',
-		'year':1998,
-		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
-		'added':'2020-01-19',
-		'updated':'2020-01-20',
-		'series':'yu-gi-oh'
 	},
 
 }
