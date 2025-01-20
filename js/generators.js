@@ -800,6 +800,17 @@ var generators={
 		'added':'2023-01-13',
 		'series':'elder scrolls'
 	},
+	'mw':{
+		'title': 'Elder Scrolls: Morrowind',
+		'source':'Bethesda',
+		'sourceurl':'https://en.wikipedia.org/wiki/Bethesda_Softworks',
+		'defaulttext':"With this character's death, the thread\nof prophecy is severed. Restore a saved\ngame to restore the weave of fate, or\npersist in the doomed world you have\ncreated.",
+		'platform':'win32',
+		'year':2002,
+		'gameinfo':'https://www.mobygames.com/game/6280/the-elder-scrolls-iii-morrowind/',
+		'added':'2025-01-20',
+		'series':'elder scrolls'
+	},
 	'elvira':{
 		'title': 'Elvira',
 		'source':'Horror Soft',
