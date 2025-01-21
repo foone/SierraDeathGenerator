@@ -1846,6 +1846,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/paris-hiltons-diamond-quest',
 		'added':'2020-05-09',
 	},
+	'phantasystar3':{
+		'title': "Phantasy Star III: Generations of Doom",
+		'source':'Sega',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sega',
+		'defaulttext':"Perhaps someday we will\nfind out where I'm from",
+		'platform':'genesis',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/phantasy-star-iii-generations-of-doom',
+		'added':'2022-10-27',
+	},
 	'pictionary':{
 		'title': 'Pictionary',
 		'source':'Software Creations',
