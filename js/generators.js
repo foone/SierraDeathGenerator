@@ -1326,6 +1326,16 @@ var generators={
 		'added':'2020-04-04',
 		'gameinfo':'https://www.mobygames.com/game/kabuki-klash'
 	},
+	'lagoon':{
+		'title': 'Lagoon',
+		'source':'Kemco',
+		'sourceurl':'https://en.wikipedia.org/wiki/Kemco',
+		'defaulttext':" G A M E  O V E R ",
+		'platform':'snes',
+		'year':1991,
+		'added':'2021-08-29',
+		'gameinfo':'https://www.mobygames.com/game/snes/lagoon'
+	},
 	'lastblade2':{
 		'title': 'Last Blade 2',
 		'source':'SNK',
