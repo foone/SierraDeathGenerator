@@ -2490,6 +2490,7 @@ var generators={
 		'year':1985,
 		'gameinfo':'https://www.mobygames.com/game/nes/super-mario-bros',
 		'added':'2018-04-04',
+		'updated':'2025-07-17'
 	},
 	'smrpg':{
 		'title': 'Super Mario RPG',
