@@ -251,6 +251,27 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/bill-teds-excellent-video-game-adventure',
 		'added':'2019-02-10'
 	},
+	'bioforceape':{
+		'title': 'Bio Force Ape',
+		'source':'SETA',
+		'sourceurl':'https://forum.digitpress.com/forum/showthread.php?71891-Bio-Force-ApeThe',
+		'contributions':[{
+			'type': 'buttery golem',
+			'contributor': '@MagicTrashman',
+			'url': 'https://twitter.com/MagicTrashman'
+		},
+		{
+			'type': 'deathgenerated',
+			'contributor': '@dregan',
+			'url':'https://bsky.app/profile/dregan.bsky.social',
+		}],
+
+		'defaulttext':'   JA I AM MADE OF\n   DUR BUTTER UND YOU\n   ARE WORTH 2K MONIES',
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'http://www.lostlevels.org/bio-force-ape/',
+		'added':'2023-09-07'
+	},
 	'bm':{
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
