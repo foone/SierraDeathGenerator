@@ -1366,12 +1366,10 @@ if(selectedGenerator=='random'){
 }
 selectGenerator()
 
-// Debounce URL updates for text input (update 500ms after user stops typing)
-var urlUpdateTimeout = null;
+// Update URL immediately on any text input
 $('#sourcetext').keyup(function(){
 	renderText()
-	clearTimeout(urlUpdateTimeout);
-	urlUpdateTimeout = setTimeout(updateURLWithState, 500);
+	updateURLWithState()
 })
 $(window).resize(function () { renderText() });
 
