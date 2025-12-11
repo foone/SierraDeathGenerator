@@ -324,6 +324,22 @@ var generators={
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/buck-rogers-countdown-to-doomsday'
 	},
+        'darkhul':{
+	        'title': 'Buffy the Vampire Slayer: Wrath of the Darkhul King',
+		'source':'Natsume',
+		'sourceurl':'https://en.wikipedia.org/wiki/Natsume_Atari',
+		'defaulttext':'Wait, who says I have a terrible sense of humor?',
+		'contributions':[{
+			'contributor': 'Joshua Barrass',
+			'url':'https://github.com/joshbarrass',
+		}],
+		'series':'buffy',
+		'platform':'gba',
+		'year':2003,
+		'gameinfo':'https://www.mobygames.com/game/10811/buffy-the-vampire-slayer-wrath-of-the-darkhul-king/',
+		'added':'2025-10-09',
+		'updated':'2025-10-09'
+        },
 	'codaw':{
 		'title': 'Call of Duty: Advanced Warfare',
 		'source':'Sledgehammer Games',
