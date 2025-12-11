@@ -687,8 +687,14 @@ function selectGenerator(){
 
 	var sourcetext = $('#sourcetext');
 
-	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
-		$('#sourcetext').text(gen.defaulttext)
+	// Check for text passed via URL query parameter
+	var params = new URLSearchParams(window.location.search);
+	var textParam = params.get('text');
+
+	if(textParam){
+		$('#sourcetext').val(textParam)
+	}else if(sourcetext.val().length==0 || isAnyDefaultText(sourcetext.val())){
+		$('#sourcetext').val(gen.defaulttext)
 	}
 
 	$('#throbber').hide()
