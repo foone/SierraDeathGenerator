@@ -1169,6 +1169,23 @@ function loadJSONForGenerator(){
 	$.getJSON(gamesPath + selectedGenerator + ".json",function(data){
 		fontInfo = data
 		resetOverlays()
+		// Apply URL query parameters for overlays
+		var params = new URLSearchParams(window.location.search);
+		params.forEach(function(value, key) {
+			if(key !== 'text') {
+				var elem = $('#overlay-' + key);
+				if(elem.length) {
+					elem.val(value);
+				}
+			}
+		});
+		// Handle checkbox parameters (e.g., wordwrap=off, transparent=on)
+		if(params.get('wordwrap') === 'off') {
+			$('#wordwrap').prop('checked', false);
+		}
+		if(params.get('transparent') === 'on') {
+			$('#transparent').prop('checked', true);
+		}
 		$('.wordwrap').toggle('wrap-width' in fontInfo)
 		renderText()
 		$('#makegif').toggle(!!fontInfo.gif)
