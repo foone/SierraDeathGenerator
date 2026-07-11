@@ -593,6 +593,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/crusader-of-centy',
 		'added':'2019-04-02',
 	},
+	'dsih':{
+		'title': 'Danny Sullivan\'s Indy Heat',
+		'source':'Rare',
+		'sourceurl':'https://en.wikipedia.org/wiki/Rare_(company)',
+		'defaulttext':"USE TURBOS FOR SPEED BOOST.\n\nUSE PIT STOP WHEN OUT OF GAS OR ON FIRE.\n\nTURBO BUTTON WILL EXIT PIT EARLY.\n\nKNOCK OTHER CARS OFF THEIR JACKS.",
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'https://www.mobygames.com/game/14150/danny-sullivans-indy-heat/',
+		'added':'2026-07-10'
+	},
 	'ds3':{
 		'title': 'Darkstalkers 3',
 		'source':'Capcom',
