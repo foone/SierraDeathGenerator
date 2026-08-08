@@ -65,11 +65,11 @@ smallimg = fullimg.crop((args.x, args.y, args.x+args.width, args.y+args.height))
 
 vsplits = findVSplits(smallimg)
 hsplits = findHSplits(smallimg)
-print >>sys.stderr,'vsplits: ', vsplits
-print >>sys.stderr,'hsplits: ', hsplits
+print('vsplits: ', vsplits,file=sys.stderr)
+print('hsplits: ', hsplits,file=sys.stderr)
 
 if len(vsplits) != 2 or len(hsplits) != 2:
-	print 'Wrong number of splits! Check your source image.'
+	print('Wrong number of splits! Check your source image.',file=sys.stderr)
 	sys.exit()
 
 #TODO: handle non-even sizes
@@ -93,4 +93,4 @@ border['b']  = rect(h1,v2,h2,v3)
 border['br'] = rect(h2,v2,h3,v3)
 
 
-print json.dumps({'border':border}, indent=2)
+print(json.dumps({'border':border}, indent=2))
