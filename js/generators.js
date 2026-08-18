@@ -1897,6 +1897,7 @@ var generators={
 		'year':1988,
 		'gameinfo':'https://www.mobygames.com/game/police-quest-2-the-vengeance',
 		'added':'2017-10-26',
+		'updated':'2026-08-17',
 		'series':'police quest'
 	},
 	'pq3':{

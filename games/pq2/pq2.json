@@ -5,6 +5,7 @@
     "y": 14
   },
   "null-character": 0,
+  "wrap-width": 180,
   "0" : { 
       "h" : 8,
       "w" : 8,
