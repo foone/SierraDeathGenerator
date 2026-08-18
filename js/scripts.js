@@ -27,6 +27,49 @@ if(window.location.hash.length > 0){
 
 window.addEventListener("hashchange", applyHashChange,false)
 
+// Update URL with current state for easy sharing
+function updateURLWithState(){
+	if(!selectedGenerator || selectedGenerator === 'gallery') return;
+
+	var params = new URLSearchParams();
+
+	// Add text if different from default
+	var text = $('#sourcetext').val();
+	var gen = generators[selectedGenerator];
+	if(text && gen && text !== gen.defaulttext){
+		params.set('text', text);
+	}
+
+	// Add overlay values if different from defaults
+	if(fontInfo && 'overlays' in fontInfo){
+		for(var key in fontInfo.overlays){
+			if(fontInfo.overlays.hasOwnProperty(key)){
+				var overlay = fontInfo.overlays[key];
+				var elem = $('#overlay-' + key);
+				if(elem.length){
+					var val = elem.val();
+					var defaultVal = overlay['default'] || '';
+					if(val !== defaultVal){
+						params.set(key, val);
+					}
+				}
+			}
+		}
+	}
+
+	// Add checkbox states if non-default
+	if($('#wordwrap').length && !$('#wordwrap').prop('checked')){
+		params.set('wordwrap', 'off');
+	}
+	if($('#hidebackground').prop('checked')){
+		params.set('transparent', 'on');
+	}
+
+	var queryString = params.toString();
+	var newURL = window.location.pathname + (queryString ? '?' + queryString : '') + '#' + selectedGenerator;
+	window.history.replaceState({}, '', newURL);
+}
+
 const smart_quote_map={
 	// Single quote: '
 	39: [0x2019,0x2018],
@@ -687,8 +730,15 @@ function selectGenerator(){
 
 	var sourcetext = $('#sourcetext');
 
-	if(sourcetext.text().length==0 || isAnyDefaultText(sourcetext.text())){
-		$('#sourcetext').text(gen.defaulttext)
+	// Check for text passed via URL query parameter
+	var params = new URLSearchParams(window.location.search);
+	var textParam = params.get('text');
+
+	if(textParam){
+		$('#sourcetext').val(textParam)
+	}else{
+		// Always reset to default when switching generators without a text param
+		$('#sourcetext').val(gen.defaulttext)
 	}
 
 	$('#throbber').hide()
@@ -1136,6 +1186,7 @@ function resetOverlays(){
 			eval(fontInfo.hooks[hookname])
 		}
 		renderText()
+		updateURLWithState()
 	})
 	$('.overlay-replacement').change(function(){
 		// from http://jsfiddle.net/influenztial/qy7h5/
@@ -1163,6 +1214,23 @@ function loadJSONForGenerator(){
 	$.getJSON(gamesPath + selectedGenerator + ".json",function(data){
 		fontInfo = data
 		resetOverlays()
+		// Apply URL query parameters for overlays
+		var params = new URLSearchParams(window.location.search);
+		params.forEach(function(value, key) {
+			if(key !== 'text') {
+				var elem = $('#overlay-' + key);
+				if(elem.length) {
+					elem.val(value);
+				}
+			}
+		});
+		// Handle checkbox parameters (e.g., wordwrap=off, transparent=on)
+		if(params.get('wordwrap') === 'off') {
+			$('#wordwrap').prop('checked', false);
+		}
+		if(params.get('transparent') === 'on') {
+			$('#hidebackground').prop('checked', true);
+		}
 		$('.wordwrap').toggle('wrap-width' in fontInfo)
 		renderText()
 		$('#makegif').toggle(!!fontInfo.gif)
@@ -1297,14 +1365,23 @@ if(selectedGenerator=='random'){
 	pickRandomGenerator();
 }
 selectGenerator()
-$('#sourcetext').keyup(renderText)
+
+// Update URL immediately on any text input
+$('#sourcetext').keyup(function(){
+	renderText()
+	updateURLWithState()
+})
 $(window).resize(function () { renderText() });
 
-$('.wordwrap').change(renderText)
+$('.wordwrap').change(function(){
+	renderText()
+	updateURLWithState()
+})
 $('#hidebackground').change(
 	function(){
 		$('#background-explanation').toggle($('#hidebackground').prop('checked'))
 		renderText()
+		updateURLWithState()
 	}
 )
 

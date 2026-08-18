@@ -251,6 +251,27 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/nes/bill-teds-excellent-video-game-adventure',
 		'added':'2019-02-10'
 	},
+	'bioforceape':{
+		'title': 'Bio Force Ape',
+		'source':'SETA',
+		'sourceurl':'https://forum.digitpress.com/forum/showthread.php?71891-Bio-Force-ApeThe',
+		'contributions':[{
+			'type': 'buttery golem',
+			'contributor': '@MagicTrashman',
+			'url': 'https://twitter.com/MagicTrashman'
+		},
+		{
+			'type': 'deathgenerated',
+			'contributor': '@dregan',
+			'url':'https://bsky.app/profile/dregan.bsky.social',
+		}],
+
+		'defaulttext':'   JA I AM MADE OF\n   DUR BUTTER UND YOU\n   ARE WORTH 2K MONIES',
+		'platform':'nes',
+		'year':1991,
+		'gameinfo':'http://www.lostlevels.org/bio-force-ape/',
+		'added':'2023-09-07'
+	},
 	'bm':{
 		'title': 'Bio Menace',
 		'source':'Apogee Software',
@@ -303,6 +324,22 @@ var generators={
 		'year':1990,
 		'gameinfo':'https://www.mobygames.com/game/buck-rogers-countdown-to-doomsday'
 	},
+        'darkhul':{
+	        'title': 'Buffy the Vampire Slayer: Wrath of the Darkhul King',
+		'source':'Natsume',
+		'sourceurl':'https://en.wikipedia.org/wiki/Natsume_Atari',
+		'defaulttext':'Wait, who says I have a terrible sense of humor?',
+		'contributions':[{
+			'contributor': 'Joshua Barrass',
+			'url':'https://github.com/joshbarrass',
+		}],
+		'series':'buffy',
+		'platform':'gba',
+		'year':2003,
+		'gameinfo':'https://www.mobygames.com/game/10811/buffy-the-vampire-slayer-wrath-of-the-darkhul-king/',
+		'added':'2025-10-09',
+		'updated':'2025-10-09'
+        },
 	'codaw':{
 		'title': 'Call of Duty: Advanced Warfare',
 		'source':'Sledgehammer Games',
@@ -776,6 +813,22 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/dos/duke-nukum-episode-1-shrapnel-city',
 		'added':'2018-01-08',
 		'series':'duke nukem'
+	},
+	'dragonwarrior':{
+		'title': 'Dragon Warrior',
+		'source':'Chunsoft',
+		'sourceurl':'https://en.wikipedia.org/wiki/Spike_Chunsoft',
+		'defaulttext':'Fortune smiles upon thee.',
+		'gameinfo':'https://www.mobygames.com/game/nes/dragon-warrior',
+		'contributions':[{
+			'contributor': '@crschmidt',
+			'url':'https://twitter.com/crschmidt',
+		}],
+		'platform':'nes',
+		'year':1986,
+		'added':'2021-08-29',
+		'updated':'2021-08-29',
+		'series': 'dragonquest',
 	},
 	'ecco1':{
 		'title': 'Ecco the Dolphin',
@@ -1336,6 +1389,16 @@ var generators={
 		'added':'2020-04-04',
 		'gameinfo':'https://www.mobygames.com/game/kabuki-klash'
 	},
+	'lagoon':{
+		'title': 'Lagoon',
+		'source':'Kemco',
+		'sourceurl':'https://en.wikipedia.org/wiki/Kemco',
+		'defaulttext':" G A M E  O V E R ",
+		'platform':'snes',
+		'year':1991,
+		'added':'2021-08-29',
+		'gameinfo':'https://www.mobygames.com/game/snes/lagoon'
+	},
 	'lastblade2':{
 		'title': 'Last Blade 2',
 		'source':'SNK',
@@ -1579,6 +1642,17 @@ var generators={
 		'series':'megaman',
 		'added':'2021-04-18',
 		'year':2003
+	},
+	'mmbn5':{
+		'title': 'Mega Man Battle Network 5',
+		'source':'Capcom',
+		'sourceurl':'https://en.wikipedia.org/wiki/Capcom',
+		'defaulttext':"Clearly, Lan\nyou do not\nown an air fryer.",
+		'gameinfo':'https://www.mobygames.com/game/mega-man-battle-network-5-team-protoman',
+		'platform':'gba',
+		'series':'megaman',
+		'added':'2022-07-04',
+		'year':2004
 	},
 	'mmx1':{
 		'title': 'Mega Man X 1',
@@ -1825,6 +1899,24 @@ var generators={
 		'added':'2021-05-23',
 		'updated':'2021-05-24',
 	},
+	'pf1gba':{
+		'title': "Puyo Puyo Fever",
+		'source':'Sega',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sega',
+		'contributions':[
+			{
+				'type':'template',
+				'contributor': '@Tasos500',
+				'url': 'https://twitter.com/tasos500'
+			}
+		],
+		'defaulttext':"[pink]Oh, Klug\n(Damn! If it isn't Mr. Goody Two\nShoes.)[/]",
+		'platform':'gba',
+		'year':2004,
+		'gameinfo':'https://www.mobygames.com/game/gameboy-advance/puyo-pop-fever',
+		'series':'puyo puyo',
+		'added':'2022-06-09'
+	},
 	'pma':{
 		'title': "Pac-Man Arrangement",
 		'source':'Namco',
@@ -1856,6 +1948,16 @@ var generators={
 		'gameinfo':'https://www.mobygames.com/game/paris-hiltons-diamond-quest',
 		'added':'2020-05-09',
 	},
+	'phantasystar3':{
+		'title': "Phantasy Star III: Generations of Doom",
+		'source':'Sega',
+		'sourceurl':'https://en.wikipedia.org/wiki/Sega',
+		'defaulttext':"Perhaps someday we will\nfind out where I'm from",
+		'platform':'genesis',
+		'year':1990,
+		'gameinfo':'https://www.mobygames.com/game/phantasy-star-iii-generations-of-doom',
+		'added':'2022-10-27',
+	},
 	'pictionary':{
 		'title': 'Pictionary',
 		'source':'Software Creations',
@@ -1870,7 +1972,7 @@ var generators={
 		'title': 'Pokemon',
 		'source':'Game Freak',
 		'sourceurl':'https://en.wikipedia.org/wiki/Game_Freak',
-		'defaulttext':'         CHARMANDER\nGary: WHAT?\nUnbelievable!',
+		'defaulttext':'         CHARMANDER\nGARY: WHAT?\nUnbelievable!',
 		'platform':'gameboy',
 		'year':1998,
 		'gameinfo':'https://www.mobygames.com/game/pokmon-red-version',
@@ -2969,6 +3071,18 @@ var generators={
 		'added':'2019-02-23',
 		'series':'mario'
 	},
+	'ygodds':{
+		'title': 'Yu-Gi-Oh!',
+		'source':'Konami',
+		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
+		'defaulttext':"Welcome to the\nworld of Yu-gi-oh\uD83D\uDCC4",
+		'platform':'gameboy',
+		'year':1998,
+		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
+		'added':'2020-01-19',
+		'updated':'2020-01-20',
+		'series':'yu-gi-oh'
+	},
 	'zelda2':{
 		'title': 'Zelda II: The Adventure of Link',
 		'source':'Nintendo',
@@ -3010,18 +3124,6 @@ var generators={
 			}
 		],
 		'series':'power rangers'
-	},
-	'ygodds':{
-		'title': 'Yu-Gi-Oh!',
-		'source':'Konami',
-		'sourceurl':'https://en.wikipedia.org/wiki/Konami',
-		'defaulttext':"Welcome to the\nworld of Yu-gi-oh\uD83D\uDCC4",
-		'platform':'gameboy',
-		'year':1998,
-		'gameinfo':'https://www.mobygames.com/game/yu-gi-oh-dark-duel-stories',
-		'added':'2020-01-19',
-		'updated':'2020-01-20',
-		'series':'yu-gi-oh'
 	},
 
 }
